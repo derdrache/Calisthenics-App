@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://wviyasausd1f"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_pvfaw"]
+[ext_resource type="Resource" uid="uid://be74is8w5qcrs" path="res://resrouces/talent_resources/Push/level9/One_Arm_Push_Up.tres" id="2_pcuoa"]
+
+[resource]
+script = ExtResource("1_pvfaw")
+unlocks = Array[ExtResource("1_pvfaw")]([ExtResource("2_pcuoa")])
+is_unlocked = false

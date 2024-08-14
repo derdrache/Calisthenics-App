@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://c7f6t7w3p4g5u"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_4e5of"]
+[ext_resource type="Resource" uid="uid://beiara2lt6e16" path="res://resrouces/talent_resources/Pull/level8/Straddle_Back_Lever.tres" id="2_dxjb5"]
+
+[resource]
+script = ExtResource("1_4e5of")
+unlocks = Array[ExtResource("1_4e5of")]([ExtResource("2_dxjb5")])
+is_unlocked = false

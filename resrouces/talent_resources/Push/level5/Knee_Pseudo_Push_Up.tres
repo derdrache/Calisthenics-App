@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://18it13teipb3"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_nj8jh"]
+[ext_resource type="Resource" uid="uid://cifs2rff427q8" path="res://resrouces/talent_resources/Push/level6/Pseudo_Planche_Push_Up.tres" id="2_rgqr4"]
+
+[resource]
+script = ExtResource("1_nj8jh")
+unlocks = Array[ExtResource("1_nj8jh")]([ExtResource("2_rgqr4")])
+is_unlocked = false

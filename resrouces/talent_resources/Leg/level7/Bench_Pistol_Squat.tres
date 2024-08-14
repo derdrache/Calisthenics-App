@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://c47rik5k7spw1"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_qpndk"]
+[ext_resource type="Resource" uid="uid://de1w06ubw25h" path="res://resrouces/talent_resources/Leg/level8/Pistol_Squat.tres" id="2_tsher"]
+
+[resource]
+script = ExtResource("1_qpndk")
+unlocks = Array[ExtResource("1_qpndk")]([ExtResource("2_tsher")])
+is_unlocked = false

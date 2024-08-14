@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://dngq0aa7nw8a4"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_mj84o"]
+[ext_resource type="Resource" uid="uid://c24psa2gvvhfe" path="res://resrouces/talent_resources/Leg/level10/Two_Handed_Shrimp_Squat.tres" id="2_dx8ya"]
+
+[resource]
+script = ExtResource("1_mj84o")
+unlocks = Array[ExtResource("1_mj84o")]([ExtResource("2_dx8ya")])
+is_unlocked = false

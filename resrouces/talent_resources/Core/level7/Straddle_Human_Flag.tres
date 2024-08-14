@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://y2v1o4cunqdi"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_43rpn"]
+[ext_resource type="Resource" uid="uid://d2tlgfvtc6weo" path="res://resrouces/talent_resources/Core/level8/Half_Lay_Human_Flag.tres" id="2_dwdpj"]
+
+[resource]
+script = ExtResource("1_43rpn")
+unlocks = Array[ExtResource("1_43rpn")]([ExtResource("2_dwdpj")])
+is_unlocked = false

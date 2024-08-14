@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://co7denyo73lks"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_djppr"]
+[ext_resource type="Resource" uid="uid://da68hlch37t5d" path="res://resrouces/talent_resources/Leg/level10/Nordic_Hamstring_Curl.tres" id="2_yp3w7"]
+
+[resource]
+script = ExtResource("1_djppr")
+unlocks = Array[ExtResource("1_djppr")]([ExtResource("2_yp3w7")])
+is_unlocked = false

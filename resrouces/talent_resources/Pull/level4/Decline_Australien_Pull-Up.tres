@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=4 format=3 uid="uid://hexejafnnf3g"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_lxj0o"]
+[ext_resource type="Resource" uid="uid://i742ns7j8ewe" path="res://resrouces/talent_resources/Pull/level5/Assisted_Chin-Up.tres" id="2_gnigy"]
+[ext_resource type="Resource" uid="uid://ctt3nt7k3okih" path="res://resrouces/talent_resources/Pull/level5/Assisted_Pull-Up.tres" id="3_3lntd"]
+
+[resource]
+script = ExtResource("1_lxj0o")
+unlocks = Array[ExtResource("1_lxj0o")]([ExtResource("2_gnigy"), ExtResource("3_3lntd")])
+is_unlocked = false

@@ -1,0 +1,2069 @@
+[gd_scene load_steps=250 format=3 uid="uid://xoar84igblnp"]
+
+[ext_resource type="Script" path="res://talent_trees/talent_tree/talent_tree.gd" id="1_y2r2o"]
+[ext_resource type="Texture2D" uid="uid://dvobueh3j5k0v" path="res://assets/images/full-shot-ninja-wearing-equipment.jpg" id="2_ci7j8"]
+[ext_resource type="PackedScene" uid="uid://brpavu0ocrgcq" path="res://widgets/top_navigation_bar/top_navigation_bar.tscn" id="3_e2pc6"]
+[ext_resource type="PackedScene" uid="uid://dtsq21l50odev" path="res://talent_trees/talent_tree/talent_icon/talent_icon.tscn" id="4_102im"]
+[ext_resource type="Resource" uid="uid://7meh4c466n3d" path="res://resrouces/talent_resources/Core/level1/Supported_L-Sit.tres" id="5_gsj4x"]
+[ext_resource type="Resource" uid="uid://ik3gg8262epn" path="res://resrouces/talent_resources/Core/level1/Flat_Knee_Raise.tres" id="5_l1qtp"]
+[ext_resource type="Resource" uid="uid://d2lj4pablq3q8" path="res://resrouces/talent_resources/Core/level1/Plank.tres" id="5_w3hrk"]
+[ext_resource type="Resource" uid="uid://dyr3xesmqt4br" path="res://resrouces/talent_resources/Core/level1/Crunch.tres" id="6_b3dgn"]
+[ext_resource type="Resource" uid="uid://ttic7ssf6e4n" path="res://resrouces/talent_resources/Core/level1/Tuck_Hollow_Body.tres" id="7_g40qd"]
+[ext_resource type="Resource" uid="uid://dkvqkjs0mivx6" path="res://resrouces/talent_resources/Core/level1/Downwards_Low_Flag.tres" id="8_lvtro"]
+[ext_resource type="Resource" uid="uid://d37dfr2a5aml5" path="res://resrouces/talent_resources/Core/level1/Superman.tres" id="9_w8fvn"]
+[ext_resource type="Resource" uid="uid://cgp44j6yj12nn" path="res://resrouces/talent_resources/Core/level2/Straddle_One-Arm_Plank.tres" id="12_x35xj"]
+[ext_resource type="Resource" uid="uid://c00erci7n4j1x" path="res://resrouces/talent_resources/Core/level2/One-Leg_Supported_L-Sit.tres" id="13_u4pxf"]
+[ext_resource type="Resource" uid="uid://dkl1hsfc5audh" path="res://resrouces/talent_resources/Core/level2/Straddle_Leg_Raise_Hold.tres" id="14_8tfhg"]
+[ext_resource type="Resource" uid="uid://b3hfb7cjli07b" path="res://resrouces/talent_resources/Core/level2/Flat_Bent_Leg_Raise.tres" id="15_180qt"]
+[ext_resource type="Resource" uid="uid://4pq38iqmu1eg" path="res://resrouces/talent_resources/Core/level2/Reverse_Crunch.tres" id="16_di828"]
+[ext_resource type="Resource" uid="uid://bql5l8vorc1d2" path="res://resrouces/talent_resources/Core/level2/Hollow_Body_Hold.tres" id="17_juo48"]
+[ext_resource type="Resource" uid="uid://d4ef4pshclb17" path="res://resrouces/talent_resources/Core/level2/Low_Flag.tres" id="18_gwgnd"]
+[ext_resource type="Resource" uid="uid://dbpxs70r0d7jc" path="res://resrouces/talent_resources/Core/level3/One-Arm_Plank.tres" id="19_bswsf"]
+[ext_resource type="Resource" uid="uid://cdmh5wkjbv1jy" path="res://resrouces/talent_resources/Core/level3/Leg_Raise_Hold.tres" id="20_oey7f"]
+[ext_resource type="Resource" uid="uid://bsux8bfxf6skd" path="res://resrouces/talent_resources/Core/level3/Leg_Raise.tres" id="21_rukvx"]
+[ext_resource type="Resource" uid="uid://h5yptxyfknif" path="res://resrouces/talent_resources/Core/level3/Adv._Reverse_Crunch.tres" id="22_cc25c"]
+[ext_resource type="Resource" uid="uid://cu00770yuoa4g" path="res://resrouces/talent_resources/Core/level3/Hollow_Body_Rock.tres" id="23_itn5p"]
+[ext_resource type="Resource" uid="uid://dpxtgnmyak5h4" path="res://resrouces/talent_resources/Core/level3/Hight_Flag.tres" id="24_f1m66"]
+[ext_resource type="Resource" uid="uid://cxpb5cjp4q6e8" path="res://resrouces/talent_resources/Core/level4/Extended_Plank.tres" id="25_7b72v"]
+[ext_resource type="Resource" uid="uid://cgow17l7uglu8" path="res://resrouces/talent_resources/Core/level4/Tuck_L-Sit.tres" id="26_edq4t"]
+[ext_resource type="Resource" uid="uid://cp001h5yc0vbq" path="res://resrouces/talent_resources/Core/level4/Fore-Arm_Knee_Raise.tres" id="27_gwqe1"]
+[ext_resource type="Resource" uid="uid://bnhxl7fk0w1rw" path="res://resrouces/talent_resources/Core/level4/Dragon_Flag_Hip_Raise.tres" id="28_niegn"]
+[ext_resource type="Resource" uid="uid://b7s78nka1vxrf" path="res://resrouces/talent_resources/Core/level4/Hollow_Body_Crunch.tres" id="29_03jth"]
+[ext_resource type="Resource" uid="uid://ce3a5jpr3cad0" path="res://resrouces/talent_resources/Core/level4/Angled_Flag.tres" id="30_43ikl"]
+[ext_resource type="Resource" uid="uid://cstuk26anxx0y" path="res://resrouces/talent_resources/Core/level5/Straddle_L-Sit.tres" id="31_esvot"]
+[ext_resource type="Resource" uid="uid://csrnsbin03w30" path="res://resrouces/talent_resources/Core/level5/Elevated_L-Sit.tres" id="32_8xbec"]
+[ext_resource type="Resource" uid="uid://bo0nyurjplpuy" path="res://resrouces/talent_resources/Core/level5/Fore-Arm_Flat_Bent_Leg_Raise.tres" id="33_p1f1v"]
+[ext_resource type="Resource" uid="uid://dok7bkmfc7br6" path="res://resrouces/talent_resources/Core/level5/Adv._Tuck_Dragon_Flag.tres" id="34_vjto1"]
+[ext_resource type="Resource" uid="uid://dvpaj7k5esjxj" path="res://resrouces/talent_resources/Core/level5/Tucked_Human_Flag.tres" id="35_fhvy8"]
+[ext_resource type="Resource" uid="uid://d37naepjx4bl5" path="res://resrouces/talent_resources/Core/level6/Floor_L-Sit.tres" id="36_o4b0l"]
+[ext_resource type="Resource" uid="uid://j251aw1ifjtb" path="res://resrouces/talent_resources/Core/level6/Fore-Arm_Leg_Raise.tres" id="37_25r57"]
+[ext_resource type="Resource" uid="uid://cei12k6j5nj33" path="res://resrouces/talent_resources/Core/level6/One-Leg_Dragon_Flag.tres" id="38_nki7f"]
+[ext_resource type="Resource" uid="uid://bnugwn15pkpr7" path="res://resrouces/talent_resources/Core/level6/One-Leg_Human_Flag.tres" id="39_584tu"]
+[ext_resource type="Resource" uid="uid://ddtvbu311owdy" path="res://resrouces/talent_resources/Core/level6/Straddle_Dragon_Flag.tres" id="40_5jebq"]
+[ext_resource type="Resource" uid="uid://cxoa5pouurfa4" path="res://resrouces/talent_resources/Core/level7/Bar_Tuck_V-Sit.tres" id="41_nudjp"]
+[ext_resource type="Resource" uid="uid://b68yf53k85o67" path="res://resrouces/talent_resources/Core/level7/Negative_Dragon_Flag.tres" id="42_t683g"]
+[ext_resource type="Resource" uid="uid://y2v1o4cunqdi" path="res://resrouces/talent_resources/Core/level7/Straddle_Human_Flag.tres" id="43_odvjt"]
+[ext_resource type="Resource" uid="uid://b84klckc33xwv" path="res://resrouces/talent_resources/Core/level8/Bar_Straddle_V-Sit.tres" id="44_g0mjs"]
+[ext_resource type="Resource" uid="uid://cexjygaiwmx85" path="res://resrouces/talent_resources/Core/level8/Dragon_Flag.tres" id="45_d4o12"]
+[ext_resource type="Resource" uid="uid://d2tlgfvtc6weo" path="res://resrouces/talent_resources/Core/level8/Half_Lay_Human_Flag.tres" id="46_fmqbn"]
+[ext_resource type="Resource" uid="uid://cohcecro520oa" path="res://resrouces/talent_resources/Core/level9/Floor_Tuck_V-Sit.tres" id="47_ruxo0"]
+[ext_resource type="Resource" uid="uid://urxitnkihaqq" path="res://resrouces/talent_resources/Core/level9/Weighted_Dragon_Flag.tres" id="48_527sm"]
+[ext_resource type="Resource" uid="uid://bebk821m2sccw" path="res://resrouces/talent_resources/Core/level9/Human_Flag.tres" id="49_8520d"]
+[ext_resource type="Resource" uid="uid://c7s4b0s4qb18c" path="res://resrouces/talent_resources/Core/level10/Floor_Straddle_V-Sit.tres" id="50_u4gtm"]
+[ext_resource type="Resource" uid="uid://bklej05kdjh85" path="res://resrouces/talent_resources/Core/level11/Floor_V-Sit.tres" id="51_hn6we"]
+[ext_resource type="Resource" uid="uid://b8fstcge0lomj" path="res://resrouces/talent_resources/Core/level14/Manna.tres" id="52_gylmj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j8j5s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y8jas"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uurqd"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_akar3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_naoy6"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iypqq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_076af"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.541176, 0.541176, 0.541176, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ghf2e"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wfkkx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j148u"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2vees"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xxc4v"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yb4ib"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_47jot"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8aepq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ovqay"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mx1m2"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cyscv"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q0fq3"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yc2dh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wcsa2"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f7bbv"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mykq1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ojfd1"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3o036"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yhp3c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rib8y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pnaq1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_onvtu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dc0d1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hn1py"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_38pbi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_evnxv"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oc80p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a8o6o"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yfq4g"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eopuq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k671d"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oqb25"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u0fvo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iffxh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_686s2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kixvk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6a86m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rexmd"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c8scc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ang2q"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lkx2c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ldfp"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hvhhk"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xqle2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bb5du"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1mppw"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o8k8f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jkfw6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xo0sf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5tv8w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o1wcv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g5a3f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1xitn"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wlwnw"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ucas4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_27ocm"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_snsu8"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mxnhg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8uj8b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g8xjw"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vo13k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_udvcb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3q0u2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_js5ek"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8cd3v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7yqmn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5kppj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2nx2i"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ypre5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hjel3"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bk8fo"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b4rvx"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ug500"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ubyfu"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pv8q2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_we41r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_20a3d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oxwk3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v4q4o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vpqkr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4m4l1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s83mk"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_njmkp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cpdj8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3p2wq"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c0j0e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pqs5g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cva5c"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nd6o1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7rdkb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kjwug"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x8u1u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u84g0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_74ee4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sffnn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g2fb1"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wokjf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0fehe"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rsu1t"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rlnlq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wj8fi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1gb8j"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_krkg3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pr0tu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uobta"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dejln"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jbox2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xpeni"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fcxwn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_62jip"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vitfw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ut0p6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hirup"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n8rq0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0ki1o"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hvmyd"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_54skc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r3knd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ycl8r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bhfch"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4t2cy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_368pd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_253y0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nwbq8"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gg00y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0uxcs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_re07x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_87lfq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q0s0q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5c1pb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5xtfx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5jvxt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tk4yf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dkirx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n1h1k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5yxfg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p3tr1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kmagh"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r11ms"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wtf80"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f254y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ieyw5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2ss5k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_svdbj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mdt1n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aho6j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1dyuk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dw38f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w6pxi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oeypt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aisvb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q20t5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_llakn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4tcyj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7nkgl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_014g3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sbt1k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_atv8m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_438iy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f2jg5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ct1t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_62wyf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e4jqv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oopup"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y210q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pkxu7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_33f3o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p0n5h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a1ic5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v8lr2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8y0ej"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mjtcj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k3dcr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8xwrs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qo777"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kpfr1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bqb78"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2ref1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cl7x3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8g8ma"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hev7e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q4sdu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l2cgo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0n8od"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mnegw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dec5h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lkjyh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_try3g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x5a3u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ipohe"]
+
+[node name="TalentTree" type="Control"]
+top_level = true
+z_index = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y2r2o")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ci7j8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(0, 130)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+
+[node name="TopNavigationBar" parent="VBoxContainer" instance=ExtResource("3_e2pc6")]
+unique_name_in_owner = true
+layout_mode = 2
+title = "CORE"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(720, 1125)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_j8j5s")
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_right = 100
+
+[node name="SkillContainer" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 50
+
+[node name="Level1" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TextureRect" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_y8jas")
+isGoal = false
+
+[node name="TextureRect2" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_uurqd")
+talentResource = ExtResource("5_w3hrk")
+isGoal = false
+
+[node name="TextureRect3" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_akar3")
+isGoal = false
+
+[node name="TextureRect4" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_naoy6")
+talentResource = ExtResource("5_gsj4x")
+isGoal = false
+
+[node name="TextureRect5" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_iypqq")
+isGoal = false
+
+[node name="TextureRect6" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_076af")
+talentResource = ExtResource("5_l1qtp")
+isGoal = false
+lockColorBorder = Color(0.541176, 0.541176, 0.541176, 1)
+
+[node name="TextureRect7" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ghf2e")
+talentResource = ExtResource("6_b3dgn")
+isGoal = false
+
+[node name="TextureRect8" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_wfkkx")
+isGoal = false
+
+[node name="TextureRect9" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_j148u")
+talentResource = ExtResource("7_g40qd")
+isGoal = false
+
+[node name="TextureRect10" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2vees")
+talentResource = ExtResource("8_lvtro")
+isGoal = false
+
+[node name="TextureRect11" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_xxc4v")
+isGoal = false
+
+[node name="TextureRect12" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yb4ib")
+talentResource = ExtResource("9_w8fvn")
+isGoal = false
+
+[node name="TextureRect13" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_47jot")
+isGoal = false
+
+[node name="TextureRect14" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_8aepq")
+isGoal = false
+
+[node name="Level2" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TextureRect" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ovqay")
+isGoal = false
+
+[node name="TextureRect2" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mx1m2")
+talentResource = ExtResource("12_x35xj")
+isGoal = false
+
+[node name="TextureRect3" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cyscv")
+talentResource = ExtResource("14_8tfhg")
+isGoal = false
+
+[node name="TextureRect4" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_q0fq3")
+talentResource = ExtResource("13_u4pxf")
+isGoal = false
+
+[node name="TextureRect5" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_yc2dh")
+isGoal = false
+
+[node name="TextureRect6" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wcsa2")
+talentResource = ExtResource("15_180qt")
+isGoal = false
+
+[node name="TextureRect7" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_f7bbv")
+talentResource = ExtResource("16_di828")
+isGoal = false
+
+[node name="TextureRect8" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mykq1")
+isGoal = false
+
+[node name="TextureRect9" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ojfd1")
+talentResource = ExtResource("17_juo48")
+isGoal = false
+
+[node name="TextureRect10" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3o036")
+talentResource = ExtResource("18_gwgnd")
+isGoal = false
+
+[node name="TextureRect11" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_yhp3c")
+isGoal = false
+
+[node name="TextureRect12" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_rib8y")
+isGoal = false
+
+[node name="TextureRect13" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_pnaq1")
+isGoal = false
+
+[node name="TextureRect14" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_onvtu")
+isGoal = false
+
+[node name="Level3" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TextureRect" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_dc0d1")
+isGoal = false
+
+[node name="TextureRect2" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hn1py")
+talentResource = ExtResource("19_bswsf")
+isGoal = false
+
+[node name="TextureRect3" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_38pbi")
+isGoal = false
+
+[node name="TextureRect4" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_evnxv")
+talentResource = ExtResource("20_oey7f")
+isGoal = false
+
+[node name="TextureRect5" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_oc80p")
+isGoal = false
+
+[node name="TextureRect6" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_a8o6o")
+talentResource = ExtResource("21_rukvx")
+isGoal = false
+
+[node name="TextureRect7" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yfq4g")
+talentResource = ExtResource("22_cc25c")
+isGoal = false
+
+[node name="TextureRect8" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_eopuq")
+isGoal = false
+
+[node name="TextureRect9" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_k671d")
+talentResource = ExtResource("23_itn5p")
+isGoal = false
+
+[node name="TextureRect10" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_oqb25")
+talentResource = ExtResource("24_f1m66")
+isGoal = false
+
+[node name="TextureRect11" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_u0fvo")
+isGoal = false
+
+[node name="TextureRect12" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_iffxh")
+isGoal = false
+
+[node name="TextureRect13" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_686s2")
+isGoal = false
+
+[node name="TextureRect14" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_kixvk")
+isGoal = false
+
+[node name="Level4" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TextureRect" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_6a86m")
+isGoal = false
+
+[node name="TextureRect2" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rexmd")
+talentResource = ExtResource("25_7b72v")
+isGoal = false
+
+[node name="TextureRect3" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_c8scc")
+isGoal = false
+
+[node name="TextureRect4" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ang2q")
+talentResource = ExtResource("26_edq4t")
+isGoal = false
+
+[node name="TextureRect5" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_lkx2c")
+isGoal = false
+
+[node name="TextureRect6" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3ldfp")
+talentResource = ExtResource("27_gwqe1")
+isGoal = true
+
+[node name="TextureRect7" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hvhhk")
+talentResource = ExtResource("28_niegn")
+isGoal = false
+
+[node name="TextureRect8" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_xqle2")
+isGoal = false
+
+[node name="TextureRect9" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bb5du")
+talentResource = ExtResource("29_03jth")
+isGoal = false
+
+[node name="TextureRect10" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1mppw")
+talentResource = ExtResource("30_43ikl")
+isGoal = false
+
+[node name="TextureRect11" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_o8k8f")
+isGoal = false
+
+[node name="TextureRect12" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_jkfw6")
+isGoal = false
+
+[node name="TextureRect13" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_xo0sf")
+isGoal = false
+
+[node name="TextureRect14" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_5tv8w")
+isGoal = false
+
+[node name="Level5" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TextureRect" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_o1wcv")
+isGoal = false
+
+[node name="TextureRect2" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_g5a3f")
+isGoal = false
+
+[node name="TextureRect3" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1xitn")
+talentResource = ExtResource("31_esvot")
+isGoal = false
+
+[node name="TextureRect4" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wlwnw")
+talentResource = ExtResource("32_8xbec")
+isGoal = false
+
+[node name="TextureRect5" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ucas4")
+isGoal = false
+
+[node name="TextureRect6" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_27ocm")
+talentResource = ExtResource("33_p1f1v")
+isGoal = false
+
+[node name="TextureRect7" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_snsu8")
+talentResource = ExtResource("34_vjto1")
+isGoal = false
+
+[node name="TextureRect8" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mxnhg")
+isGoal = false
+
+[node name="TextureRect9" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_8uj8b")
+isGoal = false
+
+[node name="TextureRect10" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_g8xjw")
+talentResource = ExtResource("35_fhvy8")
+isGoal = false
+
+[node name="TextureRect11" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_vo13k")
+isGoal = false
+
+[node name="TextureRect12" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_udvcb")
+isGoal = false
+
+[node name="TextureRect13" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_3q0u2")
+isGoal = false
+
+[node name="TextureRect14" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_js5ek")
+isGoal = false
+
+[node name="Level6" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TextureRect" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_8cd3v")
+isGoal = false
+
+[node name="TextureRect2" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_7yqmn")
+isGoal = false
+
+[node name="TextureRect3" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_5kppj")
+isGoal = false
+
+[node name="TextureRect4" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2nx2i")
+talentResource = ExtResource("36_o4b0l")
+isGoal = false
+
+[node name="TextureRect5" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ypre5")
+isGoal = false
+
+[node name="TextureRect6" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hjel3")
+talentResource = ExtResource("37_25r57")
+isGoal = false
+
+[node name="TextureRect7" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bk8fo")
+talentResource = ExtResource("38_nki7f")
+isGoal = false
+
+[node name="TextureRect8" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_b4rvx")
+talentResource = ExtResource("40_5jebq")
+isGoal = false
+
+[node name="TextureRect9" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ug500")
+isGoal = false
+
+[node name="TextureRect10" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ubyfu")
+talentResource = ExtResource("39_584tu")
+isGoal = false
+
+[node name="TextureRect11" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_pv8q2")
+isGoal = false
+
+[node name="TextureRect12" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_we41r")
+isGoal = false
+
+[node name="TextureRect13" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_20a3d")
+isGoal = false
+
+[node name="TextureRect14" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_oxwk3")
+isGoal = false
+
+[node name="Level7" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TextureRect" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_v4q4o")
+isGoal = false
+
+[node name="TextureRect2" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_vpqkr")
+isGoal = false
+
+[node name="TextureRect3" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_4m4l1")
+isGoal = false
+
+[node name="TextureRect4" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_s83mk")
+talentResource = ExtResource("41_nudjp")
+isGoal = false
+
+[node name="TextureRect5" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_njmkp")
+isGoal = false
+
+[node name="TextureRect6" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_cpdj8")
+isGoal = false
+
+[node name="TextureRect7" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3p2wq")
+talentResource = ExtResource("42_t683g")
+isGoal = false
+
+[node name="TextureRect8" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_c0j0e")
+isGoal = false
+
+[node name="TextureRect9" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_pqs5g")
+isGoal = false
+
+[node name="TextureRect10" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cva5c")
+talentResource = ExtResource("43_odvjt")
+isGoal = false
+
+[node name="TextureRect11" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_nd6o1")
+isGoal = false
+
+[node name="TextureRect12" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_7rdkb")
+isGoal = false
+
+[node name="TextureRect13" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_kjwug")
+isGoal = false
+
+[node name="TextureRect14" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_x8u1u")
+isGoal = false
+
+[node name="Level8" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TextureRect" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_u84g0")
+isGoal = false
+
+[node name="TextureRect2" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_74ee4")
+isGoal = false
+
+[node name="TextureRect3" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_sffnn")
+isGoal = false
+
+[node name="TextureRect4" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_g2fb1")
+talentResource = ExtResource("44_g0mjs")
+isGoal = false
+
+[node name="TextureRect5" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_wokjf")
+isGoal = false
+
+[node name="TextureRect6" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_0fehe")
+isGoal = false
+
+[node name="TextureRect7" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rsu1t")
+talentResource = ExtResource("45_d4o12")
+isGoal = false
+
+[node name="TextureRect8" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_rlnlq")
+isGoal = false
+
+[node name="TextureRect9" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_wj8fi")
+isGoal = false
+
+[node name="TextureRect10" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1gb8j")
+talentResource = ExtResource("46_fmqbn")
+isGoal = false
+
+[node name="TextureRect11" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_krkg3")
+isGoal = false
+
+[node name="TextureRect12" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_pr0tu")
+isGoal = false
+
+[node name="TextureRect13" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_uobta")
+isGoal = false
+
+[node name="TextureRect14" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_dejln")
+isGoal = false
+
+[node name="Level9" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TextureRect" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_jbox2")
+isGoal = false
+
+[node name="TextureRect2" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_xpeni")
+isGoal = false
+
+[node name="TextureRect3" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_fcxwn")
+isGoal = false
+
+[node name="TextureRect4" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_62jip")
+talentResource = ExtResource("47_ruxo0")
+isGoal = false
+
+[node name="TextureRect5" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_vitfw")
+isGoal = false
+
+[node name="TextureRect6" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ut0p6")
+isGoal = false
+
+[node name="TextureRect7" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hirup")
+talentResource = ExtResource("48_527sm")
+isGoal = false
+
+[node name="TextureRect8" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_n8rq0")
+isGoal = false
+
+[node name="TextureRect9" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_0ki1o")
+isGoal = false
+
+[node name="TextureRect10" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hvmyd")
+talentResource = ExtResource("49_8520d")
+isGoal = false
+
+[node name="TextureRect11" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_54skc")
+isGoal = false
+
+[node name="TextureRect12" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_r3knd")
+isGoal = false
+
+[node name="TextureRect13" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ycl8r")
+isGoal = false
+
+[node name="TextureRect14" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_bhfch")
+isGoal = false
+
+[node name="Level10" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TextureRect" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_4t2cy")
+isGoal = false
+
+[node name="TextureRect2" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_368pd")
+isGoal = false
+
+[node name="TextureRect3" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_253y0")
+isGoal = false
+
+[node name="TextureRect4" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nwbq8")
+talentResource = ExtResource("50_u4gtm")
+isGoal = false
+
+[node name="TextureRect5" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_gg00y")
+isGoal = false
+
+[node name="TextureRect6" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_0uxcs")
+isGoal = false
+
+[node name="TextureRect7" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_re07x")
+isGoal = false
+
+[node name="TextureRect8" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_87lfq")
+isGoal = false
+
+[node name="TextureRect9" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_q0s0q")
+isGoal = false
+
+[node name="TextureRect10" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_5c1pb")
+isGoal = false
+
+[node name="TextureRect11" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_5xtfx")
+isGoal = false
+
+[node name="TextureRect12" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_5jvxt")
+isGoal = false
+
+[node name="TextureRect13" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_tk4yf")
+isGoal = false
+
+[node name="TextureRect14" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_dkirx")
+isGoal = false
+
+[node name="Level11" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TextureRect" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_n1h1k")
+isGoal = false
+
+[node name="TextureRect2" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_5yxfg")
+isGoal = false
+
+[node name="TextureRect3" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_p3tr1")
+isGoal = false
+
+[node name="TextureRect4" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kmagh")
+talentResource = ExtResource("51_hn6we")
+isGoal = false
+
+[node name="TextureRect5" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_r11ms")
+isGoal = false
+
+[node name="TextureRect6" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_wtf80")
+isGoal = false
+
+[node name="TextureRect7" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_f254y")
+isGoal = false
+
+[node name="TextureRect8" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ieyw5")
+isGoal = false
+
+[node name="TextureRect9" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_2ss5k")
+isGoal = false
+
+[node name="TextureRect10" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_svdbj")
+isGoal = false
+
+[node name="TextureRect11" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mdt1n")
+isGoal = false
+
+[node name="TextureRect12" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_aho6j")
+isGoal = false
+
+[node name="TextureRect13" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_1dyuk")
+isGoal = false
+
+[node name="TextureRect14" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_dw38f")
+isGoal = false
+
+[node name="Level12" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TextureRect" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_w6pxi")
+isGoal = false
+
+[node name="TextureRect2" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_oeypt")
+isGoal = false
+
+[node name="TextureRect3" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_aisvb")
+isGoal = false
+
+[node name="TextureRect4" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_q20t5")
+isGoal = false
+
+[node name="TextureRect5" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_llakn")
+isGoal = false
+
+[node name="TextureRect6" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_4tcyj")
+isGoal = false
+
+[node name="TextureRect7" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_7nkgl")
+isGoal = false
+
+[node name="TextureRect8" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_014g3")
+isGoal = false
+
+[node name="TextureRect9" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_sbt1k")
+isGoal = false
+
+[node name="TextureRect10" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_atv8m")
+isGoal = false
+
+[node name="TextureRect11" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_438iy")
+isGoal = false
+
+[node name="TextureRect12" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_f2jg5")
+isGoal = false
+
+[node name="TextureRect13" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_8ct1t")
+isGoal = false
+
+[node name="TextureRect14" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_62wyf")
+isGoal = false
+
+[node name="Level13" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TextureRect" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_e4jqv")
+isGoal = false
+
+[node name="TextureRect2" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_oopup")
+isGoal = false
+
+[node name="TextureRect3" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_y210q")
+isGoal = false
+
+[node name="TextureRect4" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_pkxu7")
+isGoal = false
+
+[node name="TextureRect5" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_33f3o")
+isGoal = false
+
+[node name="TextureRect6" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_p0n5h")
+isGoal = false
+
+[node name="TextureRect7" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_a1ic5")
+isGoal = false
+
+[node name="TextureRect8" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_v8lr2")
+isGoal = false
+
+[node name="TextureRect9" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_8y0ej")
+isGoal = false
+
+[node name="TextureRect10" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mjtcj")
+isGoal = false
+
+[node name="TextureRect11" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_k3dcr")
+isGoal = false
+
+[node name="TextureRect12" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_8xwrs")
+isGoal = false
+
+[node name="TextureRect13" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_qo777")
+isGoal = false
+
+[node name="TextureRect14" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_kpfr1")
+isGoal = false
+
+[node name="Level14" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TextureRect" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_bqb78")
+isGoal = false
+
+[node name="TextureRect2" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_2ref1")
+isGoal = false
+
+[node name="TextureRect3" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_cl7x3")
+isGoal = false
+
+[node name="TextureRect4" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8g8ma")
+talentResource = ExtResource("52_gylmj")
+isGoal = false
+
+[node name="TextureRect5" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_hev7e")
+isGoal = false
+
+[node name="TextureRect6" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_q4sdu")
+isGoal = false
+
+[node name="TextureRect7" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_l2cgo")
+isGoal = false
+
+[node name="TextureRect8" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_0n8od")
+isGoal = false
+
+[node name="TextureRect9" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mnegw")
+isGoal = false
+
+[node name="TextureRect10" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_dec5h")
+isGoal = false
+
+[node name="TextureRect11" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_lkjyh")
+isGoal = false
+
+[node name="TextureRect12" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_try3g")
+isGoal = false
+
+[node name="TextureRect13" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_x5a3u")
+isGoal = false
+
+[node name="TextureRect14" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_102im")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ipohe")
+isGoal = false

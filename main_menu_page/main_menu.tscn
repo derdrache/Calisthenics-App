@@ -1,0 +1,129 @@
+[gd_scene load_steps=9 format=3 uid="uid://wf7fe5674ix0"]
+
+[ext_resource type="Script" path="res://main_menu_page/main_menu.gd" id="1_kg18p"]
+[ext_resource type="PackedScene" uid="uid://dpdr3ylarm35f" path="res://main_menu_page/workout_page/workout_main_page.tscn" id="2_7da7p"]
+[ext_resource type="PackedScene" uid="uid://do0a3s15lltjj" path="res://main_menu_page/skill_tree_page/skill_tree_main_page.tscn" id="3_kvfax"]
+[ext_resource type="PackedScene" uid="uid://binpilr34p13s" path="res://main_menu_page/statistic_main_page.tscn" id="4_iwmvr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bbycy"]
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_krupe"]
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qhhjm"]
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ifjp"]
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kg18p")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PageContainer" type="Control" parent="VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 1000)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="WorkoutMainPage" parent="VBoxContainer/PageContainer" instance=ExtResource("2_7da7p")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="SkillTreeMainPage" parent="VBoxContainer/PageContainer" instance=ExtResource("3_kvfax")]
+unique_name_in_owner = true
+layout_mode = 2
+anchors_preset = 0
+
+[node name="StatisticMainPage" parent="VBoxContainer/PageContainer" instance=ExtResource("4_iwmvr")]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 360.0
+offset_top = 538.0
+offset_right = 360.0
+offset_bottom = 538.0
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bbycy")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 50
+
+[node name="WorkoutButton" type="Button" parent="VBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_krupe")
+text = "Workout"
+
+[node name="SkillTreeButton" type="Button" parent="VBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_qhhjm")
+text = "Skill Tree"
+
+[node name="StatisticButton" type="Button" parent="VBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_4ifjp")
+text = "Statistic"

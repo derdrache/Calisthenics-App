@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://csdxo78juxwcc"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_krsvt"]
+[ext_resource type="Resource" uid="uid://tdx6aqt1rgm1" path="res://resrouces/talent_resources/Leg/level2/High_Calf_Raise.tres" id="2_wawyf"]
+
+[resource]
+script = ExtResource("1_krsvt")
+unlocks = Array[ExtResource("1_krsvt")]([ExtResource("2_wawyf")])
+is_unlocked = false

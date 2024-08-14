@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://ch4opk2g4dei1"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_rss1q"]
+[ext_resource type="Resource" uid="uid://dbbs5lj6qh8dq" path="res://resrouces/talent_resources/Leg/level3/Assisted_Deep_Squat.tres" id="2_t1g0s"]
+
+[resource]
+script = ExtResource("1_rss1q")
+unlocks = Array[ExtResource("1_rss1q")]([ExtResource("2_t1g0s")])
+is_unlocked = false

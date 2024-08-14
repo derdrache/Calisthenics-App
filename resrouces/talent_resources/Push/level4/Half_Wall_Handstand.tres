@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://bceqkasnh4k61"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_y35kq"]
+[ext_resource type="Resource" uid="uid://4ud16d4qrk3s" path="res://resrouces/talent_resources/Push/level5/Wall_Walk_Handstand.tres" id="2_d28u0"]
+
+[resource]
+script = ExtResource("1_y35kq")
+unlocks = Array[ExtResource("1_y35kq")]([ExtResource("2_d28u0")])
+is_unlocked = false

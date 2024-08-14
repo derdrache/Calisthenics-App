@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://cce7jkf4bdor2"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_dwx3r"]
+[ext_resource type="Resource" uid="uid://bpiyp7rv47bh4" path="res://resrouces/talent_resources/Push/level3/Assisted_Pike_Hold.tres" id="2_eyvn3"]
+
+[resource]
+script = ExtResource("1_dwx3r")
+unlocks = Array[ExtResource("1_dwx3r")]([ExtResource("2_eyvn3")])
+is_unlocked = false

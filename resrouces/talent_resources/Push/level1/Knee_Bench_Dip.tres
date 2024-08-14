@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://bimdlk8hohe8p"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_xp53y"]
+[ext_resource type="Resource" uid="uid://b8sm6ac436doo" path="res://resrouces/talent_resources/Push/level2/Bench_Dip.tres" id="2_6prla"]
+
+[resource]
+script = ExtResource("1_xp53y")
+unlocks = Array[ExtResource("1_xp53y")]([ExtResource("2_6prla")])
+is_unlocked = false

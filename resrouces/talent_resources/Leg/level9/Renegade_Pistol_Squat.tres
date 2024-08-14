@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://crq1fglpumngd"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_347nm"]
+[ext_resource type="Resource" uid="uid://dya41fu3sjw5o" path="res://resrouces/talent_resources/Leg/level10/Weighted_Pistol_Squat.tres" id="2_omd21"]
+
+[resource]
+script = ExtResource("1_347nm")
+unlocks = Array[ExtResource("1_347nm")]([ExtResource("2_omd21")])
+is_unlocked = false

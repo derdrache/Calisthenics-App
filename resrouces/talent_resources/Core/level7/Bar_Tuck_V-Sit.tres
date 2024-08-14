@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://cxoa5pouurfa4"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_l0cbm"]
+[ext_resource type="Resource" uid="uid://b84klckc33xwv" path="res://resrouces/talent_resources/Core/level8/Bar_Straddle_V-Sit.tres" id="2_wasw0"]
+
+[resource]
+script = ExtResource("1_l0cbm")
+unlocks = Array[ExtResource("1_l0cbm")]([ExtResource("2_wasw0")])
+is_unlocked = false

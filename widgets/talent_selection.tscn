@@ -1,0 +1,151 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlm00wymo6axj"]
+
+[ext_resource type="Script" path="res://main_menu_page/workout_page/setting/Talent_selection_Button.gd" id="1_8ay73"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xkgnl"]
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j0rb5"]
+bg_color = Color(0.262745, 0.458824, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="TalentSelection" type="Button"]
+custom_minimum_size = Vector2(150, 150)
+offset_right = 150.0
+offset_bottom = 150.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_xkgnl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xkgnl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xkgnl")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_xkgnl")
+theme_override_styles/focus = SubResource("StyleBoxFlat_xkgnl")
+script = ExtResource("1_8ay73")
+
+[node name="ButtonsContainer" type="Control" parent="."]
+unique_name_in_owner = true
+z_index = 1
+anchors_preset = 0
+offset_left = 55.0
+offset_top = 57.0
+offset_right = 95.0
+offset_bottom = 97.0
+mouse_filter = 1
+
+[node name="Button5" type="Button" parent="ButtonsContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_j0rb5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_j0rb5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j0rb5")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j0rb5")
+theme_override_styles/focus = SubResource("StyleBoxFlat_j0rb5")
+text = "BREAK"
+
+[node name="Button" type="Button" parent="ButtonsContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_j0rb5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_j0rb5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j0rb5")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j0rb5")
+theme_override_styles/focus = SubResource("StyleBoxFlat_j0rb5")
+text = "PUSH"
+
+[node name="Button2" type="Button" parent="ButtonsContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_j0rb5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_j0rb5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j0rb5")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j0rb5")
+theme_override_styles/focus = SubResource("StyleBoxFlat_j0rb5")
+text = "Pull"
+
+[node name="Button3" type="Button" parent="ButtonsContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_j0rb5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_j0rb5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j0rb5")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j0rb5")
+theme_override_styles/focus = SubResource("StyleBoxFlat_j0rb5")
+text = "CORE"
+
+[node name="Button4" type="Button" parent="ButtonsContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_j0rb5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_j0rb5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j0rb5")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j0rb5")
+theme_override_styles/focus = SubResource("StyleBoxFlat_j0rb5")
+text = "LEG"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="Label" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 20
+text = "Empty"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

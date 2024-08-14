@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://dbxu1y6xbywnj"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_7rm0e"]
+[ext_resource type="Resource" uid="uid://cou27og48n30m" path="res://resrouces/talent_resources/Push/level4/Decline_Planche_Lean.tres" id="2_0wlbw"]
+
+[resource]
+script = ExtResource("1_7rm0e")
+unlocks = Array[ExtResource("1_7rm0e")]([ExtResource("2_0wlbw")])
+is_unlocked = false

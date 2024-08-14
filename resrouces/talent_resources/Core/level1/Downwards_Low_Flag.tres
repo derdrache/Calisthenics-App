@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://dkvqkjs0mivx6"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_suyct"]
+[ext_resource type="Resource" uid="uid://d4ef4pshclb17" path="res://resrouces/talent_resources/Core/level2/Low_Flag.tres" id="2_dr4u1"]
+
+[resource]
+script = ExtResource("1_suyct")
+unlocks = Array[ExtResource("1_suyct")]([ExtResource("2_dr4u1")])
+is_unlocked = false

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://bvbndyu8srpv5"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_ewy5s"]
+[ext_resource type="Resource" uid="uid://dosqlil4totnh" path="res://resrouces/talent_resources/Pull/level4/Adv._Skin_the_Cat.tres" id="2_0v72x"]
+
+[resource]
+script = ExtResource("1_ewy5s")
+unlocks = Array[ExtResource("1_ewy5s")]([ExtResource("2_0v72x")])
+is_unlocked = false

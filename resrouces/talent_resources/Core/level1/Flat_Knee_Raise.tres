@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://ik3gg8262epn"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_1osww"]
+[ext_resource type="Resource" uid="uid://b3hfb7cjli07b" path="res://resrouces/talent_resources/Core/level2/Flat_Bent_Leg_Raise.tres" id="2_7kywg"]
+
+[resource]
+script = ExtResource("1_1osww")
+unlocks = Array[ExtResource("1_1osww")]([ExtResource("2_7kywg")])
+is_unlocked = false

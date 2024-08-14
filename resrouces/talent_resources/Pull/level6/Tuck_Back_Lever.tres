@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://7yfsuxeidg6r"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_xcptm"]
+[ext_resource type="Resource" uid="uid://c7f6t7w3p4g5u" path="res://resrouces/talent_resources/Pull/level7/Adv._Tuck_Back_Lever.tres" id="2_276nk"]
+
+[resource]
+script = ExtResource("1_xcptm")
+unlocks = Array[ExtResource("1_xcptm")]([ExtResource("2_276nk")])
+is_unlocked = false

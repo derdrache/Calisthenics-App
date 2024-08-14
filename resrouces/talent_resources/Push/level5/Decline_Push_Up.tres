@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=4 format=3 uid="uid://dlff5msqky0i5"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_8oytc"]
+[ext_resource type="Resource" uid="uid://bw2a71pbjovrh" path="res://resrouces/talent_resources/Push/level6/Archer_Push_Up.tres" id="2_uyw8b"]
+[ext_resource type="Resource" uid="uid://b4hgi7ddlf1nd" path="res://resrouces/talent_resources/Push/level6/Wall_One_Arm_Push_Up.tres" id="3_thc5x"]
+
+[resource]
+script = ExtResource("1_8oytc")
+unlocks = Array[ExtResource("1_8oytc")]([ExtResource("2_uyw8b"), ExtResource("3_thc5x")])
+is_unlocked = false

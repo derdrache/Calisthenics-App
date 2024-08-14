@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=4 format=3 uid="uid://mgsileavhxtw"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_2vese"]
+[ext_resource type="Resource" uid="uid://c4qcwey5i16dc" path="res://resrouces/talent_resources/Leg/level7/Weighted_Bulgarian_Split_Squat.tres" id="2_dvcc4"]
+[ext_resource type="Resource" uid="uid://b52l0nutiqji7" path="res://resrouces/talent_resources/Leg/level7/Beginner_Shrimp_Squat.tres" id="3_iwucv"]
+
+[resource]
+script = ExtResource("1_2vese")
+unlocks = Array[ExtResource("1_2vese")]([ExtResource("2_dvcc4"), ExtResource("3_iwucv")])
+is_unlocked = false

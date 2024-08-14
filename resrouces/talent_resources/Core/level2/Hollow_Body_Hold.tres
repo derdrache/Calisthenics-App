@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://bql5l8vorc1d2"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_w3v5j"]
+[ext_resource type="Resource" uid="uid://cu00770yuoa4g" path="res://resrouces/talent_resources/Core/level3/Hollow_Body_Rock.tres" id="2_odkx4"]
+
+[resource]
+script = ExtResource("1_w3v5j")
+unlocks = Array[ExtResource("1_w3v5j")]([ExtResource("2_odkx4")])
+is_unlocked = false

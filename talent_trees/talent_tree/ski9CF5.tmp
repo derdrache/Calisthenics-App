@@ -1,0 +1,257 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4epljpxfo7sy"]
+
+[ext_resource type="Texture2D" uid="uid://bgt5ytt41k45g" path="res://icon.svg" id="1_a4vsj"]
+[ext_resource type="PackedScene" uid="uid://dtsq21l50odev" path="res://skill_tree/skill_icon.tscn" id="1_wgslg"]
+
+[node name="SkillTree" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 40
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "PULL"
+horizontal_alignment = 1
+
+[node name="Level1" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 40
+
+[node name="TextureRect" parent="VBoxContainer/Level1" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect2" parent="VBoxContainer/Level1" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect3" parent="VBoxContainer/Level1" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect4" parent="VBoxContainer/Level1" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect5" parent="VBoxContainer/Level1" node_paths=PackedStringArray("connectedNodes") instance=ExtResource("1_wgslg")]
+layout_mode = 2
+talentName = "Beginner Australian Push-up"
+icon = ExtResource("1_a4vsj")
+connectedNodes = [NodePath("../../Level2/TextureRect5")]
+
+[node name="TextureRect6" parent="VBoxContainer/Level1" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect7" parent="VBoxContainer/Level1" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect8" parent="VBoxContainer/Level1" node_paths=PackedStringArray("connectedNodes") instance=ExtResource("1_wgslg")]
+layout_mode = 2
+talentName = "Dead hang"
+icon = ExtResource("1_a4vsj")
+connectedNodes = [NodePath("../../Level2/TextureRect8")]
+
+[node name="TextureRect9" parent="VBoxContainer/Level1" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect10" parent="VBoxContainer/Level1" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect11" parent="VBoxContainer/Level1" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect12" parent="VBoxContainer/Level1" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="Level2" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 40
+
+[node name="TextureRect" parent="VBoxContainer/Level2" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect2" parent="VBoxContainer/Level2" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect3" parent="VBoxContainer/Level2" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect4" parent="VBoxContainer/Level2" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect5" parent="VBoxContainer/Level2" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+talentName = "Beginner Australian Push-up"
+icon = ExtResource("1_a4vsj")
+
+[node name="TextureRect6" parent="VBoxContainer/Level2" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect7" parent="VBoxContainer/Level2" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect8" parent="VBoxContainer/Level2" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+talentName = "Dead hang"
+icon = ExtResource("1_a4vsj")
+
+[node name="TextureRect9" parent="VBoxContainer/Level2" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect10" parent="VBoxContainer/Level2" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect11" parent="VBoxContainer/Level2" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect12" parent="VBoxContainer/Level2" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="Level3" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 40
+
+[node name="TextureRect" parent="VBoxContainer/Level3" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect2" parent="VBoxContainer/Level3" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect3" parent="VBoxContainer/Level3" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect4" parent="VBoxContainer/Level3" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect5" parent="VBoxContainer/Level3" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+talentName = "Beginner Australian Push-up"
+icon = ExtResource("1_a4vsj")
+
+[node name="TextureRect6" parent="VBoxContainer/Level3" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect7" parent="VBoxContainer/Level3" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect8" parent="VBoxContainer/Level3" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+talentName = "Dead hang"
+icon = ExtResource("1_a4vsj")
+
+[node name="TextureRect9" parent="VBoxContainer/Level3" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect10" parent="VBoxContainer/Level3" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect11" parent="VBoxContainer/Level3" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect12" parent="VBoxContainer/Level3" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="Level4" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 40
+
+[node name="TextureRect" parent="VBoxContainer/Level4" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect2" parent="VBoxContainer/Level4" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect3" parent="VBoxContainer/Level4" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect4" parent="VBoxContainer/Level4" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect5" parent="VBoxContainer/Level4" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+talentName = "Beginner Australian Push-up"
+icon = ExtResource("1_a4vsj")
+
+[node name="TextureRect6" parent="VBoxContainer/Level4" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect7" parent="VBoxContainer/Level4" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect8" parent="VBoxContainer/Level4" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+talentName = "Dead hang"
+icon = ExtResource("1_a4vsj")
+
+[node name="TextureRect9" parent="VBoxContainer/Level4" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect10" parent="VBoxContainer/Level4" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect11" parent="VBoxContainer/Level4" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null
+
+[node name="TextureRect12" parent="VBoxContainer/Level4" instance=ExtResource("1_wgslg")]
+layout_mode = 2
+texture = null

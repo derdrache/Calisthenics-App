@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://ctt3nt7k3okih"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_pk50v"]
+[ext_resource type="Resource" uid="uid://cxoxsx5rjomui" path="res://resrouces/talent_resources/Pull/level6/Negative_Pull-Up.tres" id="2_26axt"]
+
+[resource]
+script = ExtResource("1_pk50v")
+unlocks = Array[ExtResource("1_pk50v")]([ExtResource("2_26axt")])
+is_unlocked = false

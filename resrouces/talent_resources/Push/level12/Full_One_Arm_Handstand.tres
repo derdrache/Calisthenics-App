@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://b5c8c1ustnusr"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_xi3jq"]
+[ext_resource type="Resource" uid="uid://gfqla315n3dr" path="res://resrouces/talent_resources/Push/level11/One_Arm_Handstand.tres" id="2_nkvm2"]
+
+[resource]
+script = ExtResource("1_xi3jq")
+unlocks = Array[ExtResource("1_xi3jq")]([ExtResource("2_nkvm2")])
+is_unlocked = false

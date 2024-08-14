@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=4 format=3 uid="uid://7meh4c466n3d"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_hsowx"]
+[ext_resource type="Resource" uid="uid://c00erci7n4j1x" path="res://resrouces/talent_resources/Core/level2/One-Leg_Supported_L-Sit.tres" id="2_ocjev"]
+[ext_resource type="Resource" uid="uid://dkl1hsfc5audh" path="res://resrouces/talent_resources/Core/level2/Straddle_Leg_Raise_Hold.tres" id="3_fhk6w"]
+
+[resource]
+script = ExtResource("1_hsowx")
+unlocks = Array[ExtResource("1_hsowx")]([ExtResource("2_ocjev"), ExtResource("3_fhk6w")])
+is_unlocked = false

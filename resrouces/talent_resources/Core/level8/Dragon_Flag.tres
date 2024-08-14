@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://cexjygaiwmx85"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_x262v"]
+[ext_resource type="Resource" uid="uid://urxitnkihaqq" path="res://resrouces/talent_resources/Core/level9/Weighted_Dragon_Flag.tres" id="2_84mvf"]
+
+[resource]
+script = ExtResource("1_x262v")
+unlocks = Array[ExtResource("1_x262v")]([ExtResource("2_84mvf")])
+is_unlocked = false

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://2otn068es2qi"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_d5b3c"]
+[ext_resource type="Resource" uid="uid://dlsot44vq8ae" path="res://resrouces/talent_resources/Pull/level11/Front_Lever.tres" id="2_xayvt"]
+
+[resource]
+script = ExtResource("1_d5b3c")
+unlocks = Array[ExtResource("1_d5b3c")]([ExtResource("2_xayvt")])
+is_unlocked = false

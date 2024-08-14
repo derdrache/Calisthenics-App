@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=4 format=3 uid="uid://b5sd5pgqkwcjk"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_tdd5k"]
+[ext_resource type="Resource" uid="uid://bgkiu80j6d30i" path="res://resrouces/talent_resources/Push/level12/Planche.tres" id="2_7u8nm"]
+[ext_resource type="Resource" uid="uid://n2mtf535lem" path="res://resrouces/talent_resources/Push/level11/Weighted_decline_One_Arm_Push_Up.tres" id="3_xiae5"]
+
+[resource]
+script = ExtResource("1_tdd5k")
+unlocks = Array[ExtResource("1_tdd5k")]([ExtResource("2_7u8nm"), ExtResource("3_xiae5")])
+is_unlocked = false

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://d2lj4pablq3q8"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_jolim"]
+[ext_resource type="Resource" uid="uid://cgp44j6yj12nn" path="res://resrouces/talent_resources/Core/level2/Straddle_One-Arm_Plank.tres" id="2_pcbnj"]
+
+[resource]
+script = ExtResource("1_jolim")
+unlocks = Array[ExtResource("1_jolim")]([ExtResource("2_pcbnj")])
+is_unlocked = false

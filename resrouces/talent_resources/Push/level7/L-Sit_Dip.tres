@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://ctluy1xcwvcne"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_llcjk"]
+[ext_resource type="Resource" uid="uid://b6s6465jgxl1d" path="res://resrouces/talent_resources/Push/level6/Tuck_L-Sit_Dip.tres" id="2_prcnd"]
+
+[resource]
+script = ExtResource("1_llcjk")
+unlocks = Array[ExtResource("1_llcjk")]([ExtResource("2_prcnd")])
+is_unlocked = false

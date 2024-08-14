@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://bnhxl7fk0w1rw"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_4aluw"]
+[ext_resource type="Resource" uid="uid://dok7bkmfc7br6" path="res://resrouces/talent_resources/Core/level5/Adv._Tuck_Dragon_Flag.tres" id="2_rhfk5"]
+
+[resource]
+script = ExtResource("1_4aluw")
+unlocks = Array[ExtResource("1_4aluw")]([ExtResource("2_rhfk5")])
+is_unlocked = false

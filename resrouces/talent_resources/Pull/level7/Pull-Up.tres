@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=6 format=3 uid="uid://443i4afdcxaa"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_epfii"]
+[ext_resource type="Resource" uid="uid://uvjq5uxc77jp" path="res://resrouces/talent_resources/Pull/level8/Close_Pull-Up.tres" id="2_yr2e8"]
+[ext_resource type="Resource" uid="uid://8okiblbc1war" path="res://resrouces/talent_resources/Pull/level8/Muscle_Up.tres" id="3_uvclc"]
+[ext_resource type="Resource" uid="uid://c0im7wdoeekfl" path="res://resrouces/talent_resources/Pull/level8/Weighted_Pull-Up.tres" id="4_q5ii0"]
+[ext_resource type="Resource" uid="uid://bc3i1m2p5sc16" path="res://resrouces/talent_resources/Pull/level8/Wide_Pull-Up.tres" id="5_jt7rx"]
+
+[resource]
+script = ExtResource("1_epfii")
+unlocks = Array[ExtResource("1_epfii")]([ExtResource("2_yr2e8"), ExtResource("3_uvclc"), ExtResource("4_q5ii0"), ExtResource("5_jt7rx")])
+is_unlocked = false

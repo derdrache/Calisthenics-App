@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://l80doxxp864"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_hsjm6"]
+[ext_resource type="Resource" uid="uid://b5jn2wlsq18ou" path="res://resrouces/talent_resources/Push/level6/Decline_Pike_Push_Up.tres" id="2_ehk5y"]
+
+[resource]
+script = ExtResource("1_hsjm6")
+unlocks = Array[ExtResource("1_hsjm6")]([ExtResource("2_ehk5y")])
+is_unlocked = false

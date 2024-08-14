@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://dbpxs70r0d7jc"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_62inx"]
+[ext_resource type="Resource" uid="uid://cxpb5cjp4q6e8" path="res://resrouces/talent_resources/Core/level4/Extended_Plank.tres" id="2_jawbx"]
+
+[resource]
+script = ExtResource("1_62inx")
+unlocks = Array[ExtResource("1_62inx")]([ExtResource("2_jawbx")])
+is_unlocked = false

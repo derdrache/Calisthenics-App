@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://dkl1hsfc5audh"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_8ycs7"]
+[ext_resource type="Resource" uid="uid://cdmh5wkjbv1jy" path="res://resrouces/talent_resources/Core/level3/Leg_Raise_Hold.tres" id="2_ak6w2"]
+
+[resource]
+script = ExtResource("1_8ycs7")
+unlocks = Array[ExtResource("1_8ycs7")]([ExtResource("2_ak6w2")])
+is_unlocked = false

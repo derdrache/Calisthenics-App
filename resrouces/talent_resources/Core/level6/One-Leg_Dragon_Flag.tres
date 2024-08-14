@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://cei12k6j5nj33"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_y6iin"]
+[ext_resource type="Resource" uid="uid://b68yf53k85o67" path="res://resrouces/talent_resources/Core/level7/Negative_Dragon_Flag.tres" id="2_0rmjq"]
+
+[resource]
+script = ExtResource("1_y6iin")
+unlocks = Array[ExtResource("1_y6iin")]([ExtResource("2_0rmjq")])
+is_unlocked = false

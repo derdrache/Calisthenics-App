@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://pxgwye3uqvsf"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_dc8hx"]
+[ext_resource type="Resource" uid="uid://df254cwyoid74" path="res://resrouces/talent_resources/Push/level4/Negative_Dip.tres" id="2_txlig"]
+
+[resource]
+script = ExtResource("1_dc8hx")
+unlocks = Array[ExtResource("1_dc8hx")]([ExtResource("2_txlig")])
+is_unlocked = false

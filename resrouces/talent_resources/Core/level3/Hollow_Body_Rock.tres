@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://cu00770yuoa4g"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_b4fqu"]
+[ext_resource type="Resource" uid="uid://b7s78nka1vxrf" path="res://resrouces/talent_resources/Core/level4/Hollow_Body_Crunch.tres" id="2_4pch0"]
+
+[resource]
+script = ExtResource("1_b4fqu")
+unlocks = Array[ExtResource("1_b4fqu")]([ExtResource("2_4pch0")])
+is_unlocked = false

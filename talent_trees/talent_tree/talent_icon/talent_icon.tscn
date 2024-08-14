@@ -1,0 +1,79 @@
+[gd_scene load_steps=6 format=3 uid="uid://dtsq21l50odev"]
+
+[ext_resource type="Script" path="res://talent_trees/talent_tree/talent_icon/talent_icon.gd" id="1_wadke"]
+[ext_resource type="Texture2D" uid="uid://bgt5ytt41k45g" path="res://icon.svg" id="2_apso6"]
+[ext_resource type="Texture2D" uid="uid://bdrc4dvbryedq" path="res://assets/icons/Icon_Large_Star_SeethroughOutline.png" id="3_my3td"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gps8g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_opdbu"]
+
+[node name="TextureRect" type="Panel"]
+custom_minimum_size = Vector2(80, 70)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxEmpty_gps8g")
+script = ExtResource("1_wadke")
+isGoal = null
+lockColorPanel = Color(0.196078, 0.196078, 0.196078, 1)
+unlockColorPanel = Color(0.54902, 0.54902, 0.54902, 1)
+unlockColorBorder = Color(0, 1, 0, 1)
+
+[node name="Button" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 48.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_opdbu")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_opdbu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_opdbu")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_opdbu")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_opdbu")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+custom_minimum_size = Vector2(70, 60)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -30.0
+offset_right = 35.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_apso6")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 11
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="GoalIcon" type="TextureRect" parent="."]
+visible = false
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 0
+offset_left = 58.0
+offset_top = -12.0
+offset_right = 88.0
+offset_bottom = 18.0
+texture = ExtResource("3_my3td")
+expand_mode = 1

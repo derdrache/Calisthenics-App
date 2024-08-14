@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://de1w06ubw25h"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_0cs7b"]
+[ext_resource type="Resource" uid="uid://crq1fglpumngd" path="res://resrouces/talent_resources/Leg/level9/Renegade_Pistol_Squat.tres" id="2_kqxpc"]
+
+[resource]
+script = ExtResource("1_0cs7b")
+unlocks = Array[ExtResource("1_0cs7b")]([ExtResource("2_kqxpc")])
+is_unlocked = false

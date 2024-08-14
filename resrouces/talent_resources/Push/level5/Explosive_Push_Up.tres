@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://cfq51rl3a2chv"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_g7xvn"]
+[ext_resource type="Resource" uid="uid://7h18sm5lbxo7" path="res://resrouces/talent_resources/Push/level6/Clapping_Push_Up.tres" id="2_1duxi"]
+
+[resource]
+script = ExtResource("1_g7xvn")
+unlocks = Array[ExtResource("1_g7xvn")]([ExtResource("2_1duxi")])
+is_unlocked = false

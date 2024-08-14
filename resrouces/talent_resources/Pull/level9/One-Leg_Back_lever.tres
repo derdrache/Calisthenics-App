@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://b6qjg3tlpfuqb"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_mssmy"]
+[ext_resource type="Resource" uid="uid://d3c5wk7y5b5pa" path="res://resrouces/talent_resources/Pull/level10/Back_Lever.tres" id="2_22wig"]
+
+[resource]
+script = ExtResource("1_mssmy")
+unlocks = Array[ExtResource("1_mssmy")]([ExtResource("2_22wig")])
+is_unlocked = false

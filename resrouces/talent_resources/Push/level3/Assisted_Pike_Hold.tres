@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://bpiyp7rv47bh4"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_8yx5e"]
+[ext_resource type="Resource" uid="uid://bceqkasnh4k61" path="res://resrouces/talent_resources/Push/level4/Half_Wall_Handstand.tres" id="2_6vib3"]
+
+[resource]
+script = ExtResource("1_8yx5e")
+unlocks = Array[ExtResource("1_8yx5e")]([ExtResource("2_6vib3")])
+is_unlocked = false

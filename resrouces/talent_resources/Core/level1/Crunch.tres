@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://dyr3xesmqt4br"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_id2at"]
+[ext_resource type="Resource" uid="uid://4pq38iqmu1eg" path="res://resrouces/talent_resources/Core/level2/Reverse_Crunch.tres" id="2_a813t"]
+
+[resource]
+script = ExtResource("1_id2at")
+unlocks = Array[ExtResource("1_id2at")]([ExtResource("2_a813t")])
+is_unlocked = false

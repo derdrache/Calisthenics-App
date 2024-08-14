@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://ddjf8o845susc"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_30p7j"]
+[ext_resource type="Resource" uid="uid://bb67y5p56gskj" path="res://resrouces/talent_resources/Push/level9/Wall_One_Arm_Handstand.tres" id="2_ma2ng"]
+
+[resource]
+script = ExtResource("1_30p7j")
+unlocks = Array[ExtResource("1_30p7j")]([ExtResource("2_ma2ng")])
+is_unlocked = false

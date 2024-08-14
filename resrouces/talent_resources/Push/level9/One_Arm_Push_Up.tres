@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://be74is8w5qcrs"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_7itki"]
+[ext_resource type="Resource" uid="uid://cwuwxobewcjau" path="res://resrouces/talent_resources/Push/level8/Straddle_one_arm_Push_Up.tres" id="2_f2xhs"]
+
+[resource]
+script = ExtResource("1_7itki")
+unlocks = Array[ExtResource("1_7itki")]([ExtResource("2_f2xhs")])
+is_unlocked = false

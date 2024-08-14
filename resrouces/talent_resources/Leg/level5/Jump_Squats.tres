@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://dds8a3jbo1kbc"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_scdud"]
+[ext_resource type="Resource" uid="uid://mkfdlb5vhnx5" path="res://resrouces/talent_resources/Leg/level6/Box_Jump.tres" id="2_sxat2"]
+
+[resource]
+script = ExtResource("1_scdud")
+unlocks = Array[ExtResource("1_scdud")]([ExtResource("2_sxat2")])
+is_unlocked = false

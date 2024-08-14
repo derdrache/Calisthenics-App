@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=6 format=3 uid="uid://bdtv2k5gbge2f"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_qytcm"]
+[ext_resource type="Resource" uid="uid://b58qb0yapc5ja" path="res://resrouces/talent_resources/Leg/level5/Deep_Squat_Hold.tres" id="2_5andu"]
+[ext_resource type="Resource" uid="uid://ld6fpl87s034" path="res://resrouces/talent_resources/Leg/level5/Weighted_Deep_Squat.tres" id="3_45uq3"]
+[ext_resource type="Resource" uid="uid://6dmahvcur85v" path="res://resrouces/talent_resources/Leg/level5/Split_Squat.tres" id="4_5oarx"]
+[ext_resource type="Resource" uid="uid://cnmsj1384tdk4" path="res://resrouces/talent_resources/Leg/level5/Cossack_Squat.tres" id="5_lsbnw"]
+
+[resource]
+script = ExtResource("1_qytcm")
+unlocks = Array[ExtResource("1_qytcm")]([ExtResource("2_5andu"), ExtResource("3_45uq3"), ExtResource("4_5oarx"), ExtResource("5_lsbnw")])
+is_unlocked = false

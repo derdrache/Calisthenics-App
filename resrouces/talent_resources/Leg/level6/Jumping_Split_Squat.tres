@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TalentResource" load_steps=3 format=3 uid="uid://cknsnbj1c1spx"]
+
+[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_rewok"]
+[ext_resource type="Resource" uid="uid://b52l0nutiqji7" path="res://resrouces/talent_resources/Leg/level7/Beginner_Shrimp_Squat.tres" id="2_c66h2"]
+
+[resource]
+script = ExtResource("1_rewok")
+unlocks = Array[ExtResource("1_rewok")]([ExtResource("2_c66h2")])
+is_unlocked = false
