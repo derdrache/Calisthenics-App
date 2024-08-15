@@ -6,7 +6,7 @@ extends Control
 const MAIN_MENU = preload("res://main_menu_page/main_menu.tscn")
 const EXERCISE_BOX = preload("res://main_menu_page/workout_page/setting/exercise_box.tscn")
 const LABEL_SELECTION_CARUSEL = preload("res://widgets/selection_carusel/label_selection_carusel.tscn")
-const WORKOUT_A = preload("res://resrouces/workout_resources/Workout_A.tres")
+var workoutAResource = preload("res://resrouces/workout_resources/Workout_A.tres")
 
 var globalBreakTime : int = GlobalData.initialBreakTime
 var workoutModus = GlobalData.workoutModus[0]
@@ -37,10 +37,10 @@ func _on_top_navigation_bar_previous_page():
 
 func _save_workout():
 	var workoutData = _get_all_exersice_data()
-	WORKOUT_A.workoutName = "Test"
-	WORKOUT_A.exercises = workoutData
+	workoutAResource.workoutName = "Test"
+	workoutAResource.exercises = workoutData
 	
-	SaveAndLoad.save_resource(WORKOUT_A)
+	SaveAndLoad.save_resource(workoutAResource)
 	
 	_on_top_navigation_bar_previous_page()
 	

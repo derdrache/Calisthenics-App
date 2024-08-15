@@ -6,4 +6,4 @@
 script = ExtResource("1_dw0yf")
 workoutName = ""
 exercises = []
-workoutModus = 0
+workoutModus = "Superset"

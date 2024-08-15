@@ -133,4 +133,3 @@ func get_selected_value():
 	for uiNode in object_container.get_children():
 		if uiNode.get_global_rect().has_point(valuePosition):
 			return uiNode.text
-
