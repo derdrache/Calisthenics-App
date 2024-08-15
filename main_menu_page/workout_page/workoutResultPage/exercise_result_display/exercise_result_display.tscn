@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://bul5vfdpnr86m"]
+
+[ext_resource type="Script" path="res://main_menu_page/workout_page/workoutResultPage/exercise_result_display/exercise_result_display.gd" id="1_ygvn3"]
+
+[node name="HBoxContainer" type="HBoxContainer"]
+theme_override_constants/separation = 30
+script = ExtResource("1_ygvn3")
+
+[node name="ExerciseNameLabel" type="Label" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "Exercise 1: "
+autowrap_mode = 2
+
+[node name="DisplayContainer" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 5

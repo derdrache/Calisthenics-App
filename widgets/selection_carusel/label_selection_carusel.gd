@@ -10,6 +10,7 @@ signal valueChanged
 
 
 @export var title = ""
+@export var stringList: Array[String]
 @export var maxValue = 10
 @export var steps = 1
 @export var initialValue = 5
@@ -17,23 +18,30 @@ signal valueChanged
 
 func _ready():
 	titleNode.text = title
-	_create_labels()
-	await get_tree().create_timer(0.01).timeout
+	
+	if stringList.is_empty():
+		_create_number_labels()
+	else:
+		_create_normal_labels()
+		
+	await get_tree().create_timer(0.1).timeout
+	
 	_set_carusel_start()
 	
 	
 	if not withBackground: _remove_background()
 
-func _create_labels():
+func _create_number_labels():
 	var spacer = Label.new()
 	spacer.custom_minimum_size.x = 80
 	object_container.add_child(spacer)
-	
 	
 	for i in maxValue / steps:
 		var label = Label.new()
 		label.text = str((i + 1) * steps)
 		label.add_theme_font_size_override("font_size", 30)
+		label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 		object_container.add_child(label)
 		label.custom_minimum_size.x = 51
 	
@@ -41,6 +49,23 @@ func _create_labels():
 	spacer2.custom_minimum_size.x = 80
 	object_container.add_child(spacer2)
 
+func _create_normal_labels():
+	var spacer = Label.new()
+	spacer.custom_minimum_size.x = 60
+	object_container.add_child(spacer)
+	
+	for i in len(stringList):
+		var label = Label.new()
+		label.text = stringList[i]
+		label.add_theme_font_size_override("font_size", 20)
+		label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+		object_container.add_child(label)
+		label.custom_minimum_size.x = 80
+	
+	var spacer2 = Label.new()
+	spacer2.custom_minimum_size.x = 60
+	object_container.add_child(spacer2)
 
 func  _remove_background():
 	background_panel.add_theme_stylebox_override("panel", StyleBoxEmpty.new())

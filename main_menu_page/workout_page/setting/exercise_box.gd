@@ -8,9 +8,7 @@ extends Control
 @export var selectedTalent : Resource
 @export var sets = 3
 @export var reps = 5
-@export var breakTime = 180
-@export var globalBreakTime = 180
-
+@export var breakTime = GlobalData.initialBreakTime
 
 const SELECTION_CARUSEL = preload("res://widgets/selection_carusel/label_selection_carusel.tscn")
 const TALENT_SELECTION_CARUSEL = preload("res://widgets/selection_carusel/talent_selection_carusel.tscn")
@@ -24,6 +22,7 @@ func _ready():
 	
 	_refresh_sets_label()
 	_refresh_reps_label()
+	_refresh_break_time_label()
 
 func _process(delta):
 	%LetterNumber.text = GlobalData.abcList[get_index()]
@@ -90,3 +89,7 @@ func _setup_break():
 	%SetSelection.hide()
 	%RepSelection.hide()
 	%BreakTimeSelection.show()
+
+func change_break_time(newValue):
+	breakTime = newValue
+	_refresh_break_time_label()

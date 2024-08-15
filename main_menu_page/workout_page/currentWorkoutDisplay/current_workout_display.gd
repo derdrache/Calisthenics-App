@@ -3,7 +3,7 @@ extends PanelContainer
 @onready var display_box = %DisplayBox
 
 
-const WORKOUT_ICON = preload("res://main_menu_page/workout_page/currentWorkoutDisplay/workout_icon.tscn")
+const EXERCISE_ICON = preload("res://widgets/excersice_icon/exercise_icon.tscn")
 
 var workoutData = SaveAndLoad.load_workout_resources()
 
@@ -11,8 +11,8 @@ func _ready():
 	_set_display()
 	
 func _set_display():
-	for exersice in workoutData.exersices:
-		var workoutIconNode = WORKOUT_ICON.instantiate()
-		workoutIconNode.exersiceName = exersice.talent.get_talent_name()
+	for exercise in workoutData.exercises:
+		var workoutIconNode = EXERCISE_ICON.instantiate()
+		workoutIconNode.talent = exercise.talent
 		
 		display_box.add_child(workoutIconNode)

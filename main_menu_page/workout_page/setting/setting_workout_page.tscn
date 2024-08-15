@@ -84,7 +84,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_kxu6w")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_kxu6w")
 theme_override_styles/focus = SubResource("StyleBoxFlat_kxu6w")
 text = "Modus:
-Superset"
+"
 
 [node name="GlobalBreakButton" type="Button" parent="VBoxContainer/MarginContainer3/HBoxContainer"]
 unique_name_in_owner = true

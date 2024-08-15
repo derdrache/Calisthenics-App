@@ -7,3 +7,4 @@
 script = ExtResource("1_eg6qb")
 unlocks = Array[ExtResource("1_eg6qb")]([ExtResource("2_la7c2")])
 is_unlocked = false
+goal = 10

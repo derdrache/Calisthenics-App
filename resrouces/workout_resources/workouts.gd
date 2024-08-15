@@ -2,5 +2,6 @@ extends Resource
 class_name WorkoutResource
 
 @export var workoutName : String
-@export var exersices : Array
-@export var workoutModus = GlobalData.workoutModus.SUPERSET
+@export var exercises : Array
+@export var workoutModus : String = "Superset"
+

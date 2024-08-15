@@ -1,17 +1,32 @@
 extends Control
 
-var currentExcersice = GlobalWorkout.get_current_exersice()
+@onready var continue_button = %ContinueButton
+
+
+var currentExcercises = GlobalWorkout.get_current_exercise()
+var isWorkoutDone = GlobalWorkout.is_workout_done()
+var repsDone
 
 func _ready():
-	%ContinueButton.pressed.connect(_next_step)
+	%SelectionCarusel.valueChanged.connect(_set_reps_done)
+	continue_button.pressed.connect(_next_step)
 	
-	%CurrentExersiceLabel.text = currentExcersice.talent.get_talent_name()
+	repsDone = %SelectionCarusel.initialValue
+	%CurrentExerciseLabel.text = currentExcercises.talent.get_talent_name()
 	
 	var currentSet = GlobalWorkout.get_current_set()
 	var maxSet = GlobalWorkout.get_current_max_set()
 	%SetInformationLabel.text = "Set: " + str(currentSet) + " / " + str(maxSet)
+	
+	if isWorkoutDone: continue_button.text = "DONE"
+
+func _set_reps_done(value):
+	repsDone = value
 
 func _next_step():
-	GlobalWorkout.next_exersice()
-	get_tree().change_scene_to_file("res://main_menu_page/workout_page/doWorkout/break_page.tscn")
+	GlobalWorkout.next_exersice(int(repsDone))
+	if isWorkoutDone:
+		get_tree().change_scene_to_file("res://main_menu_page/workout_page/workoutResultPage/workout_done.tscn")
+	else:
+		get_tree().change_scene_to_file("res://main_menu_page/workout_page/doWorkout/break_page.tscn")
 	

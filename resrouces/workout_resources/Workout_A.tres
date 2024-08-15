@@ -5,4 +5,5 @@
 [resource]
 script = ExtResource("1_dw0yf")
 workoutName = ""
-workouts = []
+exercises = []
+workoutModus = 0

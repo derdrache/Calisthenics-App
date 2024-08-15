@@ -7,3 +7,4 @@
 script = ExtResource("1_347nm")
 unlocks = Array[ExtResource("1_347nm")]([ExtResource("2_omd21")])
 is_unlocked = false
+goal = 10

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cnweebf3p7uls"]
+[gd_scene load_steps=5 format=3 uid="uid://cnweebf3p7uls"]
 
 [ext_resource type="Script" path="res://main_menu_page/workout_page/doWorkout/break_page.gd" id="1_hjgah"]
 [ext_resource type="Script" path="res://main_menu_page/workout_page/doWorkout/ProgressBar.gd" id="2_7inol"]
+[ext_resource type="PackedScene" uid="uid://c5empu6m00tpy" path="res://widgets/excersice_icon/exercise_icon.tscn" id="2_pe57c"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qeskm"]
 bg_color = Color(0.192157, 0.192157, 0.192157, 1)
@@ -64,11 +65,34 @@ text = "90 sec"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="NextExersiceDisplay" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/NextExersiceDisplay"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="VBoxContainer/NextExersiceDisplay/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 35
+text = "NEXT:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WorkoutIcon" parent="VBoxContainer/NextExersiceDisplay/HBoxContainer" instance=ExtResource("2_pe57c")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+
 [node name="CountDownBar" type="ProgressBar" parent="VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
-size_flags_vertical = 6
+size_flags_vertical = 2
 max_value = 90.0
 step = 1.0
 show_percentage = false

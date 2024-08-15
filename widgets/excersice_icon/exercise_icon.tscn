@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c5empu6m00tpy"]
 
-[ext_resource type="Script" path="res://main_menu_page/workout_page/currentWorkoutDisplay/workout_icon.gd" id="1_wyw60"]
+[ext_resource type="Script" path="res://widgets/excersice_icon/exercise_icon.gd" id="1_80sgc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8nsfn"]
 border_width_left = 2
@@ -21,7 +21,7 @@ offset_left = 2.0
 offset_top = 2.0
 offset_right = 98.0
 offset_bottom = 98.0
-script = ExtResource("1_wyw60")
+script = ExtResource("1_80sgc")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0

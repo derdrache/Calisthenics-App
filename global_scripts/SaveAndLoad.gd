@@ -13,13 +13,3 @@ func load_workout_resources():
 			var resource = load(saveWorkoutPath + fileName)
 			return resource
 
-#
-#func _load_car_resources():
-	#for fileName in DirAccess.get_files_at(GlobalData.saveFilesPath):
-		#if fileName.get_extension()== "tres":
-			#var savedCarRescource = load(GlobalData.saveFilesPath + fileName)
-			#
-			#for carResName in DirAccess.get_files_at(GlobalData.carResourcePath):
-				#if carResName == fileName:
-					#var carRescource = load(GlobalData.carResourcePath + carResName)
-					#_overwrite_car_resource_data(savedCarRescource, carRescource)
