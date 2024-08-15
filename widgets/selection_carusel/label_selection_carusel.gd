@@ -6,17 +6,23 @@ signal valueChanged
 @onready var object_container = %ObjectContainer
 @onready var selection_marker = %SelectionMarker
 @onready var titleNode = %Title
+@onready var background_panel = %BackgroundPanel
+
 
 @export var title = ""
 @export var maxValue = 10
 @export var steps = 1
 @export var initialValue = 5
+@export var withBackground = true
 
 func _ready():
 	titleNode.text = title
 	_create_labels()
 	await get_tree().create_timer(0.01).timeout
 	_set_carusel_start()
+	
+	
+	if not withBackground: _remove_background()
 
 func _create_labels():
 	var spacer = Label.new()
@@ -34,6 +40,10 @@ func _create_labels():
 	var spacer2 = Label.new()
 	spacer2.custom_minimum_size.x = 80
 	object_container.add_child(spacer2)
+
+
+func  _remove_background():
+	background_panel.add_theme_stylebox_override("panel", StyleBoxEmpty.new())
 	
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == 1 and event.is_pressed():

@@ -1,0 +1,101 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqsjs21sb0ikq"]
+
+[ext_resource type="Script" path="res://main_menu_page/workout_page/doWorkout/do_workout_page.gd" id="1_fsfw8"]
+[ext_resource type="PackedScene" uid="uid://dod8k7apd4f3" path="res://widgets/selection_carusel/label_selection_carusel.tscn" id="2_v8r8w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tix4e"]
+bg_color = Color(0.192157, 0.192157, 0.192157, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[node name="WorkoutPage" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fsfw8")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="CurrentExersiceLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 25
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="SetInformationLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 25
+text = "SET 1 / 6"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GoalLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 60
+text = "GOAL: 5 Reps
+"
+vertical_alignment = 1
+
+[node name="SelectionCarusel" parent="MarginContainer/VBoxContainer" instance=ExtResource("2_v8r8w")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+title = "Reps done"
+maxValue = 99
+initialValue = 7
+withBackground = false
+
+[node name="ContinueButton" type="Button" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_tix4e")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tix4e")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tix4e")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_tix4e")
+theme_override_styles/focus = SubResource("StyleBoxFlat_tix4e")
+text = "CONTINUE"

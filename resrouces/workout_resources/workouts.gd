@@ -1,4 +1,6 @@
 extends Resource
+class_name WorkoutResource
 
 @export var workoutName : String
-@export var workouts : Array[Dictionary]
+@export var exersices : Array
+@export var workoutModus = GlobalData.workoutModus.SUPERSET

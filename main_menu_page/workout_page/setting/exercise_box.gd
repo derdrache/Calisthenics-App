@@ -11,6 +11,7 @@ extends Control
 @export var breakTime = 180
 @export var globalBreakTime = 180
 
+
 const SELECTION_CARUSEL = preload("res://widgets/selection_carusel/label_selection_carusel.tscn")
 const TALENT_SELECTION_CARUSEL = preload("res://widgets/selection_carusel/talent_selection_carusel.tscn")
 
@@ -19,9 +20,13 @@ func _ready():
 	rep_selection.pressed.connect(_set_reps_window)
 	break_time_selection.pressed.connect(_set_break_window)
 	talent_selection.talent_updated.connect(_set_talent)
+	%DeleteButton.pressed.connect(queue_free)
 	
 	_refresh_sets_label()
 	_refresh_reps_label()
+
+func _process(delta):
+	%LetterNumber.text = GlobalData.abcList[get_index()]
 
 func _refresh_sets_label():
 	set_selection.text = str(sets) + " Sets"

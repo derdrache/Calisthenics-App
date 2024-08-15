@@ -1,8 +1,43 @@
-[gd_scene load_steps=4 format=3 uid="uid://burqvpdk5h6cn"]
+[gd_scene load_steps=8 format=3 uid="uid://burqvpdk5h6cn"]
 
 [ext_resource type="Script" path="res://main_menu_page/workout_page/setting/setting_workout_page.gd" id="1_ys275"]
 [ext_resource type="PackedScene" uid="uid://brpavu0ocrgcq" path="res://widgets/top_navigation_bar/top_navigation_bar.tscn" id="2_huq1w"]
 [ext_resource type="PackedScene" uid="uid://ix2g6f8f0bne" path="res://main_menu_page/workout_page/setting/exercise_box.tscn" id="3_rdxg7"]
+[ext_resource type="Texture2D" uid="uid://bcvvg3yet5110" path="res://assets/icons/Icon_Add.png" id="4_p7aft"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kxu6w"]
+bg_color = Color(0.498039, 0.498039, 0.498039, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lpmb0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hf3jq"]
+bg_color = Color(0.498039, 0.498039, 0.498039, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
 
 [node name="SetupWorkoutPage" type="Control"]
 layout_mode = 3
@@ -23,23 +58,100 @@ grow_vertical = 2
 
 [node name="TopNavigationBar" parent="VBoxContainer" instance=ExtResource("2_huq1w")]
 layout_mode = 2
-title = "WORKOUT"
+title = "SET WORKOUT"
+
+[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer3"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 50
+
+[node name="ModusButton" type="Button" parent="VBoxContainer/MarginContainer3/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_kxu6w")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kxu6w")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kxu6w")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_kxu6w")
+theme_override_styles/focus = SubResource("StyleBoxFlat_kxu6w")
+text = "Modus:
+Superset"
+
+[node name="GlobalBreakButton" type="Button" parent="VBoxContainer/MarginContainer3/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_kxu6w")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kxu6w")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kxu6w")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_kxu6w")
+theme_override_styles/focus = SubResource("StyleBoxFlat_kxu6w")
+text = "Break:
+180 sec"
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_right = 20
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/MarginContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/MarginContainer"]
+unique_name_in_owner = true
 layout_mode = 2
-theme_override_constants/separation = 30
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
 
-[node name="exercise_box" parent="VBoxContainer/MarginContainer/VBoxContainer2" instance=ExtResource("3_rdxg7")]
+[node name="ExerciseContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer/ScrollContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(720, 0)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="exercise_box" parent="VBoxContainer/MarginContainer/ScrollContainer/ExerciseContainer" instance=ExtResource("3_rdxg7")]
 layout_mode = 2
 
-[node name="exercise_box2" parent="VBoxContainer/MarginContainer/VBoxContainer2" instance=ExtResource("3_rdxg7")]
+[node name="addButtonContainer" type="MarginContainer" parent="VBoxContainer/MarginContainer/ScrollContainer/ExerciseContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 50
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/MarginContainer/ScrollContainer/ExerciseContainer/addButtonContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("4_p7aft")
+expand_mode = 1
+
+[node name="addExerciseButton" type="Button" parent="VBoxContainer/MarginContainer/ScrollContainer/ExerciseContainer/addButtonContainer/TextureRect"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lpmb0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_lpmb0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lpmb0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_lpmb0")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lpmb0")
 
 [node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -49,13 +161,14 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="Button" type="Button" parent="VBoxContainer/MarginContainer2"]
+[node name="SaveWorkoutButton" type="Button" parent="VBoxContainer/MarginContainer2"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_hf3jq")
 text = "SAVE"
 
 [connection signal="previousPage" from="VBoxContainer/TopNavigationBar" to="." method="_on_top_navigation_bar_previous_page"]
-[connection signal="pressed" from="VBoxContainer/MarginContainer2/Button" to="." method="_on_button_pressed"]

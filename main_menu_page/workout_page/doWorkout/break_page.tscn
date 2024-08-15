@@ -1,0 +1,113 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnweebf3p7uls"]
+
+[ext_resource type="Script" path="res://main_menu_page/workout_page/doWorkout/break_page.gd" id="1_hjgah"]
+[ext_resource type="Script" path="res://main_menu_page/workout_page/doWorkout/ProgressBar.gd" id="2_7inol"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qeskm"]
+bg_color = Color(0.192157, 0.192157, 0.192157, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[node name="BreakPage" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hjgah")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 25
+text = "BREAK"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="BreakLengthLabel" type="Label" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 25
+text = "90 sec"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CountDownBar" type="ProgressBar" parent="VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_vertical = 6
+max_value = 90.0
+step = 1.0
+show_percentage = false
+script = ExtResource("2_7inol")
+
+[node name="Label" type="Label" parent="VBoxContainer/CountDownBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "1:30"
+
+[node name="Timer" type="Timer" parent="VBoxContainer/CountDownBar"]
+autostart = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 20
+
+[node name="ContinueButton" type="Button" parent="VBoxContainer/MarginContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_qeskm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qeskm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qeskm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_qeskm")
+theme_override_styles/focus = SubResource("StyleBoxFlat_qeskm")
+text = "CONTINUE"
+
+[connection signal="timeout" from="VBoxContainer/CountDownBar/Timer" to="VBoxContainer/CountDownBar" method="_on_timer_timeout"]

@@ -98,7 +98,7 @@ func _on_top_navigation_bar_previous_page():
 
 func _set_talent_selection():
 	var newTitle = "SELECT " + top_navigation_bar.title + " WORKOUT"
-	top_navigation_bar.change_title(newTitle, 45)
+	top_navigation_bar.change_title(newTitle, 30)
 	top_navigation_bar.hide_back_button()
 	top_navigation_bar.show_close_button()
 	

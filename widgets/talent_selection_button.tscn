@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dlm00wymo6axj"]
 
-[ext_resource type="Script" path="res://main_menu_page/workout_page/setting/Talent_selection_Button.gd" id="1_8ay73"]
+[ext_resource type="Script" path="res://widgets/talent_selection_Button.gd" id="1_svkwr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xkgnl"]
 border_width_left = 2
@@ -38,7 +38,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_xkgnl")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_xkgnl")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_xkgnl")
 theme_override_styles/focus = SubResource("StyleBoxFlat_xkgnl")
-script = ExtResource("1_8ay73")
+script = ExtResource("1_svkwr")
 
 [node name="ButtonsContainer" type="Control" parent="."]
 unique_name_in_owner = true
@@ -49,21 +49,6 @@ offset_top = 57.0
 offset_right = 95.0
 offset_bottom = 97.0
 mouse_filter = 1
-
-[node name="Button5" type="Button" parent="ButtonsContainer"]
-custom_minimum_size = Vector2(80, 80)
-layout_mode = 0
-offset_right = 80.0
-offset_bottom = 80.0
-scale = Vector2(0.5, 0.5)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_styles/normal = SubResource("StyleBoxFlat_j0rb5")
-theme_override_styles/hover = SubResource("StyleBoxFlat_j0rb5")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_j0rb5")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_j0rb5")
-theme_override_styles/focus = SubResource("StyleBoxFlat_j0rb5")
-text = "BREAK"
 
 [node name="Button" type="Button" parent="ButtonsContainer"]
 custom_minimum_size = Vector2(80, 80)
@@ -93,7 +78,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_j0rb5")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_j0rb5")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_j0rb5")
 theme_override_styles/focus = SubResource("StyleBoxFlat_j0rb5")
-text = "Pull"
+text = "PULL"
 
 [node name="Button3" type="Button" parent="ButtonsContainer"]
 custom_minimum_size = Vector2(80, 80)

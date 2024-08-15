@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://ix2g6f8f0bne"]
+[gd_scene load_steps=7 format=3 uid="uid://ix2g6f8f0bne"]
 
 [ext_resource type="Script" path="res://main_menu_page/workout_page/setting/exercise_box.gd" id="1_1a0tk"]
-[ext_resource type="PackedScene" uid="uid://dlm00wymo6axj" path="res://widgets/talent_selection.tscn" id="2_bx6iu"]
+[ext_resource type="PackedScene" uid="uid://dlm00wymo6axj" path="res://widgets/talent_selection_button.tscn" id="2_r8gl2"]
+[ext_resource type="Texture2D" uid="uid://c7bpp43qq54rv" path="res://assets/icons/Icon_X.png" id="3_uloxn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6l4ya"]
 bg_color = Color(0.85098, 0.85098, 0.85098, 1)
@@ -25,56 +26,61 @@ expand_margin_top = 5.0
 expand_margin_right = 5.0
 expand_margin_bottom = 5.0
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xdavv"]
+
 [node name="exercise_box" type="Control"]
-custom_minimum_size = Vector2(680, 200)
+custom_minimum_size = Vector2(720, 240)
 layout_mode = 3
-anchors_preset = 0
-offset_right = 680.0
-offset_bottom = 200.0
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+mouse_filter = 1
 script = ExtResource("1_1a0tk")
 
-[node name="exercise_box" type="PanelContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 30
+
+[node name="exercise_box" type="PanelContainer" parent="MarginContainer"]
 custom_minimum_size = Vector2(680, 200)
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -340.0
-offset_right = 340.0
-offset_bottom = 200.0
-grow_horizontal = 2
+layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_6l4ya")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="exercise_box"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/exercise_box"]
 layout_mode = 2
-theme_override_constants/separation = 50
+theme_override_constants/separation = 40
 
-[node name="MarginContainer" type="MarginContainer" parent="exercise_box/HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/exercise_box/HBoxContainer"]
 layout_mode = 2
-theme_override_constants/margin_left = 40
 
-[node name="TalentSelection" parent="exercise_box/HBoxContainer/MarginContainer" instance=ExtResource("2_bx6iu")]
+[node name="LetterNumber" type="Label" parent="MarginContainer/exercise_box/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+
+[node name="TalentSelection" parent="MarginContainer/exercise_box/HBoxContainer" instance=ExtResource("2_r8gl2")]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="MarginContainer2" type="MarginContainer" parent="exercise_box/HBoxContainer"]
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/exercise_box/HBoxContainer"]
 layout_mode = 2
-theme_override_constants/margin_top = 25
-theme_override_constants/margin_bottom = 25
 
-[node name="VBoxContainer" type="VBoxContainer" parent="exercise_box/HBoxContainer/MarginContainer2"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/exercise_box/HBoxContainer/MarginContainer3"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_constants/separation = 50
+theme_override_constants/separation = 40
 
-[node name="setSetupContainer" type="HBoxContainer" parent="exercise_box/HBoxContainer/MarginContainer2/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_constants/separation = 50
-
-[node name="SetSelection" type="Button" parent="exercise_box/HBoxContainer/MarginContainer2/VBoxContainer/setSetupContainer"]
+[node name="SetSelection" type="Button" parent="MarginContainer/exercise_box/HBoxContainer/MarginContainer3/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
@@ -84,7 +90,7 @@ theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_4tnm1")
 text = "10 Sets"
 
-[node name="RepSelection" type="Button" parent="exercise_box/HBoxContainer/MarginContainer2/VBoxContainer/setSetupContainer"]
+[node name="RepSelection" type="Button" parent="MarginContainer/exercise_box/HBoxContainer/MarginContainer3/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
@@ -94,9 +100,31 @@ theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_4tnm1")
 text = "10 Reps"
 
-[node name="BreakTimeSelection" type="Button" parent="exercise_box/HBoxContainer/MarginContainer2/VBoxContainer/setSetupContainer"]
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/exercise_box/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/exercise_box/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="MarginContainer/exercise_box/HBoxContainer/MarginContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+horizontal_alignment = 1
+
+[node name="setSetupContainer" type="VBoxContainer" parent="MarginContainer/exercise_box/HBoxContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 50
+
+[node name="BreakTimeSelection" type="Button" parent="MarginContainer/exercise_box/HBoxContainer/MarginContainer2/VBoxContainer/setSetupContainer"]
 unique_name_in_owner = true
-visible = false
 custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -104,3 +132,26 @@ theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_4tnm1")
 text = "180 sec"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 0
+offset_left = 646.0
+offset_right = 716.0
+offset_bottom = 70.0
+texture = ExtResource("3_uloxn")
+expand_mode = 1
+
+[node name="DeleteButton" type="Button" parent="TextureRect"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xdavv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_xdavv")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_xdavv")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_xdavv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xdavv")

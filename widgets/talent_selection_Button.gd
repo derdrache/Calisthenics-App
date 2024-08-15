@@ -73,9 +73,6 @@ func _show_talent_tree(talentGroup):
 		talentNode = load("res://talent_trees/talent_tree/core_talent_tree.tscn").instantiate()
 	elif talentGroup == "LEG":
 		talentNode = load("res://talent_trees/talent_tree/leg_talent_tree.tscn").instantiate()
-	elif talentGroup == "BREAK":
-		_setup_break()
-		return
 
 	talentNode.talentSelection = true
 	talentNode.selected_talent.connect(_set_talent)
@@ -84,7 +81,3 @@ func _show_talent_tree(talentGroup):
 func _set_talent(talent):
 	label.text = talent.get_talent_name()
 	talent_updated.emit(talent)
-
-func _setup_break():
-	label.text = "Break"
-	talent_updated.emit(null)
