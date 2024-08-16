@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="exercise_history" load_steps=2 format=3 uid="uid://cn0guvtyukh7"]
+
+[ext_resource type="Script" path="res://resrouces/exersice_history.gd" id="1_gtl74"]
+
+[resource]
+script = ExtResource("1_gtl74")
+maxRep = 0
+totalReps = 0
+totalSets = 0

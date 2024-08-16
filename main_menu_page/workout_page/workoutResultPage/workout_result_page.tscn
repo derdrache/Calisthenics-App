@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b1ec4ycq32277"]
 
-[ext_resource type="Script" path="res://main_menu_page/workout_page/workoutResultPage/workout_done.gd" id="1_4eg03"]
+[ext_resource type="Script" path="res://main_menu_page/workout_page/workoutResultPage/workout_result_page.gd" id="1_4eg03"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hqmbx"]
 bg_color = Color(0.192157, 0.192157, 0.192157, 1)
@@ -70,9 +70,9 @@ custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
-theme_override_styles/normal = SubResource("StyleBoxFlat_hqmbx")
+theme_override_styles/focus = SubResource("StyleBoxFlat_hqmbx")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_hqmbx")
 theme_override_styles/hover = SubResource("StyleBoxFlat_hqmbx")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_hqmbx")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_hqmbx")
-theme_override_styles/focus = SubResource("StyleBoxFlat_hqmbx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_hqmbx")
 text = "FINISH"

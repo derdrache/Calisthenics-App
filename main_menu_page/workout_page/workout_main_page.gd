@@ -9,4 +9,5 @@ func _open_setting():
 
 func _start_workout():
 	GlobalWorkout.start_workout()
+	
 	get_tree().change_scene_to_file("res://main_menu_page/workout_page/doWorkout/do_workout_page.tscn")

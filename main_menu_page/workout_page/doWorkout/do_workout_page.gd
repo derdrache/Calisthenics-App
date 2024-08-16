@@ -26,7 +26,7 @@ func _set_reps_done(value):
 func _next_step():
 	GlobalWorkout.next_exersice(int(repsDone))
 	if isWorkoutDone:
-		get_tree().change_scene_to_file("res://main_menu_page/workout_page/workoutResultPage/workout_done.tscn")
+		get_tree().change_scene_to_file("res://main_menu_page/workout_page/workoutResultPage/workout_result_page.tscn")
 	else:
 		get_tree().change_scene_to_file("res://main_menu_page/workout_page/doWorkout/break_page.tscn")
 	

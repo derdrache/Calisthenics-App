@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dtsq21l50odev"]
 
 [ext_resource type="Script" path="res://talent_trees/talent_tree/talent_icon/talent_icon.gd" id="1_wadke"]
-[ext_resource type="Texture2D" uid="uid://bgt5ytt41k45g" path="res://icon.svg" id="2_apso6"]
+[ext_resource type="Texture2D" uid="uid://bgt5ytt41k45g" path="res://assets/icons/icon.svg" id="2_apso6"]
 [ext_resource type="Texture2D" uid="uid://bdrc4dvbryedq" path="res://assets/icons/Icon_Large_Star_SeethroughOutline.png" id="3_my3td"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gps8g"]

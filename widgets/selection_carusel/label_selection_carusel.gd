@@ -24,7 +24,7 @@ func _ready():
 	else:
 		_create_normal_labels()
 		
-	await get_tree().create_timer(0.1).timeout
+	await get_tree().create_timer(0.04).timeout
 	
 	_set_carusel_start()
 	
