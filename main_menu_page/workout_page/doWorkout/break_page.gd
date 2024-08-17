@@ -13,3 +13,7 @@ func _ready():
 	
 func _next_exersice():
 	get_tree().change_scene_to_file("res://main_menu_page/workout_page/doWorkout/do_workout_page.tscn")
+
+
+func _on_count_down_bar_count_down_done() -> void:
+	_next_exersice()

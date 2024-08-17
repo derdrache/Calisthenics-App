@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://b1ec4ycq32277"]
+[gd_scene load_steps=4 format=3 uid="uid://b1ec4ycq32277"]
 
 [ext_resource type="Script" path="res://main_menu_page/workout_page/workoutResultPage/workout_result_page.gd" id="1_4eg03"]
+[ext_resource type="PackedScene" uid="uid://c1u5yg2o45dr" path="res://widgets/safe_area_container/safe_area_container.tscn" id="2_npj5r"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hqmbx"]
 bg_color = Color(0.192157, 0.192157, 0.192157, 1)
@@ -23,48 +24,46 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4eg03")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="SaftyArea" parent="." instance=ExtResource("2_npj5r")]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="SaftyArea"]
+layout_mode = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
+theme_override_constants/margin_bottom = 50
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="SaftyArea/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="SaftyArea/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 50
 text = "NICE DONE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="WorkoutTimeLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="WorkoutTimeLabel" type="Label" parent="SaftyArea/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 40
 text = "TIME: "
 
-[node name="ExerciseResultContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="ExerciseResultContainer" type="VBoxContainer" parent="SaftyArea/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 25
 
-[node name="FinishButton" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="FinishButton" type="Button" parent="SaftyArea/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 100)
 layout_mode = 2

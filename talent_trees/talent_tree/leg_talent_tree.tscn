@@ -1,7 +1,8 @@
-[gd_scene load_steps=235 format=3 uid="uid://bgnq4k6hedx6d"]
+[gd_scene load_steps=236 format=3 uid="uid://bgnq4k6hedx6d"]
 
 [ext_resource type="Script" path="res://talent_trees/talent_tree/talent_tree.gd" id="1_v2k57"]
 [ext_resource type="Texture2D" uid="uid://dvobueh3j5k0v" path="res://assets/images/full-shot-ninja-wearing-equipment.jpg" id="2_8kqxn"]
+[ext_resource type="PackedScene" uid="uid://c1u5yg2o45dr" path="res://widgets/safe_area_container/safe_area_container.tscn" id="2_e4yjj"]
 [ext_resource type="PackedScene" uid="uid://brpavu0ocrgcq" path="res://widgets/top_navigation_bar/top_navigation_bar.tscn" id="3_erudu"]
 [ext_resource type="PackedScene" uid="uid://dtsq21l50odev" path="res://talent_trees/talent_tree/talent_icon/talent_icon.tscn" id="4_wsh3r"]
 [ext_resource type="Resource" uid="uid://csdxo78juxwcc" path="res://resrouces/talent_resources/Leg/level1/Calf_Raise.tres" id="5_4bbsi"]
@@ -40,7 +41,7 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j8j5s"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7iw5j"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i1pba"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)
 border_width_left = 2
 border_width_top = 2
@@ -52,13 +53,13 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4arm2"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oyn87"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r70dq"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jrkav"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qjnlx"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kp3yk"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pehbu"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kbpav"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)
 border_width_left = 2
 border_width_top = 2
@@ -70,25 +71,25 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d3fjg"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1tfbx"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w0do8"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m5hx8"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_udboh"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3ripm"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m0fw6"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_drn3y"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nb4ap"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w5b54"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k5qbd"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0a3vf"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gauxf"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n1xci"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h7epg"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mo4o5"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bm5at"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_foimx"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j6lfr"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1j6fx"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)
 border_width_left = 2
 border_width_top = 2
@@ -100,13 +101,13 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lrtqd"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_megon"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lc7ad"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_caado"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lrvia"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gbbr7"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jvem2"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ua0c"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)
 border_width_left = 2
 border_width_top = 2
@@ -118,25 +119,25 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_krmym"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5kktv"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_405i5"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i52b3"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kpikm"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ynor"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_isonk"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_txisa"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yim4d"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b5fwg"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vai6a"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6x2nj"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ahc3y"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tqvvj"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ujshl"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_moear"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u22y7"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_16t5a"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i7f64"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j43yo"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)
 border_width_left = 2
 border_width_top = 2
@@ -148,13 +149,13 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_suk04"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aka2j"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tfvag"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0mdiw"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3qc1d"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mw2uw"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ckcq7"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nuw26"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)
 border_width_left = 2
 border_width_top = 2
@@ -166,25 +167,25 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kipnw"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pubu3"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oi0x3"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_twr05"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yn62b"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e25wa"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_466wp"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0xbkg"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7cuyp"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_88vm4"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gwj5f"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_76juf"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r2xom"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uqwub"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3bx68"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jqln3"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_djcxm"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x81ql"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p2te4"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hsj2o"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)
 border_width_left = 2
 border_width_top = 2
@@ -196,13 +197,13 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6jcjv"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2wyhm"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ad620"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uala2"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rvjme"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kpq17"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ln87b"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xxw6c"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)
 border_width_left = 2
 border_width_top = 2
@@ -214,11 +215,11 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_menyo"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_adp0m"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eww2j"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v2x6j"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1e4i4"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r7iod"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)
 border_width_left = 2
 border_width_top = 2
@@ -230,19 +231,19 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y3fw2"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mkj57"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3ciy8"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6ocmb"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5muli"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fvoxd"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uyxf4"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ehrnr"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rcen0"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2q0c7"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hc6qg"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bttsn"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t3cdl"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f126d"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)
 border_width_left = 2
 border_width_top = 2
@@ -254,9 +255,9 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ivrsx"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j12nl"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gdbj6"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tmvw3"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)
 border_width_left = 2
 border_width_top = 2
@@ -268,7 +269,7 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fmj55"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yoc5o"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)
 border_width_left = 2
 border_width_top = 2
@@ -280,7 +281,7 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rwu41"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_frpbg"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)
 border_width_left = 2
 border_width_top = 2
@@ -292,7 +293,7 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1wqsv"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t8gtf"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)
 border_width_left = 2
 border_width_top = 2
@@ -304,7 +305,7 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xvpq7"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ash7q"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)
 border_width_left = 2
 border_width_top = 2
@@ -316,7 +317,7 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2qgm6"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uswn2"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)
 border_width_left = 2
 border_width_top = 2
@@ -328,23 +329,23 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yqiih"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oy7lb"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_leglk"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1a7rg"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6oksx"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qbjyd"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h6tey"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y21eo"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qbdi6"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hksp8"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dh07b"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cfpv0"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bfq5s"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ug3rr"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kyqcn"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5qi1e"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ro7dl"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1hk34"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)
 border_width_left = 2
 border_width_top = 2
@@ -356,7 +357,7 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vl0d0"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3u72g"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)
 border_width_left = 2
 border_width_top = 2
@@ -368,7 +369,7 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w7nyp"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spdnv"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)
 border_width_left = 2
 border_width_top = 2
@@ -380,7 +381,7 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6sqiw"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wcqr6"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)
 border_width_left = 2
 border_width_top = 2
@@ -392,7 +393,7 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4jk1w"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jkbqm"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)
 border_width_left = 2
 border_width_top = 2
@@ -404,25 +405,25 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eir4j"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bvf1x"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8tu2b"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q6yd2"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nw3te"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_exiku"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_51obe"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2f45n"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_trlqr"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rinek"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xo7ss"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fdy0m"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bk36p"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i72oa"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q4yb1"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ppay1"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3n215"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7ntk3"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_msu8c"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_13v4v"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)
 border_width_left = 2
 border_width_top = 2
@@ -434,7 +435,7 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jyy4g"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_emtww"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)
 border_width_left = 2
 border_width_top = 2
@@ -446,7 +447,7 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kwcic"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w6bmb"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)
 border_width_left = 2
 border_width_top = 2
@@ -458,29 +459,29 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g27ij"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ghswr"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ce5db"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rhvbv"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_630ug"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jt1gm"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wcuml"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jwolw"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_llypq"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_opdni"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p41ow"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b0gnw"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f140t"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s66sa"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_onq7x"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uok6r"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r7k2s"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m51b1"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bth2t"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hlo24"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k5257"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bnou1"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nd0mm"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5qx81"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)
 border_width_left = 2
 border_width_top = 2
@@ -492,9 +493,9 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_700dk"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sk4qc"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ataxe"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u14km"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)
 border_width_left = 2
 border_width_top = 2
@@ -506,25 +507,25 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_12dqr"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n7lpa"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2iqtn"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5urgp"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xhp3c"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k61q1"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fcndi"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ncr6h"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k1lot"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yydqv"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c2yvg"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l75d5"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jyhui"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7e1ew"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rmqlc"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c3lc5"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5u67a"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d6xqs"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7k67a"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dwrwj"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)
 border_width_left = 2
 border_width_top = 2
@@ -536,9 +537,9 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_muotb"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_chflm"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_choek"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uujkx"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)
 border_width_left = 2
 border_width_top = 2
@@ -550,9 +551,9 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wb5dn"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8rksx"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tibgy"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ud747"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)
 border_width_left = 2
 border_width_top = 2
@@ -564,25 +565,25 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3iiji"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yb7e1"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_20u0f"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jxgh6"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wok0b"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ed34s"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lm53w"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7q0l4"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c00ky"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4baey"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jqc7f"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xnbrg"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xi2km"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_slk0x"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uea07"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cvnxn"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_45idv"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ws72q"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cet2k"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e5tl8"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)
 border_width_left = 2
 border_width_top = 2
@@ -594,9 +595,9 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b17ys"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3fe03"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cax24"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_34wbr"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)
 border_width_left = 2
 border_width_top = 2
@@ -608,9 +609,9 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gb3wr"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e66u7"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ohsh"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_edtco"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)
 border_width_left = 2
 border_width_top = 2
@@ -622,29 +623,29 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_thxrn"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m5vgo"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eia0w"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ggnpb"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hbahq"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jm6af"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s61ou"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1lxqk"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ceh1n"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0qlud"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wrkho"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sp6f7"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4d3t6"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hmprs"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jrjlm"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_68110"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o6ufi"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bv4x1"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n3bum"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xvkuk"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n43oc"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6lxe1"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0qjgv"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6fw4v"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)
 border_width_left = 2
 border_width_top = 2
@@ -656,111 +657,111 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0xq36"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o3m55"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ilunb"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2gr0f"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0bcuh"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jvow0"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lw8sw"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4blan"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dpd3b"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_urdod"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ne308"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m0q3w"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d6mnl"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x58cc"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_14lrd"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6aiwx"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4to8c"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b268v"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ui04b"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v2bsf"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yc1hj"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ae3oj"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vgiac"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hcvw5"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_44l64"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wfb4q"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d7650"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eb6xd"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sc6mu"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1xlg0"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_at5ui"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cdo8l"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fvn5g"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e4vy5"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ursr3"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rcakh"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dw4cb"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7wva2"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rntgm"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7mws1"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0n461"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fyfdg"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2t486"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_agm7e"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4tyw1"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_giyk1"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jxwym"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ejeef"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fwl67"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1bi1w"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ndb7t"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tvv4e"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eibay"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1h6cd"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kmpim"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cy2eb"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cf6oc"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qdgs6"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s101g"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a7aju"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yrw7x"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vkhh0"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wu3qc"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_02k1v"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_76lck"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w4ueu"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m5wok"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ntfsf"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5ih47"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ichx4"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nmrgx"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hyef0"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aml2h"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wk6ah"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oune4"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_abfnb"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_87ir8"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8lh7y"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h3p1v"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7m7g1"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y35y6"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1kfhd"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_flftn"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uf8gb"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kofep"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_awiua"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fyy2n"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_thyex"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3nvc7"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3hvip"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dj6rw"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yyis4"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s2qni"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2oxjj"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jts5y"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ohenx"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cjjcv"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v2dtd"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bh6xg"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ksfsq"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gtwtx"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cr1ex"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oeutd"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ko002"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xo5ua"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7axv7"]
 
 [node name="TalentTree" type="Control"]
 top_level = true
@@ -773,32 +774,30 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_v2k57")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-z_index = -1
+[node name="SaftyArea" parent="." instance=ExtResource("2_e4yjj")]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_bottom = 80.0
+
+[node name="TextureRect" type="TextureRect" parent="SaftyArea"]
+z_index = -1
+layout_mode = 2
 texture = ExtResource("2_8kqxn")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-custom_minimum_size = Vector2(0, 130)
+[node name="SaftyArea2" parent="." instance=ExtResource("2_e4yjj")]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_bottom = 55.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SaftyArea2"]
+custom_minimum_size = Vector2(0, 130)
+layout_mode = 2
 theme_override_constants/separation = 25
 
-[node name="TopNavigationBar" parent="VBoxContainer" instance=ExtResource("3_erudu")]
+[node name="TopNavigationBar" parent="SaftyArea2/VBoxContainer" instance=ExtResource("3_erudu")]
 unique_name_in_owner = true
 layout_mode = 2
 title = "Leg"
 
-[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="SaftyArea2/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(720, 1125)
 layout_mode = 2
@@ -806,1084 +805,1085 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_j8j5s")
 horizontal_scroll_mode = 3
 vertical_scroll_mode = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/ScrollContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="SaftyArea2/VBoxContainer/ScrollContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 100
 
-[node name="SkillContainer" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/MarginContainer"]
+[node name="SkillContainer" type="HBoxContainer" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 50
 
-[node name="Level1" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
+[node name="Level1" type="VBoxContainer" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="TextureRect" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_7iw5j")
+theme_override_styles/panel = SubResource("StyleBoxFlat_i1pba")
 talentResource = ExtResource("5_4bbsi")
 isGoal = false
 
-[node name="TextureRect2" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect2" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_4arm2")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_oyn87")
 isGoal = false
 
-[node name="TextureRect3" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect3" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_r70dq")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_jrkav")
 isGoal = false
 
-[node name="TextureRect4" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect4" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_qjnlx")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_kp3yk")
 isGoal = false
 
-[node name="TextureRect5" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect5" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_pehbu")
+theme_override_styles/panel = SubResource("StyleBoxFlat_kbpav")
 talentResource = ExtResource("6_xp868")
 isGoal = false
 
-[node name="TextureRect6" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect6" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_d3fjg")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_1tfbx")
 isGoal = false
 lockColorBorder = Color(0.541176, 0.541176, 0.541176, 1)
 
-[node name="TextureRect7" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect7" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_w0do8")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_m5hx8")
 isGoal = false
 
-[node name="TextureRect8" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect8" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_udboh")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_3ripm")
 isGoal = false
 
-[node name="TextureRect9" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect9" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_m0fw6")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_drn3y")
 isGoal = false
 
-[node name="TextureRect10" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect10" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_nb4ap")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_w5b54")
 isGoal = false
 
-[node name="TextureRect11" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect11" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_k5qbd")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_0a3vf")
 isGoal = false
 
-[node name="TextureRect12" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect12" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_gauxf")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_n1xci")
 isGoal = false
 
-[node name="TextureRect13" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect13" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_h7epg")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mo4o5")
 isGoal = false
 
-[node name="TextureRect14" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect14" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level1" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_bm5at")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_foimx")
 isGoal = false
 
-[node name="Level2" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
+[node name="Level2" type="VBoxContainer" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="TextureRect" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_j6lfr")
+theme_override_styles/panel = SubResource("StyleBoxFlat_1j6fx")
 talentResource = ExtResource("7_4eaw2")
 isGoal = false
 
-[node name="TextureRect2" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect2" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_lrtqd")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_megon")
 isGoal = false
 
-[node name="TextureRect3" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect3" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_lc7ad")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_caado")
 isGoal = false
 
-[node name="TextureRect4" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect4" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_lrvia")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_gbbr7")
 isGoal = false
 
-[node name="TextureRect5" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect5" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_jvem2")
+theme_override_styles/panel = SubResource("StyleBoxFlat_3ua0c")
 talentResource = ExtResource("8_epmwu")
 isGoal = false
 
-[node name="TextureRect6" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect6" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_krmym")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_5kktv")
 isGoal = false
 
-[node name="TextureRect7" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect7" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_405i5")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_i52b3")
 isGoal = false
 
-[node name="TextureRect8" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect8" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_kpikm")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_8ynor")
 isGoal = false
 
-[node name="TextureRect9" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect9" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_isonk")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_txisa")
 isGoal = false
 
-[node name="TextureRect10" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect10" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_yim4d")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_b5fwg")
 isGoal = false
 
-[node name="TextureRect11" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect11" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_vai6a")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_6x2nj")
 isGoal = false
 
-[node name="TextureRect12" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect12" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_ahc3y")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_tqvvj")
 isGoal = false
 
-[node name="TextureRect13" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect13" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_ujshl")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_moear")
 isGoal = false
 
-[node name="TextureRect14" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect14" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level2" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_u22y7")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_16t5a")
 isGoal = false
 
-[node name="Level3" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
+[node name="Level3" type="VBoxContainer" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="TextureRect" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_i7f64")
+theme_override_styles/panel = SubResource("StyleBoxFlat_j43yo")
 talentResource = ExtResource("9_fxk42")
 isGoal = false
 
-[node name="TextureRect2" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect2" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_suk04")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_aka2j")
 isGoal = false
 
-[node name="TextureRect3" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect3" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_tfvag")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_0mdiw")
 isGoal = false
 
-[node name="TextureRect4" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect4" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_3qc1d")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mw2uw")
 isGoal = false
 
-[node name="TextureRect5" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect5" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_ckcq7")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nuw26")
 talentResource = ExtResource("10_alitq")
 isGoal = false
 
-[node name="TextureRect6" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect6" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_kipnw")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_pubu3")
 isGoal = false
 
-[node name="TextureRect7" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect7" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_oi0x3")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_twr05")
 isGoal = false
 
-[node name="TextureRect8" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect8" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_yn62b")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_e25wa")
 isGoal = false
 
-[node name="TextureRect9" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect9" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_466wp")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_0xbkg")
 isGoal = false
 
-[node name="TextureRect10" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect10" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_7cuyp")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_88vm4")
 isGoal = false
 
-[node name="TextureRect11" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect11" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_gwj5f")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_76juf")
 isGoal = false
 
-[node name="TextureRect12" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect12" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_r2xom")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_uqwub")
 isGoal = false
 
-[node name="TextureRect13" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect13" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_3bx68")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_jqln3")
 isGoal = false
 
-[node name="TextureRect14" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect14" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level3" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_djcxm")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_x81ql")
 isGoal = false
 
-[node name="Level4" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
+[node name="Level4" type="VBoxContainer" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="TextureRect" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_p2te4")
+theme_override_styles/panel = SubResource("StyleBoxFlat_hsj2o")
 talentResource = ExtResource("11_7a3ag")
 isGoal = false
 
-[node name="TextureRect2" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect2" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_6jcjv")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_2wyhm")
 isGoal = false
 
-[node name="TextureRect3" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect3" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_ad620")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_uala2")
 isGoal = false
 
-[node name="TextureRect4" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect4" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_rvjme")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_kpq17")
 isGoal = false
 
-[node name="TextureRect5" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect5" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_ln87b")
+theme_override_styles/panel = SubResource("StyleBoxFlat_xxw6c")
 talentResource = ExtResource("12_131kn")
 isGoal = false
 
-[node name="TextureRect6" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect6" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_menyo")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_adp0m")
 isGoal = true
 
-[node name="TextureRect7" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect7" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_eww2j")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_v2x6j")
 isGoal = false
 
-[node name="TextureRect8" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect8" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_1e4i4")
+theme_override_styles/panel = SubResource("StyleBoxFlat_r7iod")
 talentResource = ExtResource("13_5ppdq")
 isGoal = false
 
-[node name="TextureRect9" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect9" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_y3fw2")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mkj57")
 isGoal = false
 
-[node name="TextureRect10" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect10" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_3ciy8")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_6ocmb")
 isGoal = false
 
-[node name="TextureRect11" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect11" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_5muli")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_fvoxd")
 isGoal = false
 
-[node name="TextureRect12" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect12" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_uyxf4")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ehrnr")
 isGoal = false
 
-[node name="TextureRect13" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect13" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_rcen0")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_2q0c7")
 isGoal = false
 
-[node name="TextureRect14" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect14" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level4" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_hc6qg")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_bttsn")
 isGoal = false
 
-[node name="Level5" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
+[node name="Level5" type="VBoxContainer" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="TextureRect" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_t3cdl")
+theme_override_styles/panel = SubResource("StyleBoxFlat_f126d")
 talentResource = ExtResource("14_y7v5m")
 isGoal = false
 
-[node name="TextureRect2" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect2" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_ivrsx")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_j12nl")
 isGoal = false
 
-[node name="TextureRect3" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect3" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_gdbj6")
+theme_override_styles/panel = SubResource("StyleBoxFlat_tmvw3")
 talentResource = ExtResource("15_urwxb")
 isGoal = false
 
-[node name="TextureRect4" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect4" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_fmj55")
+theme_override_styles/panel = SubResource("StyleBoxFlat_yoc5o")
 talentResource = ExtResource("16_7q1br")
 isGoal = false
 
-[node name="TextureRect5" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect5" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_rwu41")
+theme_override_styles/panel = SubResource("StyleBoxFlat_frpbg")
 talentResource = ExtResource("17_0sxoh")
 isGoal = false
 
-[node name="TextureRect6" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect6" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_1wqsv")
+theme_override_styles/panel = SubResource("StyleBoxFlat_t8gtf")
 talentResource = ExtResource("18_38450")
 isGoal = false
 
-[node name="TextureRect7" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect7" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_xvpq7")
+theme_override_styles/panel = SubResource("StyleBoxFlat_ash7q")
 talentResource = ExtResource("19_odwlt")
 isGoal = false
 
-[node name="TextureRect8" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect8" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2qgm6")
+theme_override_styles/panel = SubResource("StyleBoxFlat_uswn2")
 talentResource = ExtResource("20_ah0n3")
 isGoal = false
 
-[node name="TextureRect9" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect9" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_yqiih")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_oy7lb")
 isGoal = false
 
-[node name="TextureRect10" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect10" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_leglk")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_1a7rg")
 isGoal = false
 
-[node name="TextureRect11" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect11" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_6oksx")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_qbjyd")
 isGoal = false
 
-[node name="TextureRect12" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect12" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_h6tey")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_y21eo")
 isGoal = false
 
-[node name="TextureRect13" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect13" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_qbdi6")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_hksp8")
 isGoal = false
 
-[node name="TextureRect14" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect14" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level5" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_dh07b")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_cfpv0")
 isGoal = false
 
-[node name="Level6" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
+[node name="Level6" type="VBoxContainer" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="TextureRect" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_bfq5s")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ug3rr")
 isGoal = false
 
-[node name="TextureRect2" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect2" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_kyqcn")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_5qi1e")
 isGoal = false
 
-[node name="TextureRect3" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect3" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_ro7dl")
+theme_override_styles/panel = SubResource("StyleBoxFlat_1hk34")
 talentResource = ExtResource("21_wkdwt")
 isGoal = false
 
-[node name="TextureRect4" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect4" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_vl0d0")
+theme_override_styles/panel = SubResource("StyleBoxFlat_3u72g")
 talentResource = ExtResource("22_0qlor")
 isGoal = false
 
-[node name="TextureRect5" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect5" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_w7nyp")
+theme_override_styles/panel = SubResource("StyleBoxFlat_spdnv")
 talentResource = ExtResource("23_7naio")
 isGoal = false
 
-[node name="TextureRect6" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect6" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_6sqiw")
+theme_override_styles/panel = SubResource("StyleBoxFlat_wcqr6")
 talentResource = ExtResource("24_04sov")
 isGoal = false
 
-[node name="TextureRect7" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect7" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_4jk1w")
+theme_override_styles/panel = SubResource("StyleBoxFlat_jkbqm")
 talentResource = ExtResource("21_bqhvh")
 isGoal = false
 
-[node name="TextureRect8" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect8" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_eir4j")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_bvf1x")
 isGoal = false
 
-[node name="TextureRect9" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect9" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_8tu2b")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_q6yd2")
 isGoal = false
 
-[node name="TextureRect10" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect10" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_nw3te")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_exiku")
 isGoal = false
 
-[node name="TextureRect11" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect11" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_51obe")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_2f45n")
 isGoal = false
 
-[node name="TextureRect12" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect12" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_trlqr")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_rinek")
 isGoal = false
 
-[node name="TextureRect13" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect13" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_xo7ss")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_fdy0m")
 isGoal = false
 
-[node name="TextureRect14" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect14" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level6" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_bk36p")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_i72oa")
 isGoal = false
 
-[node name="Level7" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
+[node name="Level7" type="VBoxContainer" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="TextureRect" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_q4yb1")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ppay1")
 isGoal = false
 
-[node name="TextureRect2" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect2" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_3n215")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_7ntk3")
 isGoal = false
 
-[node name="TextureRect3" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect3" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_msu8c")
+theme_override_styles/panel = SubResource("StyleBoxFlat_13v4v")
 talentResource = ExtResource("26_x0u2h")
 isGoal = false
 
-[node name="TextureRect4" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect4" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_jyy4g")
+theme_override_styles/panel = SubResource("StyleBoxFlat_emtww")
 talentResource = ExtResource("27_tswkd")
 isGoal = false
 
-[node name="TextureRect5" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect5" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_kwcic")
+theme_override_styles/panel = SubResource("StyleBoxFlat_w6bmb")
 talentResource = ExtResource("28_oe411")
 isGoal = false
 
-[node name="TextureRect6" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect6" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_g27ij")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ghswr")
 isGoal = false
 
-[node name="TextureRect7" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect7" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_ce5db")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_rhvbv")
 isGoal = false
 
-[node name="TextureRect8" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect8" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_630ug")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_jt1gm")
 isGoal = false
 
-[node name="TextureRect9" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect9" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_wcuml")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_jwolw")
 isGoal = false
 
-[node name="TextureRect10" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect10" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_llypq")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_opdni")
 isGoal = false
 
-[node name="TextureRect11" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect11" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_p41ow")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_b0gnw")
 isGoal = false
 
-[node name="TextureRect12" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect12" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_f140t")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_s66sa")
 isGoal = false
 
-[node name="TextureRect13" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect13" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_onq7x")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_uok6r")
 isGoal = false
 
-[node name="TextureRect14" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect14" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level7" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_r7k2s")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_m51b1")
 isGoal = false
 
-[node name="Level8" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
+[node name="Level8" type="VBoxContainer" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="TextureRect" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_bth2t")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_hlo24")
 isGoal = false
 
-[node name="TextureRect2" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect2" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_k5257")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_bnou1")
 isGoal = false
 
-[node name="TextureRect3" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect3" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_nd0mm")
+theme_override_styles/panel = SubResource("StyleBoxFlat_5qx81")
 talentResource = ExtResource("29_5lc2y")
 isGoal = false
 
-[node name="TextureRect4" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect4" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_700dk")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_sk4qc")
 isGoal = false
 
-[node name="TextureRect5" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect5" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_ataxe")
+theme_override_styles/panel = SubResource("StyleBoxFlat_u14km")
 talentResource = ExtResource("30_m1qlx")
 isGoal = false
 
-[node name="TextureRect6" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect6" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_12dqr")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_n7lpa")
 isGoal = false
 
-[node name="TextureRect7" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect7" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_2iqtn")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_5urgp")
 isGoal = false
 
-[node name="TextureRect8" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect8" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_xhp3c")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_k61q1")
 isGoal = false
 
-[node name="TextureRect9" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect9" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_fcndi")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ncr6h")
 isGoal = false
 
-[node name="TextureRect10" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect10" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_k1lot")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_yydqv")
 isGoal = false
 
-[node name="TextureRect11" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect11" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_c2yvg")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_l75d5")
 isGoal = false
 
-[node name="TextureRect12" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect12" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_jyhui")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_7e1ew")
 isGoal = false
 
-[node name="TextureRect13" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect13" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_rmqlc")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_c3lc5")
 isGoal = false
 
-[node name="TextureRect14" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect14" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level8" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_5u67a")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_d6xqs")
 isGoal = false
 
-[node name="Level9" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
+[node name="Level9" type="VBoxContainer" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="TextureRect" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_7k67a")
+theme_override_styles/panel = SubResource("StyleBoxFlat_dwrwj")
 talentResource = ExtResource("31_ko8bx")
 isGoal = false
 
-[node name="TextureRect2" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect2" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_muotb")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_chflm")
 isGoal = false
 
-[node name="TextureRect3" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect3" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_choek")
+theme_override_styles/panel = SubResource("StyleBoxFlat_uujkx")
 talentResource = ExtResource("31_puqai")
 isGoal = false
 
-[node name="TextureRect4" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect4" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_wb5dn")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_8rksx")
 isGoal = false
 
-[node name="TextureRect5" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect5" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_tibgy")
+theme_override_styles/panel = SubResource("StyleBoxFlat_ud747")
 talentResource = ExtResource("33_7fpo1")
 isGoal = false
 
-[node name="TextureRect6" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect6" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_3iiji")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_yb7e1")
 isGoal = false
 
-[node name="TextureRect7" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect7" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_20u0f")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_jxgh6")
 isGoal = false
 
-[node name="TextureRect8" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect8" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_wok0b")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ed34s")
 isGoal = false
 
-[node name="TextureRect9" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect9" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_lm53w")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_7q0l4")
 isGoal = false
 
-[node name="TextureRect10" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect10" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_c00ky")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_4baey")
 isGoal = false
 
-[node name="TextureRect11" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect11" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_jqc7f")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_xnbrg")
 isGoal = false
 
-[node name="TextureRect12" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect12" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_xi2km")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_slk0x")
 isGoal = false
 
-[node name="TextureRect13" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect13" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_uea07")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_cvnxn")
 isGoal = false
 
-[node name="TextureRect14" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect14" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level9" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_45idv")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ws72q")
 isGoal = false
 
-[node name="Level10" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
+[node name="Level10" type="VBoxContainer" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="TextureRect" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_cet2k")
+theme_override_styles/panel = SubResource("StyleBoxFlat_e5tl8")
 talentResource = ExtResource("34_wb2se")
 isGoal = false
 
-[node name="TextureRect2" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect2" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_b17ys")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_3fe03")
 isGoal = false
 
-[node name="TextureRect3" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect3" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_cax24")
+theme_override_styles/panel = SubResource("StyleBoxFlat_34wbr")
 talentResource = ExtResource("35_ytdir")
 isGoal = false
 
-[node name="TextureRect4" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect4" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_gb3wr")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_e66u7")
 isGoal = false
 
-[node name="TextureRect5" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect5" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2ohsh")
+theme_override_styles/panel = SubResource("StyleBoxFlat_edtco")
 talentResource = ExtResource("36_0ux81")
 isGoal = false
 
-[node name="TextureRect6" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect6" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_thxrn")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_m5vgo")
 isGoal = false
 
-[node name="TextureRect7" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect7" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_eia0w")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ggnpb")
 isGoal = false
 
-[node name="TextureRect8" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect8" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_hbahq")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_jm6af")
 isGoal = false
 
-[node name="TextureRect9" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect9" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_s61ou")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_1lxqk")
 isGoal = false
 
-[node name="TextureRect10" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect10" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_ceh1n")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_0qlud")
 isGoal = false
 
-[node name="TextureRect11" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect11" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_wrkho")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_sp6f7")
 isGoal = false
 
-[node name="TextureRect12" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect12" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_4d3t6")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_hmprs")
 isGoal = false
 
-[node name="TextureRect13" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect13" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_jrjlm")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_68110")
 isGoal = false
 
-[node name="TextureRect14" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect14" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level10" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_o6ufi")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_bv4x1")
 isGoal = false
 
-[node name="Level11" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
+[node name="Level11" type="VBoxContainer" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="TextureRect" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_n3bum")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_xvkuk")
 isGoal = false
 
-[node name="TextureRect2" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect2" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_n43oc")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_6lxe1")
 isGoal = false
 
-[node name="TextureRect3" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect3" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_0qjgv")
+theme_override_styles/panel = SubResource("StyleBoxFlat_6fw4v")
 talentResource = ExtResource("37_pfv56")
 isGoal = false
 
-[node name="TextureRect4" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect4" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_0xq36")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_o3m55")
 isGoal = false
 
-[node name="TextureRect5" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect5" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_ilunb")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_2gr0f")
 isGoal = false
 
-[node name="TextureRect6" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect6" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_0bcuh")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_jvow0")
 isGoal = false
 
-[node name="TextureRect7" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect7" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_lw8sw")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_4blan")
 isGoal = false
 
-[node name="TextureRect8" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect8" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_dpd3b")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_urdod")
 isGoal = false
 
-[node name="TextureRect9" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect9" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_ne308")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_m0q3w")
 isGoal = false
 
-[node name="TextureRect10" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect10" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_d6mnl")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_x58cc")
 isGoal = false
 
-[node name="TextureRect11" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect11" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_14lrd")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_6aiwx")
 isGoal = false
 
-[node name="TextureRect12" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect12" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_4to8c")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_b268v")
 isGoal = false
 
-[node name="TextureRect13" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect13" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_ui04b")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_v2bsf")
 isGoal = false
 
-[node name="TextureRect14" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect14" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level11" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_yc1hj")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ae3oj")
 isGoal = false
 
-[node name="Level12" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
+[node name="Level12" type="VBoxContainer" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="TextureRect" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_vgiac")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_hcvw5")
 isGoal = false
 
-[node name="TextureRect2" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect2" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_44l64")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_wfb4q")
 isGoal = false
 
-[node name="TextureRect3" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect3" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_d7650")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_eb6xd")
 isGoal = false
 
-[node name="TextureRect4" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect4" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_sc6mu")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_1xlg0")
 isGoal = false
 
-[node name="TextureRect5" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect5" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_at5ui")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_cdo8l")
 isGoal = false
 
-[node name="TextureRect6" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect6" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_fvn5g")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_e4vy5")
 isGoal = false
 
-[node name="TextureRect7" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect7" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_ursr3")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_rcakh")
 isGoal = false
 
-[node name="TextureRect8" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect8" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_dw4cb")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_7wva2")
 isGoal = false
 
-[node name="TextureRect9" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect9" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_rntgm")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_7mws1")
 isGoal = false
 
-[node name="TextureRect10" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect10" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_0n461")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_fyfdg")
 isGoal = false
 
-[node name="TextureRect11" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect11" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_2t486")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_agm7e")
 isGoal = false
 
-[node name="TextureRect12" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect12" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_4tyw1")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_giyk1")
 isGoal = false
 
-[node name="TextureRect13" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect13" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_jxwym")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ejeef")
 isGoal = false
 
-[node name="TextureRect14" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect14" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level12" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_fwl67")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_1bi1w")
 isGoal = false
 
-[node name="Level13" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
+[node name="Level13" type="VBoxContainer" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="TextureRect" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_ndb7t")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_tvv4e")
 isGoal = false
 
-[node name="TextureRect2" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect2" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_eibay")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_1h6cd")
 isGoal = false
 
-[node name="TextureRect3" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect3" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_kmpim")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_cy2eb")
 isGoal = false
 
-[node name="TextureRect4" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect4" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_cf6oc")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_qdgs6")
 isGoal = false
 
-[node name="TextureRect5" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect5" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_s101g")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_a7aju")
 isGoal = false
 
-[node name="TextureRect6" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect6" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_yrw7x")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_vkhh0")
 isGoal = false
 
-[node name="TextureRect7" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect7" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_wu3qc")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_02k1v")
 isGoal = false
 
-[node name="TextureRect8" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect8" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_76lck")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_w4ueu")
 isGoal = false
 
-[node name="TextureRect9" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect9" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_m5wok")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ntfsf")
 isGoal = false
 
-[node name="TextureRect10" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect10" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_5ih47")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ichx4")
 isGoal = false
 
-[node name="TextureRect11" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect11" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_nmrgx")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_hyef0")
 isGoal = false
 
-[node name="TextureRect12" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect12" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_aml2h")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_wk6ah")
 isGoal = false
 
-[node name="TextureRect13" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect13" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_oune4")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_abfnb")
 isGoal = false
 
-[node name="TextureRect14" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect14" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level13" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_87ir8")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_8lh7y")
 isGoal = false
 
-[node name="Level14" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
+[node name="Level14" type="VBoxContainer" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="TextureRect" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_h3p1v")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_7m7g1")
 isGoal = false
 
-[node name="TextureRect2" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect2" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_y35y6")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_1kfhd")
 isGoal = false
 
-[node name="TextureRect3" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect3" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_flftn")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_uf8gb")
 isGoal = false
 
-[node name="TextureRect4" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect4" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_kofep")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_awiua")
 isGoal = false
 
-[node name="TextureRect5" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect5" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_fyy2n")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_thyex")
 isGoal = false
 
-[node name="TextureRect6" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect6" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_3nvc7")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_3hvip")
 isGoal = false
 
-[node name="TextureRect7" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect7" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_dj6rw")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_yyis4")
 isGoal = false
 
-[node name="TextureRect8" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect8" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_s2qni")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_2oxjj")
 isGoal = false
 
-[node name="TextureRect9" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect9" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_jts5y")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ohenx")
 isGoal = false
 
-[node name="TextureRect10" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect10" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_cjjcv")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_v2dtd")
 isGoal = false
 
-[node name="TextureRect11" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect11" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_bh6xg")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ksfsq")
 isGoal = false
 
-[node name="TextureRect12" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect12" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_gtwtx")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_cr1ex")
 isGoal = false
 
-[node name="TextureRect13" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect13" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_oeutd")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ko002")
 isGoal = false
 
-[node name="TextureRect14" parent="VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_wsh3r")]
+[node name="TextureRect14" parent="SaftyArea2/VBoxContainer/ScrollContainer/MarginContainer/SkillContainer/Level14" instance=ExtResource("4_wsh3r")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_xo5ua")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_7axv7")
 isGoal = false

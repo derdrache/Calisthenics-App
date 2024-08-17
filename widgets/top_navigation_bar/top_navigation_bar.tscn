@@ -7,7 +7,7 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yautv"]
 
 [node name="HBoxContainer" type="HBoxContainer"]
-custom_minimum_size = Vector2(0, 70)
+custom_minimum_size = Vector2(0, 100)
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 90.0
@@ -23,7 +23,7 @@ theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 20
 
 [node name="TextureRect" type="TextureRect" parent="BackButtonContainer"]
-custom_minimum_size = Vector2(50, 50)
+custom_minimum_size = Vector2(90, 70)
 layout_mode = 2
 size_flags_horizontal = 4
 texture = ExtResource("1_ygun5")
@@ -51,7 +51,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 50
 text = "adadasd"
 horizontal_alignment = 1
 autowrap_mode = 2
@@ -60,13 +60,15 @@ autowrap_mode = 2
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_constants/margin_left = 15
 theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 30
 
 [node name="TextureRect" type="TextureRect" parent="CloseButtonContainer"]
-custom_minimum_size = Vector2(50, 50)
+custom_minimum_size = Vector2(90, 70)
 layout_mode = 2
 size_flags_horizontal = 4
 texture = ExtResource("3_7iktk")

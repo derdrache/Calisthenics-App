@@ -1,5 +1,6 @@
 extends Node
 
+var workoutResourceTemplate = preload("res://resrouces/workout_resources/Workout.tres").duplicate()
 
 var currentWorkout : Resource = SaveAndLoad.load_workout_resources()
 var currentExerciseIndex = 0
@@ -7,6 +8,9 @@ var startTime
 
 var exerciseData= []
 
+func load_workout():
+	currentWorkout = SaveAndLoad.load_workout_resources()
+	
 func get_current_exercise():
 	if currentExerciseIndex > len(currentWorkout.exercises) -1:
 		currentExerciseIndex = 0
@@ -108,3 +112,9 @@ func save_exercise_data():
 			
 		SaveAndLoad.save_resource(SaveAndLoad.saveExerciseDataPath, exerciseHistory, talent.get_talent_name())
 		
+func save_workout(index, workoutData):
+	var resource = SaveAndLoad.load_workout_resources()
+	if resource == null: resource = workoutResourceTemplate
+	resource.exercises = workoutData.exercises
+	
+	SaveAndLoad.save_resource(SaveAndLoad.saveWorkoutPath, resource, workoutData.name)

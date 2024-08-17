@@ -16,4 +16,3 @@ func _open_tree(selection):
 		"pull": selectedTree = "res://talent_trees/talent_tree/pull_talent_tree.tscn"
 		
 	get_tree().change_scene_to_file(selectedTree)
-

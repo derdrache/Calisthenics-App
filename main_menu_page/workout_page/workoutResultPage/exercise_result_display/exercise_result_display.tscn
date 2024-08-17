@@ -8,9 +8,12 @@ script = ExtResource("1_ygvn3")
 
 [node name="ExerciseNameLabel" type="Label" parent="."]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(150, 0)
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 30
 text = "Exercise 1: "
 autowrap_mode = 2
 

@@ -14,32 +14,69 @@ signal selected_talent
 const MAIN_MENU = preload("res://main_menu_page/main_menu.tscn")		
 
 var changedScale = 1
+var touchEvents = {}
+var last_drag_distance = 0
+var zoom_sensitivity = 10
+var defaultContentSize 
 
 func _ready():
 	top_navigation_bar.previousPage.connect(_on_top_navigation_bar_previous_page)
 	top_navigation_bar.closePage.connect(_on_top_navigation_bar_close_page)
 	
+	defaultContentSize = %ContentContainer.size
+
 	changedScale = %ScrollContainer.scale.x
 	if talentSelection: 
 		_set_talent_selection()
 
-func _input(event):
+func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("quit"): 
 		get_tree().quit()
+	
+	var zoom = false
 		
 	if event is InputEventMouseButton and event.button_index == 4 and event.is_pressed():
 		changedScale += 0.1
-		_zoom()
+		zoom = true
 	elif event is InputEventMouseButton and event.button_index == 5 and event.is_pressed():
 		changedScale -= 0.1
-		_zoom()
+		zoom = true
+	
+	
+	if event is InputEventScreenTouch:
+		if event.pressed:
+			touchEvents[event.index] = event
+		else:
+			touchEvents.erase(event.index)
+	elif event is InputEventScreenDrag:
+		touchEvents[event.index] = event
+		
+		if touchEvents.size() == 2:
+			var drag_distance = touchEvents[0].position.distance_to(touchEvents[1].position)
+			
+			if drag_distance - last_drag_distance > 0:
+				changedScale += 0.01
+				last_drag_distance = drag_distance
+				zoom = true
+			elif drag_distance - last_drag_distance < 0:
+				changedScale -= 0.01
+				last_drag_distance = drag_distance
+				zoom = true
+				
+			
+	if zoom: _zoom()
+	
+
 
 func _zoom():
-	changedScale = clamp(changedScale, 0.5, 2)
+	changedScale = clamp(changedScale, 1, 2)
 	var zoomPosition = get_global_mouse_position() * changedScale - get_global_mouse_position()
 	%ScrollContainer.scale = Vector2(changedScale, changedScale)
-	%ScrollContainer.size = size / %ScrollContainer.scale 
 	
+	var improveSizeFactor = (Vector2(1,1) + (%ScrollContainer.scale * 0.08))
+	%ContentContainer.custom_minimum_size = defaultContentSize * improveSizeFactor
+
+
 	%ScrollContainer.get_h_scroll_bar().value = abs(zoomPosition.x)
 	%ScrollContainer.get_v_scroll_bar().value = abs(zoomPosition.y)
 	

@@ -30,4 +30,4 @@ exercises = [{
 "sets": 3,
 "talent": ExtResource("4_qfxp8")
 }]
-workoutModus = 0
+workoutModus = "Superset"

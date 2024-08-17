@@ -21,4 +21,3 @@ func _load_all_resources(path, array):
 		
 		file_name = dir.get_next()
 		
-
