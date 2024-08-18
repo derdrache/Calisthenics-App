@@ -1,4 +1,4 @@
-extends HBoxContainer
+extends Control
 
 signal previousPage
 signal closePage
@@ -12,6 +12,8 @@ signal closePage
 func _ready():
 	%BackButton.pressed.connect(_back_button_pressed)
 	%CloseButton.pressed.connect(_close_button_pressed)
+	
+	%CloseButtonContainer.hide()
 	
 	titleNode.text = title
 
