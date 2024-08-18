@@ -86,6 +86,8 @@ func _set_break_window():
 	selectionCaruselNode.steps = 30
 	
 	add_child(selectionCaruselNode)
+	selectionCaruselNode.global_position = %GlobalBreakButton.global_position
+	
 	selectionCaruselNode.valueChanged.connect(_change_break_time)
 
 func _change_break_time(newValue):
@@ -104,6 +106,7 @@ func _set_modus_window():
 	selectionCaruselNode.initialValue = workoutModus
 
 	add_child(selectionCaruselNode)
+	selectionCaruselNode.global_position = %ModusButton.global_position
 	selectionCaruselNode.valueChanged.connect(_change_modus)	
 
 func _change_modus(newValue):
