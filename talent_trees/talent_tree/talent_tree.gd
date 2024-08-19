@@ -70,12 +70,12 @@ func _input(event: InputEvent) -> void:
 
 func _zoom():
 	changedScale = clamp(changedScale, 1, 2)
+	
 	var zoomPosition = get_global_mouse_position() * changedScale - get_global_mouse_position()
 	%ScrollContainer.scale = Vector2(changedScale, changedScale)
 	
-	var improveSizeFactor = (Vector2(1,1) + (%ScrollContainer.scale * 0.08))
-	%ContentContainer.custom_minimum_size = defaultContentSize * improveSizeFactor
-
+	var zoomFactor = Vector2.ONE + (Vector2(0.05, 0.3) * %ScrollContainer.scale)
+	%SkillContainer.custom_minimum_size = defaultContentSize *  zoomFactor
 
 	%ScrollContainer.get_h_scroll_bar().value = abs(zoomPosition.x)
 	%ScrollContainer.get_v_scroll_bar().value = abs(zoomPosition.y)
