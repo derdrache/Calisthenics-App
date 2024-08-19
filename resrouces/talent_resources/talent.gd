@@ -16,3 +16,6 @@ func get_category():
 	elif "Pull" in resource_path: return "Pull"
 	elif "Leg" in resource_path: return "Leg"
 	elif "Core" in resource_path: return "Core"
+
+func get_talent_level():
+	return resource_path.split("/")[-2]
