@@ -14,6 +14,8 @@ func _ready():
 	repsDone = %SelectionCarusel.initialValue
 	%CurrentExerciseLabel.text = currentExcercises.talent.get_talent_name()
 	
+	%GoalLabel.text = "GOAL: " + str(currentExcercises.reps) + " Reps"
+	
 	var currentSet = GlobalWorkout.get_current_set()
 	var maxSet = GlobalWorkout.get_current_max_set()
 	%SetInformationLabel.text = "Set: " + str(currentSet) + " / " + str(maxSet)
