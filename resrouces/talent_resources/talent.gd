@@ -18,4 +18,4 @@ func get_category():
 	elif "Core" in resource_path: return "Core"
 
 func get_talent_level():
-	return resource_path.split("/")[-2]
+	return resource_path.split("/")[-2][-1]
