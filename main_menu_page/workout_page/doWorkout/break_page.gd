@@ -9,7 +9,7 @@ func _ready():
 	%CountDownBar.max_value = breakTime
 	
 	var nextExersice = GlobalWorkout.get_current_exercise().talent
-	%WorkoutIcon.set_talent(nextExersice)
+	%TalentSelection.set_talent(nextExersice)
 	
 func _next_exersice():
 	get_tree().change_scene_to_file("res://main_menu_page/workout_page/doWorkout/do_workout_page.tscn")

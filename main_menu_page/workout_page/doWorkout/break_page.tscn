@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://main_menu_page/workout_page/doWorkout/break_page.gd" id="1_hjgah"]
 [ext_resource type="Script" path="res://main_menu_page/workout_page/doWorkout/ProgressBar.gd" id="2_7inol"]
 [ext_resource type="PackedScene" uid="uid://c1u5yg2o45dr" path="res://widgets/safe_area_container/safe_area_container.tscn" id="2_ca3ls"]
-[ext_resource type="PackedScene" uid="uid://c5empu6m00tpy" path="res://widgets/excersice_icon/exercise_icon.tscn" id="2_pe57c"]
+[ext_resource type="PackedScene" uid="uid://dlm00wymo6axj" path="res://widgets/talent_selection_button.tscn" id="3_a84em"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qeskm"]
 bg_color = Color(0.192157, 0.192157, 0.192157, 1)
@@ -82,10 +82,10 @@ text = "NEXT:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="WorkoutIcon" parent="SaftyArea/VBoxContainer/NextExersiceDisplay/HBoxContainer" instance=ExtResource("2_pe57c")]
+[node name="TalentSelection" parent="SaftyArea/VBoxContainer/NextExersiceDisplay/HBoxContainer" instance=ExtResource("3_a84em")]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 4
+withTalentSelection = false
 
 [node name="CountDownBar" type="ProgressBar" parent="SaftyArea/VBoxContainer"]
 unique_name_in_owner = true

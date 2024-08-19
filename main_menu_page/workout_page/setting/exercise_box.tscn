@@ -49,6 +49,7 @@ theme_override_constants/margin_bottom = 30
 [node name="exercise_box" type="PanelContainer" parent="MarginContainer"]
 custom_minimum_size = Vector2(680, 200)
 layout_mode = 2
+mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_6l4ya")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/exercise_box"]
@@ -70,6 +71,7 @@ horizontal_alignment = 1
 [node name="TalentSelection" parent="MarginContainer/exercise_box/HBoxContainer" instance=ExtResource("2_r8gl2")]
 unique_name_in_owner = true
 layout_mode = 2
+mouse_filter = 1
 
 [node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/exercise_box/HBoxContainer"]
 layout_mode = 2
@@ -84,6 +86,7 @@ theme_override_constants/separation = 40
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
+mouse_filter = 1
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 25
@@ -94,6 +97,7 @@ text = "10 Sets"
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
+mouse_filter = 1
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 25
@@ -127,6 +131,7 @@ theme_override_constants/separation = 50
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
+mouse_filter = 1
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 25
@@ -149,6 +154,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 theme_override_styles/focus = SubResource("StyleBoxEmpty_xdavv")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_xdavv")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_xdavv")
