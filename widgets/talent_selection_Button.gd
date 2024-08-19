@@ -75,9 +75,10 @@ func _show_talent_tree(talentGroup):
 		talentNode = load("res://talent_trees/talent_tree/leg_talent_tree.tscn").instantiate()
 
 	talentNode.talentSelection = true
-	talentNode.selected_talent.connect(_set_talent)
+	talentNode.selected_talent.connect(set_talent)
 	add_child(talentNode)
 
-func _set_talent(talent):
+func set_talent(talent, withSignal = true):
 	label.text = talent.get_talent_name()
-	talent_updated.emit(talent)
+	if withSignal: talent_updated.emit(talent)
+	

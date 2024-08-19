@@ -16,6 +16,8 @@ func _ready():
 	%addExerciseButton.pressed.connect(_add_exercise)
 	%SaveWorkoutButton.pressed.connect(_save_workout)
 	
+	_load_workout()
+	
 	_refresh_modus_button_label()
 	_refresh_global_break_button_label()
 
@@ -112,3 +114,23 @@ func _set_modus_window():
 func _change_modus(newValue):
 	workoutModus = newValue
 	_refresh_modus_button_label()
+
+func _load_workout():
+	var workoutData = GlobalWorkout.currentWorkout
+	
+	if not workoutData: return
+	
+	exercise_container.get_children()[0].queue_free()
+	
+	for exercise in workoutData.exercises:
+		var exerciseNode = EXERCISE_BOX.instantiate()
+		exerciseNode.breakTime = exercise.breakTime
+		exerciseNode.reps = exercise.reps
+		exerciseNode.sets = exercise.sets
+		exerciseNode.selectedTalent = exercise.talent
+		
+		exercise_container.add_child(exerciseNode)
+		exercise_container.move_child(exerciseNode, exercise_container.get_child_count() -2)
+		
+		exercise.talent.get_talent_level()
+	

@@ -33,11 +33,11 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-theme_override_styles/normal = SubResource("StyleBoxFlat_xkgnl")
+theme_override_styles/focus = SubResource("StyleBoxFlat_xkgnl")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_xkgnl")
 theme_override_styles/hover = SubResource("StyleBoxFlat_xkgnl")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_xkgnl")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_xkgnl")
-theme_override_styles/focus = SubResource("StyleBoxFlat_xkgnl")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xkgnl")
 script = ExtResource("1_svkwr")
 
 [node name="ButtonsContainer" type="Control" parent="."]
@@ -58,11 +58,11 @@ offset_bottom = 8.0
 scale = Vector2(0.5, 0.5)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-theme_override_styles/normal = SubResource("StyleBoxFlat_j0rb5")
+theme_override_styles/focus = SubResource("StyleBoxFlat_j0rb5")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j0rb5")
 theme_override_styles/hover = SubResource("StyleBoxFlat_j0rb5")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_j0rb5")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_j0rb5")
-theme_override_styles/focus = SubResource("StyleBoxFlat_j0rb5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_j0rb5")
 text = "PUSH"
 
 [node name="Button2" type="Button" parent="ButtonsContainer"]
@@ -73,11 +73,11 @@ offset_bottom = 8.0
 scale = Vector2(0.5, 0.5)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-theme_override_styles/normal = SubResource("StyleBoxFlat_j0rb5")
+theme_override_styles/focus = SubResource("StyleBoxFlat_j0rb5")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j0rb5")
 theme_override_styles/hover = SubResource("StyleBoxFlat_j0rb5")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_j0rb5")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_j0rb5")
-theme_override_styles/focus = SubResource("StyleBoxFlat_j0rb5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_j0rb5")
 text = "PULL"
 
 [node name="Button3" type="Button" parent="ButtonsContainer"]
@@ -88,11 +88,11 @@ offset_bottom = 8.0
 scale = Vector2(0.5, 0.5)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-theme_override_styles/normal = SubResource("StyleBoxFlat_j0rb5")
+theme_override_styles/focus = SubResource("StyleBoxFlat_j0rb5")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j0rb5")
 theme_override_styles/hover = SubResource("StyleBoxFlat_j0rb5")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_j0rb5")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_j0rb5")
-theme_override_styles/focus = SubResource("StyleBoxFlat_j0rb5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_j0rb5")
 text = "CORE"
 
 [node name="Button4" type="Button" parent="ButtonsContainer"]
@@ -103,11 +103,11 @@ offset_bottom = 8.0
 scale = Vector2(0.5, 0.5)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-theme_override_styles/normal = SubResource("StyleBoxFlat_j0rb5")
+theme_override_styles/focus = SubResource("StyleBoxFlat_j0rb5")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j0rb5")
 theme_override_styles/hover = SubResource("StyleBoxFlat_j0rb5")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_j0rb5")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_j0rb5")
-theme_override_styles/focus = SubResource("StyleBoxFlat_j0rb5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_j0rb5")
 text = "LEG"
 
 [node name="MarginContainer" type="MarginContainer" parent="."]

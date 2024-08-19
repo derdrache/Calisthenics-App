@@ -20,6 +20,8 @@ func _ready():
 	talent_selection.talent_updated.connect(_set_talent)
 	%DeleteButton.pressed.connect(queue_free)
 	
+	if selectedTalent: _set_talent(selectedTalent)
+	
 	_refresh_sets_label()
 	_refresh_reps_label()
 	_refresh_break_time_label()
@@ -76,19 +78,9 @@ func _change_break_time(newValue):
 	breakTime = newValue
 	_refresh_break_time_label()
 
-func _change_talent(newTalent):
-	selectedTalent = newTalent
-	talent_selection.text = newTalent.get_talent_name()
-
 func _set_talent(talent):
 	selectedTalent = talent
-	
-	if not talent: _setup_break()
-
-func _setup_break():
-	%SetSelection.hide()
-	%RepSelection.hide()
-	%BreakTimeSelection.show()
+	talent_selection.set_talent(selectedTalent, false)
 
 func change_break_time(newValue):
 	breakTime = newValue
