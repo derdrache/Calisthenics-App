@@ -98,6 +98,8 @@ func _draw():
 			var targetPosition = (targetNode.global_position) + (targetNode.get_center()* %ScrollContainer.scale.x)
 			var color = Color.BLACK if talentNode.talentResource.is_unlocked else Color.GRAY
 			
+			if targetPosition.y < 200: continue
+			
 			draw_line(sourcePosition, targetPosition, color, 7.0)
 
 func _set_scrollbar_center(scrollBar):

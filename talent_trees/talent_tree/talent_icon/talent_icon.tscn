@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bgt5ytt41k45g" path="res://assets/icons/icon.svg" id="2_apso6"]
 [ext_resource type="Texture2D" uid="uid://bdrc4dvbryedq" path="res://assets/icons/Icon_Large_Star_SeethroughOutline.png" id="3_my3td"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gps8g"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tu3v4"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_opdbu"]
 
@@ -13,7 +13,7 @@ custom_minimum_size = Vector2(80, 70)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxEmpty_gps8g")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_tu3v4")
 script = ExtResource("1_wadke")
 isGoal = null
 lockColorPanel = Color(0.196078, 0.196078, 0.196078, 1)
@@ -29,11 +29,12 @@ offset_right = 48.0
 offset_bottom = 56.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxEmpty_opdbu")
+mouse_filter = 1
+theme_override_styles/focus = SubResource("StyleBoxEmpty_opdbu")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_opdbu")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_opdbu")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_opdbu")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_opdbu")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_opdbu")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_opdbu")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 visible = false
