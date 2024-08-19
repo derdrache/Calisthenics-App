@@ -31,3 +31,4 @@ exercises = [{
 "talent": ExtResource("4_qfxp8")
 }]
 workoutModus = "Superset"
+selected = false
