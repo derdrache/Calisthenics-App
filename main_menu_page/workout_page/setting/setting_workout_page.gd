@@ -22,6 +22,7 @@ func _ready():
 	_refresh_global_break_button_label()
 
 func _refresh_modus_button_label():
+	
 	%ModusButton.text = "Modus:\n" + workoutModus
 	
 func _refresh_global_break_button_label():
@@ -41,6 +42,8 @@ func _save_workout():
 	
 	var workoutData = {
 		"name":  "Workout_A",
+		"modus": workoutModus,
+		"globalBreak": globalBreakTime,
 		"exercises": _get_all_exersice_data()
 	} 
 	
@@ -121,6 +124,12 @@ func _load_workout():
 	if not workoutData: return
 	
 	exercise_container.get_children()[0].queue_free()
+	
+	workoutModus = workoutData.modus
+	globalBreakTime = workoutData.globalBreak
+	
+	_refresh_modus_button_label()
+	_refresh_global_break_button_label()
 	
 	for exercise in workoutData.exercises:
 		var exerciseNode = EXERCISE_BOX.instantiate()

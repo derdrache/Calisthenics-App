@@ -114,7 +114,11 @@ func save_exercise_data():
 		
 func save_workout(index, workoutData):
 	var resource = SaveAndLoad.load_workout_resources()
+	
 	if resource == null: resource = workoutResourceTemplate
+	
 	resource.exercises = workoutData.exercises
+	resource.modus = workoutData.modus
+	resource.globalBreak = workoutData.globalBreak
 	
 	SaveAndLoad.save_resource(SaveAndLoad.saveWorkoutPath, resource, workoutData.name)
