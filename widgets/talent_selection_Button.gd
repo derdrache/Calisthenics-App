@@ -2,18 +2,26 @@ extends Button
 
 signal talent_updated
 
+@export var withTalentSelection = true
+@export var small = false
+
 @onready var buttons_container = %ButtonsContainer
 @onready var label = %Label
-
+@onready var exercise_level_label: Label = %ExerciseLevelLabel
 
 var radius = 90
 var animatinSpeed = 0.25
+var smallSize = Vector2(125,125)
 
 var num
 var active = false
 
 func _ready():
 	buttons_container.hide()
+	
+	if small: 
+		custom_minimum_size = smallSize
+		size = smallSize
 	
 	num = buttons_container.get_child_count()
 	for button in buttons_container.get_children():
@@ -22,6 +30,7 @@ func _ready():
 
 
 func _on_pressed():
+	if not withTalentSelection: return
 	disabled = true
 
 	if active:
@@ -78,7 +87,8 @@ func _show_talent_tree(talentGroup):
 	talentNode.selected_talent.connect(set_talent)
 	add_child(talentNode)
 
-func set_talent(talent, withSignal = true):
+func set_talent(talent : TalentResource, withSignal = true):
 	label.text = talent.get_talent_name()
+	exercise_level_label.text = talent.get_talent_level()
 	if withSignal: talent_updated.emit(talent)
 	
