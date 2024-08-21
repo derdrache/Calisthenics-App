@@ -49,14 +49,15 @@ func next_exersice(repsDone):
 	_add_reps(repsDone)
 	_add_set()
 	
-	var modus = currentWorkout.workoutModus
+	var modus = currentWorkout.modus
 	var setsDone = exerciseData[currentExerciseIndex].setsDone
 	var maxSets = exerciseData[currentExerciseIndex].maxSets
 	var exerciseDone = setsDone == maxSets
 	
-	if modus == "Normal":
+
+	if modus == "NORMAL":
 		if exerciseDone: currentExerciseIndex += 1
-	elif modus == "Superset":
+	elif modus == "SUPERSET":
 		var isEvenNumber = currentExerciseIndex % 2 == 0
 		
 		if isEvenNumber:

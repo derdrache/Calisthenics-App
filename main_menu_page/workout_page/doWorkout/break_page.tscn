@@ -133,5 +133,4 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_qeskm")
 theme_override_styles/normal = SubResource("StyleBoxFlat_qeskm")
 text = "CONTINUE"
 
-[connection signal="countDownDone" from="SaftyArea/VBoxContainer/CountDownBar" to="." method="_on_count_down_bar_count_down_done"]
 [connection signal="timeout" from="SaftyArea/VBoxContainer/CountDownBar/Timer" to="SaftyArea/VBoxContainer/CountDownBar" method="_on_timer_timeout"]

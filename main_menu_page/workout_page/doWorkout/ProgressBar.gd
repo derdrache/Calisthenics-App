@@ -10,4 +10,5 @@ func _on_timer_timeout():
 	
 	$Label.text = GlobalData.seconds_in_minutes_string(max_value - value)
 	
-	if value == 0: countDownDone.emit()		
+	if value == max_value: 
+		countDownDone.emit()		
