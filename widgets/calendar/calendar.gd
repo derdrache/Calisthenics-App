@@ -1,7 +1,8 @@
 extends Control
 
-@onready var columns_box: HBoxContainer = %ColumnsBox
+@export var smallCalendar = false
 
+@onready var columns_box: HBoxContainer = %ColumnsBox
 
 const DATE_LABEL = preload("res://widgets/calendar/DateLabel.tscn")
 const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
@@ -11,10 +12,30 @@ const DAY_IN_UNIX_TIME = 86400
 var selectedDate = Time.get_datetime_dict_from_system()
 var monthsList = []
 
-func _ready() -> void:	
-	_set_calender()
+func _ready() -> void:
+	if smallCalendar:
+		%TopNavigationBar.hide()
+		%MonthSelectionBox.hide()
+		
+	_set_calendar()
+
+func _set_calendar():
+	if smallCalendar:
+		_set_small_calendar()
+	else:
+		set_big_calendar()
+
+func _set_small_calendar():
+	var currentDate = Time.get_datetime_dict_from_system()
+	var currentUnixTime = Time.get_unix_time_from_system()
+	var startDate = Time.get_datetime_dict_from_unix_time(currentUnixTime - DAY_IN_UNIX_TIME * (currentDate.weekday - 1))
 	
-func _set_calender():
+	var calculateDate = startDate
+	for i in 7:
+		_create_label(calculateDate, i % 7)
+		calculateDate = _get_next_day(calculateDate)
+
+func set_big_calendar():
 	%MonthYearLabel.text = MONTH_NAMES[selectedDate.month - 1] + " " + str(selectedDate.year)
 	
 	var firstOfMonthDate = _get_first_of_month(selectedDate)
@@ -23,13 +44,14 @@ func _set_calender():
 	var startWeekday = firstOfMonthDate.weekday -1
 	if startWeekday == -1: startWeekday = 6
 	
+	var rows = 5
 	var startDate = Time.get_datetime_dict_from_unix_time(firstOfMonthUnixTime - DAY_IN_UNIX_TIME * (startWeekday))
+		
 	var calculateDate = startDate
 	
-	for i in 5 * 7:
+	for i in rows * 7:
 		_create_label(calculateDate, i % 7)
 		calculateDate = _get_next_day(calculateDate)
-	
 	
 	if selectedDate.month != calculateDate.month: return
 	
@@ -79,4 +101,4 @@ func _refresh_calendar():
 			
 			node.queue_free()
 	
-	_set_calender()
+	_set_calendar()
