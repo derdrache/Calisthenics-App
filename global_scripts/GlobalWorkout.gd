@@ -51,10 +51,10 @@ func next_exersice(repsDone):
 	
 	var modus = currentWorkout.modus
 	var setsDone = exerciseData[currentExerciseIndex].setsDone
-	var maxSets = exerciseData[currentExerciseIndex].maxSets
+	var maxSets = int(exerciseData[currentExerciseIndex].maxSets)
 	var exerciseDone = setsDone == maxSets
 	
-
+	
 	if modus == "NORMAL":
 		if exerciseDone: currentExerciseIndex += 1
 	elif modus == "SUPERSET":

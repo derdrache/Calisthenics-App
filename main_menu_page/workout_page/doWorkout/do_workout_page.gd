@@ -11,7 +11,8 @@ func _ready():
 	%SelectionCarusel.valueChanged.connect(_set_reps_done)
 	continue_button.pressed.connect(_next_step)
 	
-	repsDone = %SelectionCarusel.initialValue
+	%SelectionCarusel.initialValue = currentExcercises.reps
+	repsDone = currentExcercises.reps
 	%CurrentExerciseLabel.text = currentExcercises.talent.get_talent_name()
 	
 	%GoalLabel.text = "GOAL: " + str(currentExcercises.reps) + " Reps"
