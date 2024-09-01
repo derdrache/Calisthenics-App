@@ -50,7 +50,8 @@ theme_override_constants/margin_right = 20
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/BigCalendarBox/MonthSelectionBox"]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/BigCalendarBox/MonthSelectionBox/HBoxContainer"]
+[node name="previousMonth" type="TextureRect" parent="VBoxContainer/BigCalendarBox/MonthSelectionBox/HBoxContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -58,7 +59,7 @@ size_flags_vertical = 4
 texture = ExtResource("2_0t6bo")
 expand_mode = 1
 
-[node name="previousMonthButton" type="Button" parent="VBoxContainer/BigCalendarBox/MonthSelectionBox/HBoxContainer/TextureRect"]
+[node name="previousMonthButton" type="Button" parent="VBoxContainer/BigCalendarBox/MonthSelectionBox/HBoxContainer/previousMonth"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -88,7 +89,8 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 35
 text = "September 2024"
 
-[node name="TextureRect2" type="TextureRect" parent="VBoxContainer/BigCalendarBox/MonthSelectionBox/HBoxContainer"]
+[node name="nextMonth" type="TextureRect" parent="VBoxContainer/BigCalendarBox/MonthSelectionBox/HBoxContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -97,7 +99,7 @@ texture = ExtResource("2_0t6bo")
 expand_mode = 1
 flip_h = true
 
-[node name="nextMonthButton" type="Button" parent="VBoxContainer/BigCalendarBox/MonthSelectionBox/HBoxContainer/TextureRect2"]
+[node name="nextMonthButton" type="Button" parent="VBoxContainer/BigCalendarBox/MonthSelectionBox/HBoxContainer/nextMonth"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -119,17 +121,52 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_1fvyw")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_1fvyw")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_1fvyw")
 
-[node name="ColumnsBox" type="HBoxContainer" parent="VBoxContainer/BigCalendarBox"]
-unique_name_in_owner = true
+[node name="WeekSelection" type="HBoxContainer" parent="VBoxContainer/BigCalendarBox"]
 layout_mode = 2
-theme_override_constants/separation = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/BigCalendarBox/ColumnsBox"]
+[node name="previousWeek" type="TextureRect" parent="VBoxContainer/BigCalendarBox/WeekSelection"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_0t6bo")
+expand_mode = 1
+
+[node name="previousWeekButton" type="Button" parent="VBoxContainer/BigCalendarBox/WeekSelection/previousWeek"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1fvyw")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_1fvyw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1fvyw")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_1fvyw")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_1fvyw")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_1fvyw")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1fvyw")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_1fvyw")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_1fvyw")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_1fvyw")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1fvyw")
+
+[node name="ColumnsBox" type="HBoxContainer" parent="VBoxContainer/BigCalendarBox/WeekSelection"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 0
 
-[node name="Label" type="Label" parent="VBoxContainer/BigCalendarBox/ColumnsBox/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/BigCalendarBox/WeekSelection/ColumnsBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/BigCalendarBox/WeekSelection/ColumnsBox/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2
@@ -138,12 +175,12 @@ text = "Mon"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/BigCalendarBox/ColumnsBox"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/BigCalendarBox/WeekSelection/ColumnsBox"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 0
 
-[node name="Label" type="Label" parent="VBoxContainer/BigCalendarBox/ColumnsBox/VBoxContainer2"]
+[node name="Label" type="Label" parent="VBoxContainer/BigCalendarBox/WeekSelection/ColumnsBox/VBoxContainer2"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2
@@ -152,12 +189,12 @@ text = "Tue"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer3" type="VBoxContainer" parent="VBoxContainer/BigCalendarBox/ColumnsBox"]
+[node name="VBoxContainer3" type="VBoxContainer" parent="VBoxContainer/BigCalendarBox/WeekSelection/ColumnsBox"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 0
 
-[node name="Label" type="Label" parent="VBoxContainer/BigCalendarBox/ColumnsBox/VBoxContainer3"]
+[node name="Label" type="Label" parent="VBoxContainer/BigCalendarBox/WeekSelection/ColumnsBox/VBoxContainer3"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2
@@ -166,12 +203,12 @@ text = "Wed"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer4" type="VBoxContainer" parent="VBoxContainer/BigCalendarBox/ColumnsBox"]
+[node name="VBoxContainer4" type="VBoxContainer" parent="VBoxContainer/BigCalendarBox/WeekSelection/ColumnsBox"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 0
 
-[node name="Label" type="Label" parent="VBoxContainer/BigCalendarBox/ColumnsBox/VBoxContainer4"]
+[node name="Label" type="Label" parent="VBoxContainer/BigCalendarBox/WeekSelection/ColumnsBox/VBoxContainer4"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2
@@ -180,12 +217,12 @@ text = "Thu"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer5" type="VBoxContainer" parent="VBoxContainer/BigCalendarBox/ColumnsBox"]
+[node name="VBoxContainer5" type="VBoxContainer" parent="VBoxContainer/BigCalendarBox/WeekSelection/ColumnsBox"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 0
 
-[node name="Label" type="Label" parent="VBoxContainer/BigCalendarBox/ColumnsBox/VBoxContainer5"]
+[node name="Label" type="Label" parent="VBoxContainer/BigCalendarBox/WeekSelection/ColumnsBox/VBoxContainer5"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2
@@ -194,12 +231,12 @@ text = "Fri"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer6" type="VBoxContainer" parent="VBoxContainer/BigCalendarBox/ColumnsBox"]
+[node name="VBoxContainer6" type="VBoxContainer" parent="VBoxContainer/BigCalendarBox/WeekSelection/ColumnsBox"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 0
 
-[node name="Label" type="Label" parent="VBoxContainer/BigCalendarBox/ColumnsBox/VBoxContainer6"]
+[node name="Label" type="Label" parent="VBoxContainer/BigCalendarBox/WeekSelection/ColumnsBox/VBoxContainer6"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2
@@ -208,12 +245,12 @@ text = "Sat"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer7" type="VBoxContainer" parent="VBoxContainer/BigCalendarBox/ColumnsBox"]
+[node name="VBoxContainer7" type="VBoxContainer" parent="VBoxContainer/BigCalendarBox/WeekSelection/ColumnsBox"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 0
 
-[node name="Label" type="Label" parent="VBoxContainer/BigCalendarBox/ColumnsBox/VBoxContainer7"]
+[node name="Label" type="Label" parent="VBoxContainer/BigCalendarBox/WeekSelection/ColumnsBox/VBoxContainer7"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2
@@ -222,5 +259,39 @@ text = "Sun"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="VBoxContainer/BigCalendarBox/MonthSelectionBox/HBoxContainer/TextureRect/previousMonthButton" to="." method="_on_previous_month_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/BigCalendarBox/MonthSelectionBox/HBoxContainer/TextureRect2/nextMonthButton" to="." method="_on_next_month_button_pressed"]
+[node name="nextWeek" type="TextureRect" parent="VBoxContainer/BigCalendarBox/WeekSelection"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_0t6bo")
+expand_mode = 1
+flip_h = true
+
+[node name="nextWeekButton" type="Button" parent="VBoxContainer/BigCalendarBox/WeekSelection/nextWeek"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1fvyw")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_1fvyw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1fvyw")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_1fvyw")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_1fvyw")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_1fvyw")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1fvyw")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_1fvyw")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_1fvyw")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_1fvyw")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1fvyw")
+
+[connection signal="pressed" from="VBoxContainer/BigCalendarBox/MonthSelectionBox/HBoxContainer/previousMonth/previousMonthButton" to="." method="_on_previous_month_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/BigCalendarBox/MonthSelectionBox/HBoxContainer/nextMonth/nextMonthButton" to="." method="_on_next_month_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/BigCalendarBox/WeekSelection/previousWeek/previousWeekButton" to="." method="_on_previous_week_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/BigCalendarBox/WeekSelection/nextWeek/nextWeekButton" to="." method="_on_next_week_button_pressed"]

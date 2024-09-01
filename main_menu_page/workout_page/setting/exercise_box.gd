@@ -11,7 +11,6 @@ extends Control
 @export var breakTime = GlobalData.initialBreakTime
 
 const SELECTION_CARUSEL = preload("res://widgets/selection_carusel/label_selection_carusel.tscn")
-const TALENT_SELECTION_CARUSEL = preload("res://widgets/selection_carusel/talent_selection_carusel.tscn")
 
 func _ready():
 	set_selection.pressed.connect(_set_sets_window)

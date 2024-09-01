@@ -90,7 +90,22 @@ func _add_reps(repsDone):
 func _add_set():
 	exerciseData[currentExerciseIndex].setsDone += 1
 
-func save_exercise_data():
+func save_workout(index, workoutData):
+	var resource = SaveAndLoad.load_workout_resources()
+	
+	if resource == null: resource = workoutResourceTemplate
+	
+	resource.exercises = workoutData.exercises
+	resource.modus = workoutData.modus
+	resource.globalBreak = workoutData.globalBreak
+	
+	SaveAndLoad.save_resource(SaveAndLoad.saveWorkoutPath, resource, workoutData.name)
+
+func workout_done():
+	_save_exercise_data()
+	add_workout(SaveAndLoad.workoutHistoryDataFile, Time.get_datetime_dict_from_system())
+	
+func _save_exercise_data():
 	for i in len(exerciseData):
 		var exercise = exerciseData[i]
 		var talent = exercise.talent
@@ -112,14 +127,42 @@ func save_exercise_data():
 				exerciseHistory.bestResult[repIndex] = rep
 			
 		SaveAndLoad.save_resource(SaveAndLoad.saveExerciseDataPath, exerciseHistory, talent.get_talent_name())
+
+func add_workout(file, date):
+	var workoutHistory = SaveAndLoad.load_data(file)	
+	
+	if not workoutHistory: workoutHistory = []
+	
+	var newWorkoutData = {}
+	newWorkoutData.date = date
+	newWorkoutData.workout = var_to_str(currentWorkout)
+	
+	workoutHistory.append(newWorkoutData)
+	
+	SaveAndLoad.save_data(file, workoutHistory)
+	
+	
+	
+func get_workout_history_data(date : Dictionary) -> Dictionary:
+	var workoutHistory = SaveAndLoad.load_data(SaveAndLoad.workoutHistoryDataFile)
+	
+	return _find_workout_data(workoutHistory, date)
+	
+func get_workout_plan(date):
+	var workoutPlan = SaveAndLoad.load_data(SaveAndLoad.plannedWorkoutFile)
+	return _find_workout_data(workoutPlan, date)
 		
-func save_workout(index, workoutData):
-	var resource = SaveAndLoad.load_workout_resources()
 	
-	if resource == null: resource = workoutResourceTemplate
+func _find_workout_data(fileData, date):
+	if not fileData: return {}
 	
-	resource.exercises = workoutData.exercises
-	resource.modus = workoutData.modus
-	resource.globalBreak = workoutData.globalBreak
-	
-	SaveAndLoad.save_resource(SaveAndLoad.saveWorkoutPath, resource, workoutData.name)
+	for workout in fileData:
+		var sameDay = workout.date.day == date.day
+		var sameMonth = workout.date.month == date.month
+		var sameYear = workout.date.year == date.year
+		
+		if sameDay and sameMonth and sameYear:
+			return workout
+		
+	return {}
+		

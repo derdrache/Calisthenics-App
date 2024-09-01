@@ -6,3 +6,8 @@ class_name WorkoutResource
 @export var modus : String
 @export var globalBreak: int
 @export var selected = false
+
+	
+	
+	
+	

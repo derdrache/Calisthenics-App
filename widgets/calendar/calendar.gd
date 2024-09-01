@@ -13,12 +13,8 @@ var selectedDate = Time.get_datetime_dict_from_system()
 var monthsList = []
 
 func _ready() -> void:
-	if smallCalendar:
-		%TopNavigationBar.hide()
-		%MonthSelectionBox.hide()
-		
 	_set_calendar()
-
+	
 func _set_calendar():
 	if smallCalendar:
 		_set_small_calendar()
@@ -26,9 +22,12 @@ func _set_calendar():
 		set_big_calendar()
 
 func _set_small_calendar():
-	var currentDate = Time.get_datetime_dict_from_system()
-	var currentUnixTime = Time.get_unix_time_from_system()
-	var startDate = Time.get_datetime_dict_from_unix_time(currentUnixTime - DAY_IN_UNIX_TIME * (currentDate.weekday - 1))
+	%TopNavigationBar.hide()
+	%previousMonth.hide()
+	%nextMonth.hide()
+	
+	var selectedDateUnixTime = Time.get_unix_time_from_datetime_dict(selectedDate)
+	var startDate = Time.get_datetime_dict_from_unix_time(selectedDateUnixTime - DAY_IN_UNIX_TIME * (_get_weekday_index(selectedDate)))
 	
 	var calculateDate = startDate
 	for i in 7:
@@ -36,6 +35,9 @@ func _set_small_calendar():
 		calculateDate = _get_next_day(calculateDate)
 
 func set_big_calendar():
+	%previousWeek.hide()
+	%nextWeek.hide()
+	
 	%MonthYearLabel.text = MONTH_NAMES[selectedDate.month - 1] + " " + str(selectedDate.year)
 	
 	var firstOfMonthDate = _get_first_of_month(selectedDate)
@@ -45,7 +47,7 @@ func set_big_calendar():
 	if startWeekday == -1: startWeekday = 6
 	
 	var rows = 5
-	var startDate = Time.get_datetime_dict_from_unix_time(firstOfMonthUnixTime - DAY_IN_UNIX_TIME * (startWeekday))
+	var startDate = Time.get_datetime_dict_from_unix_time(firstOfMonthUnixTime - DAY_IN_UNIX_TIME * (_get_weekday_index(firstOfMonthDate)))
 		
 	var calculateDate = startDate
 	
@@ -61,7 +63,10 @@ func set_big_calendar():
 	
 func _create_label(date, index):
 		var dateLabel = DATE_LABEL.instantiate()
+		
 		dateLabel.date = date
+		dateLabel.workoutData = GlobalWorkout.get_workout_history_data(date)
+		if not dateLabel.workoutData: dateLabel.workoutData = GlobalWorkout.get_workout_plan(date)
 
 		%ColumnsBox.get_children()[index].add_child(dateLabel)	
 	
@@ -86,7 +91,7 @@ func _on_next_month_button_pressed() -> void:
 	
 	_refresh_calendar()
 
-func _refresh_calendar():
+func _refresh_calendar():	
 	if selectedDate.month > 12:
 		selectedDate.month = 1
 		selectedDate.year += 1
@@ -94,7 +99,6 @@ func _refresh_calendar():
 		selectedDate.month = 12
 		selectedDate.year -= 1
 	
-
 	for column in columns_box.get_children():
 		for node in column.get_children():
 			if node is Label: continue
@@ -102,3 +106,22 @@ func _refresh_calendar():
 			node.queue_free()
 	
 	_set_calendar()
+
+func _get_weekday_index(date):
+	var index = date.weekday -1
+	if index == -1: index = 6	
+	
+	return index
+
+
+func _on_previous_week_button_pressed() -> void:
+	var newUnixTime = Time.get_unix_time_from_datetime_dict(selectedDate) - 7 * DAY_IN_UNIX_TIME
+	selectedDate = Time.get_datetime_dict_from_unix_time(newUnixTime)
+	
+	_refresh_calendar()
+
+func _on_next_week_button_pressed() -> void:
+	var newUnixTime = Time.get_unix_time_from_datetime_dict(selectedDate) + 7 * DAY_IN_UNIX_TIME
+	selectedDate = Time.get_datetime_dict_from_unix_time(newUnixTime)
+	
+	_refresh_calendar()

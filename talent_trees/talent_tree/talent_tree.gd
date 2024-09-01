@@ -42,7 +42,6 @@ func _input(event: InputEvent) -> void:
 		changedScale -= 0.1
 		zoom = true
 	
-	
 	if event is InputEventScreenTouch:
 		if event.pressed:
 			touchEvents[event.index] = event

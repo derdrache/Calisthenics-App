@@ -46,14 +46,17 @@ theme_override_constants/margin_bottom = 150
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer3"]
 layout_mode = 2
+theme_override_constants/separation = 150
 
 [node name="Calendar" parent="MarginContainer3/VBoxContainer" instance=ExtResource("4_dd0rm")]
 custom_minimum_size = Vector2(600, 200)
 layout_mode = 2
+size_flags_vertical = 0
 smallCalendar = true
 
 [node name="CurrentWorkout" parent="MarginContainer3/VBoxContainer" instance=ExtResource("2_pao4v")]
 layout_mode = 2
+size_flags_vertical = 4
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1

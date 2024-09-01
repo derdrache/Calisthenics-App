@@ -7,7 +7,7 @@ var workoutExercisesData = GlobalWorkout.exerciseData
 func _ready():
 	%FinishButton.pressed.connect(_quit_page)
 	
-	GlobalWorkout.save_exercise_data()
+	GlobalWorkout.workout_done()
 	
 	_setup_workout_time()
 	_setup_exercise_resulst()

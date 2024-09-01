@@ -1,24 +1,35 @@
 extends PanelContainer
 
+@export var workoutData : WorkoutResource = null
+
 @onready var display_box = %DisplayBox
 @onready var setup_workout_button: Button = %SetupWorkoutButton
 
 const TALENT_SELECTION_BUTTON = preload("res://widgets/talent_selection_button.tscn")
 
-var workoutData = SaveAndLoad.load_workout_resources()
+var displayDate : Dictionary = Time.get_datetime_dict_from_system()
 
 func _ready():	
-	setup_workout_button.hide()
+	setup_workout_button.pressed.connect(_setup_workout)
+	SignalHub.calendar_date_selected.connect(_change_workout_data)
 	
-	GlobalWorkout.load_workout()
+	setup_workout_button.hide()	
 	
-	_set_display()
+	_change_workout_data(Time.get_datetime_dict_from_system())
 	
 func _set_display():
+	%Title.text = str(displayDate.day) + "." + str(displayDate.month) + ". Workout"
+	
 	if not workoutData: 
 		setup_workout_button.show()
-		setup_workout_button.pressed.connect(_setup_workout)
+		
+		
+		if not _is_in_future(displayDate): 
+			print(not _is_in_future(displayDate))
+			setup_workout_button.text = "Not trained"
+		else: setup_workout_button.text = "No workout - set up yet"
 	else:
+		setup_workout_button.hide()	
 		for exercise in workoutData.exercises:
 			var workoutIconNode = TALENT_SELECTION_BUTTON.instantiate()
 			workoutIconNode.withTalentSelection = false
@@ -29,4 +40,35 @@ func _set_display():
 			workoutIconNode.set_talent(exercise.talent)
 			
 func _setup_workout():
-	get_tree().change_scene_to_file("res://main_menu_page/workout_page/setting/setting_workout_page.tscn")
+	if not GlobalWorkout.currentWorkout:
+		get_tree().change_scene_to_file("res://main_menu_page/workout_page/setting/setting_workout_page.tscn")
+	else: 
+		if not _is_in_future(displayDate): return
+		
+		workoutData = GlobalWorkout.currentWorkout
+		GlobalWorkout.add_workout(SaveAndLoad.plannedWorkoutFile, displayDate)
+		_refresh_display()
+		
+func _is_in_future(date):
+	var currentDateUnix = Time.get_unix_time_from_system()
+	var selectedDateUnix = Time.get_unix_time_from_datetime_dict(date)
+	
+	return selectedDateUnix >= currentDateUnix
+
+func _change_workout_data(date):
+	displayDate = date
+	var workout = GlobalWorkout.get_workout_history_data(date)
+	if not workout: workout = GlobalWorkout.get_workout_plan(date)
+
+	if workout: workoutData = str_to_var(workout.workout)
+	else: workoutData = null
+	
+	_refresh_display()
+
+
+func _refresh_display():
+	for node in display_box.get_children():
+		node.queue_free()
+		
+	_set_display()
+	
