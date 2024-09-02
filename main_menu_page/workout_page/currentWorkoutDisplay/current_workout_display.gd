@@ -13,23 +13,25 @@ func _ready():
 	setup_workout_button.pressed.connect(_setup_workout)
 	SignalHub.calendar_date_selected.connect(_change_workout_data)
 	
-	setup_workout_button.hide()	
-	
+	setup_workout_button.hide()
+
 	_change_workout_data(Time.get_datetime_dict_from_system())
 	
 func _set_display():
 	%Title.text = str(displayDate.day) + "." + str(displayDate.month) + ". Workout"
 	
+	if not workoutData or not _is_in_future(displayDate): %deleteWorkoutContainer.hide()
+	else: %deleteWorkoutContainer.show()
+
 	if not workoutData: 
 		setup_workout_button.show()
 		
-		
 		if not _is_in_future(displayDate): 
-			print(not _is_in_future(displayDate))
 			setup_workout_button.text = "Not trained"
 		else: setup_workout_button.text = "No workout - set up yet"
 	else:
 		setup_workout_button.hide()	
+		
 		for exercise in workoutData.exercises:
 			var workoutIconNode = TALENT_SELECTION_BUTTON.instantiate()
 			workoutIconNode.withTalentSelection = false
@@ -52,7 +54,7 @@ func _setup_workout():
 func _is_in_future(date):
 	var currentDateUnix = Time.get_unix_time_from_system()
 	var selectedDateUnix = Time.get_unix_time_from_datetime_dict(date)
-	
+
 	return selectedDateUnix >= currentDateUnix
 
 func _change_workout_data(date):
@@ -60,15 +62,25 @@ func _change_workout_data(date):
 	var workout = GlobalWorkout.get_workout_history_data(date)
 	if not workout: workout = GlobalWorkout.get_workout_plan(date)
 
-	if workout: workoutData = str_to_var(workout.workout)
+	if workout: 
+		workoutData = str_to_var(workout.workout)
+		displayDate = workout.date
 	else: workoutData = null
 	
 	_refresh_display()
-
 
 func _refresh_display():
 	for node in display_box.get_children():
 		node.queue_free()
 		
 	_set_display()
+	
+func _on_delete_workout_button_pressed() -> void:
+	var workoutid = workoutData.id
+	
+	workoutData = null
+	GlobalWorkout.delete_workout_plan(workoutid)
+	
+	_refresh_display()
+	
 	

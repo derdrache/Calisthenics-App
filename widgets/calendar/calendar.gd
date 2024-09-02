@@ -13,6 +13,8 @@ var selectedDate = Time.get_datetime_dict_from_system()
 var monthsList = []
 
 func _ready() -> void:
+	SignalHub.update_calendar.connect(_refresh_calendar)
+	
 	_set_calendar()
 	
 func _set_calendar():

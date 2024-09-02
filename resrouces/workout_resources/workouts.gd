@@ -7,6 +7,7 @@ class_name WorkoutResource
 @export var globalBreak: int
 @export var selected = false
 
+var id = get_instance_id()
 	
 	
 	

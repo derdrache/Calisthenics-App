@@ -134,14 +134,14 @@ func add_workout(file, date):
 	if not workoutHistory: workoutHistory = []
 	
 	var newWorkoutData = {}
+	newWorkoutData.id = currentWorkout.id
 	newWorkoutData.date = date
 	newWorkoutData.workout = var_to_str(currentWorkout)
 	
 	workoutHistory.append(newWorkoutData)
 	
 	SaveAndLoad.save_data(file, workoutHistory)
-	
-	
+	SignalHub.update_calendar.emit()
 	
 func get_workout_history_data(date : Dictionary) -> Dictionary:
 	var workoutHistory = SaveAndLoad.load_data(SaveAndLoad.workoutHistoryDataFile)
@@ -152,7 +152,6 @@ func get_workout_plan(date):
 	var workoutPlan = SaveAndLoad.load_data(SaveAndLoad.plannedWorkoutFile)
 	return _find_workout_data(workoutPlan, date)
 		
-	
 func _find_workout_data(fileData, date):
 	if not fileData: return {}
 	
@@ -165,4 +164,15 @@ func _find_workout_data(fileData, date):
 			return workout
 		
 	return {}
-		
+
+func delete_workout_plan(workoutId):
+	var workoutPlan = SaveAndLoad.load_data(SaveAndLoad.plannedWorkoutFile)
+	var index = -1
+	
+	for i in workoutPlan.size():
+		if workoutPlan[i].id == workoutId: index = i
+	
+	if index >= 0:
+		workoutPlan.remove_at(index)
+		SaveAndLoad.save_data(SaveAndLoad.plannedWorkoutFile, workoutPlan)
+		SignalHub.update_calendar.emit()
