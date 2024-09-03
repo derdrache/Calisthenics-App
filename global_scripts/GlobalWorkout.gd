@@ -67,9 +67,31 @@ func next_exersice(repsDone):
 				currentExerciseIndex += 1
 			else: currentExerciseIndex -= 1
 		
-func _previous_exercise():
-	#modus beachten!
-	pass
+func previous_exercise(pageName):
+	var modus = currentWorkout.modus
+	
+	if exerciseData[currentExerciseIndex].setsDone == 0 and currentExerciseIndex == 0:
+		return
+	
+	if "Workout" in pageName:
+		get_tree().change_scene_to_file("res://main_menu_page/workout_page/doWorkout/break_page.tscn")
+	elif "Break" in pageName:
+		if modus == "NORMAL": 
+			currentExerciseIndex -= 1
+		elif modus == "SUPERSET":
+			var isEvenNumber = currentExerciseIndex % 2 == 0
+			var setsDone = exerciseData[currentExerciseIndex].setsDone
+			
+			if isEvenNumber and setsDone == 0:
+				currentExerciseIndex -= 1
+			elif isEvenNumber:
+				currentExerciseIndex += 1
+			else: currentExerciseIndex -= 1
+		
+		exerciseData[currentExerciseIndex].setsDone -= 1
+		
+		if currentExerciseIndex < 0: currentExerciseIndex = 0
+		get_tree().change_scene_to_file("res://main_menu_page/workout_page/doWorkout/do_workout_page.tscn")
 
 func is_workout_done():
 	var setsDone = exerciseData[currentExerciseIndex].setsDone
@@ -91,15 +113,18 @@ func _add_set():
 	exerciseData[currentExerciseIndex].setsDone += 1
 
 func save_workout(index, workoutData):
-	var resource = SaveAndLoad.load_workout_resources()
+	var workoutResource = SaveAndLoad.load_workout_resources()
 	
-	if resource == null: resource = workoutResourceTemplate
+	if workoutResource == null: workoutResource = workoutResourceTemplate
 	
-	resource.exercises = workoutData.exercises
-	resource.modus = workoutData.modus
-	resource.globalBreak = workoutData.globalBreak
+	workoutResource.exercises = workoutData.exercises
+	workoutResource.modus = workoutData.modus
+	workoutResource.globalBreak = workoutData.globalBreak
+	workoutResource.id = workoutResource.get_instance_id()
 	
-	SaveAndLoad.save_resource(SaveAndLoad.saveWorkoutPath, resource, workoutData.name)
+	currentWorkout = workoutResource
+	
+	SaveAndLoad.save_resource(SaveAndLoad.saveWorkoutPath, workoutResource, workoutData.name)
 
 func workout_done():
 	_save_exercise_data()
@@ -165,13 +190,19 @@ func _find_workout_data(fileData, date):
 		
 	return {}
 
-func delete_workout_plan(workoutId):
+func delete_workout_plan(date):
 	var workoutPlan = SaveAndLoad.load_data(SaveAndLoad.plannedWorkoutFile)
 	var index = -1
 	
 	for i in workoutPlan.size():
-		if workoutPlan[i].id == workoutId: index = i
-	
+		var day = workoutPlan[i].date.day
+		var month = workoutPlan[i].date.month
+		var year = workoutPlan[i].date.year
+		
+		if day == date.day and month == date.month and year == date.year: 
+			index = i
+			break
+		
 	if index >= 0:
 		workoutPlan.remove_at(index)
 		SaveAndLoad.save_data(SaveAndLoad.plannedWorkoutFile, workoutPlan)

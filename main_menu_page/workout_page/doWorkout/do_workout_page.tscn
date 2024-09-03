@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dqsjs21sb0ikq"]
+[gd_scene load_steps=7 format=3 uid="uid://dqsjs21sb0ikq"]
 
 [ext_resource type="Script" path="res://main_menu_page/workout_page/doWorkout/do_workout_page.gd" id="1_fsfw8"]
 [ext_resource type="PackedScene" uid="uid://c1u5yg2o45dr" path="res://widgets/safe_area_container/safe_area_container.tscn" id="2_gsdin"]
 [ext_resource type="PackedScene" uid="uid://dod8k7apd4f3" path="res://widgets/selection_carusel/label_selection_carusel.tscn" id="2_v8r8w"]
 [ext_resource type="AudioStream" uid="uid://b1yx3ptjmd0jp" path="res://assets/sound/gong.mp3" id="3_h1raw"]
+[ext_resource type="PackedScene" uid="uid://neudsmy1a03g" path="res://widgets/setting_button/settingButton.tscn" id="4_2ep2c"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tix4e"]
 bg_color = Color(0.192157, 0.192157, 0.192157, 1)
@@ -39,6 +40,10 @@ theme_override_constants/margin_bottom = 50
 [node name="VBoxContainer" type="VBoxContainer" parent="SaftyArea/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 50
+
+[node name="SettingButton" parent="SaftyArea/MarginContainer/VBoxContainer" instance=ExtResource("4_2ep2c")]
+layout_mode = 2
+size_flags_horizontal = 8
 
 [node name="CurrentExerciseLabel" type="Label" parent="SaftyArea/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
@@ -82,18 +87,20 @@ vertical_alignment = 1
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 10
+size_flags_vertical = 3
 title = "Reps done"
 maxValue = 99
 initialValue = 7
 withBackground = false
+withCloseOnBackgroundClick = false
 
 [node name="ContinueButton" type="Button" parent="SaftyArea/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(200, 100)
+custom_minimum_size = Vector2(400, 150)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
+theme_override_font_sizes/font_size = 40
 theme_override_styles/focus = SubResource("StyleBoxFlat_tix4e")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_tix4e")
 theme_override_styles/hover = SubResource("StyleBoxFlat_tix4e")

@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://neudsmy1a03g"]
+
+[ext_resource type="Texture2D" uid="uid://4urmxf5oxbcu" path="res://more_vert.png" id="1_6qrcg"]
+[ext_resource type="Script" path="res://widgets/setting_button/setting_button.gd" id="1_qm33h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ftuvb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s4u1v"]
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="SettingButton" type="Control"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+script = ExtResource("1_qm33h")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(50, 50)
+size_flags_horizontal = 8
+size_flags_vertical = 0
+texture = ExtResource("1_6qrcg")
+expand_mode = 1
+
+[node name="popupButton" type="Button" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ftuvb")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ftuvb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ftuvb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ftuvb")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ftuvb")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_ftuvb")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ftuvb")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_ftuvb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ftuvb")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_ftuvb")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ftuvb")
+
+[node name="PopupMenu" type="PopupMenu" parent="."]
+unique_name_in_owner = true
+auto_translate_mode = 1
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 10
+theme_override_font_sizes/font_size = 25
+theme_override_styles/panel = SubResource("StyleBoxFlat_s4u1v")
+
+[connection signal="pressed" from="TextureRect/popupButton" to="." method="_on_popup_button_pressed"]
+[connection signal="id_pressed" from="PopupMenu" to="." method="_on_popup_menu_id_pressed"]
