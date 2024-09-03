@@ -48,6 +48,7 @@ func _setup_workout():
 		if not _is_in_future(displayDate): return
 		
 		workoutData = GlobalWorkout.currentWorkout
+
 		GlobalWorkout.add_workout(SaveAndLoad.plannedWorkoutFile, displayDate)
 		_refresh_display()
 		
@@ -76,10 +77,8 @@ func _refresh_display():
 	_set_display()
 	
 func _on_delete_workout_button_pressed() -> void:
-	var workoutid = workoutData.id
-	
 	workoutData = null
-	GlobalWorkout.delete_workout_plan(workoutid)
+	GlobalWorkout.delete_workout_plan(displayDate)
 	
 	_refresh_display()
 	

@@ -17,7 +17,7 @@ func _load_all_resources(path, array):
 		var allResourceFiles = DirAccess.get_files_at(pushTalentPath+folderName)
 
 		for resourceName in allResourceFiles:
-			allPushResources.append(load(pushTalentPath+folderName + "/" + resourceName))
+			allPushResources.append(ResourceLoader.load(pushTalentPath+folderName + "/" + resourceName))
 		
 		file_name = dir.get_next()
 		
