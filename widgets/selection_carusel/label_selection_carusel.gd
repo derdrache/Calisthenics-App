@@ -8,13 +8,13 @@ signal valueChanged
 @onready var titleNode = %Title
 @onready var background_panel = %BackgroundPanel
 
-
 @export var title = ""
 @export var stringList: Array[String]
 @export var maxValue = 10
 @export var steps = 1
 @export var initialValue = 5
 @export var withBackground = true
+@export var withCloseOnBackgroundClick = true
 
 func _ready():
 	titleNode.text = title
@@ -33,7 +33,7 @@ func _ready():
 
 func _create_number_labels():
 	var spacer = Label.new()
-	spacer.custom_minimum_size.x = 80
+	spacer.custom_minimum_size.x = 70
 	object_container.add_child(spacer)
 	
 	for i in maxValue / steps:
@@ -71,6 +71,8 @@ func  _remove_background():
 	background_panel.add_theme_stylebox_override("panel", StyleBoxEmpty.new())
 	
 func _input(event):
+	if not withCloseOnBackgroundClick: return
+	
 	if event is InputEventMouseButton and event.button_index == 1 and event.is_pressed():
 		var mousePosition = get_global_mouse_position()
 		
@@ -80,6 +82,7 @@ func _input(event):
 			if not value: value = initialValue
 			
 			valueChanged.emit(value)
+			
 			queue_free()
 
 func _set_carusel_start():
@@ -124,8 +127,12 @@ func _select_deselect_objects(label = null):
 	for uiNode in object_container.get_children():
 		if uiNode.text == str(selectedValue) || uiNode == label:
 			uiNode.add_theme_constant_override("outline_size",5)
+			uiNode.add_theme_color_override("font_color", Color(0,0,0))
+			uiNode.add_theme_color_override("font_outline_color", Color(1,1,1))
 		else:
 			uiNode.add_theme_constant_override("outline_size",0)
+			uiNode.add_theme_color_override("font_color", Color(1,1,1))
+			uiNode.add_theme_color_override("font_outline_color", Color(0,0,0))
 
 func get_selected_value():
 	var valuePosition = selection_marker.global_position
