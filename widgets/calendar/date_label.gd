@@ -28,9 +28,9 @@ func _set_workout_indicator():
 	var styleBox = workout_indicator.get_theme_stylebox("panel").duplicate()
 	var currentDate = Time.get_datetime_dict_from_system()
 	var workoutDate = workoutData.date
-	var compareDate = Time.get_unix_time_from_datetime_dict(workoutDate)  - Time.get_unix_time_from_datetime_dict(currentDate)
+	var doneCheck = workoutDate.day +1 <= currentDate.day or workoutDate.month +1 <= currentDate.month or workoutDate.year +1 <= currentDate.year
 	
-	if compareDate <= 0: styleBox.bg_color = WORKOUT_DONE_COLOR
+	if doneCheck: styleBox.bg_color = WORKOUT_DONE_COLOR
 	else: styleBox.bg_color = WORKOUT_STILL_DO_COLOR
 		
 	workout_indicator.add_theme_stylebox_override("panel", styleBox)
