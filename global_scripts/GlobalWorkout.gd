@@ -8,6 +8,27 @@ var startTime
 
 var exerciseData= []
 
+func _ready() -> void:
+	_get_and_remove_unfinished_workout_plans()
+
+func _get_and_remove_unfinished_workout_plans():
+	var workoutHistory = _get_all_workout_history_data()
+	var workoutPlans = _get_all_workout_plan()
+	var deletePlanWorkouts = []
+	
+	for workoutPlan in workoutPlans:
+		var currentDate = Time.get_datetime_dict_from_system()
+		var planDate = workoutPlan.date
+		var isWorkoutDone = planDate.day +1 <= currentDate.day or planDate.month +1 <= currentDate.month or planDate.year +1 <= currentDate.year
+		
+		if not isWorkoutDone: return
+		
+		var workout = get_workout_history_data(workoutPlan.date)
+		if workout.is_empty(): deletePlanWorkouts.append(workoutPlan)
+	
+	for workoutPlan in deletePlanWorkouts:
+		_remove_workout_plan(workoutPlan)	
+	
 func load_workout():
 	currentWorkout = SaveAndLoad.load_workout_resources()
 	
@@ -207,3 +228,22 @@ func delete_workout_plan(date):
 		workoutPlan.remove_at(index)
 		SaveAndLoad.save_data(SaveAndLoad.plannedWorkoutFile, workoutPlan)
 		SignalHub.update_calendar.emit()
+
+func _get_all_workout_history_data():
+	var workoutHistory = SaveAndLoad.load_data(SaveAndLoad.workoutHistoryDataFile)
+	return workoutHistory
+	
+func _get_all_workout_plan():
+	var workoutPlan = SaveAndLoad.load_data(SaveAndLoad.plannedWorkoutFile)
+	return workoutPlan
+
+func _remove_workout_plan(plan):
+	var workoutPlan = SaveAndLoad.load_data(SaveAndLoad.plannedWorkoutFile)
+	var deleteIndex = 0
+	
+	for i in workoutPlan.size():
+		if workoutPlan[i].date == plan.date:
+			deleteIndex = i
+	
+	workoutPlan.remove_at(deleteIndex)
+	SaveAndLoad.save_data(SaveAndLoad.plannedWorkoutFile, workoutPlan)
