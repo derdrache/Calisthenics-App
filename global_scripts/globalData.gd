@@ -1,6 +1,7 @@
 extends Node
 
 const abcList = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q"]
+const DAY_IN_UNIX_TIME = 86400
 
 var workoutModus : Array[String] = ["NORMAL", "SUPERSET"]
 var initialBreakTime : int = 180

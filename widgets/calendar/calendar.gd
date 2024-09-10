@@ -7,7 +7,7 @@ extends Control
 const DATE_LABEL = preload("res://widgets/calendar/DateLabel.tscn")
 const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
-const DAY_IN_UNIX_TIME = 86400
+
 
 var selectedDate = Time.get_datetime_dict_from_system()
 var monthsList = []
@@ -29,7 +29,8 @@ func _set_small_calendar():
 	%nextMonth.hide()
 	
 	var selectedDateUnixTime = Time.get_unix_time_from_datetime_dict(selectedDate)
-	var startDate = Time.get_datetime_dict_from_unix_time(selectedDateUnixTime - DAY_IN_UNIX_TIME * (_get_weekday_index(selectedDate)))
+	var startDate = Time.get_datetime_dict_from_unix_time(
+		selectedDateUnixTime - GlobalData.DAY_IN_UNIX_TIME * (_get_weekday_index(selectedDate)))
 	
 	var calculateDate = startDate
 	for i in 7:
@@ -49,7 +50,8 @@ func set_big_calendar():
 	if startWeekday == -1: startWeekday = 6
 	
 	var rows = 5
-	var startDate = Time.get_datetime_dict_from_unix_time(firstOfMonthUnixTime - DAY_IN_UNIX_TIME * (_get_weekday_index(firstOfMonthDate)))
+	var startDate = Time.get_datetime_dict_from_unix_time(
+		firstOfMonthUnixTime - GlobalData.DAY_IN_UNIX_TIME * (_get_weekday_index(firstOfMonthDate)))
 		
 	var calculateDate = startDate
 	
@@ -80,7 +82,7 @@ func _get_first_of_month(date):
 	return Time.get_datetime_dict_from_unix_time(selectedUnixTime)
 
 func _get_next_day(date):
-		var nextDayUnixTime = Time.get_unix_time_from_datetime_dict(date) + DAY_IN_UNIX_TIME
+		var nextDayUnixTime = Time.get_unix_time_from_datetime_dict(date) + GlobalData.DAY_IN_UNIX_TIME
 		return Time.get_datetime_dict_from_unix_time(nextDayUnixTime)	
 
 func _on_previous_month_button_pressed() -> void:
@@ -115,15 +117,14 @@ func _get_weekday_index(date):
 	
 	return index
 
-
 func _on_previous_week_button_pressed() -> void:
-	var newUnixTime = Time.get_unix_time_from_datetime_dict(selectedDate) - 7 * DAY_IN_UNIX_TIME
+	var newUnixTime = Time.get_unix_time_from_datetime_dict(selectedDate) - 7 * GlobalData.DAY_IN_UNIX_TIME
 	selectedDate = Time.get_datetime_dict_from_unix_time(newUnixTime)
 	
 	_refresh_calendar()
 
 func _on_next_week_button_pressed() -> void:
-	var newUnixTime = Time.get_unix_time_from_datetime_dict(selectedDate) + 7 * DAY_IN_UNIX_TIME
+	var newUnixTime = Time.get_unix_time_from_datetime_dict(selectedDate) + 7 * GlobalData.DAY_IN_UNIX_TIME
 	selectedDate = Time.get_datetime_dict_from_unix_time(newUnixTime)
 	
 	_refresh_calendar()
