@@ -18,6 +18,7 @@ var touchEvents = {}
 var last_drag_distance = 0
 var zoom_sensitivity = 10
 var defaultContentSize 
+var previousScale = 1
 
 func _ready():
 	top_navigation_bar.previousPage.connect(_on_top_navigation_bar_previous_page)
@@ -29,6 +30,10 @@ func _ready():
 	if talentSelection: 
 		_set_talent_selection()
 
+func _on_scroll_container_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and (event.button_index == 4 or event.button_index == 5):
+		accept_event()
+		
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("quit"): 
 		get_tree().quit()
@@ -63,21 +68,32 @@ func _input(event: InputEvent) -> void:
 				zoom = true
 				
 			
-	if zoom: _zoom()
-	
+	#if zoom: _zoom()
 
+func _unhandled_input(event):
+	if event is InputEventMouseButton:
+		return
 
-func _zoom():
-	changedScale = clamp(changedScale, 1, 2)
-	
-	var zoomPosition = get_global_mouse_position() * changedScale - get_global_mouse_position()
-	%ScrollContainer.scale = Vector2(changedScale, changedScale)
-	
-	var zoomFactor = Vector2.ONE + (Vector2(0.05, 0.3) * %ScrollContainer.scale)
-	%SkillContainer.custom_minimum_size = defaultContentSize *  zoomFactor
-
-	%ScrollContainer.get_h_scroll_bar().value = abs(zoomPosition.x)
-	%ScrollContainer.get_v_scroll_bar().value = abs(zoomPosition.y)
+#func _zoom():
+	#changedScale = clamp(changedScale, 1, 2)
+	#
+	#print(changedScale)
+	#print(previousScale)
+	#
+	#var zoomPosition = get_global_mouse_position() * changedScale- get_global_mouse_position()
+	#%ScrollContainer.scale = Vector2(changedScale, changedScale)
+	#
+	#var zoomFactor = Vector2.ONE + (Vector2(0.05, 0.3) * %ScrollContainer.scale)
+	#%SkillContainer.custom_minimum_size = defaultContentSize *  zoomFactor
+	#
+	#await get_tree().physics_frame
+#
+	#var test_x = ( %ScrollContainer.get_h_scroll_bar().value + get_global_mouse_position().x) * (previousScale - changedScale-1)
+#
+	#%ScrollContainer.get_h_scroll_bar().value += test_x
+	#%ScrollContainer.get_v_scroll_bar().value = abs(zoomPosition.y)
+	#
+	#previousScale = changedScale
 	
 func _process(delta):
 	queue_redraw()
