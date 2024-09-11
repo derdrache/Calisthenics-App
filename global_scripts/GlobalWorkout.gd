@@ -19,13 +19,14 @@ func _get_and_remove_unfinished_workout_plans():
 	for workoutPlan in workoutPlans:
 		var currentDate = Time.get_datetime_dict_from_system()
 		var planDate = workoutPlan.date
-		var isWorkoutDone = planDate.day +1 <= currentDate.day or planDate.month +1 <= currentDate.month or planDate.year +1 <= currentDate.year
+		var isWorkoutPast = planDate.day +1 <= currentDate.day or planDate.month +1 <= currentDate.month or planDate.year +1 <= currentDate.year
 		
-		if not isWorkoutDone: return
+		if not isWorkoutPast: continue
 		
 		var workout = get_workout_history_data(workoutPlan.date)
-		if workout.is_empty(): deletePlanWorkouts.append(workoutPlan)
-	
+		if workout.is_empty(): 
+			deletePlanWorkouts.append(workoutPlan)
+
 	for workoutPlan in deletePlanWorkouts:
 		_remove_workout_plan(workoutPlan)	
 	
@@ -240,10 +241,10 @@ func _get_all_workout_plan():
 func _remove_workout_plan(plan):
 	var workoutPlan = SaveAndLoad.load_data(SaveAndLoad.plannedWorkoutFile)
 	var deleteIndex = 0
-	
+
 	for i in workoutPlan.size():
 		if workoutPlan[i].date == plan.date:
 			deleteIndex = i
-	
+
 	workoutPlan.remove_at(deleteIndex)
 	SaveAndLoad.save_data(SaveAndLoad.plannedWorkoutFile, workoutPlan)
