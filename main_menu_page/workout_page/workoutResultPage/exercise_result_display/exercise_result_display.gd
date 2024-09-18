@@ -12,5 +12,5 @@ func _ready():
 		var displayNode = SET_DISPLAY.instantiate()
 		displayNode.reps = reps
 		displayNode.goal = exercise.goal
-		
+	
 		%DisplayContainer.add_child(displayNode)

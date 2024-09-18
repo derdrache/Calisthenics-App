@@ -28,7 +28,7 @@ func _setup_exercise_resulst():
 		
 		exersiceResultDisplayNode.exercise = exercise.talent
 		exersiceResultDisplayNode.repsDoneList = exercise.repsDone
-		
+
 		%ExerciseResultContainer.add_child(exersiceResultDisplayNode)	
 
 func _quit_page():

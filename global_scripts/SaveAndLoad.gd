@@ -7,7 +7,7 @@ const workoutHistoryDataFile = "user://workout_history.bin"
 const plannedWorkoutFile = "user://workout_planned.bin"
 
 func save_resource(path, resource, name = null):
-	_check_paths()
+	_create_dir()
 		
 	var fileName = resource.resource_path.get_file()
 	
@@ -15,7 +15,7 @@ func save_resource(path, resource, name = null):
 	
 	ResourceSaver.save(resource, path + fileName)
 
-func _check_paths():
+func _create_dir():
 	var dir = DirAccess.open(basePath)
 	dir.make_dir("workout_templates")
 	dir.make_dir("exercises")
