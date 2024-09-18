@@ -94,5 +94,10 @@ offset_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="ColorRect" type="ColorRect" parent="SelectionMarker"]
+layout_mode = 0
+offset_right = 1.0
+offset_bottom = 1.0
+
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="scroll_ended" from="BackgroundPanel/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/ScrollContainer" to="." method="_on_scroll_container_scroll_ended"]

@@ -1,7 +1,5 @@
 extends Control
 
-signal valueChanged
-
 @onready var scroll_container = %ScrollContainer
 @onready var object_container = %ObjectContainer
 @onready var selection_marker = %SelectionMarker
@@ -46,7 +44,7 @@ func _create_number_labels():
 		label.custom_minimum_size.x = 51
 	
 	var spacer2 = Label.new()
-	spacer2.custom_minimum_size.x = 80
+	spacer2.custom_minimum_size.x = 70
 	object_container.add_child(spacer2)
 
 func _create_normal_labels():
@@ -72,18 +70,6 @@ func  _remove_background():
 	
 func _input(event):
 	if not withCloseOnBackgroundClick: return
-	
-	if event is InputEventMouseButton and event.button_index == 1 and event.is_pressed():
-		var mousePosition = get_global_mouse_position()
-		
-		if not get_global_rect().has_point(mousePosition):
-			var value = get_selected_value()
-			
-			if not value: value = initialValue
-			
-			valueChanged.emit(value)
-			
-			queue_free()
 
 func _set_carusel_start():
 	var initalValueIndex = get_node_index(initialValue)
