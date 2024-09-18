@@ -6,12 +6,12 @@ const saveExerciseDataPath = "user://exercises/"
 const workoutHistoryDataFile = "user://workout_history.bin"
 const plannedWorkoutFile = "user://workout_planned.bin"
 
-func save_resource(path, resource, name = null):
+func save_resource(path, resource, newName = null):
 	_create_dir()
 		
 	var fileName = resource.resource_path.get_file()
 	
-	if name: fileName = name.replace(" ", "_") + ".tres"
+	if newName: fileName = newName.replace(" ", "_") + ".tres"
 	
 	ResourceSaver.save(resource, path + fileName)
 
@@ -26,10 +26,10 @@ func load_workout_resources():
 			var resource = ResourceLoader.load(saveWorkoutPath + fileName)
 			return resource
 			
-func load_exercise_history(name):
+func load_exercise_history(selectedFileName):
 	for fileName in DirAccess.get_files_at(saveExerciseDataPath):
 		var fileNormalName = fileName.split(".")[0]
-		if fileNormalName == name:
+		if fileNormalName == selectedFileName:
 			var resource = load(saveExerciseDataPath + fileName)
 			return resource
 	

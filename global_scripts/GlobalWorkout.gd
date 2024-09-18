@@ -12,7 +12,6 @@ func _ready() -> void:
 	_get_and_remove_unfinished_workout_plans()
 
 func _get_and_remove_unfinished_workout_plans():
-	var workoutHistory = _get_all_workout_history_data()
 	var workoutPlans = _get_all_workout_plan()
 	var deletePlanWorkouts = []
 	
@@ -56,9 +55,7 @@ func start_workout():
 	_setup_exercise_data()
 
 func _setup_exercise_data():
-	for exercise in currentWorkout.exercises:
-		var index : int = currentWorkout.exercises.find(exercise)
-		
+	for exercise in currentWorkout.exercises:		
 		exerciseData.append({
 			"talent": exercise.talent,
 			"setsDone": 0,
@@ -156,7 +153,6 @@ func _save_exercise_data():
 	for i in len(exerciseData):
 		var exercise = exerciseData[i]
 		var talent = exercise.talent
-		var repsGoal = talent.goal
 		var repsDoneArray = exercise.repsDone
 		
 		var exerciseHistory = SaveAndLoad.load_exercise_history(talent.get_talent_name())

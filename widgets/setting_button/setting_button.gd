@@ -10,9 +10,9 @@ func _ready() -> void:
 
 
 func _on_popup_button_pressed() -> void:
-	var position = get_global_mouse_position()
+	var mousePosition = get_global_mouse_position()
 	popup_menu.show()
-	popup_menu.position = Vector2i(position.x - popup_menu.size.x, position.y)
+	popup_menu.position = Vector2i(mousePosition.x - popup_menu.size.x, mousePosition.y)
 	
 func _on_popup_menu_id_pressed(id: int) -> void:
 	if id == 0: _workout_undo()

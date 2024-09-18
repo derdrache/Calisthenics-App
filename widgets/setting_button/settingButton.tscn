@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://neudsmy1a03g"]
 
-[ext_resource type="Texture2D" uid="uid://4urmxf5oxbcu" path="res://more_vert.png" id="1_6qrcg"]
+[ext_resource type="Texture2D" uid="uid://4urmxf5oxbcu" path="res://assets/icons/more_vert.png" id="1_6qrcg"]
 [ext_resource type="Script" path="res://widgets/setting_button/setting_button.gd" id="1_qm33h"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ftuvb"]
