@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dpdr3ylarm35f"]
+[gd_scene load_steps=8 format=3 uid="uid://dpdr3ylarm35f"]
 
 [ext_resource type="Script" path="res://main_menu_page/workout_page/workout_main_page.gd" id="1_xvtn2"]
 [ext_resource type="Texture2D" uid="uid://c5dh3ubufrjwn" path="res://assets/icons/battle_setting.png" id="2_8kbjj"]
 [ext_resource type="PackedScene" uid="uid://cb3gyjpywky8i" path="res://main_menu_page/workout_page/currentWorkoutDisplay/current_workout_display.tscn" id="2_pao4v"]
 [ext_resource type="PackedScene" uid="uid://cqey1rgvj0e2j" path="res://widgets/calendar/Calendar.tscn" id="4_dd0rm"]
+[ext_resource type="PackedScene" uid="uid://ctosym02jipr0" path="res://main_menu_page/workout_page/CurrentState/current_state.tscn" id="4_p2p3c"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v2n0d"]
 bg_color = Color(0.380392, 0.686275, 0.301961, 1)
@@ -46,7 +47,7 @@ theme_override_constants/margin_bottom = 150
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer3"]
 layout_mode = 2
-theme_override_constants/separation = 150
+theme_override_constants/separation = 50
 
 [node name="Calendar" parent="MarginContainer3/VBoxContainer" instance=ExtResource("4_dd0rm")]
 custom_minimum_size = Vector2(600, 200)
@@ -57,6 +58,9 @@ smallCalendar = true
 [node name="CurrentWorkout" parent="MarginContainer3/VBoxContainer" instance=ExtResource("2_pao4v")]
 layout_mode = 2
 size_flags_vertical = 4
+
+[node name="CurrentState" parent="MarginContainer3/VBoxContainer" instance=ExtResource("4_p2p3c")]
+layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1

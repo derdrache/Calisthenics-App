@@ -22,6 +22,7 @@ ResourceData="*res://global_scripts/resourceData.gd"
 GlobalData="*res://global_scripts/globalData.gd"
 GlobalWorkout="*res://global_scripts/GlobalWorkout.gd"
 SignalHub="*res://global_scripts/SignalHub.gd"
+StrengthSystem="*res://global_scripts/strength_system.gd"
 
 [display]
 

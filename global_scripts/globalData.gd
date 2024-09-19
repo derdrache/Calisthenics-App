@@ -6,7 +6,6 @@ const DAY_IN_UNIX_TIME = 86400
 var workoutModus : Array[String] = ["NORMAL", "SUPERSET"]
 var initialBreakTime : int = 180
 
-
 func seconds_in_minutes_string(seconds):
 	var pufferMinutes = seconds / 60.0
 	var minutes = int(pufferMinutes)

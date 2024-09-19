@@ -1,0 +1,89 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctosym02jipr0"]
+
+[ext_resource type="Script" path="res://main_menu_page/workout_page/CurrentState/current_state.gd" id="1_hntuu"]
+
+[node name="CurrentState" type="MarginContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 175.0
+grow_horizontal = 2
+script = ExtResource("1_hntuu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 20
+text = "Overall Strength: "
+
+[node name="AllStrengthLabel" type="Label" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 20
+text = "9001"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Push"
+
+[node name="PushStrengthLabel" type="Label" parent="VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Level 10: 2000 Strength"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Pull"
+
+[node name="PullStrengthLabel" type="Label" parent="VBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Level 10: 2000"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Leg"
+
+[node name="LegStrengthLabel" type="Label" parent="VBoxContainer/HBoxContainer4"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Level 10: 2000"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Core"
+
+[node name="CoreStrengthLabel" type="Label" parent="VBoxContainer/HBoxContainer5"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Level 10: 2000"
