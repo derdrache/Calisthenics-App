@@ -33,6 +33,7 @@ grow_horizontal = 2
 
 [node name="TopNavigationBar" parent="VBoxContainer" instance=ExtResource("1_xcq41")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 title = "Workout Calendar"
 
