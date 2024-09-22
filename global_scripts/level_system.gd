@@ -90,3 +90,6 @@ func _get_strength(part: MAIN_PARTS):
 	var repStrength = _get_rep_strength(talentPath + "/level", level)
 
 	return levelStrength + repStrength	
+
+func talent_completed(talent):
+	pass

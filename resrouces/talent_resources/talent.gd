@@ -3,8 +3,9 @@ class_name TalentResource
 
 @export var icon : CompressedTexture2D
 @export var unlocks: Array[TalentResource]
-@export var is_unlocked = false
 @export var goal = 10
+@export var completed = false
+@export var is_unlocked = false
 
 var talentName = resource_path.get_file().trim_suffix('.tres')
 
