@@ -12,8 +12,6 @@ func _ready():
 	
 	for button in buttons.get_children():
 		button.pressed.connect(_open_page.bind(button.get_index()))
-		button.pressed.connect(_open_page.bind(button.get_index()))
-		button.pressed.connect(_open_page.bind(button.get_index()))
 	
 func _open_page(pageNumber):
 	for i in page_container.get_child_count():
