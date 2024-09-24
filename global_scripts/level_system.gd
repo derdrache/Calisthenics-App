@@ -79,8 +79,10 @@ func _get_rep_strength(levelPath, level):
 			maxReps = exerciseResource.maxRep
 		
 		if maxReps > MAX_POINT_REP: maxReps = MAX_POINT_REP
-		if maxReps < 3: maxReps = 3
-
+		
+	
+	if maxReps < 3: return 0
+	
 	return (maxReps - 3) * level * 100 / (MAX_POINT_REP - 3)
 
 func _get_strength(part: MAIN_PARTS):
