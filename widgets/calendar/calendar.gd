@@ -28,6 +28,8 @@ func _set_small_calendar():
 	%previousMonth.hide()
 	%nextMonth.hide()
 	
+	%MonthYearLabel.text = MONTH_NAMES[selectedDate.month - 1] + " " + str(selectedDate.year)
+	
 	var selectedDateUnixTime = Time.get_unix_time_from_datetime_dict(selectedDate)
 	var startDate = Time.get_datetime_dict_from_unix_time(
 		selectedDateUnixTime - GlobalData.DAY_IN_UNIX_TIME * (_get_weekday_index(selectedDate)))
@@ -126,5 +128,7 @@ func _on_previous_week_button_pressed() -> void:
 func _on_next_week_button_pressed() -> void:
 	var newUnixTime = Time.get_unix_time_from_datetime_dict(selectedDate) + 7 * GlobalData.DAY_IN_UNIX_TIME
 	selectedDate = Time.get_datetime_dict_from_unix_time(newUnixTime)
+	
+	
 	
 	_refresh_calendar()
