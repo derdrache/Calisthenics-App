@@ -62,17 +62,15 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="WorkoutMainPage" parent="SaftyArea/VBoxContainer/PageContainer" instance=ExtResource("2_7da7p")]
-unique_name_in_owner = true
 layout_mode = 1
 
 [node name="SkillTreeMainPage" parent="SaftyArea/VBoxContainer/PageContainer" instance=ExtResource("3_kvfax")]
-unique_name_in_owner = true
 visible = false
 layout_mode = 2
 anchors_preset = 0
+grow_vertical = 0
 
 [node name="StatisticMainPage" parent="SaftyArea/VBoxContainer/PageContainer" instance=ExtResource("4_iwmvr")]
-unique_name_in_owner = true
 visible = false
 layout_mode = 2
 anchors_preset = 0
@@ -88,13 +86,13 @@ theme_override_constants/margin_left = 0
 theme_override_constants/margin_top = 25
 theme_override_constants/margin_bottom = 25
 
-[node name="HBoxContainer" type="HBoxContainer" parent="SaftyArea/VBoxContainer/PanelContainer/MarginContainer"]
+[node name="Buttons" type="HBoxContainer" parent="SaftyArea/VBoxContainer/PanelContainer/MarginContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 50
 
-[node name="WorkoutButton" type="Button" parent="SaftyArea/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
-unique_name_in_owner = true
+[node name="WorkoutButton" type="Button" parent="SaftyArea/VBoxContainer/PanelContainer/MarginContainer/Buttons"]
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -103,8 +101,7 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_g420j")
 text = "Workout"
 
-[node name="SkillTreeButton" type="Button" parent="SaftyArea/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
-unique_name_in_owner = true
+[node name="SkillTreeButton" type="Button" parent="SaftyArea/VBoxContainer/PanelContainer/MarginContainer/Buttons"]
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -113,8 +110,7 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_gaa1t")
 text = "Skill Tree"
 
-[node name="StatisticButton" type="Button" parent="SaftyArea/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
-unique_name_in_owner = true
+[node name="StatisticButton" type="Button" parent="SaftyArea/VBoxContainer/PanelContainer/MarginContainer/Buttons"]
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
