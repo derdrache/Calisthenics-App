@@ -95,21 +95,23 @@ func previous_exercise(pageName):
 	if "Workout" in pageName:
 		get_tree().change_scene_to_file("res://main_menu_page/workout_page/doWorkout/break_page.tscn")
 	elif "Break" in pageName:
-		if modus == "NORMAL": 
+		if modus == "NORMAL" or exerciseData.size() == 1: 
 			currentExerciseIndex -= 1
 		elif modus == "SUPERSET":
 			var isEvenNumber = currentExerciseIndex % 2 == 0
 			var setsDone = exerciseData[currentExerciseIndex].setsDone
-			
+
 			if isEvenNumber and setsDone == 0:
 				currentExerciseIndex -= 1
 			elif isEvenNumber:
 				currentExerciseIndex += 1
 			else: currentExerciseIndex -= 1
 		
-		exerciseData[currentExerciseIndex].setsDone -= 1
-		
 		if currentExerciseIndex < 0: currentExerciseIndex = 0
+		
+		exerciseData[currentExerciseIndex].setsDone -= 1
+		_remove_last_set()
+		
 		get_tree().change_scene_to_file("res://main_menu_page/workout_page/doWorkout/do_workout_page.tscn")
 
 func is_workout_done():
@@ -130,6 +132,10 @@ func _add_reps(repsDone):
 
 func _add_set():
 	exerciseData[currentExerciseIndex].setsDone += 1
+
+func _remove_last_set():
+	exerciseData[currentExerciseIndex].repsDone.pop_back()
+
 
 func save_workout(index, workoutData):
 	var workoutResource = SaveAndLoad.load_workout_resources()
