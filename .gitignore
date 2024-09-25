@@ -2,3 +2,5 @@
 .godot/
 /apk
 *.tmp
+/archiv
+/saveFiles
