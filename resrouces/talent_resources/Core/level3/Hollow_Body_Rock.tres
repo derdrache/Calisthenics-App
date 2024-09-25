@@ -6,5 +6,12 @@
 [resource]
 script = ExtResource("1_b4fqu")
 unlocks = Array[ExtResource("1_b4fqu")]([ExtResource("2_4pch0")])
-is_unlocked = false
 goal = 10
+completed = false
+is_unlocked = false
+firstTimeDoneDate = {}
+goalAchievedDate = {}
+bestResult = Array[int]([])
+maxReps = 0
+totalReps = 0
+totalSets = 0
