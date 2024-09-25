@@ -6,13 +6,12 @@ const saveExerciseDataPath = "user://exercises/"
 const workoutHistoryDataFile = "user://workout_history.bin"
 const plannedWorkoutFile = "user://workout_planned.bin"
 
-func save_resource(path, resource, newName = null):
+func save_resource(path, resource, name = ""):
 	_create_dir()
 		
 	var fileName = resource.resource_path.get_file()
-	
-	if newName: fileName = newName.replace(" ", "_") + ".tres"
-	
+	if name: fileName = name.replace(" ", "_") + ".tres"
+
 	ResourceSaver.save(resource, path + fileName)
 
 func _create_dir():
@@ -26,15 +25,13 @@ func load_workout_resources():
 			var resource = ResourceLoader.load(saveWorkoutPath + fileName)
 			return resource
 			
-func load_exercise_history(selectedFileName):
+func load_exercise_saveFile(excersice: TalentResource):
 	for fileName in DirAccess.get_files_at(saveExerciseDataPath):
-		var fileNormalName = fileName.split(".")[0]
-		if fileNormalName == selectedFileName:
-			var resource = load(saveExerciseDataPath + fileName)
+		if fileName == excersice.get_talent_file_name():
+			var resource = ResourceLoader.load(saveExerciseDataPath + fileName)
 			return resource
-	
-	var resource = load("res://resrouces/exercise_hisotry.tres").duplicate()
-	resource.firstTimeDoneDate = Time.get_datetime_dict_from_system()	
+
+	var resource = load(excersice.get_origin_save_path())
 	return resource
 
 func save_data(save_path: String, data) -> void:
