@@ -5,6 +5,9 @@ enum MAIN_PARTS {PUSH, PULL, LEG, CORE}
 const STRENGTH_FACTOR = 100
 const MAX_POINT_REP = 10
 
+func _ready() -> void:
+	pass#unlock_previous_talents(load("res://resrouces/talent_resources/Push/level4/Push_up.tres"))
+
 func get_overall_strength():
 	return (get_push_data().strength + get_pull_data().strength + 
 		get_leg_data().strength + get_core_Data().strength)
@@ -76,7 +79,7 @@ func _get_rep_strength(levelPath, level):
 		var exerciseResource = ResourceLoader.load(loadPath)
 		
 		if exerciseResource: 
-			maxReps = exerciseResource.maxRep
+			maxReps = exerciseResource.maxReps
 		
 		if maxReps > MAX_POINT_REP: maxReps = MAX_POINT_REP
 		
@@ -93,5 +96,37 @@ func _get_strength(part: MAIN_PARTS):
 
 	return levelStrength + repStrength	
 
-func talent_completed(talent):
-	pass
+func unlock_talents(talent: TalentResource):
+	var unlockTalents = talent.unlocks
+
+	for unlockTalent in unlockTalents:
+		var loadedResource = unlockTalent.load_save_data()
+		loadedResource.is_unlocked = true
+		loadedResource.save()
+		
+	unlock_previous_talents(talent)
+
+func unlock_previous_talents(talent: TalentResource):
+	var talentLevel = int(talent.get_talent_level())
+	var mainPart = talent.get_main_part()
+	var talentPath = _get_main_path(mainPart)
+	var searchTalentNames = [talent.get_talent_name()]
+	
+	for i in range(talentLevel-1, 0, -1):
+		var serachFolder = talentPath + "level" + str(i) + "/"
+		
+		for fileName in DirAccess.get_files_at(serachFolder):
+			if not ResourceLoader.exists(serachFolder + fileName): continue
+			var resource : TalentResource = ResourceLoader.load(serachFolder + fileName)
+			
+			for lookTalent in resource.unlocks:
+				var lookTalentName = lookTalent.get_talent_name()
+				
+				if searchTalentNames.has(lookTalentName):
+					searchTalentNames.erase(lookTalentName)
+					resource.is_unlocked = true
+					resource.completed = true
+					searchTalentNames.append(resource.get_talent_name())
+					unlock_talents(resource)
+					
+					resource.save()
