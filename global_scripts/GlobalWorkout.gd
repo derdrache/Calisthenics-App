@@ -156,26 +156,39 @@ func workout_done():
 	add_workout(SaveAndLoad.workoutHistoryDataFile, Time.get_datetime_dict_from_system())
 	
 func _save_exercise_data():
-	for i in len(exerciseData):
-		var exercise = exerciseData[i]
-		var talent = exercise.talent
+	for exercise in exerciseData:
+		var talentFileName = exercise.talent.get_talent_file_name()
 		var repsDoneArray = exercise.repsDone
 		
-		var exerciseHistory = SaveAndLoad.load_exercise_history(talent.get_talent_name())
-		var oldRecord = exerciseHistory.maxRep
+		var exerciseResource : TalentResource = SaveAndLoad.load_exercise_saveFile(exercise.talent)
+		var oldRecord = exerciseResource.maxReps
+		var totalRepsDone = 0
+
+		if exerciseResource.totalReps == 0:
+			exerciseResource.firstTimeDoneDate = Time.get_datetime_dict_from_system()
+			LevelSystem.unlock_previous_talents(exercise.talent)
 		
 		for repIndex in len(repsDoneArray):
 			var rep = repsDoneArray[repIndex]
+			totalRepsDone += rep
 			
-			if rep > exerciseHistory.maxRep: exerciseHistory.maxRep = rep
-			exerciseHistory.totalReps += rep
-			exerciseHistory.totalSets += 1
+			exerciseResource.totalReps += rep
+			exerciseResource.totalSets += 1
 			
-			
-			if rep > exerciseHistory.bestResult[repIndex]:
-				exerciseHistory.bestResult[repIndex] = rep
-			
-		SaveAndLoad.save_resource(SaveAndLoad.saveExerciseDataPath, exerciseHistory, talent.get_talent_name())
+			if rep > exerciseResource.maxReps: exerciseResource.maxReps = rep
+
+			if exerciseResource.bestResult.size() == repIndex:
+				exerciseResource.bestResult.append(rep)
+			elif rep > exerciseResource.bestResult[repIndex]:
+				exerciseResource.bestResult[repIndex] = rep
+		
+		if totalRepsDone >= 30 and not exerciseResource.completed:
+			LevelSystem.unlock_talents(exerciseResource)
+			exerciseResource.is_unlocked = true
+			exerciseResource.completed = true
+			exerciseResource.goalAchievedDate = Time.get_datetime_dict_from_system()
+
+		SaveAndLoad.save_resource(SaveAndLoad.saveExerciseDataPath, exerciseResource.get_save_file())
 
 func add_workout(file, date):
 	var workoutHistory = SaveAndLoad.load_data(file)	
