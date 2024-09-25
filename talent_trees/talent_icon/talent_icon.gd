@@ -1,4 +1,3 @@
-@tool
 extends Panel
 
 @export var talentResource : TalentResource:
@@ -19,6 +18,9 @@ extends Panel
 @export var unlockColorPanel: Color
 @export var unlockColorBorder : Color
 
+@export var completeColorPanel: Color
+@export var completeColorBorder: Color
+
 @onready var label = $Label
 @onready var texture_rect = $TextureRect
 @onready var goal_icon = $GoalIcon
@@ -30,7 +32,9 @@ const TALENT_ICON_STYLEBOX = preload("res://talent_trees/talent_tree/talent_icon
 func _ready():
 	goal_icon.hide()
 	
-	if talentResource: add_to_group("talents")
+	if talentResource: 
+		add_to_group("talents")
+		talentResource = talentResource.load_save_data()
 	
 	if not talentResource: 
 		texture_rect.hide()
@@ -56,7 +60,10 @@ func get_center():
 func _set_style():
 	var styleBox : StyleBoxFlat = get_theme_stylebox("panel").duplicate()
 	
-	if talentResource.is_unlocked:
+	if talentResource.completed:
+		styleBox.border_color = completeColorBorder
+		styleBox.bg_color = completeColorPanel
+	elif talentResource.is_unlocked:
 		styleBox.border_color = unlockColorBorder
 		styleBox.bg_color = unlockColorPanel
 	else:
@@ -65,3 +72,8 @@ func _set_style():
 	
 	add_theme_stylebox_override("panel", styleBox)
 	
+
+
+func _on_button_pressed() -> void:
+	# open info window?
+	pass

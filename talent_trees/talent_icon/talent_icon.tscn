@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://dtsq21l50odev"]
 
-[ext_resource type="Script" path="res://talent_trees/talent_tree/talent_icon/talent_icon.gd" id="1_wadke"]
+[ext_resource type="Script" path="res://talent_trees/talent_icon/talent_icon.gd" id="1_wadke"]
 [ext_resource type="Texture2D" uid="uid://bgt5ytt41k45g" path="res://assets/icons/icon.svg" id="2_apso6"]
 [ext_resource type="Texture2D" uid="uid://bdrc4dvbryedq" path="res://assets/icons/Icon_Large_Star_SeethroughOutline.png" id="3_my3td"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tu3v4"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sk3tt"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_opdbu"]
 
@@ -13,20 +13,21 @@ custom_minimum_size = Vector2(80, 70)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxEmpty_tu3v4")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_sk3tt")
 script = ExtResource("1_wadke")
 isGoal = null
 lockColorPanel = Color(0.196078, 0.196078, 0.196078, 1)
 unlockColorPanel = Color(0.54902, 0.54902, 0.54902, 1)
 unlockColorBorder = Color(0, 1, 0, 1)
+completeColorPanel = Color(1, 0.843137, 0, 1)
+completeColorBorder = null
 
 [node name="Button" type="Button" parent="."]
 unique_name_in_owner = true
-layout_mode = 2
-offset_left = 2.0
-offset_top = 2.0
-offset_right = 48.0
-offset_bottom = 56.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
@@ -78,3 +79,5 @@ offset_right = 88.0
 offset_bottom = 18.0
 texture = ExtResource("3_my3td")
 expand_mode = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

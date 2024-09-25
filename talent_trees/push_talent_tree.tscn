@@ -1,10 +1,10 @@
 [gd_scene load_steps=262 format=3 uid="uid://b2upxp3be8ox2"]
 
-[ext_resource type="Script" path="res://talent_trees/talent_tree/talent_tree.gd" id="1_bpftf"]
+[ext_resource type="Script" path="res://talent_trees/talent_tree.gd" id="1_bpftf"]
 [ext_resource type="Texture2D" uid="uid://dvobueh3j5k0v" path="res://assets/images/full-shot-ninja-wearing-equipment.jpg" id="2_8fxay"]
 [ext_resource type="PackedScene" uid="uid://c1u5yg2o45dr" path="res://widgets/safe_area_container/safe_area_container.tscn" id="3_nxmqd"]
 [ext_resource type="PackedScene" uid="uid://brpavu0ocrgcq" path="res://widgets/top_navigation_bar/top_navigation_bar.tscn" id="3_rnui1"]
-[ext_resource type="PackedScene" uid="uid://dtsq21l50odev" path="res://talent_trees/talent_tree/talent_icon/talent_icon.tscn" id="4_h5km4"]
+[ext_resource type="PackedScene" uid="uid://dtsq21l50odev" path="res://talent_trees/talent_icon/talent_icon.tscn" id="4_h5km4"]
 [ext_resource type="Resource" uid="uid://bsubt8p8iq1l8" path="res://resrouces/talent_resources/Push/level1/Plank.tres" id="5_3u2wl"]
 [ext_resource type="Resource" uid="uid://c2t6hepyn8ae2" path="res://resrouces/talent_resources/Push/level1/Wall_Push_Up.tres" id="6_228ks"]
 [ext_resource type="Resource" uid="uid://bimdlk8hohe8p" path="res://resrouces/talent_resources/Push/level1/Knee_Bench_Dip.tres" id="7_fpmqa"]

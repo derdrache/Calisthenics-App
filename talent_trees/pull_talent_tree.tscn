@@ -1,10 +1,10 @@
 [gd_scene load_steps=239 format=3 uid="uid://br6al0arrcsdx"]
 
-[ext_resource type="Script" path="res://talent_trees/talent_tree/talent_tree.gd" id="1_umcnp"]
+[ext_resource type="Script" path="res://talent_trees/talent_tree.gd" id="1_umcnp"]
 [ext_resource type="Texture2D" uid="uid://dvobueh3j5k0v" path="res://assets/images/full-shot-ninja-wearing-equipment.jpg" id="2_f2grp"]
 [ext_resource type="PackedScene" uid="uid://c1u5yg2o45dr" path="res://widgets/safe_area_container/safe_area_container.tscn" id="2_fu5xe"]
 [ext_resource type="PackedScene" uid="uid://brpavu0ocrgcq" path="res://widgets/top_navigation_bar/top_navigation_bar.tscn" id="3_05svs"]
-[ext_resource type="PackedScene" uid="uid://dtsq21l50odev" path="res://talent_trees/talent_tree/talent_icon/talent_icon.tscn" id="4_poil6"]
+[ext_resource type="PackedScene" uid="uid://dtsq21l50odev" path="res://talent_trees/talent_icon/talent_icon.tscn" id="4_poil6"]
 [ext_resource type="Resource" uid="uid://dpx7hdv03nq2e" path="res://resrouces/talent_resources/Pull/level1/Dead_Hang.tres" id="5_v5glv"]
 [ext_resource type="Resource" uid="uid://dk0aflereapmo" path="res://resrouces/talent_resources/Pull/level1/Beginner_Australien_Pull-Up.tres" id="6_thhh3"]
 [ext_resource type="Resource" uid="uid://b1xl1j50w0o2w" path="res://resrouces/talent_resources/Pull/level2/German_Hang.tres" id="7_x2pjh"]

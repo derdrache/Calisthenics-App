@@ -1,10 +1,10 @@
 [gd_scene load_steps=236 format=3 uid="uid://bgnq4k6hedx6d"]
 
-[ext_resource type="Script" path="res://talent_trees/talent_tree/talent_tree.gd" id="1_v2k57"]
+[ext_resource type="Script" path="res://talent_trees/talent_tree.gd" id="1_v2k57"]
 [ext_resource type="Texture2D" uid="uid://dvobueh3j5k0v" path="res://assets/images/full-shot-ninja-wearing-equipment.jpg" id="2_8kqxn"]
 [ext_resource type="PackedScene" uid="uid://c1u5yg2o45dr" path="res://widgets/safe_area_container/safe_area_container.tscn" id="2_e4yjj"]
 [ext_resource type="PackedScene" uid="uid://brpavu0ocrgcq" path="res://widgets/top_navigation_bar/top_navigation_bar.tscn" id="3_erudu"]
-[ext_resource type="PackedScene" uid="uid://dtsq21l50odev" path="res://talent_trees/talent_tree/talent_icon/talent_icon.tscn" id="4_wsh3r"]
+[ext_resource type="PackedScene" uid="uid://dtsq21l50odev" path="res://talent_trees/talent_icon/talent_icon.tscn" id="4_wsh3r"]
 [ext_resource type="Resource" uid="uid://csdxo78juxwcc" path="res://resrouces/talent_resources/Leg/level1/Calf_Raise.tres" id="5_4bbsi"]
 [ext_resource type="Resource" uid="uid://bfqvhfchqfk7k" path="res://resrouces/talent_resources/Leg/level1/Assisted_Squat.tres" id="6_xp868"]
 [ext_resource type="Resource" uid="uid://tdx6aqt1rgm1" path="res://resrouces/talent_resources/Leg/level2/High_Calf_Raise.tres" id="7_4eaw2"]

@@ -1,4 +1,4 @@
-@tool
+
 extends Control
 
 signal selected_talent
@@ -73,27 +73,6 @@ func _input(event: InputEvent) -> void:
 func _unhandled_input(event):
 	if event is InputEventMouseButton:
 		return
-
-#func _zoom():
-	#changedScale = clamp(changedScale, 1, 2)
-	#
-	#print(changedScale)
-	#print(previousScale)
-	#
-	#var zoomPosition = get_global_mouse_position() * changedScale- get_global_mouse_position()
-	#%ScrollContainer.scale = Vector2(changedScale, changedScale)
-	#
-	#var zoomFactor = Vector2.ONE + (Vector2(0.05, 0.3) * %ScrollContainer.scale)
-	#%SkillContainer.custom_minimum_size = defaultContentSize *  zoomFactor
-	#
-	#await get_tree().physics_frame
-#
-	#var test_x = ( %ScrollContainer.get_h_scroll_bar().value + get_global_mouse_position().x) * (previousScale - changedScale-1)
-#
-	#%ScrollContainer.get_h_scroll_bar().value += test_x
-	#%ScrollContainer.get_v_scroll_bar().value = abs(zoomPosition.y)
-	#
-	#previousScale = changedScale
 	
 func _process(delta):
 	queue_redraw()
@@ -111,8 +90,8 @@ func _draw():
 				continue
 			
 			var targetPosition = (targetNode.global_position) + (targetNode.get_center()* %ScrollContainer.scale.x)
-			var color = Color.BLACK if talentNode.talentResource.is_unlocked else Color.GRAY
-			
+			var color = Color.BLACK if targetNode.talentResource.is_unlocked else Color.GRAY
+		
 			if targetPosition.y < 200: continue
 			
 			draw_line(sourcePosition, targetPosition, color, 7.0)
@@ -123,7 +102,7 @@ func _set_scrollbar_center(scrollBar):
 
 func _get_node_with_resource(resource):
 	for talentNode in get_tree().get_nodes_in_group("talents"):
-		if talentNode.talentResource == resource:
+		if talentNode.talentResource.get_talent_name() == resource.get_talent_name() :
 			return talentNode
 
 func _reset_talents():	
