@@ -27,7 +27,7 @@ extends Panel
 @onready var button = %Button
 
 
-const TALENT_ICON_STYLEBOX = preload("res://talent_trees/talent_tree/talent_icon/talent_icon_stylebox.tres")
+const TALENT_ICON_STYLEBOX = preload("res://talent_trees/talent_icon/talent_icon_stylebox.tres")
 
 func _ready():
 	goal_icon.hide()
