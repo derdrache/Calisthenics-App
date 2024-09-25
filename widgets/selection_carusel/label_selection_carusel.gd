@@ -1,5 +1,7 @@
 extends Control
 
+signal valueChanged
+
 @onready var scroll_container = %ScrollContainer
 @onready var object_container = %ObjectContainer
 @onready var selection_marker = %SelectionMarker
@@ -70,6 +72,15 @@ func  _remove_background():
 	
 func _input(event):
 	if not withCloseOnBackgroundClick: return
+	var onContainer = get_rect().has_point(get_global_mouse_position())
+	
+	if event is InputEventMouseButton and event.button_index == 1 and event.is_pressed() and not onContainer:
+		var mousePosition = get_global_mouse_position()
+
+		var value = get_selected_value()
+		valueChanged.emit(value)
+
+		queue_free()
 
 func _set_carusel_start():
 	var initalValueIndex = get_node_index(initialValue)
