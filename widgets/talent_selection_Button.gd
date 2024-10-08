@@ -75,13 +75,13 @@ func _show_talent_tree(talentGroup):
 	var talentNode
 	
 	if talentGroup == "PUSH":
-		talentNode = load("res://talent_trees/talent_tree/push_talent_tree.tscn").instantiate()
+		talentNode = load("res://talent_trees/push_talent_tree.tscn").instantiate()
 	elif talentGroup == "PULL":
-		talentNode = load("res://talent_trees/talent_tree/pull_talent_tree.tscn").instantiate()
+		talentNode = load("res://talent_trees/pull_talent_tree.tscn").instantiate()
 	elif talentGroup == "CORE":
-		talentNode = load("res://talent_trees/talent_tree/core_talent_tree.tscn").instantiate()
+		talentNode = load("res://talent_trees/core_talent_tree.tscn").instantiate()
 	elif talentGroup == "LEG":
-		talentNode = load("res://talent_trees/talent_tree/leg_talent_tree.tscn").instantiate()
+		talentNode = load("res://talent_trees/leg_talent_tree.tscn").instantiate()
 
 	talentNode.talentSelection = true
 	talentNode.selected_talent.connect(set_talent)
