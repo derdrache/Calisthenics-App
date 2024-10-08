@@ -47,9 +47,10 @@ func _setup_workout():
 	else: 
 		if not _is_in_future(displayDate): return
 		
-		workoutData = GlobalWorkout.currentWorkout
-
-		GlobalWorkout.add_workout(SaveAndLoad.plannedWorkoutFile, displayDate)
+		workoutData = GlobalWorkout.currentWorkout.duplicate()
+		workoutData.planDate = displayDate
+		GlobalWorkout.add_workout_to_store("Plan", workoutData)
+		
 		_refresh_display()
 		
 func _is_in_future(date):
@@ -60,13 +61,17 @@ func _is_in_future(date):
 
 func _change_workout_data(date):
 	displayDate = date
-	var workout = GlobalWorkout.get_workout_history_data(date)
-	if not workout: workout = GlobalWorkout.get_workout_plan(date)
+	
+	var workoutCollection = GlobalWorkout.get_workout_collection()
+	workoutData = workoutCollection.get_workout(date)
+	
+	if workoutData: displayDate = workoutData.get_date()
+	
+	#if not workoutData:
+		#workoutData = GlobalWorkout.get_plan_workout(date)
+		#if workoutData: displayDate = workoutData.planDate
+	#else: displayDate = workoutData.doneDate
 
-	if workout: 
-		workoutData = str_to_var(workout.workout)
-		displayDate = workout.date
-	else: workoutData = null
 	
 	_refresh_display()
 

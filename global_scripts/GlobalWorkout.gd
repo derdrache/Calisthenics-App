@@ -9,25 +9,8 @@ var startTime
 var exerciseData= []
 
 func _ready() -> void:
-	_get_and_remove_unfinished_workout_plans()
-
-func _get_and_remove_unfinished_workout_plans():
-	var workoutPlans = _get_all_workout_plan()
-	var deletePlanWorkouts = []
-	
-	for workoutPlan in workoutPlans:
-		var currentDate = Time.get_datetime_dict_from_system()
-		var planDate = workoutPlan.date
-		var isWorkoutPast = planDate.day +1 <= currentDate.day or planDate.month +1 <= currentDate.month or planDate.year +1 <= currentDate.year
-		
-		if not isWorkoutPast: continue
-		
-		var workout = get_workout_history_data(workoutPlan.date)
-		if workout.is_empty(): 
-			deletePlanWorkouts.append(workoutPlan)
-
-	for workoutPlan in deletePlanWorkouts:
-		_remove_workout_plan(workoutPlan)	
+	var workoutCollection = get_workout_collection()
+	workoutCollection.delete_unfinished_workout_plans()
 	
 func load_workout():
 	currentWorkout = SaveAndLoad.load_workout_resources()
@@ -136,12 +119,12 @@ func _add_set():
 func _remove_last_set():
 	exerciseData[currentExerciseIndex].repsDone.pop_back()
 
-
-func save_workout(index, workoutData):
+func save_workout(workoutData):
 	var workoutResource = SaveAndLoad.load_workout_resources()
 	
 	if workoutResource == null: workoutResource = workoutResourceTemplate
 	
+	workoutResource.workoutName = workoutData.name
 	workoutResource.exercises = workoutData.exercises
 	workoutResource.modus = workoutData.modus
 	workoutResource.globalBreak = workoutData.globalBreak
@@ -149,11 +132,18 @@ func save_workout(index, workoutData):
 	
 	currentWorkout = workoutResource
 	
-	SaveAndLoad.save_resource(SaveAndLoad.saveWorkoutPath, workoutResource, workoutData.name)
+	SaveAndLoad.save_resource(SaveAndLoad.saveWorkoutPath, workoutResource, workoutResource.workoutName)
 
 func workout_done():
 	_save_exercise_data()
-	add_workout(SaveAndLoad.workoutHistoryDataFile, Time.get_datetime_dict_from_system())
+	
+	var workoutData = currentWorkout.duplicate()
+	workoutData.doneDate = Time.get_datetime_dict_from_system()
+	
+	var workoutCollection = SaveAndLoad.load_workout_collection()
+	workoutCollection.add_workout(workoutData, "History")
+
+	SignalHub.update_calendar.emit()
 	
 func _save_exercise_data():
 	for exercise in exerciseData:
@@ -161,6 +151,7 @@ func _save_exercise_data():
 		var repsDoneArray = exercise.repsDone
 		
 		var exerciseResource : TalentResource = SaveAndLoad.load_exercise_saveFile(exercise.talent)
+
 		var oldRecord = exerciseResource.maxReps
 		var totalRepsDone = 0
 
@@ -190,76 +181,12 @@ func _save_exercise_data():
 
 		SaveAndLoad.save_resource(SaveAndLoad.saveExerciseDataPath, exerciseResource.get_save_file())
 
-func add_workout(file, date):
-	var workoutHistory = SaveAndLoad.load_data(file)	
+func delete_workout_plan(date: Dictionary):
+	var workoutCollection := get_workout_collection()
+
+	workoutCollection.delete_plan_workout(date)	
 	
-	if not workoutHistory: workoutHistory = []
-	
-	var newWorkoutData = {}
-	newWorkoutData.id = currentWorkout.id
-	newWorkoutData.date = date
-	newWorkoutData.workout = var_to_str(currentWorkout)
-	
-	workoutHistory.append(newWorkoutData)
-	
-	SaveAndLoad.save_data(file, workoutHistory)
 	SignalHub.update_calendar.emit()
-	
-func get_workout_history_data(date : Dictionary) -> Dictionary:
-	var workoutHistory = SaveAndLoad.load_data(SaveAndLoad.workoutHistoryDataFile)
-	
-	return _find_workout_data(workoutHistory, date)
-	
-func get_workout_plan(date):
-	var workoutPlan = SaveAndLoad.load_data(SaveAndLoad.plannedWorkoutFile)
-	return _find_workout_data(workoutPlan, date)
-		
-func _find_workout_data(fileData, date):
-	if not fileData: return {}
-	
-	for workout in fileData:
-		var sameDay = workout.date.day == date.day
-		var sameMonth = workout.date.month == date.month
-		var sameYear = workout.date.year == date.year
-		
-		if sameDay and sameMonth and sameYear:
-			return workout
-		
-	return {}
 
-func delete_workout_plan(date):
-	var workoutPlan = SaveAndLoad.load_data(SaveAndLoad.plannedWorkoutFile)
-	var index = -1
-	
-	for i in workoutPlan.size():
-		var day = workoutPlan[i].date.day
-		var month = workoutPlan[i].date.month
-		var year = workoutPlan[i].date.year
-		
-		if day == date.day and month == date.month and year == date.year: 
-			index = i
-			break
-		
-	if index >= 0:
-		workoutPlan.remove_at(index)
-		SaveAndLoad.save_data(SaveAndLoad.plannedWorkoutFile, workoutPlan)
-		SignalHub.update_calendar.emit()
-
-func _get_all_workout_history_data():
-	var workoutHistory = SaveAndLoad.load_data(SaveAndLoad.workoutHistoryDataFile)
-	return workoutHistory
-	
-func _get_all_workout_plan():
-	var workoutPlan = SaveAndLoad.load_data(SaveAndLoad.plannedWorkoutFile)
-	return workoutPlan
-
-func _remove_workout_plan(plan):
-	var workoutPlan = SaveAndLoad.load_data(SaveAndLoad.plannedWorkoutFile)
-	var deleteIndex = 0
-
-	for i in workoutPlan.size():
-		if workoutPlan[i].date == plan.date:
-			deleteIndex = i
-
-	workoutPlan.remove_at(deleteIndex)
-	SaveAndLoad.save_data(SaveAndLoad.plannedWorkoutFile, workoutPlan)
+func get_workout_collection() -> workoutCollectionResource:
+	return SaveAndLoad.load_workout_collection()

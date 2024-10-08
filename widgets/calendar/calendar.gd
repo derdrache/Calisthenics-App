@@ -71,8 +71,9 @@ func _create_label(date, index):
 		var dateLabel = DATE_LABEL.instantiate()
 		
 		dateLabel.date = date
-		dateLabel.workoutData = GlobalWorkout.get_workout_history_data(date)
-		if not dateLabel.workoutData: dateLabel.workoutData = GlobalWorkout.get_workout_plan(date)
+		
+		var workoutCcollection = GlobalWorkout.get_workout_collection()
+		dateLabel.workoutData = workoutCcollection.get_workout(date)
 
 		%ColumnsBox.get_children()[index].add_child(dateLabel)	
 	

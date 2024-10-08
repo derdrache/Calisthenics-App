@@ -47,7 +47,7 @@ func _save_workout():
 		"exercises": _get_all_exersice_data()
 	} 
 	
-	GlobalWorkout.save_workout(0,workoutData)
+	GlobalWorkout.save_workout(workoutData)
 	
 	_on_top_navigation_bar_previous_page()
 	

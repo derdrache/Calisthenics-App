@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="workoutCollectionResource" load_steps=3 format=3 uid="uid://tludwfsmx30s"]
+
+[ext_resource type="Script" path="res://resrouces/workout_resources/workout_collection_resource.gd" id="1_l7dtm"]
+[ext_resource type="Script" path="res://resrouces/workout_resources/workouts.gd" id="2_x5wcq"]
+
+[resource]
+script = ExtResource("1_l7dtm")
+workouts = Array[ExtResource("2_x5wcq")]([])

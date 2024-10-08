@@ -4,7 +4,7 @@ extends MarginContainer
 
 
 @export var date: Dictionary
-@export var workoutData: Dictionary
+@export var workoutData: WorkoutResource
 
 const WORKOUT_STILL_DO_COLOR = Color(0.5,0.5,0.5,1)
 const WORKOUT_DONE_COLOR = Color(0,0.5,0,1)
@@ -18,7 +18,7 @@ func _ready() -> void:
 	
 	if not isCurrentDate: %Panel.add_theme_stylebox_override("panel", StyleBoxEmpty.new())
 	
-	if workoutData.is_empty(): workout_indicator.add_theme_stylebox_override("panel", StyleBoxEmpty.new())
+	if not workoutData: workout_indicator.add_theme_stylebox_override("panel", StyleBoxEmpty.new())
 	else: _set_workout_indicator()
 
 func _on_button_pressed():
@@ -27,7 +27,7 @@ func _on_button_pressed():
 func _set_workout_indicator():
 	var styleBox = workout_indicator.get_theme_stylebox("panel").duplicate()
 	var currentDate = Time.get_datetime_dict_from_system()
-	var workoutDate = workoutData.date
+	var workoutDate = workoutData.get_date()
 	var doneCheck = workoutDate.day +1 <= currentDate.day or workoutDate.month +1 <= currentDate.month or workoutDate.year +1 <= currentDate.year
 	
 	if doneCheck: styleBox.bg_color = WORKOUT_DONE_COLOR
