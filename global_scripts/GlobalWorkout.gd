@@ -11,7 +11,7 @@ var exerciseData= []
 func _ready() -> void:
 	var workoutCollection = get_workout_collection()
 	workoutCollection.delete_unfinished_workout_plans()
-	
+		
 func load_workout():
 	currentWorkout = SaveAndLoad.load_workout_resources()
 	

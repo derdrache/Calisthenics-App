@@ -9,7 +9,7 @@ const TALENT_SELECTION_BUTTON = preload("res://widgets/talent_selection_button.t
 
 var displayDate : Dictionary = Time.get_datetime_dict_from_system()
 
-func _ready():	
+func _ready():
 	setup_workout_button.pressed.connect(_setup_workout)
 	SignalHub.calendar_date_selected.connect(_change_workout_data)
 	
@@ -49,7 +49,9 @@ func _setup_workout():
 		
 		workoutData = GlobalWorkout.currentWorkout.duplicate()
 		workoutData.planDate = displayDate
-		GlobalWorkout.add_workout_to_store("Plan", workoutData)
+		
+		var workoutCollection = GlobalWorkout.get_workout_collection()
+		workoutCollection.add_workout(workoutData, "Plan")
 		
 		_refresh_display()
 		

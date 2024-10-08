@@ -10,7 +10,7 @@ func save_resource(path, resource, name = ""):
 		
 	var fileName = resource.resource_path.get_file()
 	if name: fileName = name.replace(" ", "_") + ".tres"
-	print(path + fileName)
+
 	ResourceSaver.save(resource, path + fileName)
 
 func _create_dir():
