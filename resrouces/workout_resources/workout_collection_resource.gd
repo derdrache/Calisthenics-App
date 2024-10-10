@@ -5,7 +5,7 @@ class_name WorkoutCollectionResource
 @export var plan: Array[WorkoutResource]
 
 func save() -> void:
-	SaveAndLoad.save_resource(SaveAndLoad.basePath, self, "workout_collection")
+	SaveAndLoad.save_resource(GlobalData.BASE_PATH, self, "workout_collection")
 
 func add_workout(workout: WorkoutResource, collectionType: String) -> void:
 	if collectionType == "History": history.append(workout)

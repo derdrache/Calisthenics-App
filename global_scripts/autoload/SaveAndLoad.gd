@@ -1,12 +1,5 @@
 extends Node
 
-const basePath = "user://"
-const saveWorkoutPath = "user://workout_templates/"
-#
-const WOKROUT_COLLECTION = "user://workout_collection.tres"
-
-func _ready() -> void:
-	_create_dir()
 
 func save_resource(path: String, resource: Resource, fileName := "") -> void:
 	if fileName: fileName = fileName.replace(" ", "_") + ".tres"
@@ -14,26 +7,20 @@ func save_resource(path: String, resource: Resource, fileName := "") -> void:
 
 	ResourceSaver.save(resource, path + fileName)
 
-func _create_dir() -> void:
-	var dir := DirAccess.open(basePath)
-	dir.make_dir("workout_templates")
-	dir.make_dir("exercises")
-	
 func load_workout_resources() -> WorkoutResource:	
-	for fileName in DirAccess.get_files_at(saveWorkoutPath):
+	for fileName in DirAccess.get_files_at(GlobalData.SAVE_WORKOUT_PATH):
 		if fileName.get_extension()== "tres":
-			var resource := ResourceLoader.load(saveWorkoutPath + fileName)
+			var resource := ResourceLoader.load(GlobalData.SAVE_WORKOUT_PATH + fileName)
 			return resource
-			
 	return
 
 func load_workout_collection() -> WorkoutCollectionResource:
 	var resource: WorkoutCollectionResource
 	
-	if ResourceLoader.exists(WOKROUT_COLLECTION):
-		resource = ResourceLoader.load(WOKROUT_COLLECTION)
+	if ResourceLoader.exists(GlobalData.WOKROUT_COLLECTION):
+		resource = ResourceLoader.load(GlobalData.WOKROUT_COLLECTION)
 	else: 
-		resource = ResourceLoader.load("res://resrouces/workout_resources/workout_collection.tres").duplicate()
+		resource = ResourceLoader.load(GlobalData.WORKOUT_COLLECTION_TEMPLATE).duplicate()
 	
 	return resource
 	

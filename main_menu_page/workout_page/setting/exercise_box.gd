@@ -30,7 +30,7 @@ func _ready() -> void:
 	_refresh_break_time_label()
 
 func _process(_delta: float) -> void:
-	letter_number.text = GlobalData.abcList[get_index()]
+	letter_number.text = GlobalData.ABC_LIST[get_index()]
 
 func _refresh_sets_label() -> void:
 	set_selection.text = str(sets) + " Sets"

@@ -123,7 +123,7 @@ func save_workout(workoutData: WorkoutResource) -> void:
 	
 	currentWorkout = workoutResource
 	
-	SaveAndLoad.save_resource(SaveAndLoad.saveWorkoutPath, workoutResource, workoutResource.workoutName)
+	SaveAndLoad.save_resource(GlobalData.SAVE_WORKOUT_PATH, workoutResource, workoutResource.workoutName)
 
 func workout_done() -> void:
 	_save_exercise_data()

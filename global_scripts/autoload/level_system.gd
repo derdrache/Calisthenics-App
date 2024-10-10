@@ -74,7 +74,7 @@ func _get_rep_strength(levelPath: String, level: int) -> int:
 	var maxReps := 0
 	
 	for fileName in DirAccess.get_files_at(levelPath + str(level)):
-		var loadPath: String = GlobalData.saveExerciseDataPath + fileName
+		var loadPath: String = GlobalData.SAVE_EXERSICE_PATH + fileName
 		
 		if not ResourceLoader.exists(loadPath): continue
 		

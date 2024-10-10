@@ -38,7 +38,7 @@ func get_talent_level() -> String:
 	return resource_path.split("/")[-2][-1]
 
 func load_save_data() -> TalentResource:
-	var saveExerciseDataPath := GlobalData.saveExerciseDataPath
+	var saveExerciseDataPath := GlobalData.SAVE_EXERSICE_PATH
 	var resource: TalentResource
 	
 	for fileName in DirAccess.get_files_at(saveExerciseDataPath):
@@ -59,7 +59,7 @@ func get_exercice_type() -> GlobalData.exercice_type:
 	return GlobalData.exercice_type.PUSH
 
 func save() -> void:
-	SaveAndLoad.save_resource(GlobalData.saveExerciseDataPath, _create_save_file())
+	SaveAndLoad.save_resource(GlobalData.SAVE_EXERSICE_PATH, _create_save_file())
 
 func _create_save_file() -> TalentResource:
 	var newResource: TalentResource = ResourceLoader.load(get_origin_save_path())
