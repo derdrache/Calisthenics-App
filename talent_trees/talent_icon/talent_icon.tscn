@@ -15,12 +15,10 @@ size_flags_vertical = 4
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxEmpty_sk3tt")
 script = ExtResource("1_wadke")
-isGoal = null
 lockColorPanel = Color(0.196078, 0.196078, 0.196078, 1)
 unlockColorPanel = Color(0.54902, 0.54902, 0.54902, 1)
 unlockColorBorder = Color(0, 1, 0, 1)
 completeColorPanel = Color(1, 0.843137, 0, 1)
-completeColorBorder = null
 
 [node name="Button" type="Button" parent="."]
 unique_name_in_owner = true

@@ -935,94 +935,70 @@ theme_override_constants/separation = 10
 [node name="TextureRect" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level1" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_b6tb3")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect2" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level1" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_648xq")
 talentResource = ExtResource("5_w3hrk")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect3" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level1" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_k76x1")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect4" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level1" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_jnyho")
 talentResource = ExtResource("5_gsj4x")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect5" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level1" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_2fve0")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect6" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level1" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_pou3i")
 talentResource = ExtResource("5_l1qtp")
-isGoal = false
 lockColorBorder = Color(0.541176, 0.541176, 0.541176, 1)
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect7" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level1" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ngdfw")
 talentResource = ExtResource("6_b3dgn")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect8" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level1" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_ydneu")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect9" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level1" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_al864")
 talentResource = ExtResource("7_g40qd")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect10" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level1" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_j26r8")
 talentResource = ExtResource("8_lvtro")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect11" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level1" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_b8gjs")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect12" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level1" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_crm07")
 talentResource = ExtResource("9_w8fvn")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="Level2" type="VBoxContainer" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer"]
 layout_mode = 2
@@ -1031,93 +1007,69 @@ theme_override_constants/separation = 10
 [node name="TextureRect" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level2" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_5rs8p")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect2" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level2" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_hqpua")
 talentResource = ExtResource("12_x35xj")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect3" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level2" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lkpcb")
 talentResource = ExtResource("14_8tfhg")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect4" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level2" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_pvcis")
 talentResource = ExtResource("13_u4pxf")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect5" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level2" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_tvoyv")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect6" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level2" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_cafyu")
 talentResource = ExtResource("15_180qt")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect7" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level2" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_jp2wp")
 talentResource = ExtResource("16_di828")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect8" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level2" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_2sqhe")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect9" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level2" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_3akrk")
 talentResource = ExtResource("17_juo48")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect10" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level2" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_pwp4o")
 talentResource = ExtResource("18_gwgnd")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect11" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level2" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_2crj1")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect12" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level2" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_q4bbk")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="Level3" type="VBoxContainer" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer"]
 layout_mode = 2
@@ -1126,92 +1078,68 @@ theme_override_constants/separation = 10
 [node name="TextureRect" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level3" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_adari")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect2" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level3" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_yi0ks")
 talentResource = ExtResource("19_bswsf")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect3" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level3" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_x7r7u")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect4" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level3" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_fyiu7")
 talentResource = ExtResource("20_oey7f")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect5" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level3" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_g5tca")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect6" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level3" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_dqrmq")
 talentResource = ExtResource("21_rukvx")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect7" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level3" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8eakx")
 talentResource = ExtResource("22_cc25c")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect8" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level3" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_anna6")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect9" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level3" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_4nlbu")
 talentResource = ExtResource("23_itn5p")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect10" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level3" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_l22fv")
 talentResource = ExtResource("24_f1m66")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect11" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level3" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_qs0io")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect12" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level3" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_ag0tm")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="Level4" type="VBoxContainer" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer"]
 layout_mode = 2
@@ -1220,39 +1148,29 @@ theme_override_constants/separation = 10
 [node name="TextureRect" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level4" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_ojl60")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect2" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level4" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_4qqab")
 talentResource = ExtResource("25_7b72v")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect3" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level4" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_uds3v")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect4" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level4" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_x1qkv")
 talentResource = ExtResource("26_edq4t")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect5" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level4" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_mfeee")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect6" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level4" instance=ExtResource("4_102im")]
 layout_mode = 2
@@ -1260,52 +1178,39 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_dlyiu")
 talentResource = ExtResource("27_gwqe1")
 isGoal = true
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect7" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level4" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_4yoev")
 talentResource = ExtResource("28_niegn")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect8" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level4" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_da3fj")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect9" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level4" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_uul65")
 talentResource = ExtResource("29_03jth")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect10" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level4" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_jjc1t")
 talentResource = ExtResource("30_43ikl")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect11" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level4" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_4so42")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect12" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level4" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_mqbvr")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="Level5" type="VBoxContainer" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer"]
 layout_mode = 2
@@ -1314,91 +1219,67 @@ theme_override_constants/separation = 10
 [node name="TextureRect" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level5" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_pmf2k")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect2" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level5" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_4mh5u")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect3" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level5" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_0hj05")
 talentResource = ExtResource("31_esvot")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect4" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level5" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_rj5b1")
 talentResource = ExtResource("32_8xbec")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect5" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level5" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_yx6fo")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect6" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level5" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8wbja")
 talentResource = ExtResource("33_p1f1v")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect7" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level5" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_3hf5v")
 talentResource = ExtResource("34_vjto1")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect8" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level5" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_3gdf5")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect9" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level5" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_oc7x8")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect10" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level5" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_qro6e")
 talentResource = ExtResource("35_fhvy8")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect11" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level5" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_6hp1o")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect12" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level5" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_fnkks")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="Level6" type="VBoxContainer" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer"]
 layout_mode = 2
@@ -1407,91 +1288,67 @@ theme_override_constants/separation = 10
 [node name="TextureRect" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level6" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_81xnb")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect2" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level6" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_67jax")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect3" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level6" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_0ahs0")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect4" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level6" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_tbhe8")
 talentResource = ExtResource("36_o4b0l")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect5" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level6" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_b876w")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect6" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level6" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_sm1kf")
 talentResource = ExtResource("37_25r57")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect7" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level6" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_akuhf")
 talentResource = ExtResource("38_nki7f")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect8" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level6" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_fg53l")
 talentResource = ExtResource("40_5jebq")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect9" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level6" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_0s7rs")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect10" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level6" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_loogt")
 talentResource = ExtResource("39_584tu")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect11" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level6" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_4vjvs")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect12" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level6" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_x4krd")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="Level7" type="VBoxContainer" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer"]
 layout_mode = 2
@@ -1500,89 +1357,65 @@ theme_override_constants/separation = 10
 [node name="TextureRect" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level7" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_83y13")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect2" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level7" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_14hxs")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect3" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level7" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_mdhj8")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect4" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level7" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_jgdwy")
 talentResource = ExtResource("41_nudjp")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect5" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level7" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_bq2vu")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect6" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level7" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_1xchu")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect7" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level7" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_25od7")
 talentResource = ExtResource("42_t683g")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect8" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level7" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_fdlqx")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect9" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level7" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_xs57f")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect10" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level7" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_hdxpx")
 talentResource = ExtResource("43_odvjt")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect11" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level7" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_hxh7s")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect12" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level7" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_80i7j")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="Level8" type="VBoxContainer" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer"]
 layout_mode = 2
@@ -1591,89 +1424,65 @@ theme_override_constants/separation = 10
 [node name="TextureRect" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level8" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_4wqbm")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect2" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level8" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_umm8c")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect3" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level8" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_2vi50")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect4" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level8" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_2d8ao")
 talentResource = ExtResource("44_g0mjs")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect5" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level8" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_36tec")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect6" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level8" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_plxkg")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect7" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level8" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_868so")
 talentResource = ExtResource("45_d4o12")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect8" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level8" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_q1m0c")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect9" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level8" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_ue3lt")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect10" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level8" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ayh47")
 talentResource = ExtResource("46_fmqbn")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect11" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level8" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_ffja6")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect12" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level8" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_k3xp0")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="Level9" type="VBoxContainer" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer"]
 layout_mode = 2
@@ -1682,89 +1491,65 @@ theme_override_constants/separation = 10
 [node name="TextureRect" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level9" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_fm2jy")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect2" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level9" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_d0i64")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect3" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level9" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_kpmhx")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect4" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level9" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_nepcw")
 talentResource = ExtResource("47_ruxo0")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect5" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level9" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_2rdwd")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect6" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level9" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_nixls")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect7" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level9" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_nlrw4")
 talentResource = ExtResource("48_527sm")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect8" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level9" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_hmenr")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect9" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level9" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_xrnoq")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect10" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level9" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_gr2wm")
 talentResource = ExtResource("49_8520d")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect11" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level9" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_sw7w6")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect12" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level9" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_hqnug")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="Level10" type="VBoxContainer" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer"]
 layout_mode = 2
@@ -1773,87 +1558,63 @@ theme_override_constants/separation = 10
 [node name="TextureRect" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level10" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8407q")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect2" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level10" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_0rru4")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect3" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level10" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_464jj")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect4" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level10" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_b6vu4")
 talentResource = ExtResource("50_u4gtm")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect5" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level10" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_liq1u")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect6" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level10" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_yhvnq")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect7" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level10" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_kyjd0")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect8" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level10" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_b41y6")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect9" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level10" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8prn3")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect10" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level10" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_2mhin")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect11" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level10" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_keqxw")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect12" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level10" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_7sivr")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="Level11" type="VBoxContainer" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer"]
 layout_mode = 2
@@ -1862,87 +1623,63 @@ theme_override_constants/separation = 10
 [node name="TextureRect" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level11" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_rxdw8")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect2" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level11" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_hxxeq")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect3" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level11" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_qr1g5")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect4" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level11" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_2gamv")
 talentResource = ExtResource("51_hn6we")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect5" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level11" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_r7evx")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect6" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level11" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_1c1c5")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect7" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level11" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_kaphp")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect8" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level11" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8nq78")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect9" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level11" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_1ji18")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect10" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level11" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_u5kjm")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect11" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level11" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_tidsl")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect12" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level11" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_g5mkq")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="Level12" type="VBoxContainer" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer"]
 layout_mode = 2
@@ -1951,86 +1688,62 @@ theme_override_constants/separation = 10
 [node name="TextureRect" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level12" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_svkjo")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect2" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level12" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_sayxk")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect3" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level12" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8gnpw")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect4" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level12" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_y2yns")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect5" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level12" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_3io4j")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect6" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level12" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_tdtxq")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect7" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level12" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_6t5us")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect8" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level12" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_l6qml")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect9" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level12" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_ldxwx")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect10" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level12" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_hlfrf")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect11" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level12" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_66ya3")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect12" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level12" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_r7tfx")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="Level13" type="VBoxContainer" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer"]
 layout_mode = 2
@@ -2039,86 +1752,62 @@ theme_override_constants/separation = 10
 [node name="TextureRect" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level13" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_e4mar")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect2" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level13" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8xuxr")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect3" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level13" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_l24bl")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect4" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level13" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_qfp52")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect5" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level13" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_0i56w")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect6" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level13" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_0qmh7")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect7" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level13" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8apfe")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect8" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level13" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_v6sl5")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect9" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level13" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_mtl8y")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect10" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level13" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_h1fsn")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect11" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level13" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_dyckq")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect12" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level13" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_jobrv")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="Level14" type="VBoxContainer" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer"]
 layout_mode = 2
@@ -2127,84 +1816,60 @@ theme_override_constants/separation = 10
 [node name="TextureRect" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level14" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_wreav")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect2" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level14" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_3whn3")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect3" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level14" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_01367")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect4" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level14" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_32qkw")
 talentResource = ExtResource("52_gylmj")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect5" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level14" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_n80rw")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect6" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level14" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_tom8q")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect7" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level14" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_uqqwr")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect8" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level14" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_pvef7")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect9" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level14" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_sqv3f")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect10" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level14" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_qujkh")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect11" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level14" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_1y6vy")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)
 
 [node name="TextureRect12" parent="SaftyArea/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level14" instance=ExtResource("4_102im")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8vd1p")
-isGoal = false
 completeColorPanel = Color(0, 0, 0, 1)
-completeColorBorder = Color(0, 0, 0, 1)

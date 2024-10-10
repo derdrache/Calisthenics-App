@@ -1,35 +1,33 @@
 extends Node
 
-var workoutResourceTemplate = preload("res://resrouces/workout_resources/Workout.tres").duplicate()
+var workoutResourceTemplate: WorkoutResource = preload("res://resrouces/workout_resources/Workout.tres").duplicate()
 
-var currentWorkout : Resource = SaveAndLoad.load_workout_resources()
-var currentExerciseIndex = 0
-var startTime
+var currentWorkout : WorkoutResource = SaveAndLoad.load_workout_resources()
+var currentExerciseIndex := 0
+var startTime: Dictionary
 
-var exerciseData= []
+var exerciseData : Array[Exercise] = []
 
 func _ready() -> void:
-	var workoutCollection = get_workout_collection()
+	var workoutCollection := get_workout_collection()
 	workoutCollection.delete_unfinished_workout_plans()
-		
-func load_workout():
-	currentWorkout = SaveAndLoad.load_workout_resources()
 	
-func get_current_exercise():
+func get_current_exercise() -> Exercise:
 	if currentExerciseIndex > len(currentWorkout.exercises) -1:
 		currentExerciseIndex = 0
+	
 	return currentWorkout.exercises[currentExerciseIndex]
 
-func get_current_set():
+func get_current_set() -> int:
 	return exerciseData[currentExerciseIndex].setsDone + 1
 
-func get_current_max_set():
+func get_current_max_set() -> int:
 	return exerciseData[currentExerciseIndex].maxSets
 	
-func get_break_time():
+func get_break_time() -> int:
 	return exerciseData[currentExerciseIndex - 1].breakTime
 
-func start_workout():
+func start_workout() -> void:
 	reset_workout_data()
 	
 	startTime = Time.get_time_dict_from_system()
@@ -37,40 +35,33 @@ func start_workout():
 	
 	_setup_exercise_data()
 
-func _setup_exercise_data():
-	for exercise in currentWorkout.exercises:		
-		exerciseData.append({
-			"talent": exercise.talent,
-			"setsDone": 0,
-			"maxSets": exercise.sets,
-			"breakTime": exercise.breakTime,
-			"repsDone" : [],
-		})
+func _setup_exercise_data() -> void:
+	exerciseData = currentWorkout.exercises
 
-func next_exersice(repsDone):
+func set_next_exersice(repsDone: int) -> void:
 	_add_reps(repsDone)
 	_add_set()
 	
-	var modus = currentWorkout.modus
-	var setsDone = exerciseData[currentExerciseIndex].setsDone
-	var maxSets = int(exerciseData[currentExerciseIndex].maxSets)
-	var exerciseDone = setsDone == maxSets
+	var modus: GlobalData.workout_modus = currentWorkout.modus
+	var setsDone: int = exerciseData[currentExerciseIndex].setsDone
+	var maxSets := int(exerciseData[currentExerciseIndex].maxSets)
+	var isExerciseDone := setsDone == maxSets
 	
 	
-	if modus == "NORMAL":
-		if exerciseDone: currentExerciseIndex += 1
-	elif modus == "SUPERSET":
-		var isEvenNumber = currentExerciseIndex % 2 == 0
+	if modus == GlobalData.workout_modus.NORMAL:
+		if isExerciseDone: currentExerciseIndex += 1
+	elif modus == GlobalData.workout_modus.SUPERSET:
+		var isEvenNumber := currentExerciseIndex % 2 == 0
 		
 		if isEvenNumber:
 			currentExerciseIndex += 1
 		else:
-			if exerciseDone:
+			if isExerciseDone:
 				currentExerciseIndex += 1
 			else: currentExerciseIndex -= 1
 		
-func previous_exercise(pageName):
-	var modus = currentWorkout.modus
+func set_previous_exercise(pageName: String) -> void:
+	var modus := currentWorkout.modus
 	
 	if exerciseData[currentExerciseIndex].setsDone == 0 and currentExerciseIndex == 0:
 		return
@@ -78,11 +69,11 @@ func previous_exercise(pageName):
 	if "Workout" in pageName:
 		get_tree().change_scene_to_file("res://main_menu_page/workout_page/doWorkout/break_page.tscn")
 	elif "Break" in pageName:
-		if modus == "NORMAL" or exerciseData.size() == 1: 
+		if modus == GlobalData.workout_modus.NORMAL or exerciseData.size() == 1: 
 			currentExerciseIndex -= 1
-		elif modus == "SUPERSET":
-			var isEvenNumber = currentExerciseIndex % 2 == 0
-			var setsDone = exerciseData[currentExerciseIndex].setsDone
+		elif modus == GlobalData.workout_modus.SUPERSET:
+			var isEvenNumber := currentExerciseIndex % 2 == 0
+			var setsDone: int = exerciseData[currentExerciseIndex].setsDone
 
 			if isEvenNumber and setsDone == 0:
 				currentExerciseIndex -= 1
@@ -97,34 +88,34 @@ func previous_exercise(pageName):
 		
 		get_tree().change_scene_to_file("res://main_menu_page/workout_page/doWorkout/do_workout_page.tscn")
 
-func is_workout_done():
-	var setsDone = exerciseData[currentExerciseIndex].setsDone
-	var maxSets = exerciseData[currentExerciseIndex].maxSets
-	var isLastExercise = len(currentWorkout.exercises) - 1 == currentExerciseIndex
+func is_workout_done() -> bool:
+	var setsDone: int = exerciseData[currentExerciseIndex].setsDone
+	var maxSets: int= exerciseData[currentExerciseIndex].maxSets
+	var isLastExercise := len(currentWorkout.exercises) - 1 == currentExerciseIndex
 	
 	return isLastExercise and setsDone == maxSets -1
 
-func reset_workout_data():
+func reset_workout_data() -> void:
 	currentWorkout = null
 	currentExerciseIndex = 0
 	exerciseData = []
-	startTime = null
+	startTime = {}
 
-func _add_reps(repsDone):
+func _add_reps(repsDone: int) -> void:
 	exerciseData[currentExerciseIndex].repsDone.append(repsDone)
 
-func _add_set():
+func _add_set() -> void:
 	exerciseData[currentExerciseIndex].setsDone += 1
 
-func _remove_last_set():
+func _remove_last_set() -> void:
 	exerciseData[currentExerciseIndex].repsDone.pop_back()
 
-func save_workout(workoutData):
-	var workoutResource = SaveAndLoad.load_workout_resources()
+func save_workout(workoutData: WorkoutResource) -> void:
+	var workoutResource := SaveAndLoad.load_workout_resources()
 	
 	if workoutResource == null: workoutResource = workoutResourceTemplate
 	
-	workoutResource.workoutName = workoutData.name
+	workoutResource.workoutName = workoutData.workoutName
 	workoutResource.exercises = workoutData.exercises
 	workoutResource.modus = workoutData.modus
 	workoutResource.globalBreak = workoutData.globalBreak
@@ -134,33 +125,29 @@ func save_workout(workoutData):
 	
 	SaveAndLoad.save_resource(SaveAndLoad.saveWorkoutPath, workoutResource, workoutResource.workoutName)
 
-func workout_done():
+func workout_done() -> void:
 	_save_exercise_data()
 	
-	var workoutData = currentWorkout.duplicate()
+	var workoutData :WorkoutResource = currentWorkout.duplicate()
 	workoutData.doneDate = Time.get_datetime_dict_from_system()
 	
-	var workoutCollection = SaveAndLoad.load_workout_collection()
+	var workoutCollection := SaveAndLoad.load_workout_collection()
 	workoutCollection.add_workout(workoutData, "History")
 
 	SignalHub.update_calendar.emit()
 	
-func _save_exercise_data():
-	for exercise in exerciseData:
-		var talentFileName = exercise.talent.get_talent_file_name()
-		var repsDoneArray = exercise.repsDone
-		
-		var exerciseResource : TalentResource = SaveAndLoad.load_exercise_saveFile(exercise.talent)
-
-		var oldRecord = exerciseResource.maxReps
-		var totalRepsDone = 0
+func _save_exercise_data() -> void:
+	for exercise: Exercise in exerciseData:
+		var repsDoneArray: Array = exercise.repsDone
+		var exerciseResource : TalentResource = exercise.talent.load_save_data()
+		var totalRepsDone := 0
 
 		if exerciseResource.totalReps == 0:
 			exerciseResource.firstTimeDoneDate = Time.get_datetime_dict_from_system()
 			LevelSystem.unlock_previous_talents(exercise.talent)
 		
 		for repIndex in len(repsDoneArray):
-			var rep = repsDoneArray[repIndex]
+			var rep: int = repsDoneArray[repIndex]
 			totalRepsDone += rep
 			
 			exerciseResource.totalReps += rep
@@ -179,14 +166,14 @@ func _save_exercise_data():
 			exerciseResource.completed = true
 			exerciseResource.goalAchievedDate = Time.get_datetime_dict_from_system()
 
-		SaveAndLoad.save_resource(SaveAndLoad.saveExerciseDataPath, exerciseResource.get_save_file())
+		exerciseResource.save()
 
-func delete_workout_plan(date: Dictionary):
+func delete_workout_plan(date: Dictionary) -> void:
 	var workoutCollection := get_workout_collection()
 
 	workoutCollection.delete_plan_workout(date)	
 	
 	SignalHub.update_calendar.emit()
 
-func get_workout_collection() -> workoutCollectionResource:
+func get_workout_collection() -> WorkoutCollectionResource:
 	return SaveAndLoad.load_workout_collection()

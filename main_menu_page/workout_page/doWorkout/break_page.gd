@@ -1,15 +1,20 @@
 extends Control
 
-func _ready():
-	%CountDownBar.countDownDone.connect(_next_exersice)
-	%ContinueButton.pressed.connect(_next_exersice)
+@onready var break_length_label: Label = %BreakLengthLabel
+@onready var talent_selection: TalentSelectionButton = %TalentSelection
+@onready var count_down_bar: ProgressBar = %CountDownBar
+@onready var continue_button: Button = %ContinueButton
+
+func _ready() -> void:
+	count_down_bar.countDownDone.connect(_next_exersice)
+	continue_button.pressed.connect(_next_exersice)
 	
-	var breakTime = GlobalWorkout.get_break_time()
-	%BreakLengthLabel.text = str(breakTime) + " sec"
-	%CountDownBar.max_value = breakTime
+	var breakTime: int = GlobalWorkout.get_break_time()
+	break_length_label.text = str(breakTime) + " sec"
+	count_down_bar.max_value = breakTime
 	
-	var nextExersice = GlobalWorkout.get_current_exercise().talent
-	%TalentSelection.set_talent(nextExersice)
+	var nextExersice: TalentResource = GlobalWorkout.get_current_exercise().talent
+	talent_selection.set_talent(nextExersice)
 	
-func _next_exersice():
+func _next_exersice() -> void:
 	get_tree().change_scene_to_file("res://main_menu_page/workout_page/doWorkout/do_workout_page.tscn")

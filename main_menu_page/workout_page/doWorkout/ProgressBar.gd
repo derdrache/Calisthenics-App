@@ -1,14 +1,16 @@
 extends ProgressBar
 
-signal countDownDone
+signal countDownDone()
 
-func _ready():
-	$Label.text = GlobalData.seconds_in_minutes_string(max_value)
+@onready var label: Label = $Label
 
-func _on_timer_timeout():
+func _ready() -> void:
+	label.text = GlobalData.seconds_in_minutes_string(max_value)
+
+func _on_timer_timeout() -> void:
 	value += 1
 	
-	$Label.text = GlobalData.seconds_in_minutes_string(max_value - value)
+	label.text = GlobalData.seconds_in_minutes_string(max_value - value)
 	
 	if value == max_value: 
 		countDownDone.emit()		

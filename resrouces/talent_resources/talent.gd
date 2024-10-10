@@ -4,8 +4,8 @@ class_name TalentResource
 @export var icon : CompressedTexture2D
 @export var unlocks: Array[TalentResource]
 @export var goal := 10
-@export var completed = false
-@export var is_unlocked = false
+@export var completed := false
+@export var is_unlocked := false
 
 #statistics
 @export var firstTimeDoneDate: Dictionary
@@ -15,32 +15,54 @@ class_name TalentResource
 @export var totalReps := 0
 @export var totalSets := 0
 
-enum MAIN_PARTS {PUSH, PULL, LEG, CORE}
-var talentName = resource_path.get_file().trim_suffix('.tres')
+var talentName:  String = resource_path.get_file().trim_suffix('.tres')
 
-func get_talent_name():
+func get_talent_name() -> String:
 	return resource_path.get_file().trim_suffix('.tres').replace("_", " ")
 
-func get_talent_file_name():
+func get_talent_file_name() -> String:
 	return resource_path.get_file()
 	
-func get_origin_save_path():
+func get_origin_save_path() -> String:
 	return resource_path
 
-func get_category():
-	if "Push" in resource_path: return "Push"
-	elif "Pull" in resource_path: return "Pull"
-	elif "Leg" in resource_path: return "Leg"
-	elif "Core" in resource_path: return "Core"
-
-func get_talent_level():
+#func get_category() -> GlobalData.exercies_type:
+	#if "Push" in resource_path: return GlobalData.exercies_type.PUSH
+	#elif "Pull" in resource_path: return GlobalData.exercies_type.PULL
+	#elif "Leg" in resource_path: return GlobalData.exercies_type.LEG
+	#elif "Core" in resource_path: return GlobalData.exercies_type.CORE
+	#
+	#return -1
+	
+func get_talent_level() -> String:
 	return resource_path.split("/")[-2][-1]
 
-func load_save_data():
-	return SaveAndLoad.load_exercise_saveFile(self)
+func load_save_data() -> TalentResource:
+	var saveExerciseDataPath := GlobalData.saveExerciseDataPath
+	var resource: TalentResource
+	
+	for fileName in DirAccess.get_files_at(saveExerciseDataPath):
+		if fileName == get_talent_file_name():
+			resource = ResourceLoader.load(saveExerciseDataPath + fileName)
+			return resource
 
-func get_save_file():
-	var newResource = ResourceLoader.load(get_origin_save_path())
+	resource = load(get_origin_save_path())
+	
+	return resource
+
+func get_exercice_type() -> GlobalData.exercice_type:
+	if "Push" in get_origin_save_path(): return GlobalData.exercice_type.PUSH
+	elif "Pull" in get_origin_save_path(): return GlobalData.exercice_type.PULL
+	elif "Leg" in get_origin_save_path(): return GlobalData.exercice_type.LEG
+	elif "Core" in get_origin_save_path(): return GlobalData.exercice_type.CORE
+	
+	return GlobalData.exercice_type.PUSH
+
+func save() -> void:
+	SaveAndLoad.save_resource(GlobalData.saveExerciseDataPath, _create_save_file())
+
+func _create_save_file() -> TalentResource:
+	var newResource: TalentResource = ResourceLoader.load(get_origin_save_path())
 	
 	newResource.completed = completed
 	newResource.is_unlocked = is_unlocked
@@ -52,12 +74,3 @@ func get_save_file():
 	newResource.totalSets = totalSets
 	
 	return newResource
-	
-func get_main_part():
-	if "Push" in get_origin_save_path(): return MAIN_PARTS.PUSH
-	elif "Pull" in get_origin_save_path(): return MAIN_PARTS.PULL
-	elif "Leg" in get_origin_save_path(): return MAIN_PARTS.LEG
-	elif "Core" in get_origin_save_path(): return MAIN_PARTS.CORE
-
-func save() -> void:
-	SaveAndLoad.save_resource(SaveAndLoad.saveExerciseDataPath, get_save_file())

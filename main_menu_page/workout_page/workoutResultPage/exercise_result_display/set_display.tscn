@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://main_menu_page/workout_page/workoutResultPage/exercise_result_display/set_display.gd" id="1_dq0ym"]
 
-[node name="SetDisplay" type="HBoxContainer"]
+[node name="ExerciseDoneDisplay" type="HBoxContainer"]
 script = ExtResource("1_dq0ym")
 
 [node name="SetLabel" type="Label" parent="."]

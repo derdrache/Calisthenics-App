@@ -40,6 +40,46 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_xkgnl")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xkgnl")
 script = ExtResource("1_svkwr")
 
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="Label" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 20
+text = "Empty"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 2
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 140.0
+offset_bottom = 140.0
+grow_horizontal = 0
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 0
+
+[node name="ExerciseLevelLabel" type="Label" parent="MarginContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/outline_size = 5
+horizontal_alignment = 2
+vertical_alignment = 1
+
 [node name="ButtonsContainer" type="Control" parent="."]
 unique_name_in_owner = true
 z_index = 1
@@ -98,8 +138,8 @@ text = "CORE"
 [node name="Button4" type="Button" parent="ButtonsContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_right = 80.0
+offset_bottom = 80.0
 scale = Vector2(0.5, 0.5)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
@@ -109,47 +149,5 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_j0rb5")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_j0rb5")
 theme_override_styles/normal = SubResource("StyleBoxFlat_j0rb5")
 text = "LEG"
-
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="Label" type="Label" parent="MarginContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_font_sizes/font_size = 20
-text = "Empty"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
-
-[node name="MarginContainer2" type="MarginContainer" parent="."]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -40.0
-offset_right = -11.0
-offset_bottom = 23.0
-grow_horizontal = 0
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 0
-
-[node name="ExerciseLevelLabel" type="Label" parent="MarginContainer2"]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_constants/outline_size = 5
-horizontal_alignment = 2
-vertical_alignment = 1
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

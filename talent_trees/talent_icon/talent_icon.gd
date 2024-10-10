@@ -1,4 +1,5 @@
 extends Panel
+class_name TalentIcon
 
 @export var talentResource : TalentResource:
 	set(newValue):
@@ -8,9 +9,9 @@ extends Panel
 		
 		if newValue == null: label.text = ""
 		else:
-			var talentName = talentResource.resource_path.get_file().trim_suffix('.tres')
+			var talentName: String = talentResource.resource_path.get_file().trim_suffix('.tres')
 			label.text = talentName.replace("_", " ")
-@export var isGoal = false
+@export var isGoal := false
 
 @export var lockColorPanel : Color
 @export var lockColorBorder: Color
@@ -21,15 +22,14 @@ extends Panel
 @export var completeColorPanel: Color
 @export var completeColorBorder: Color
 
-@onready var label = $Label
-@onready var texture_rect = $TextureRect
-@onready var goal_icon = $GoalIcon
-@onready var button = %Button
-
+@onready var texture_rect: TextureRect = $TextureRect
+@onready var label: Label = $Label
+@onready var goal_icon: TextureRect = $GoalIcon
+@onready var button: Button = %Button
 
 const TALENT_ICON_STYLEBOX = preload("res://talent_trees/talent_icon/talent_icon_stylebox.tres")
 
-func _ready():
+func _ready() -> void:
 	goal_icon.hide()
 	
 	if talentResource: 
@@ -45,7 +45,7 @@ func _ready():
 	
 	if not talentResource.icon: texture_rect.hide()
 	
-	var talentName = talentResource.resource_path.get_file().trim_suffix('.tres')
+	var talentName: String = talentResource.resource_path.get_file().trim_suffix('.tres')
 	label.text = talentName.replace("_", " ")
 	
 	if isGoal: goal_icon.show()
@@ -54,10 +54,10 @@ func _ready():
 		
 
 
-func get_center():
+func get_center() -> Vector2:
 	return custom_minimum_size/2
 
-func _set_style():
+func _set_style() -> void:
 	var styleBox : StyleBoxFlat = get_theme_stylebox("panel").duplicate()
 	
 	if talentResource.completed:

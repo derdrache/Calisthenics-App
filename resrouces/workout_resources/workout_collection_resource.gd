@@ -1,5 +1,5 @@
 extends Resource
-class_name workoutCollectionResource
+class_name WorkoutCollectionResource
 
 @export var history: Array[WorkoutResource]
 @export var plan: Array[WorkoutResource]
@@ -14,17 +14,17 @@ func add_workout(workout: WorkoutResource, collectionType: String) -> void:
 	save()
 
 func get_workout(date: Dictionary, collectionType: String = "") -> WorkoutResource:
-	var workoutList = history + plan
+	var workoutList := history + plan
 	
 	if collectionType == "History": workoutList = history
 	elif collectionType == "Plan": workoutList = history
 	
 	for workout: WorkoutResource in workoutList:
-		var workoutDate = workout.get_date()
+		var workoutDate := workout.get_date()
 		
-		var sameDay = workoutDate.day == date.day
-		var sameMonth = workoutDate.month == date.month
-		var sameYear = workoutDate.year == date.year
+		var sameDay: bool = workoutDate.day == date.day
+		var sameMonth: bool = workoutDate.month == date.month
+		var sameYear: bool = workoutDate.year == date.year
 		
 		if sameDay and sameMonth and sameYear: return workout
 		
@@ -34,9 +34,9 @@ func delete_plan_workout(date: Dictionary) -> void:
 	var index := -1
 	
 	for i in plan.size():
-		var day = plan[i].planDate.day
-		var month = plan[i].planDate.month
-		var year = plan[i].planDate.year
+		var day: int = plan[i].planDate.day
+		var month: int = plan[i].planDate.month
+		var year: int = plan[i].planDate.year
 		
 		if day == date.day and month == date.month and year == date.year: 
 			index = i
@@ -47,17 +47,18 @@ func delete_plan_workout(date: Dictionary) -> void:
 		save()	
 
 func delete_unfinished_workout_plans() -> void:
-	var deletePlanWorkouts = []
+	var deletePlanWorkouts := []
 	
 	for workoutPlan in plan:
-		var currentDate = Time.get_datetime_dict_from_system()
-		var planDate = workoutPlan.planDate
-		var isWorkoutPast = planDate.day +1 <= currentDate.day or planDate.month +1 <= currentDate.month or planDate.year +1 <= currentDate.year
+		var currentDate := Time.get_datetime_dict_from_system()
+		var planDate := workoutPlan.planDate
+		var isPastWorkout : bool = (planDate.day +1 <= currentDate.day 
+			or planDate.month +1 <= currentDate.month or planDate.year +1 <= currentDate.year)
 		
-		if not isWorkoutPast: continue
+		if not isPastWorkout: continue
 		
-		var workout = get_workout(workoutPlan.planDate, "History")
-		if workout.is_empty(): deletePlanWorkouts.append(workoutPlan)
+		var workout := get_workout(workoutPlan.planDate, "History")
+		if not workout: deletePlanWorkouts.append(workoutPlan)
 
-	for workoutPlan in deletePlanWorkouts:
-		delete_plan_workout(workoutPlan.date)
+	for workoutPlan: WorkoutResource in deletePlanWorkouts:
+		delete_plan_workout(workoutPlan.planDate)
