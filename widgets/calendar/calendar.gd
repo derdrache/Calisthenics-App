@@ -16,9 +16,7 @@ const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "Ju
 var selectedDate := Time.get_datetime_dict_from_system()
 var monthsList := []
 
-func _ready() -> void:
-	SignalHub.update_calendar.connect(_refresh_calendar)
-	
+func _ready() -> void:	
 	_set_calendar()
 	
 func _set_calendar() -> void:
@@ -76,7 +74,7 @@ func _create_label(date: Dictionary, index: int) -> void:
 		
 		dateLabel.date = date
 		
-		var workoutCcollection := GlobalWorkout.get_workout_collection()
+		var workoutCcollection := SaveAndLoad.load_workout_collection()
 		dateLabel.workoutData = workoutCcollection.get_workout(date)
 
 		columns_box.get_children()[index].add_child(dateLabel)	
@@ -103,7 +101,7 @@ func _on_next_month_button_pressed() -> void:
 	
 	_refresh_calendar()
 
-func _refresh_calendar() -> void:	
+func _refresh_calendar() -> void:
 	if selectedDate.month > 12:
 		selectedDate.month = 1
 		selectedDate.year += 1
