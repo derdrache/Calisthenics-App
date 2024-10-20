@@ -16,13 +16,18 @@ enum workout_modus {NORMAL, SUPERSET}
 
 func _ready() -> void:
 	_create_dir()
+	_detet_workout_plans()
 
-func _create_dir() -> void:
+func _detet_workout_plans():
+	var workoutCollection := SaveAndLoad.load_workout_collection()
+	workoutCollection.delete_unfinished_workout_plans()	
+
+static func _create_dir() -> void:
 	var dir := DirAccess.open(BASE_PATH)
 	dir.make_dir("workout_templates")
 	dir.make_dir("exercises")
 
-func seconds_in_minutes_string(seconds: int) -> String:
+static func seconds_in_minutes_string(seconds: int) -> String:
 	var pufferMinutes :float = seconds / 60.0
 	var minutes := int(pufferMinutes)
 	var restSeconds := (pufferMinutes - minutes) * 60
