@@ -1,20 +1,20 @@
 extends Node
+class_name SaveAndLoad
 
-
-func save_resource(path: String, resource: Resource, fileName := "") -> void:
+static func save_resource(path: String, resource: Resource, fileName := "") -> void:
 	if fileName: fileName = fileName.replace(" ", "_") + ".tres"
 	else: fileName = resource.resource_path.get_file()
 
 	ResourceSaver.save(resource, path + fileName)
 
-func load_workout_resources() -> WorkoutResource:	
+static func load_workout_resources() -> WorkoutResource:	
 	for fileName in DirAccess.get_files_at(GlobalData.SAVE_WORKOUT_PATH):
 		if fileName.get_extension()== "tres":
 			var resource := ResourceLoader.load(GlobalData.SAVE_WORKOUT_PATH + fileName)
 			return resource
 	return
 
-func load_workout_collection() -> WorkoutCollectionResource:
+static func load_workout_collection() -> WorkoutCollectionResource:
 	var resource: WorkoutCollectionResource
 	
 	if ResourceLoader.exists(GlobalData.WOKROUT_COLLECTION):
