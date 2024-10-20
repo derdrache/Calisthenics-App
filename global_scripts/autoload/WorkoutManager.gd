@@ -1,16 +1,11 @@
 extends Node
 
 var workoutResourceTemplate: WorkoutResource = preload("res://resrouces/workout_resources/Workout.tres").duplicate()
-
 var currentWorkout : WorkoutResource = SaveAndLoad.load_workout_resources()
 var currentExerciseIndex := 0
 var startTime: Dictionary
 
 var exerciseData : Array[Exercise] = []
-
-func _ready() -> void:
-	var workoutCollection := get_workout_collection()
-	workoutCollection.delete_unfinished_workout_plans()
 	
 func get_current_exercise() -> Exercise:
 	if currentExerciseIndex > len(currentWorkout.exercises) -1:
@@ -133,8 +128,6 @@ func workout_done() -> void:
 	
 	var workoutCollection := SaveAndLoad.load_workout_collection()
 	workoutCollection.add_workout(workoutData, "History")
-
-	SignalHub.update_calendar.emit()
 	
 func _save_exercise_data() -> void:
 	for exercise: Exercise in exerciseData:
@@ -144,7 +137,7 @@ func _save_exercise_data() -> void:
 
 		if exerciseResource.totalReps == 0:
 			exerciseResource.firstTimeDoneDate = Time.get_datetime_dict_from_system()
-			LevelSystem.unlock_previous_talents(exercise.talent)
+			LevelSystemManager.unlock_previous_talents(exercise.talent)
 		
 		for repIndex in len(repsDoneArray):
 			var rep: int = repsDoneArray[repIndex]
@@ -161,7 +154,7 @@ func _save_exercise_data() -> void:
 				exerciseResource.bestResult[repIndex] = rep
 		
 		if totalRepsDone >= 30 and not exerciseResource.completed:
-			LevelSystem.unlock_talents(exerciseResource)
+			LevelSystemManager.unlock_talents(exerciseResource)
 			exerciseResource.is_unlocked = true
 			exerciseResource.completed = true
 			exerciseResource.goalAchievedDate = Time.get_datetime_dict_from_system()
@@ -169,11 +162,8 @@ func _save_exercise_data() -> void:
 		exerciseResource.save()
 
 func delete_workout_plan(date: Dictionary) -> void:
-	var workoutCollection := get_workout_collection()
+	var workoutCollection := SaveAndLoad.load_workout_collection()
 
 	workoutCollection.delete_plan_workout(date)	
 	
 	SignalHub.update_calendar.emit()
-
-func get_workout_collection() -> WorkoutCollectionResource:
-	return SaveAndLoad.load_workout_collection()
