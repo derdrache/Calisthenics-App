@@ -1,12 +1,7 @@
 extends Node
 
-#enum MAIN_PARTS {PUSH, PULL, LEG, CORE}
-
 const STRENGTH_FACTOR = 100
 const MAX_POINT_REP = 10
-
-func _ready() -> void:
-	pass#unlock_previous_talents(load("res://resrouces/talent_resources/Push/level4/Push_up.tres"))
 
 func get_overall_strength() -> int:
 	return (get_push_data().strength + get_pull_data().strength + 
@@ -45,11 +40,11 @@ func _get_level(part: GlobalData.exercice_type) -> int:
 		var unlocked := false
 		
 		for fileName in DirAccess.get_files_at(serachFolder):
-			if not ResourceLoader.exists(serachFolder + fileName): continue
+			if not ResourceLoader.exists(GlobalData.SAVE_EXERSICE_PATH  + fileName): continue
 			
-			var resource: TalentResource = ResourceLoader.load(serachFolder + fileName)
+			var resource: TalentResource = ResourceLoader.load(GlobalData.SAVE_EXERSICE_PATH + fileName)
 			if resource.is_unlocked: unlocked = resource.is_unlocked
-			
+
 		if unlocked: 
 			level += 1
 			unlocked = false
