@@ -8,12 +8,12 @@ extends MarginContainer
 
 
 func _ready() -> void:
-	var pushData := LevelSystem.get_push_data()
-	var pullData := LevelSystem.get_pull_data()
-	var legData := LevelSystem.get_leg_data()
-	var coreData := LevelSystem.get_core_Data()
-	
-	all_strength_label.text = str(LevelSystem.get_overall_strength())
+	var pushData := LevelSystemManager.get_push_data()
+	var pullData := LevelSystemManager.get_pull_data()
+	var legData := LevelSystemManager.get_leg_data()
+	var coreData := LevelSystemManager.get_core_Data()
+
+	all_strength_label.text = str(LevelSystemManager.get_overall_strength())
 	push_strength_label.text = "Level " + str(pushData.level) +": " + str(pushData.strength)
 	pull_strength_label.text = "Level " + str(pullData.level) +": " + str(pullData.strength)
 	leg_strength_label.text = "Level " + str(legData.level) +": " + str(legData.strength)

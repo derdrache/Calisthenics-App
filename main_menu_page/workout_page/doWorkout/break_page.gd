@@ -9,11 +9,11 @@ func _ready() -> void:
 	count_down_bar.countDownDone.connect(_next_exersice)
 	continue_button.pressed.connect(_next_exersice)
 	
-	var breakTime: int = GlobalWorkout.get_break_time()
+	var breakTime: int = WorkoutManager.get_break_time()
 	break_length_label.text = str(breakTime) + " sec"
 	count_down_bar.max_value = breakTime
 	
-	var nextExersice: TalentResource = GlobalWorkout.get_current_exercise().talent
+	var nextExersice: TalentResource = WorkoutManager.get_current_exercise().talent
 	talent_selection.set_talent(nextExersice)
 	
 func _next_exersice() -> void:

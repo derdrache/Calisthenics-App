@@ -20,7 +20,7 @@ func _on_popup_menu_id_pressed(id: int) -> void:
 
 
 func _workout_undo() -> void:
-	GlobalWorkout.set_previous_exercise(get_tree().current_scene.name)
+	WorkoutManager.set_previous_exercise(get_tree().current_scene.name)
 	
 func _discard_workout() -> void:
 	get_tree().change_scene_to_file("res://main_menu_page/main_menu.tscn")

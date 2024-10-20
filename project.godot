@@ -18,11 +18,10 @@ config/icon="res://assets/icons/app_icon.png"
 [autoload]
 
 GlobalData="*res://global_scripts/autoload/globalData.gd"
-SaveAndLoad="*res://global_scripts/autoload/SaveAndLoad.gd"
 ResourceData="*res://global_scripts/autoload/resourceData.gd"
-GlobalWorkout="*res://global_scripts/autoload/GlobalWorkout.gd"
+WorkoutManager="*res://global_scripts/autoload/WorkoutManager.gd"
 SignalHub="*res://global_scripts/autoload/SignalHub.gd"
-LevelSystem="*res://global_scripts/autoload/level_system.gd"
+LevelSystemManager="*res://global_scripts/autoload/LevelSystemManager.gd"
 
 [debug]
 

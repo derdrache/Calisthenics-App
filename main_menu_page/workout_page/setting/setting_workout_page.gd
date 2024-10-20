@@ -50,7 +50,7 @@ func _save_workout() -> void:
 	workoutData.globalBreak = globalBreakTime
 	workoutData.exercises = _get_all_exersice_data()
 
-	GlobalWorkout.save_workout(workoutData)
+	WorkoutManager.save_workout(workoutData)
 	
 	_on_top_navigation_bar_previous_page()
 	
@@ -122,7 +122,7 @@ func _change_modus(newValue: String) -> void:
 	_refresh_modus_button_label()
 
 func _load_workout() -> void:
-	var workoutData := GlobalWorkout.currentWorkout
+	var workoutData := WorkoutManager.currentWorkout
 
 	if not workoutData: return
 	

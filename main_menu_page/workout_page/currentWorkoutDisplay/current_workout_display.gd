@@ -32,7 +32,8 @@ func _set_display() -> void:
 		
 		if not _is_in_future(displayDate): 
 			setup_workout_button.text = "Not trained"
-		else: setup_workout_button.text = "No workout - set up yet"
+		else: 
+			setup_workout_button.text = "No workout - set up yet"
 	else:
 		setup_workout_button.hide()	
 		
@@ -46,15 +47,15 @@ func _set_display() -> void:
 			workoutIconNode.set_talent(exercise.talent)
 			
 func _setup_workout() -> void:
-	if not GlobalWorkout.currentWorkout:
+	if not WorkoutManager.currentWorkout:
 		get_tree().change_scene_to_file("res://main_menu_page/workout_page/setting/setting_workout_page.tscn")
 	else: 
 		if not _is_in_future(displayDate): return
 		
-		workoutData = GlobalWorkout.currentWorkout.duplicate()
+		workoutData = WorkoutManager.currentWorkout.duplicate()
 		workoutData.planDate = displayDate
 		
-		var workoutCollection := GlobalWorkout.get_workout_collection()
+		var workoutCollection := SaveAndLoad.load_workout_collection()
 		workoutCollection.add_workout(workoutData, "Plan")
 		
 		_refresh_display()
@@ -68,7 +69,7 @@ func _is_in_future(date: Dictionary) -> bool:
 func _change_workout_data(date: Dictionary) -> void:
 	displayDate = date
 	
-	var workoutCollection := GlobalWorkout.get_workout_collection()
+	var workoutCollection := SaveAndLoad.load_workout_collection()
 	workoutData = workoutCollection.get_workout(date)
 	
 	if workoutData: displayDate = workoutData.get_date()
@@ -83,7 +84,7 @@ func _refresh_display() -> void:
 	
 func _on_delete_workout_button_pressed() -> void:
 	workoutData = null
-	GlobalWorkout.delete_workout_plan(displayDate)
+	WorkoutManager.delete_workout_plan(displayDate)
 	
 	_refresh_display()
 	
