@@ -17,6 +17,12 @@ var smallSize := Vector2(125,125)
 var num: int
 var active := false
 
+func _input(event: InputEvent) -> void:
+	var mouseOver = get_global_rect().has_point(get_global_mouse_position())
+	var leftMouseClick = event is InputEventMouseButton and event.button_index == 1 and event.is_pressed()
+	
+	if leftMouseClick and not mouseOver: _hide_menu()
+
 func _ready() -> void:
 	buttons_container.hide()
 	
