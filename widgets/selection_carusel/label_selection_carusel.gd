@@ -74,8 +74,8 @@ func  _remove_background() -> void:
 	
 func _input(event: InputEvent) -> void:
 	if not withCloseOnBackgroundClick: return
-	var onContainer: bool = get_rect().has_point(get_global_mouse_position())
-	
+	var onContainer: bool = background_panel.get_global_rect().has_point(get_global_mouse_position())
+
 	if event is InputEventMouseButton and event.button_index == 1 and event.is_pressed() and not onContainer:
 		var value := get_selected_value()
 		valueChanged.emit(value)
