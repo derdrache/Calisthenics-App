@@ -50,8 +50,8 @@ func _set_sets_window() -> void:
 	add_child(selectionCaruselNode)
 	selectionCaruselNode.valueChanged.connect(_change_sets_value)
 	
-func _change_sets_value(newValue: int) -> void:
-	sets = newValue
+func _change_sets_value(newValue: String) -> void:
+	sets = int(newValue)
 	_refresh_sets_label()
 
 func _set_reps_window() -> void:
