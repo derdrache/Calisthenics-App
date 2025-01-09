@@ -63,8 +63,8 @@ func _set_reps_window() -> void:
 	add_child(selectionCaruselNode)
 	selectionCaruselNode.valueChanged.connect(_change_reps_value)	
 
-func _change_reps_value(newValue: int) -> void:
-	reps = newValue
+func _change_reps_value(newValue: String) -> void:
+	reps = int(newValue)
 	_refresh_reps_label()
 
 func _set_break_window() -> void:
