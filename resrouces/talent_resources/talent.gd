@@ -43,6 +43,7 @@ func load_save_data() -> TalentResource:
 	
 	for fileName in DirAccess.get_files_at(saveExerciseDataPath):
 		if fileName == get_talent_file_name():
+			printt(saveExerciseDataPath, fileName)
 			resource = ResourceLoader.load(saveExerciseDataPath + fileName)
 			return resource
 

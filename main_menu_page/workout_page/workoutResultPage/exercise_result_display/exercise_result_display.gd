@@ -6,8 +6,8 @@ class_name ExerciseResultDisplay
 
 const SET_DISPLAY = preload("res://main_menu_page/workout_page/workoutResultPage/exercise_result_display/set_display.tscn")
 
-var exercise : TalentResource
-var repsDoneList : Array[int]
+@export var exercise : TalentResource
+@export var repsDoneList : Array[int]
 
 func _ready() -> void:
 	exercise_name_label.text = exercise.get_talent_name()

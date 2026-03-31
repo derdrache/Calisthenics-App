@@ -1,23 +1,26 @@
-[gd_scene load_steps=2 format=3 uid="uid://c42gosme6f748"]
+[gd_scene format=3 uid="uid://c42gosme6f748"]
 
-[ext_resource type="Script" path="res://main_menu_page/workout_page/workoutResultPage/exercise_result_display/set_display.gd" id="1_dq0ym"]
+[ext_resource type="Script" uid="uid://bfb80n7hmtadv" path="res://main_menu_page/workout_page/workoutResultPage/exercise_result_display/set_display.gd" id="1_dq0ym"]
 
-[node name="ExerciseDoneDisplay" type="HBoxContainer"]
+[node name="ExerciseDoneDisplay" type="HBoxContainer" unique_id=234431652]
+theme_override_constants/separation = 15
 script = ExtResource("1_dq0ym")
 
-[node name="SetLabel" type="Label" parent="."]
+[node name="SetLabel" type="Label" parent="." unique_id=1144861401]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 24
 text = "Set 1 "
 
-[node name="ProgressBar" type="ProgressBar" parent="."]
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=335481739]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(300, 20)
 layout_mode = 2
+size_flags_vertical = 4
 step = 1.0
 show_percentage = false
 
-[node name="ProgressLabel" type="Label" parent="ProgressBar"]
+[node name="ProgressLabel" type="Label" parent="ProgressBar" unique_id=346915207]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
@@ -31,3 +34,4 @@ offset_right = 20.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/font_size = 24
