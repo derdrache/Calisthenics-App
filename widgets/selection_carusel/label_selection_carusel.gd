@@ -13,23 +13,23 @@ signal valueChanged(value: String)
 @export var stringList: Array
 @export var maxValue := 10
 @export var steps := 1
-@export var initialValue := 5
+@export var initialValue := 5:
+	set(value):
+		initialValue = value
+		if is_node_ready(): 
+			_set_carusel_start()
+		
 @export var withBackground := true
 @export var withCloseOnBackgroundClick := true
 
 func _ready() -> void:
 	titleLabel.text = title
-	
+
 	if stringList.is_empty():
 		_create_number_labels()
 	else:
 		_create_normal_labels()
 		
-	await get_tree().create_timer(0.04).timeout
-	
-	_set_carusel_start()
-	
-	
 	if not withBackground: _remove_background()
 
 func _create_number_labels() -> void:
@@ -84,7 +84,11 @@ func _input(event: InputEvent) -> void:
 
 func _set_carusel_start() -> void:
 	var initalValueIndex := get_node_index(initialValue)
+	
 	var startScroll := _get_space_between_scroll_objects() * (initalValueIndex-1)
+	
+	await get_tree().process_frame
+	
 	scroll_container.scroll_horizontal = startScroll
 	_select_deselect_objects(object_container.get_children()[initalValueIndex])
 
@@ -93,7 +97,7 @@ func get_node_index(value: int) -> int:
 		var object : Label = object_container.get_children()[i]
 		if object.text == str(value):
 			return i
-	
+			
 	return -1
 
 func _on_scroll_container_scroll_ended() -> void:

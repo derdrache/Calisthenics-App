@@ -1,6 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dqsjs21sb0ikq"]
+[gd_scene format=3 uid="uid://dqsjs21sb0ikq"]
 
-[ext_resource type="Script" path="res://main_menu_page/workout_page/doWorkout/do_workout_page.gd" id="1_fsfw8"]
+[ext_resource type="Script" uid="uid://dy6je1dik8h1x" path="res://main_menu_page/workout_page/doWorkout/do_workout_page.gd" id="1_fsfw8"]
 [ext_resource type="PackedScene" uid="uid://c1u5yg2o45dr" path="res://widgets/safe_area_container/safe_area_container.tscn" id="2_gsdin"]
 [ext_resource type="PackedScene" uid="uid://dod8k7apd4f3" path="res://widgets/selection_carusel/label_selection_carusel.tscn" id="2_v8r8w"]
 [ext_resource type="AudioStream" uid="uid://b1yx3ptjmd0jp" path="res://assets/sound/gong.mp3" id="3_h1raw"]
@@ -18,7 +18,7 @@ corner_radius_top_right = 25
 corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
-[node name="WorkoutPage" type="Control"]
+[node name="WorkoutPage" type="Control" unique_id=2121894325]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -27,25 +27,25 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_fsfw8")
 
-[node name="SaftyArea" parent="." instance=ExtResource("2_gsdin")]
+[node name="SaftyArea" parent="." unique_id=219965013 instance=ExtResource("2_gsdin")]
 layout_mode = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="SaftyArea"]
+[node name="MarginContainer" type="MarginContainer" parent="SaftyArea" unique_id=1741149802]
 layout_mode = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 50
 
-[node name="VBoxContainer" type="VBoxContainer" parent="SaftyArea/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="SaftyArea/MarginContainer" unique_id=1261099555]
 layout_mode = 2
 theme_override_constants/separation = 50
 
-[node name="SettingButton" parent="SaftyArea/MarginContainer/VBoxContainer" instance=ExtResource("4_2ep2c")]
+[node name="SettingButton" parent="SaftyArea/MarginContainer/VBoxContainer" unique_id=346654195 instance=ExtResource("4_2ep2c")]
 layout_mode = 2
 size_flags_horizontal = 8
 
-[node name="CurrentExerciseLabel" type="Label" parent="SaftyArea/MarginContainer/VBoxContainer"]
+[node name="CurrentExerciseLabel" type="Label" parent="SaftyArea/MarginContainer/VBoxContainer" unique_id=1987946043]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
@@ -59,7 +59,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="SetInformationLabel" type="Label" parent="SaftyArea/MarginContainer/VBoxContainer"]
+[node name="SetInformationLabel" type="Label" parent="SaftyArea/MarginContainer/VBoxContainer" unique_id=189486347]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
@@ -71,7 +71,7 @@ text = "SET 1 / 6"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="GoalLabel" type="Label" parent="SaftyArea/MarginContainer/VBoxContainer"]
+[node name="GoalLabel" type="Label" parent="SaftyArea/MarginContainer/VBoxContainer" unique_id=1560950490]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
@@ -83,7 +83,7 @@ text = "GOAL: 5 Reps
 "
 vertical_alignment = 1
 
-[node name="SelectionCarusel" parent="SaftyArea/MarginContainer/VBoxContainer" instance=ExtResource("2_v8r8w")]
+[node name="SelectionCarusel" parent="SaftyArea/MarginContainer/VBoxContainer" unique_id=895611728 instance=ExtResource("2_v8r8w")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
@@ -94,20 +94,20 @@ initialValue = 7
 withBackground = false
 withCloseOnBackgroundClick = false
 
-[node name="ContinueButton" type="Button" parent="SaftyArea/MarginContainer/VBoxContainer"]
+[node name="ContinueButton" type="Button" parent="SaftyArea/MarginContainer/VBoxContainer" unique_id=2099280350]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(400, 150)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 theme_override_font_sizes/font_size = 40
-theme_override_styles/focus = SubResource("StyleBoxFlat_tix4e")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_tix4e")
-theme_override_styles/hover = SubResource("StyleBoxFlat_tix4e")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_tix4e")
 theme_override_styles/normal = SubResource("StyleBoxFlat_tix4e")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tix4e")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tix4e")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_tix4e")
+theme_override_styles/focus = SubResource("StyleBoxFlat_tix4e")
 text = "CONTINUE"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=229838512]
 stream = ExtResource("3_h1raw")
 autoplay = true

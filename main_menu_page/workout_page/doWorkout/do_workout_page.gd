@@ -12,7 +12,7 @@ var isWorkoutDone := WorkoutManager.is_workout_done()
 
 func _ready() -> void:
 	continue_button.pressed.connect(_next_step)
-	
+
 	selection_carusel.initialValue = currentExcercises.reps
 	
 	current_exercise_label.text = currentExcercises.talent.get_talent_name()
