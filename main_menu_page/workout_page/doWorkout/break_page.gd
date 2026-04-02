@@ -11,7 +11,7 @@ func _ready() -> void:
 	
 	var breakTime: int = WorkoutManager.get_break_time()
 	break_length_label.text = str(breakTime) + " sec"
-	count_down_bar.max_value = breakTime
+	count_down_bar.countdown = breakTime
 	
 	var nextExersice: TalentResource = WorkoutManager.get_current_exercise().talent
 	talent_selection.set_talent(nextExersice)

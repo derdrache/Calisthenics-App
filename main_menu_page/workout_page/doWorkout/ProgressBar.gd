@@ -4,13 +4,17 @@ signal countDownDone()
 
 @onready var label: Label = $Label
 
-func _ready() -> void:
-	label.text = GlobalData.seconds_in_minutes_string(max_value)
+@export var countdown: int:
+	set(value):
+		countdown = value
+		max_value = value
+		if is_node_ready():
+			label.text = str(value)
 
 func _on_timer_timeout() -> void:
 	value += 1
 	
-	label.text = GlobalData.seconds_in_minutes_string(max_value - value)
+	label.text = str(int(max_value - value))
 	
 	if value == max_value: 
 		countDownDone.emit()		

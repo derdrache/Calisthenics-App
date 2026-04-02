@@ -7,3 +7,7 @@ class_name Exercise
 @export var maxSets := 0
 @export var breakTime := 0
 @export var repsDone : Array[int]
+
+func reset() -> void:
+	setsDone = 0
+	repsDone = []

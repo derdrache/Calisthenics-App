@@ -7,7 +7,6 @@ extends Control
 @onready var add_exercise_button: Button = %addExerciseButton
 @onready var save_workout_button: Button = %SaveWorkoutButton
 
-
 const MAIN_MENU = preload("res://main_menu_page/main_menu.tscn")
 const EXERCISE_BOX = preload("res://main_menu_page/workout_page/setting/exercise_box.tscn")
 const LABEL_SELECTION_CARUSEL = preload("res://widgets/selection_carusel/label_selection_carusel.tscn")
@@ -41,19 +40,6 @@ func _on_top_navigation_bar_previous_page() -> void:
 	get_tree().root.add_child(mainMenu)
 	get_tree().current_scene = mainMenu
 
-func _save_workout() -> void:
-	if _get_all_exersice_data().is_empty(): return
-	
-	var workoutData := WorkoutResource.new()
-	workoutData.workoutName = "Workout_A"
-	workoutData.modus = workoutModus
-	workoutData.globalBreak = globalBreakTime
-	workoutData.exercises = _get_all_exersice_data()
-
-	WorkoutManager.save_workout(workoutData)
-	
-	_on_top_navigation_bar_previous_page()
-	
 func _get_all_exersice_data() -> Array[Exercise]:
 	var exerciseList: Array[Exercise] = []
 	
@@ -121,10 +107,29 @@ func _change_modus(newValue: String) -> void:
 	workoutModus = GlobalData.workout_modus[newValue]  
 	_refresh_modus_button_label()
 
-func _load_workout() -> void:
-	var workoutData := WorkoutManager.currentWorkout
+func _save_workout() -> void:
+	if _get_all_exersice_data().is_empty(): return
+	
+	var workoutData := WorkoutResource.new()
+	workoutData.workoutName = "Workout_A"
+	workoutData.modus = workoutModus
+	workoutData.globalBreak = globalBreakTime
+	workoutData.exercises = _get_all_exersice_data()
 
-	if not workoutData: return
+	if GlobalData.workouts.is_empty():
+		GlobalData.workouts.append(workoutData)
+	else:
+		GlobalData.workouts[0] = workoutData
+		
+	SaveAndLoad.save_resource(GlobalData.SAVE_WORKOUT_PATH, workoutData, workoutData.workoutName)
+	
+	_on_top_navigation_bar_previous_page()
+
+func _load_workout() -> void:
+	if GlobalData.workouts.is_empty():
+		return
+		
+	var workoutData := GlobalData.workouts[0]
 	
 	exercise_container.get_children()[0].queue_free()
 	

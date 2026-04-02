@@ -10,7 +10,10 @@ class_name WorkoutResource
 @export var globalBreak: int
 @export var selected := false
 
-
 func get_date() -> Dictionary:
 	if doneDate: return doneDate
 	else: return planDate
+
+func reset() -> void:
+	for exercise in exercises:
+		exercise.reset()

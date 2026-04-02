@@ -6,7 +6,8 @@ extends Control
 
 const EXERSICE_RESULT_DISPLAY = preload("res://main_menu_page/workout_page/workoutResultPage/exercise_result_display/exercise_result_display.tscn")
 
-var workoutExercisesData := WorkoutManager.exerciseData
+var workoutExercisesData := WorkoutManager.currentWorkout.exercises
+# hier muss das goal gespeichert werden?
 
 func _ready() -> void:
 	finish_button.pressed.connect(_quit_page)
@@ -14,6 +15,7 @@ func _ready() -> void:
 	WorkoutManager.workout_done()
 	
 	_setup_workout_time()
+	
 	_setup_exercise_resulst()
 
 func _setup_workout_time() -> void:
@@ -30,8 +32,7 @@ func _setup_exercise_resulst() -> void:
 	for exercise: Exercise in workoutExercisesData:
 		var exersiceResultDisplayNode: ExerciseResultDisplay = EXERSICE_RESULT_DISPLAY.instantiate()
 		
-		exersiceResultDisplayNode.exercise = exercise.talent
-		exersiceResultDisplayNode.repsDoneList = exercise.repsDone
+		exersiceResultDisplayNode.exercise = exercise
 
 		exercise_result_container.add_child(exersiceResultDisplayNode)	
 

@@ -4,9 +4,6 @@ class_name WorkoutCollectionResource
 @export var history: Array[WorkoutResource]
 @export var plan: Array[WorkoutResource]
 
-func save() -> void:
-	SaveAndLoad.save_resource(GlobalData.BASE_PATH, self, "workout_collection")
-
 func add_workout(workout: WorkoutResource, collectionType: String) -> void:
 	if collectionType == "History": history.append(workout)
 	elif collectionType == "Plan": plan.append(workout)
@@ -62,3 +59,6 @@ func delete_unfinished_workout_plans() -> void:
 
 	for workoutPlan: WorkoutResource in deletePlanWorkouts:
 		delete_plan_workout(workoutPlan.planDate)
+
+func save() -> void:
+	SaveAndLoad.save_resource(GlobalData.BASE_PATH, self, "workout_collection")

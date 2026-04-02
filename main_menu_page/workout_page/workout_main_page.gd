@@ -3,14 +3,13 @@ extends Control
 @onready var start_button: Button = %StartButton
 @onready var setting_button: Button = %SettingButton
 
-
 var hasSetupWorkout := true
 
 func _ready() -> void:
 	setting_button.pressed.connect(_open_setting)
 	start_button.pressed.connect(_start_workout)
 
-	if not WorkoutManager.currentWorkout:
+	if GlobalData.workouts.is_empty():
 		hasSetupWorkout = false
 		start_button.text = "SETUP"
 

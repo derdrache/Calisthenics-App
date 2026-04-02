@@ -1,5 +1,5 @@
 extends Node
-
+# rework
 const STRENGTH_FACTOR = 100
 const MAX_POINT_REP = 10
 
@@ -35,15 +35,19 @@ func _get_level(part: GlobalData.exercice_type) -> int:
 	var talentPath := _get_excersies_main_path(part)
 	var level := 1
 
-	for i in 14:
+	for i in GlobalData.MAX_EXERCISE_LEVEL:
 		var serachFolder: String = talentPath + "level" + str(i+1) + "/"
 		var unlocked := false
 		
 		for fileName in DirAccess.get_files_at(serachFolder):
-			if not ResourceLoader.exists(GlobalData.SAVE_EXERSICE_PATH  + fileName): continue
+			var exercise: TalentResource = ResourceLoader.load(serachFolder + fileName)
 			
-			var resource: TalentResource = ResourceLoader.load(GlobalData.SAVE_EXERSICE_PATH + fileName)
-			if resource.is_unlocked: unlocked = resource.is_unlocked
+			var exerciseUID := exercise.get_uid()
+			var isUnlocked: bool = exerciseUID in GlobalData.exerciseUnlocked
+			printt(fileName,exerciseUID, GlobalData.exerciseUnlocked)
+			if isUnlocked: 
+				
+				unlocked = true
 
 		if unlocked: 
 			level += 1
@@ -97,12 +101,15 @@ func unlock_talents(talent: TalentResource) -> void:
 	var unlockTalents := talent.unlocks
 
 	for unlockTalent: TalentResource in unlockTalents:
-		var loadedResource := unlockTalent.load_save_data()
-		loadedResource.is_unlocked = true
-		loadedResource.save()
+		var talentUID := unlockTalent.get_uid()
 		
+		if not talentUID in GlobalData.exerciseUnlocked:
+			GlobalData.exerciseUnlocked.append(talentUID)
+
 	unlock_previous_talents(talent)
 
+
+# rework
 func unlock_previous_talents(talent: TalentResource) -> void:
 	var talentLevel := int(talent.get_talent_level())
 	var mainPart := talent.get_exercice_type()
@@ -111,7 +118,7 @@ func unlock_previous_talents(talent: TalentResource) -> void:
 	
 	for i in range(talentLevel-1, 0, -1):
 		var serachFolder: String = talentPath + "level" + str(i) + "/"
-		
+		print(talentLevel)
 		for fileName in DirAccess.get_files_at(serachFolder):
 			if not ResourceLoader.exists(serachFolder + fileName): continue
 			var resource : TalentResource = ResourceLoader.load(serachFolder + fileName)
@@ -120,10 +127,13 @@ func unlock_previous_talents(talent: TalentResource) -> void:
 				var lookTalentName := lookTalent.get_talent_name()
 				
 				if searchTalentNames.has(lookTalentName):
-					searchTalentNames.erase(lookTalentName)
-					resource.is_unlocked = true
-					resource.completed = true
-					searchTalentNames.append(resource.get_talent_name())
-					unlock_talents(resource)
 					
-					resource.save()
+					searchTalentNames.erase(lookTalentName)
+					
+					var talentUID := lookTalent.get_uid()
+					if not talentUID in GlobalData.exerciseUnlocked:
+						GlobalData.exerciseUnlocked.append(talentUID)
+					if not talentUID in GlobalData.exerciseUnlocked:
+						GlobalData.exerciseUnlocked.append(talentUID)
+
+					unlock_previous_talents(resource)

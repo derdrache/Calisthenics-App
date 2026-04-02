@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cnweebf3p7uls"]
+[gd_scene format=3 uid="uid://cnweebf3p7uls"]
 
-[ext_resource type="Script" path="res://main_menu_page/workout_page/doWorkout/break_page.gd" id="1_hjgah"]
-[ext_resource type="Script" path="res://main_menu_page/workout_page/doWorkout/ProgressBar.gd" id="2_7inol"]
+[ext_resource type="Script" uid="uid://d1mre0h7bmnko" path="res://main_menu_page/workout_page/doWorkout/break_page.gd" id="1_hjgah"]
+[ext_resource type="Script" uid="uid://iwk5b7ubwyuo" path="res://main_menu_page/workout_page/doWorkout/ProgressBar.gd" id="2_7inol"]
 [ext_resource type="PackedScene" uid="uid://c1u5yg2o45dr" path="res://widgets/safe_area_container/safe_area_container.tscn" id="2_ca3ls"]
 [ext_resource type="PackedScene" uid="uid://dlm00wymo6axj" path="res://widgets/talent_selection_button.tscn" id="3_a84em"]
 [ext_resource type="PackedScene" uid="uid://neudsmy1a03g" path="res://widgets/setting_button/settingButton.tscn" id="3_grv5g"]
@@ -18,7 +18,7 @@ corner_radius_top_right = 25
 corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
-[node name="BreakPage" type="Control"]
+[node name="BreakPage" type="Control" unique_id=1442697074]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -27,24 +27,24 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hjgah")
 
-[node name="SaftyArea" parent="." instance=ExtResource("2_ca3ls")]
+[node name="SaftyArea" parent="." unique_id=627010563 instance=ExtResource("2_ca3ls")]
 layout_mode = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="SaftyArea"]
+[node name="VBoxContainer" type="VBoxContainer" parent="SaftyArea" unique_id=1473345555]
 layout_mode = 2
 
-[node name="SettingButton" parent="SaftyArea/VBoxContainer" instance=ExtResource("3_grv5g")]
+[node name="SettingButton" parent="SaftyArea/VBoxContainer" unique_id=1732471978 instance=ExtResource("3_grv5g")]
 layout_mode = 2
 size_flags_horizontal = 8
 
-[node name="MarginContainer" type="MarginContainer" parent="SaftyArea/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="SaftyArea/VBoxContainer" unique_id=1853291855]
 layout_mode = 2
 theme_override_constants/margin_top = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="SaftyArea/VBoxContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="SaftyArea/VBoxContainer/MarginContainer" unique_id=198508786]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="SaftyArea/VBoxContainer/MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="SaftyArea/VBoxContainer/MarginContainer/VBoxContainer" unique_id=89829377]
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -57,7 +57,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="BreakLengthLabel" type="Label" parent="SaftyArea/VBoxContainer/MarginContainer/VBoxContainer"]
+[node name="BreakLengthLabel" type="Label" parent="SaftyArea/VBoxContainer/MarginContainer/VBoxContainer" unique_id=132643779]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
@@ -69,16 +69,16 @@ text = "90 sec"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="NextExersiceDisplay" type="MarginContainer" parent="SaftyArea/VBoxContainer"]
+[node name="NextExersiceDisplay" type="MarginContainer" parent="SaftyArea/VBoxContainer" unique_id=406923376]
 layout_mode = 2
 size_flags_vertical = 6
 
-[node name="HBoxContainer" type="HBoxContainer" parent="SaftyArea/VBoxContainer/NextExersiceDisplay"]
+[node name="HBoxContainer" type="HBoxContainer" parent="SaftyArea/VBoxContainer/NextExersiceDisplay" unique_id=529374414]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 20
 
-[node name="Label" type="Label" parent="SaftyArea/VBoxContainer/NextExersiceDisplay/HBoxContainer"]
+[node name="Label" type="Label" parent="SaftyArea/VBoxContainer/NextExersiceDisplay/HBoxContainer" unique_id=658214104]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
@@ -87,12 +87,12 @@ text = "NEXT:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TalentSelection" parent="SaftyArea/VBoxContainer/NextExersiceDisplay/HBoxContainer" instance=ExtResource("3_a84em")]
+[node name="TalentSelection" parent="SaftyArea/VBoxContainer/NextExersiceDisplay/HBoxContainer" unique_id=111586753 instance=ExtResource("3_a84em")]
 unique_name_in_owner = true
 layout_mode = 2
 withTalentSelection = false
 
-[node name="CountDownBar" type="ProgressBar" parent="SaftyArea/VBoxContainer"]
+[node name="CountDownBar" type="ProgressBar" parent="SaftyArea/VBoxContainer" unique_id=149103502]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
@@ -102,7 +102,7 @@ step = 1.0
 show_percentage = false
 script = ExtResource("2_7inol")
 
-[node name="Label" type="Label" parent="SaftyArea/VBoxContainer/CountDownBar"]
+[node name="Label" type="Label" parent="SaftyArea/VBoxContainer/CountDownBar" unique_id=1209382319]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -118,25 +118,25 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 30
 text = "1:30"
 
-[node name="Timer" type="Timer" parent="SaftyArea/VBoxContainer/CountDownBar"]
+[node name="Timer" type="Timer" parent="SaftyArea/VBoxContainer/CountDownBar" unique_id=157832387]
 autostart = true
 
-[node name="MarginContainer2" type="MarginContainer" parent="SaftyArea/VBoxContainer"]
+[node name="MarginContainer2" type="MarginContainer" parent="SaftyArea/VBoxContainer" unique_id=244777803]
 layout_mode = 2
 theme_override_constants/margin_bottom = 50
 
-[node name="ContinueButton" type="Button" parent="SaftyArea/VBoxContainer/MarginContainer2"]
+[node name="ContinueButton" type="Button" parent="SaftyArea/VBoxContainer/MarginContainer2" unique_id=1076078639]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(400, 150)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 theme_override_font_sizes/font_size = 40
-theme_override_styles/focus = SubResource("StyleBoxFlat_qeskm")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_qeskm")
-theme_override_styles/hover = SubResource("StyleBoxFlat_qeskm")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_qeskm")
 theme_override_styles/normal = SubResource("StyleBoxFlat_qeskm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qeskm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qeskm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_qeskm")
+theme_override_styles/focus = SubResource("StyleBoxFlat_qeskm")
 text = "CONTINUE"
 
 [connection signal="timeout" from="SaftyArea/VBoxContainer/CountDownBar/Timer" to="SaftyArea/VBoxContainer/CountDownBar" method="_on_timer_timeout"]

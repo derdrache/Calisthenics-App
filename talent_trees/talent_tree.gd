@@ -41,7 +41,12 @@ func _draw() -> void:
 				continue
 			
 			var targetPosition: Vector2 = (targetNode.global_position) + (targetNode.get_center()* scroll_container.scale.x)
-			var color := Color.BLACK if targetNode.talentResource.is_unlocked else Color.GRAY
+			var color := Color.GRAY
+			
+			var isUnlocked = targetNode.talentResource.get_uid() in GlobalData.exerciseUnlocked
+			
+			if isUnlocked:
+				color = Color.BLACK
 		
 			if targetPosition.y < 200: continue
 			

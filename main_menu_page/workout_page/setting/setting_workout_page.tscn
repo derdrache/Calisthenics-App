@@ -1,6 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://burqvpdk5h6cn"]
+[gd_scene format=3 uid="uid://burqvpdk5h6cn"]
 
-[ext_resource type="Script" path="res://main_menu_page/workout_page/setting/setting_workout_page.gd" id="1_ys275"]
+[ext_resource type="Script" uid="uid://da4ga444yrgso" path="res://main_menu_page/workout_page/setting/setting_workout_page.gd" id="1_ys275"]
 [ext_resource type="PackedScene" uid="uid://c1u5yg2o45dr" path="res://widgets/safe_area_container/safe_area_container.tscn" id="2_gjhjg"]
 [ext_resource type="PackedScene" uid="uid://brpavu0ocrgcq" path="res://widgets/top_navigation_bar/top_navigation_bar.tscn" id="2_huq1w"]
 [ext_resource type="PackedScene" uid="uid://ix2g6f8f0bne" path="res://main_menu_page/workout_page/setting/exercise_box.tscn" id="3_rdxg7"]
@@ -40,7 +40,7 @@ expand_margin_top = 5.0
 expand_margin_right = 5.0
 expand_margin_bottom = 5.0
 
-[node name="SetupWorkoutPage" type="Control"]
+[node name="SetupWorkoutPage" type="Control" unique_id=1140176969]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -49,26 +49,26 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ys275")
 
-[node name="SaftyArea" parent="." instance=ExtResource("2_gjhjg")]
+[node name="SaftyArea" parent="." unique_id=337852192 instance=ExtResource("2_gjhjg")]
 layout_mode = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="SaftyArea"]
+[node name="VBoxContainer" type="VBoxContainer" parent="SaftyArea" unique_id=343536872]
 layout_mode = 2
 
-[node name="TopNavigationBar" parent="SaftyArea/VBoxContainer" instance=ExtResource("2_huq1w")]
+[node name="TopNavigationBar" parent="SaftyArea/VBoxContainer" unique_id=468222143 instance=ExtResource("2_huq1w")]
 layout_mode = 2
 title = "SET WORKOUT"
 
-[node name="MarginContainer3" type="MarginContainer" parent="SaftyArea/VBoxContainer"]
+[node name="MarginContainer3" type="MarginContainer" parent="SaftyArea/VBoxContainer" unique_id=29772003]
 layout_mode = 2
 theme_override_constants/margin_top = 50
 
-[node name="HBoxContainer" type="HBoxContainer" parent="SaftyArea/VBoxContainer/MarginContainer3"]
+[node name="HBoxContainer" type="HBoxContainer" parent="SaftyArea/VBoxContainer/MarginContainer3" unique_id=2069953300]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 70
 
-[node name="ModusButton" type="Button" parent="SaftyArea/VBoxContainer/MarginContainer3/HBoxContainer"]
+[node name="ModusButton" type="Button" parent="SaftyArea/VBoxContainer/MarginContainer3/HBoxContainer" unique_id=1530959472]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
@@ -77,15 +77,15 @@ size_flags_vertical = 4
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 20
-theme_override_styles/focus = SubResource("StyleBoxFlat_kxu6w")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_kxu6w")
-theme_override_styles/hover = SubResource("StyleBoxFlat_kxu6w")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_kxu6w")
 theme_override_styles/normal = SubResource("StyleBoxFlat_kxu6w")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kxu6w")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kxu6w")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_kxu6w")
+theme_override_styles/focus = SubResource("StyleBoxFlat_kxu6w")
 text = "Modus:
 "
 
-[node name="GlobalBreakButton" type="Button" parent="SaftyArea/VBoxContainer/MarginContainer3/HBoxContainer"]
+[node name="GlobalBreakButton" type="Button" parent="SaftyArea/VBoxContainer/MarginContainer3/HBoxContainer" unique_id=1937653229]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
@@ -94,15 +94,15 @@ size_flags_vertical = 4
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 20
-theme_override_styles/focus = SubResource("StyleBoxFlat_kxu6w")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_kxu6w")
-theme_override_styles/hover = SubResource("StyleBoxFlat_kxu6w")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_kxu6w")
 theme_override_styles/normal = SubResource("StyleBoxFlat_kxu6w")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kxu6w")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kxu6w")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_kxu6w")
+theme_override_styles/focus = SubResource("StyleBoxFlat_kxu6w")
 text = "Break:
 180 sec"
 
-[node name="MarginContainer" type="MarginContainer" parent="SaftyArea/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="SaftyArea/VBoxContainer" unique_id=1656290951]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/margin_left = 0
@@ -110,36 +110,36 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 0
 theme_override_constants/margin_bottom = 20
 
-[node name="ScrollContainer" type="ScrollContainer" parent="SaftyArea/VBoxContainer/MarginContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="SaftyArea/VBoxContainer/MarginContainer" unique_id=1991528914]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_scroll_mode = 0
 vertical_scroll_mode = 3
 
-[node name="ExerciseContainer" type="VBoxContainer" parent="SaftyArea/VBoxContainer/MarginContainer/ScrollContainer"]
+[node name="ExerciseContainer" type="VBoxContainer" parent="SaftyArea/VBoxContainer/MarginContainer/ScrollContainer" unique_id=1026107237]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(720, 0)
 layout_mode = 2
 size_flags_horizontal = 6
 theme_override_constants/separation = 25
 
-[node name="exercise_box" parent="SaftyArea/VBoxContainer/MarginContainer/ScrollContainer/ExerciseContainer" instance=ExtResource("3_rdxg7")]
+[node name="exercise_box" parent="SaftyArea/VBoxContainer/MarginContainer/ScrollContainer/ExerciseContainer" unique_id=1668719658 instance=ExtResource("3_rdxg7")]
 layout_mode = 2
 
-[node name="addButtonContainer" type="MarginContainer" parent="SaftyArea/VBoxContainer/MarginContainer/ScrollContainer/ExerciseContainer"]
+[node name="addButtonContainer" type="MarginContainer" parent="SaftyArea/VBoxContainer/MarginContainer/ScrollContainer/ExerciseContainer" unique_id=851667247]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_bottom = 50
 
-[node name="TextureRect" type="TextureRect" parent="SaftyArea/VBoxContainer/MarginContainer/ScrollContainer/ExerciseContainer/addButtonContainer"]
+[node name="TextureRect" type="TextureRect" parent="SaftyArea/VBoxContainer/MarginContainer/ScrollContainer/ExerciseContainer/addButtonContainer" unique_id=1237231468]
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
 size_flags_horizontal = 4
 texture = ExtResource("4_p7aft")
 expand_mode = 1
 
-[node name="addExerciseButton" type="Button" parent="SaftyArea/VBoxContainer/MarginContainer/ScrollContainer/ExerciseContainer/addButtonContainer/TextureRect"]
+[node name="addExerciseButton" type="Button" parent="SaftyArea/VBoxContainer/MarginContainer/ScrollContainer/ExerciseContainer/addButtonContainer/TextureRect" unique_id=1575339299]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -148,13 +148,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
-theme_override_styles/focus = SubResource("StyleBoxEmpty_lpmb0")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_lpmb0")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_lpmb0")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_lpmb0")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_lpmb0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lpmb0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_lpmb0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_lpmb0")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lpmb0")
 
-[node name="MarginContainer2" type="MarginContainer" parent="SaftyArea/VBoxContainer"]
+[node name="MarginContainer2" type="MarginContainer" parent="SaftyArea/VBoxContainer" unique_id=1975603202]
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_constants/margin_left = 20
@@ -162,7 +162,7 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 50
 
-[node name="SaveWorkoutButton" type="Button" parent="SaftyArea/VBoxContainer/MarginContainer2"]
+[node name="SaveWorkoutButton" type="Button" parent="SaftyArea/VBoxContainer/MarginContainer2" unique_id=510260998]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(225, 120)
 layout_mode = 2
