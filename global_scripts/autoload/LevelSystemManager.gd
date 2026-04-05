@@ -1,6 +1,6 @@
 extends Node
 # rework
-const STRENGTH_FACTOR = 100
+const STRENGTH_FACTOR = 10
 const MAX_POINT_REP = 10
 
 func get_overall_strength() -> int:
@@ -33,7 +33,7 @@ func get_core_Data() -> Dictionary:
 
 func _get_level(part: GlobalData.exercice_type) -> int:
 	var talentPath := _get_excersies_main_path(part)
-	var level := 1
+	var level := 0
 
 	for i in GlobalData.MAX_EXERCISE_LEVEL:
 		var serachFolder: String = talentPath + "level" + str(i+1) + "/"
@@ -41,12 +41,11 @@ func _get_level(part: GlobalData.exercice_type) -> int:
 		
 		for fileName in DirAccess.get_files_at(serachFolder):
 			var exercise: TalentResource = ResourceLoader.load(serachFolder + fileName)
-			
+			if not exercise: continue
 			var exerciseUID := exercise.get_uid()
 			var isUnlocked: bool = exerciseUID in GlobalData.exerciseUnlocked
-			printt(fileName,exerciseUID, GlobalData.exerciseUnlocked)
+			
 			if isUnlocked: 
-				
 				unlocked = true
 
 		if unlocked: 
@@ -73,21 +72,20 @@ func _get_rep_strength(levelPath: String, level: int) -> int:
 	var maxReps := 0
 	
 	for fileName in DirAccess.get_files_at(levelPath + str(level)):
-		var loadPath: String = GlobalData.SAVE_EXERSICE_PATH + fileName
-		
-		if not ResourceLoader.exists(loadPath): continue
-		
+		var loadPath: String = levelPath + str(level)+"/" + fileName		
 		var exerciseResource: TalentResource = ResourceLoader.load(loadPath)
 		
-		if exerciseResource: 
-			maxReps = exerciseResource.maxReps
+		var exerciseUID := exerciseResource.get_uid()
+		var historyResource: Exercise_History = SaveAndLoad.load_exercise_history(exerciseUID)
+
+		if historyResource: 
+			maxReps = historyResource.maxRep
 		
 		if maxReps > MAX_POINT_REP: maxReps = MAX_POINT_REP
 		
-	
 	if maxReps < 3: return 0
 	
-	return (maxReps - 3) * level * 100 / (MAX_POINT_REP - 3)
+	return (maxReps - 3) * level * STRENGTH_FACTOR / (MAX_POINT_REP - 3)
 
 func _get_strength(part: GlobalData.exercice_type) -> int:
 	var talentPath := _get_excersies_main_path(part)
@@ -98,16 +96,11 @@ func _get_strength(part: GlobalData.exercice_type) -> int:
 	return levelStrength + repStrength	
 
 func unlock_talents(talent: TalentResource) -> void:
-	var unlockTalents := talent.unlocks
-
-	for unlockTalent: TalentResource in unlockTalents:
-		var talentUID := unlockTalent.get_uid()
-		
-		if not talentUID in GlobalData.exerciseUnlocked:
-			GlobalData.exerciseUnlocked.append(talentUID)
-
+	var talentUID := talent.get_uid()
+	if not talentUID in GlobalData.exerciseUnlocked:
+		GlobalData.exerciseUnlocked.append(talentUID)
+	
 	unlock_previous_talents(talent)
-
 
 # rework
 func unlock_previous_talents(talent: TalentResource) -> void:
@@ -118,22 +111,22 @@ func unlock_previous_talents(talent: TalentResource) -> void:
 	
 	for i in range(talentLevel-1, 0, -1):
 		var serachFolder: String = talentPath + "level" + str(i) + "/"
-		print(talentLevel)
+
 		for fileName in DirAccess.get_files_at(serachFolder):
 			if not ResourceLoader.exists(serachFolder + fileName): continue
 			var resource : TalentResource = ResourceLoader.load(serachFolder + fileName)
-			
+
 			for lookTalent in resource.unlocks:
 				var lookTalentName := lookTalent.get_talent_name()
-				
+			
 				if searchTalentNames.has(lookTalentName):
 					
 					searchTalentNames.erase(lookTalentName)
 					
-					var talentUID := lookTalent.get_uid()
+					var talentUID := resource.get_uid()
 					if not talentUID in GlobalData.exerciseUnlocked:
 						GlobalData.exerciseUnlocked.append(talentUID)
-					if not talentUID in GlobalData.exerciseUnlocked:
-						GlobalData.exerciseUnlocked.append(talentUID)
+					if not talentUID in GlobalData.exerciseCompleted:
+						GlobalData.exerciseCompleted.append(talentUID)
 
 					unlock_previous_talents(resource)
