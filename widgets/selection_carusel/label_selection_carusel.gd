@@ -13,11 +13,7 @@ signal valueChanged(value: String)
 @export var stringList: Array
 @export var maxValue := 10
 @export var steps := 1
-@export var initialValue := 5:
-	set(value):
-		initialValue = value
-		if is_node_ready(): 
-			_set_carusel_start()
+@export var initialValue := 5
 		
 @export var withBackground := true
 @export var withCloseOnBackgroundClick := true
@@ -31,6 +27,8 @@ func _ready() -> void:
 		_create_normal_labels()
 		
 	if not withBackground: _remove_background()
+	
+	_set_carusel_start()
 
 func _create_number_labels() -> void:
 	var spacer := Label.new()
