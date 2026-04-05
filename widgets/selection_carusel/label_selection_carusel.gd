@@ -81,13 +81,15 @@ func _input(event: InputEvent) -> void:
 		queue_free()
 
 func _set_carusel_start() -> void:
+	# wait time because of the set of the objects
+	await get_tree().create_timer(0.01).timeout
+	
 	var initalValueIndex := get_node_index(initialValue)
 	
 	var startScroll := _get_space_between_scroll_objects() * (initalValueIndex-1)
 	
-	await get_tree().process_frame
-	
 	scroll_container.scroll_horizontal = startScroll
+
 	_select_deselect_objects(object_container.get_children()[initalValueIndex])
 
 func get_node_index(value: int) -> int:
