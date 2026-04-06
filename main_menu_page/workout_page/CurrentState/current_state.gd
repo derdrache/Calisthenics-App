@@ -12,9 +12,13 @@ func _ready() -> void:
 	var pullData := LevelSystemManager.get_pull_data()
 	var legData := LevelSystemManager.get_leg_data()
 	var coreData := LevelSystemManager.get_core_Data()
-
-	all_strength_label.text = str(LevelSystemManager.get_overall_strength())
+	
+	var allStrength := LevelSystemManager.get_overall_strength()
+	all_strength_label.text = str(allStrength)
 	push_strength_label.text = "Level " + str(pushData.level) +": " + str(pushData.strength)
 	pull_strength_label.text = "Level " + str(pullData.level) +": " + str(pullData.strength)
 	leg_strength_label.text = "Level " + str(legData.level) +": " + str(legData.strength)
 	core_strength_label.text = "Level " + str(coreData.level) +": " + str(coreData.strength)
+	
+	if allStrength == 0: 
+		hide()

@@ -72,6 +72,9 @@ func _get_level_in_strength(level: int) -> int:
 func _get_rep_strength(levelPath: String, level: int) -> int:
 	var maxReps := 0
 	
+	if level == 0: 
+		return 0
+	
 	for fileName in DirAccess.get_files_at(levelPath + str(level)):
 		var loadPath: String = levelPath + str(level)+"/" + fileName		
 		var exerciseResource: TalentResource = ResourceLoader.load(loadPath)

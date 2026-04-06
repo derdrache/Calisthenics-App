@@ -22,8 +22,11 @@ var workouts: Array[WorkoutResource] = []
 
 func _ready() -> void:
 	_create_dir()
+	
 	SaveAndLoad.load_exercise_data()
+	
 	_load_workout_templates()
+	
 	_delete_workout_plans()
 	
 func _create_dir() -> void:
