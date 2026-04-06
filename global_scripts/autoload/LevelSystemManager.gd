@@ -1,5 +1,5 @@
 extends Node
-# rework
+
 const STRENGTH_FACTOR = 10
 const MAX_POINT_REP = 10
 
@@ -67,7 +67,6 @@ func _get_excersies_main_path(part: GlobalData.exercice_type) -> String:
 	return ""
 
 func _get_level_in_strength(level: int) -> int:
-	level -= 1
 	return (level * (level + 1)) / 2 * STRENGTH_FACTOR
 
 func _get_rep_strength(levelPath: String, level: int) -> int:
@@ -92,7 +91,7 @@ func _get_rep_strength(levelPath: String, level: int) -> int:
 func _get_strength(part: GlobalData.exercice_type) -> int:
 	var talentPath := _get_excersies_main_path(part)
 	var level := _get_level(part)
-	var levelStrength := _get_level_in_strength(level)
+	var levelStrength := _get_level_in_strength(level - 1)
 	var repStrength := _get_rep_strength(talentPath + "/level", level)
 
 	return levelStrength + repStrength	
@@ -104,7 +103,6 @@ func unlock_talents(talent: TalentResource) -> void:
 	
 	unlock_previous_talents(talent)
 
-# rework
 func unlock_previous_talents(talent: TalentResource) -> void:
 	var talentLevel := int(talent.get_talent_level())
 	var mainPart := talent.get_exercice_type()
@@ -115,15 +113,15 @@ func unlock_previous_talents(talent: TalentResource) -> void:
 		var serachFolder: String = talentPath + "level" + str(i) + "/"
 
 		for fileName in DirAccess.get_files_at(serachFolder):
+			
 			if not ResourceLoader.exists(serachFolder + fileName): continue
+			
 			var resource : TalentResource = ResourceLoader.load(serachFolder + fileName)
 
 			for lookTalent in resource.unlocks:
 				var lookTalentName := lookTalent.get_talent_name()
 			
 				if searchTalentNames.has(lookTalentName):
-					
-					searchTalentNames.erase(lookTalentName)
 					
 					var talentUID := resource.get_uid()
 					if not talentUID in GlobalData.exerciseUnlocked:

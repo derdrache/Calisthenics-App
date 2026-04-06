@@ -1,8 +1,6 @@
 extends Node
 class_name SaveAndLoad
 
-# rework
-
 static func save_resource(path: String, resource: Resource, fileName := "") -> void:
 	if fileName: fileName = fileName.replace(" ", "_") + ".tres"
 	else: fileName = resource.resource_path.get_file()

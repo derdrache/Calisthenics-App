@@ -53,7 +53,6 @@ func get_center() -> Vector2:
 	return custom_minimum_size/2
 
 func _set_style() -> void:
-	# rework
 	var styleBox : StyleBoxFlat = get_theme_stylebox("panel").duplicate()
 	
 	var isCompleted: bool = talentResource.get_uid() in GlobalData.exerciseCompleted
@@ -63,7 +62,7 @@ func _set_style() -> void:
 	if isCompleted:
 		styleBox.border_color = completeColorBorder
 		styleBox.bg_color = completeColorPanel
-	elif isUnlocked:# or isLevel1:
+	elif isUnlocked or isLevel1:
 		styleBox.border_color = unlockColorBorder
 		styleBox.bg_color = unlockColorPanel
 	else:

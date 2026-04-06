@@ -1,12 +1,9 @@
 extends Node
 
-# rework
 var workoutResourceTemplate: WorkoutResource = preload("res://resrouces/workout_resources/Workout.tres").duplicate()
 var currentWorkout : WorkoutResource
 var currentExerciseIndex := 0
 var startTime: Dictionary
-
-#var exerciseData : Array[Exercise] = []
 	
 func get_current_exercise() -> Exercise:
 	if currentExerciseIndex > len(currentWorkout.exercises) -1:
@@ -29,11 +26,6 @@ func start_workout() -> void:
 	startTime = Time.get_time_dict_from_system()
 	currentWorkout = GlobalData.workouts[0]
 	currentWorkout.reset()
-	
-#	_setup_exercise_data()
-
-#func _setup_exercise_data() -> void:
-	#exerciseData = currentWorkout.exercises
 
 func set_next_exersice(repsDone: int) -> void:
 	_add_reps(repsDone)
