@@ -20,12 +20,12 @@ func _ready() -> void:
 	add_exercise_button.pressed.connect(_add_exercise)
 	save_workout_button.pressed.connect(_save_workout)
 	
-	_load_workout()
-	
 	_refresh_modus_button_label()
 	_refresh_global_break_button_label()
 	
 	_add_exercise()
+	
+	_load_workout()
 
 func _refresh_modus_button_label() -> void:
 	modus_button.text = "Modus:\n" + GlobalData.workout_modus.keys()[workoutModus]
@@ -63,15 +63,19 @@ func _add_exercise() -> void:
 	exerciseNode.breakTime = globalBreakTime
 	
 	exercise_container.add_child(exerciseNode)
-	exercise_container.move_child(exerciseNode, exercise_container.get_child_count() -2)
 	
 	exerciseNode.changed.connect(_on_exercise_container_changed.bind(exerciseNode))
 
 	var childCount: int = exercise_container.get_child_count()
 	var isOdd: bool = childCount / 2 == 0
-	if isOdd and workoutModus == GlobalData.workout_modus.SUPERSET:
-		_add_exercise()
-		return 
+
+	if not isOdd and workoutModus == GlobalData.workout_modus.SUPERSET:
+		var secondExerciseNode: ExerciseBox = EXERCISE_BOX.instantiate()
+		secondExerciseNode.breakTime = globalBreakTime
+		
+		exercise_container.add_child(secondExerciseNode)
+		
+		secondExerciseNode.changed.connect(_on_exercise_container_changed.bind(secondExerciseNode))
 	
 	_scroll_v_bottom()
 

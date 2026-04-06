@@ -117,8 +117,11 @@ func unlock_previous_talents(talent: TalentResource) -> void:
 
 		for fileName in DirAccess.get_files_at(serachFolder):
 			
-			if not ResourceLoader.exists(serachFolder + fileName): continue
+			# adrnoid special
+			fileName = fileName.replace(".remap", "")
 			
+			if not ResourceLoader.exists(serachFolder + fileName): continue
+
 			var resource : TalentResource = ResourceLoader.load(serachFolder + fileName)
 
 			for lookTalent in resource.unlocks:

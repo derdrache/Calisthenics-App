@@ -74,4 +74,5 @@ func _set_style() -> void:
 
 func _on_button_pressed() -> void:
 	# open info window?
+	print("info window")
 	pass

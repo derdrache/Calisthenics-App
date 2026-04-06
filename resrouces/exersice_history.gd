@@ -19,8 +19,9 @@ func add_data(exerciseData: Exercise) -> void:
 
 	## todo check if one set at least 3 reps
 	var hasMinimumReps: bool = repsDoneArray.any(func(val: int) -> bool: return val >= 3)
-	if hasMinimumReps and firstTimeDoneDate.is_empty():
-		firstTimeDoneDate = Time.get_datetime_dict_from_system()
+	if hasMinimumReps:
+		if firstTimeDoneDate.is_empty():
+			firstTimeDoneDate = Time.get_datetime_dict_from_system()
 		LevelSystemManager.unlock_talents(exerciseData.talent)
 	
 	for repIndex in len(repsDoneArray):

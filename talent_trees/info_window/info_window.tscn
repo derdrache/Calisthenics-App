@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://4abutnd18e4i"]
+
+[node name="InfoWindow" type="PanelContainer" unique_id=1908891191]
+custom_minimum_size = Vector2(300, 500)
+offset_right = 300.0
+offset_bottom = 500.0
