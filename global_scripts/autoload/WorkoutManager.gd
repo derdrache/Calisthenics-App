@@ -1,6 +1,6 @@
 extends Node
-
-var workoutResourceTemplate: WorkoutResource = preload("res://resrouces/workout_resources/Workout.tres").duplicate()
+# rework
+#var workoutResourceTemplate: WorkoutResource = preload("res://resrouces/workout_resources/Workout.tres").duplicate()
 var currentWorkout : WorkoutResource
 var currentExerciseIndex := 0
 var startTime: Dictionary

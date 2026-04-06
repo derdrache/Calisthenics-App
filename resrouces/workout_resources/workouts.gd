@@ -2,7 +2,6 @@ extends Resource
 class_name WorkoutResource
 
 @export var workoutName : String
-@export var id: int
 @export var planDate: Dictionary
 @export var doneDate: Dictionary
 @export var exercises : Array[Exercise]

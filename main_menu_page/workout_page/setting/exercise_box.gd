@@ -96,6 +96,6 @@ func change_break_time(newValue: int) -> void:
 	breakTime = newValue
 	_refresh_break_time_label()
 
-func change_sets(newValue):
-	sets = int(newValue)
+func change_sets(newValue: int) -> void:
+	sets = newValue
 	_refresh_sets_label()
