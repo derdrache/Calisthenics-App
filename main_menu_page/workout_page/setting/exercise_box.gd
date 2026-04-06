@@ -1,6 +1,8 @@
 extends Control
 class_name ExerciseBox
 
+signal changed()
+
 @onready var letter_number: Label = %LetterNumber
 @onready var talent_selection: TalentSelectionButton = %TalentSelection
 @onready var set_selection: Button = %SetSelection
@@ -54,6 +56,8 @@ func _change_sets_value(newValue: String) -> void:
 	sets = int(newValue)
 	_refresh_sets_label()
 
+	changed.emit()
+
 func _set_reps_window() -> void:
 	var selectionCaruselNode: LabelSelectionCarusel = SELECTION_CARUSEL.instantiate()
 	selectionCaruselNode.title = "Reps"
@@ -62,6 +66,8 @@ func _set_reps_window() -> void:
 	
 	add_child(selectionCaruselNode)
 	selectionCaruselNode.valueChanged.connect(_change_reps_value)	
+	
+	changed.emit()
 
 func _change_reps_value(newValue: String) -> void:
 	reps = int(newValue)
@@ -80,6 +86,7 @@ func _set_break_window() -> void:
 func _change_break_time(newValue: int) -> void:
 	breakTime = newValue
 	_refresh_break_time_label()
+	changed.emit()
 
 func _set_talent(talent: TalentResource) -> void:
 	selectedTalent = talent
@@ -88,3 +95,7 @@ func _set_talent(talent: TalentResource) -> void:
 func change_break_time(newValue: int) -> void:
 	breakTime = newValue
 	_refresh_break_time_label()
+
+func change_sets(newValue):
+	sets = int(newValue)
+	_refresh_sets_label()

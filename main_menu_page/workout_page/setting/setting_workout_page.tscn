@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://da4ga444yrgso" path="res://main_menu_page/workout_page/setting/setting_workout_page.gd" id="1_ys275"]
 [ext_resource type="PackedScene" uid="uid://c1u5yg2o45dr" path="res://widgets/safe_area_container/safe_area_container.tscn" id="2_gjhjg"]
 [ext_resource type="PackedScene" uid="uid://brpavu0ocrgcq" path="res://widgets/top_navigation_bar/top_navigation_bar.tscn" id="2_huq1w"]
-[ext_resource type="PackedScene" uid="uid://ix2g6f8f0bne" path="res://main_menu_page/workout_page/setting/exercise_box.tscn" id="3_rdxg7"]
 [ext_resource type="Texture2D" uid="uid://bcvvg3yet5110" path="res://assets/icons/Icon_Add.png" id="4_p7aft"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kxu6w"]
@@ -116,30 +115,30 @@ layout_mode = 2
 horizontal_scroll_mode = 0
 vertical_scroll_mode = 3
 
-[node name="ExerciseContainer" type="VBoxContainer" parent="SaftyArea/VBoxContainer/MarginContainer/ScrollContainer" unique_id=1026107237]
+[node name="VBoxContainer" type="VBoxContainer" parent="SaftyArea/VBoxContainer/MarginContainer/ScrollContainer" unique_id=1332920964]
+layout_mode = 2
+
+[node name="ExerciseContainer" type="VBoxContainer" parent="SaftyArea/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1026107237]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(720, 0)
 layout_mode = 2
 size_flags_horizontal = 6
 theme_override_constants/separation = 25
 
-[node name="exercise_box" parent="SaftyArea/VBoxContainer/MarginContainer/ScrollContainer/ExerciseContainer" unique_id=1668719658 instance=ExtResource("3_rdxg7")]
-layout_mode = 2
-
-[node name="addButtonContainer" type="MarginContainer" parent="SaftyArea/VBoxContainer/MarginContainer/ScrollContainer/ExerciseContainer" unique_id=851667247]
+[node name="addButtonContainer" type="MarginContainer" parent="SaftyArea/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer" unique_id=851667247]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_bottom = 50
 
-[node name="TextureRect" type="TextureRect" parent="SaftyArea/VBoxContainer/MarginContainer/ScrollContainer/ExerciseContainer/addButtonContainer" unique_id=1237231468]
+[node name="TextureRect" type="TextureRect" parent="SaftyArea/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/addButtonContainer" unique_id=1237231468]
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
 size_flags_horizontal = 4
 texture = ExtResource("4_p7aft")
 expand_mode = 1
 
-[node name="addExerciseButton" type="Button" parent="SaftyArea/VBoxContainer/MarginContainer/ScrollContainer/ExerciseContainer/addButtonContainer/TextureRect" unique_id=1575339299]
+[node name="addExerciseButton" type="Button" parent="SaftyArea/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/addButtonContainer/TextureRect" unique_id=1575339299]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15

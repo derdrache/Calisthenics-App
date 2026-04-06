@@ -24,6 +24,8 @@ func _ready() -> void:
 	
 	_refresh_modus_button_label()
 	_refresh_global_break_button_label()
+	
+	_add_exercise()
 
 func _refresh_modus_button_label() -> void:
 	modus_button.text = "Modus:\n" + GlobalData.workout_modus.keys()[workoutModus]
@@ -63,8 +65,33 @@ func _add_exercise() -> void:
 	exercise_container.add_child(exerciseNode)
 	exercise_container.move_child(exerciseNode, exercise_container.get_child_count() -2)
 	
-	_scroll_v_bottom()
+	exerciseNode.changed.connect(_on_exercise_container_changed.bind(exerciseNode))
+
+	var childCount: int = exercise_container.get_child_count()
+	var isOdd: bool = childCount / 2 == 0
+	if isOdd and workoutModus == GlobalData.workout_modus.SUPERSET:
+		_add_exercise()
+		return 
 	
+	_scroll_v_bottom()
+
+func _on_exercise_container_changed(exercise_box: Control) -> void:
+	if not workoutModus == GlobalData.workout_modus.SUPERSET:
+		return
+	
+	var exerciseContainerIndex: int = exercise_box.get_index()
+	var connectionContainerIndex := -1
+	var isOddIndex:bool = exerciseContainerIndex / 2 == 0
+
+	if isOddIndex:
+		connectionContainerIndex = exerciseContainerIndex - 1
+	else:
+		connectionContainerIndex = exerciseContainerIndex + 1
+		
+	var connectionContainer: Control = exercise_container.get_child(connectionContainerIndex)
+	connectionContainer.change_break_time(exercise_box.breakTime)
+	connectionContainer.change_sets(exercise_box.sets)
+
 func _scroll_v_bottom() -> void:
 	await get_tree().process_frame
 	await get_tree().process_frame
@@ -87,9 +114,7 @@ func _change_break_time(newValue: String) -> void:
 	globalBreakTime = int(newValue)
 	_refresh_global_break_button_label()
 	
-	for container: Control in exercise_container.get_children():
-		if "Button" in container.name: continue
-		
+	for container: Control in exercise_container.get_children():		
 		container.change_break_time(globalBreakTime)
 
 func _set_modus_window() -> void:
@@ -104,8 +129,22 @@ func _set_modus_window() -> void:
 	selectionCaruselNode.valueChanged.connect(_change_modus)	
 
 func _change_modus(newValue: String) -> void:
-	workoutModus = GlobalData.workout_modus[newValue]  
+	var newModus: GlobalData.workout_modus = GlobalData.workout_modus[newValue]
+	workoutModus = newModus
 	_refresh_modus_button_label()
+	
+	if newModus == GlobalData.workout_modus.SUPERSET:
+		_check_superset_setup()
+		
+func _check_superset_setup() -> void:
+	var childCount: int = exercise_container.get_child_count()
+	var isOdd: bool = childCount / 2 == 0
+
+	if not isOdd: 
+		return
+	
+	_add_exercise()
+	
 
 func _save_workout() -> void:
 	if _get_all_exersice_data().is_empty(): return

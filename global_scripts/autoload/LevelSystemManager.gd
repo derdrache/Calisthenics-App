@@ -41,7 +41,9 @@ func _get_level(part: GlobalData.exercice_type) -> int:
 		
 		for fileName in DirAccess.get_files_at(serachFolder):
 			var exercise: TalentResource = ResourceLoader.load(serachFolder + fileName)
+			
 			if not exercise: continue
+			
 			var exerciseUID := exercise.get_uid()
 			var isUnlocked: bool = exerciseUID in GlobalData.exerciseUnlocked
 			
