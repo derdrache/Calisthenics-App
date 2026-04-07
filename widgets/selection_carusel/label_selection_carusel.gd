@@ -13,7 +13,11 @@ signal valueChanged(value: String)
 @export var stringList: Array
 @export var maxValue := 10
 @export var steps := 1
-@export var initialValue := 5
+@export var initialValue := 1:
+	set(value):
+		initialValue = value
+		if is_node_ready():
+			_set_carusel_start()
 		
 @export var withBackground := true
 @export var withCloseOnBackgroundClick := true
@@ -81,14 +85,13 @@ func _input(event: InputEvent) -> void:
 		queue_free()
 
 func _set_carusel_start() -> void:
-	# wait time because of the set of the objects
-	await get_tree().create_timer(0.01).timeout
+
 	
 	var initalValueIndex := get_node_index(initialValue)
 	
 	var startScroll := _get_space_between_scroll_objects() * (initalValueIndex-1)
-	
-	scroll_container.scroll_horizontal = startScroll
+
+	scroll_container.set_deferred("scroll_horizontal", startScroll)
 
 	_select_deselect_objects(object_container.get_children()[initalValueIndex])
 
