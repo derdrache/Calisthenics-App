@@ -14,12 +14,37 @@ signal selected_talent
 @onready var content_container: MarginContainer = %ContentContainer
 @onready var skill_container: HBoxContainer = %SkillContainer
 
+const INFO_WINDOW = preload("uid://4abutnd18e4i")
+
 func _ready() -> void:
 	top_navigation_bar.previousPage.connect(_on_top_navigation_bar_previous_page)
 	top_navigation_bar.closePage.connect(_on_top_navigation_bar_close_page)
 	
 	if talentSelection: _set_talent_selection()
-		
+	
+	_set_signals()
+	
+func _set_signals() -> void:
+	for talentIcon in get_tree().get_nodes_in_group("talentIcon"):
+		talentIcon.selected.connect(_on_talent_icon_selected)
+
+func _on_talent_icon_selected(talentResource: TalentResource) -> void:
+	if talentSelection or not talentResource: return
+	
+	var title: String = talentResource.get_talent_name()
+	var exerciseHistory: Exercise_History = SaveAndLoad.load_exercise_history(talentResource.get_uid())
+	
+	var oldInfoWindow: Control = get_tree().get_first_node_in_group("infoWindow")
+	if oldInfoWindow:
+		oldInfoWindow.queue_free()
+	
+	var infoWindowNode := INFO_WINDOW.instantiate()
+	infoWindowNode.title = title
+	infoWindowNode.exerciseHistory = exerciseHistory
+	
+	add_child(infoWindowNode)
+	
+
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("quit"): 
 		get_tree().quit()

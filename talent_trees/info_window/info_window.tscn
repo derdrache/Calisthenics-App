@@ -1,6 +1,118 @@
 [gd_scene format=3 uid="uid://4abutnd18e4i"]
 
+[ext_resource type="Script" uid="uid://d2qdsql43s7sv" path="res://talent_trees/info_window/info_window.gd" id="1_wxa8t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wxa8t"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 5
+
 [node name="InfoWindow" type="PanelContainer" unique_id=1908891191]
-custom_minimum_size = Vector2(300, 500)
-offset_right = 300.0
-offset_bottom = 500.0
+custom_minimum_size = Vector2(500, 350)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -150.0
+offset_right = 150.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wxa8t")
+script = ExtResource("1_wxa8t")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=594231914]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=772710311]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="titleLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=776926830]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 30
+text = "XXXX"
+horizontal_alignment = 1
+
+[node name="statsOverview" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=63163729]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/statsOverview" unique_id=1464582944]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/statsOverview/HBoxContainer" unique_id=1745548856]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "total reps:"
+
+[node name="totalRepsLabel" type="Label" parent="MarginContainer/VBoxContainer/statsOverview/HBoxContainer" unique_id=952995658]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "xxx"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer/statsOverview" unique_id=611566073]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/statsOverview/HBoxContainer3" unique_id=97798050]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "total sets:"
+
+[node name="totalSetsLabel" type="Label" parent="MarginContainer/VBoxContainer/statsOverview/HBoxContainer3" unique_id=119439783]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "xxx"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/statsOverview" unique_id=1189298197]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/statsOverview/HBoxContainer2" unique_id=63671445]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "max rep:"
+
+[node name="maxRepLabel" type="Label" parent="MarginContainer/VBoxContainer/statsOverview/HBoxContainer2" unique_id=1215381261]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "xxx"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/VBoxContainer/statsOverview" unique_id=1861892849]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/statsOverview/HBoxContainer4" unique_id=907502392]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "best result: "
+
+[node name="bestReusltLabel" type="Label" parent="MarginContainer/VBoxContainer/statsOverview/HBoxContainer4" unique_id=1294939086]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "xxx"

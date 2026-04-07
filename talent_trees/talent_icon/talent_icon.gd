@@ -1,6 +1,8 @@
 extends Panel
 class_name TalentIcon
 
+signal selected(talentResource: TalentResource)
+
 @export var talentResource : TalentResource:
 	set(newValue):
 		talentResource = newValue
@@ -30,6 +32,7 @@ class_name TalentIcon
 const TALENT_ICON_STYLEBOX = preload("res://talent_trees/talent_icon/talent_icon_stylebox.tres")
 
 func _ready() -> void:
+	add_to_group("talentIcon")
 	goal_icon.hide()
 
 	if not talentResource: 
@@ -73,6 +76,4 @@ func _set_style() -> void:
 	add_theme_stylebox_override("panel", styleBox)
 
 func _on_button_pressed() -> void:
-	# open info window?
-	print("info window")
-	pass
+	selected.emit(talentResource)
