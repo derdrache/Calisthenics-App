@@ -66,14 +66,11 @@ layout_mode = 1
 
 [node name="SkillTreeMainPage" parent="SaftyArea/VBoxContainer/PageContainer" unique_id=293526321 instance=ExtResource("3_kvfax")]
 visible = false
-layout_mode = 0
-anchors_preset = 0
-grow_vertical = 0
+layout_mode = 1
 
 [node name="StatisticMainPage" parent="SaftyArea/VBoxContainer/PageContainer" unique_id=351977707 instance=ExtResource("4_iwmvr")]
 visible = false
-layout_mode = 0
-anchors_preset = 0
+layout_mode = 1
 
 [node name="PanelContainer" type="PanelContainer" parent="SaftyArea/VBoxContainer" unique_id=1807246103]
 custom_minimum_size = Vector2(0, 170)
