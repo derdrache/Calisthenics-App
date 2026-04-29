@@ -122,5 +122,3 @@ func delete_workout_plan(date: Dictionary) -> void:
 	var workoutCollection := SaveAndLoad.load_workout_collection()
 
 	workoutCollection.delete_plan_workout(date)	
-	
-	SignalHub.update_calendar.emit()
