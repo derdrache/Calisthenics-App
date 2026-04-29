@@ -7,8 +7,6 @@ extends PanelContainer
 @onready var setup_workout_button : Button = %SetupWorkoutButton
 @onready var delete_workout_container: MarginContainer = %deleteWorkoutContainer
 
-
-
 const TALENT_SELECTION_BUTTON = preload("res://widgets/talent_selection_button.tscn")
 
 var displayDate : Dictionary = Time.get_datetime_dict_from_system()
@@ -59,6 +57,8 @@ func _setup_workout() -> void:
 		workoutCollection.add_workout(workoutData, "Plan")
 		
 		_refresh_display()
+		
+		SignalHub.workout_changed.emit()
 
 func _change_workout_data(date: Dictionary) -> void:
 	displayDate = date
@@ -81,5 +81,7 @@ func _on_delete_workout_button_pressed() -> void:
 	WorkoutManager.delete_workout_plan(displayDate)
 	
 	_refresh_display()
+	
+	SignalHub.workout_changed.emit()
 	
 	

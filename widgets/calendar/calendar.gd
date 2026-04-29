@@ -9,6 +9,7 @@ extends Control
 @onready var previous_month: TextureRect = %previousMonth
 @onready var next_month: TextureRect = %nextMonth
 @onready var month_year_label: Label = %MonthYearLabel
+@onready var setup_workout_button: Button = %SetupWorkoutButton
 
 const DATE_LABEL = preload("res://widgets/calendar/DateLabel.tscn")
 const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
@@ -16,7 +17,8 @@ const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "Ju
 var selectedDate := Time.get_datetime_dict_from_system()
 var monthsList := []
 
-func _ready() -> void:	
+func _ready() -> void:
+	SignalHub.workout_changed.connect(_on_workout_changed)
 	_set_calendar()
 	
 func _set_calendar() -> void:
@@ -133,4 +135,7 @@ func _on_next_week_button_pressed() -> void:
 	var newUnixTime := Time.get_unix_time_from_datetime_dict(selectedDate) + 7 * GlobalData.DAY_IN_UNIX_TIME
 	selectedDate = Time.get_datetime_dict_from_unix_time(newUnixTime)
 	
+	_refresh_calendar()
+
+func _on_workout_changed() -> void:
 	_refresh_calendar()
