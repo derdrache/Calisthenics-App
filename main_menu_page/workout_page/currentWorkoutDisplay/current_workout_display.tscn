@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://cb3gyjpywky8i"]
+[gd_scene format=3 uid="uid://cb3gyjpywky8i"]
 
-[ext_resource type="Script" path="res://main_menu_page/workout_page/currentWorkoutDisplay/current_workout_display.gd" id="1_gt6uy"]
+[ext_resource type="Script" uid="uid://di6tfw03ysiq8" path="res://main_menu_page/workout_page/currentWorkoutDisplay/current_workout_display.gd" id="1_gt6uy"]
 [ext_resource type="Texture2D" uid="uid://c7bpp43qq54rv" path="res://assets/icons/Icon_X.png" id="2_odecc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ki2fa"]
@@ -19,7 +19,7 @@ corner_radius_bottom_left = 30
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dbc7o"]
 
-[node name="CurrentWorkout" type="PanelContainer"]
+[node name="CurrentWorkout" type="PanelContainer" unique_id=117636322]
 custom_minimum_size = Vector2(0, 250)
 anchors_preset = 10
 anchor_right = 1.0
@@ -28,18 +28,18 @@ grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ki2fa")
 script = ExtResource("1_gt6uy")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=334318986]
 layout_mode = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1160949162]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer" unique_id=605645680]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -49,33 +49,33 @@ text = "Current Workout"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="DisplayBox" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="DisplayBox" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1409760092]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 10
 
-[node name="SetupWorkoutButton" type="Button" parent="."]
+[node name="SetupWorkoutButton" type="Button" parent="." unique_id=1872381908]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxEmpty_ggjdt")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ggjdt")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_ggjdt")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ggjdt")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ggjdt")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_ggjdt")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_ggjdt")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_ggjdt")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_ggjdt")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_ggjdt")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_ggjdt")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_ggjdt")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ggjdt")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_ggjdt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ggjdt")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_ggjdt")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ggjdt")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ggjdt")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ggjdt")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ggjdt")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ggjdt")
 text = "No workout - set up yet"
 
-[node name="deleteWorkoutContainer" type="MarginContainer" parent="."]
+[node name="deleteWorkoutContainer" type="MarginContainer" parent="." unique_id=782768444]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 8
@@ -83,7 +83,7 @@ size_flags_vertical = 0
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 15
 
-[node name="TextureRect" type="TextureRect" parent="deleteWorkoutContainer"]
+[node name="TextureRect" type="TextureRect" parent="deleteWorkoutContainer" unique_id=951497320]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -91,23 +91,23 @@ size_flags_vertical = 4
 texture = ExtResource("2_odecc")
 expand_mode = 1
 
-[node name="deleteWorkoutButton" type="Button" parent="deleteWorkoutContainer/TextureRect"]
+[node name="deleteWorkoutButton" type="Button" parent="deleteWorkoutContainer/TextureRect" unique_id=63760738]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/focus = SubResource("StyleBoxEmpty_dbc7o")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_dbc7o")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_dbc7o")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_dbc7o")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_dbc7o")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_dbc7o")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_dbc7o")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_dbc7o")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_dbc7o")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_dbc7o")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_dbc7o")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_dbc7o")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_dbc7o")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_dbc7o")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_dbc7o")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_dbc7o")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_dbc7o")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_dbc7o")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_dbc7o")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_dbc7o")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dbc7o")
 
 [connection signal="pressed" from="deleteWorkoutContainer/TextureRect/deleteWorkoutButton" to="." method="_on_delete_workout_button_pressed"]

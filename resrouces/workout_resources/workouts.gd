@@ -16,3 +16,6 @@ func get_date() -> Dictionary:
 func reset() -> void:
 	for exercise in exercises:
 		exercise.reset()
+
+func is_done() -> bool:
+	return doneDate.is_empty()

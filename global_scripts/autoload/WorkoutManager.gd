@@ -5,6 +5,10 @@ var currentWorkout : WorkoutResource
 var currentExerciseIndex := 0
 var startTime: Dictionary
 	
+	
+func _ready() -> void:
+	currentWorkout = GlobalData.workouts[0]
+
 func get_current_exercise() -> Exercise:
 	if currentExerciseIndex > len(currentWorkout.exercises) -1:
 		currentExerciseIndex = 0

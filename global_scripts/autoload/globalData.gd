@@ -27,8 +27,6 @@ func _ready() -> void:
 	
 	_load_workout_templates()
 	
-	_delete_workout_plans()
-	
 func _create_dir() -> void:
 	var dir := DirAccess.open(BASE_PATH)
 	dir.make_dir("workout_templates")
@@ -37,15 +35,3 @@ func _create_dir() -> void:
 
 func _load_workout_templates() -> void:
 	workouts = SaveAndLoad.load_workout_resources()
-	
-func _delete_workout_plans() -> void:
-	var workoutCollection := SaveAndLoad.load_workout_collection()
-	workoutCollection.delete_unfinished_workout_plans()	
-
-static func seconds_in_minutes_string(seconds: int) -> String:
-	var pufferMinutes :float = seconds / 60.0
-	var minutes := int(pufferMinutes)
-	var restSeconds := (pufferMinutes - minutes) * 60
-	var spezialZero := "0" if restSeconds < 10 else ""
-	
-	return str(minutes) + ":" + spezialZero + str(round(restSeconds))

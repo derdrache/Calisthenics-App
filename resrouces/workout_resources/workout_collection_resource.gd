@@ -43,22 +43,22 @@ func delete_plan_workout(date: Dictionary) -> void:
 		plan.remove_at(index)
 		save()	
 
-func delete_unfinished_workout_plans() -> void:
-	var deletePlanWorkouts := []
-	
-	for workoutPlan in plan:
-		var currentDate := Time.get_datetime_dict_from_system()
-		var planDate := workoutPlan.planDate
-		var isPastWorkout : bool = (planDate.day +1 <= currentDate.day 
-			or planDate.month +1 <= currentDate.month or planDate.year +1 <= currentDate.year)
-		
-		if not isPastWorkout: continue
-		
-		var workout := get_workout(workoutPlan.planDate, "History")
-		if not workout: deletePlanWorkouts.append(workoutPlan)
-
-	for workoutPlan: WorkoutResource in deletePlanWorkouts:
-		delete_plan_workout(workoutPlan.planDate)
+#func delete_unfinished_workout_plans() -> void:
+	#var deletePlanWorkouts := []
+	#
+	#for workoutPlan in plan:
+		#var currentDate := Time.get_datetime_dict_from_system()
+		#var planDate := workoutPlan.planDate
+		#var isPastWorkout : bool = (planDate.day +1 <= currentDate.day 
+			#or planDate.month +1 <= currentDate.month or planDate.year +1 <= currentDate.year)
+		#
+		#if not isPastWorkout: continue
+		#
+		#var workout := get_workout(workoutPlan.planDate, "History")
+		#if not workout: deletePlanWorkouts.append(workoutPlan)
+#
+	#for workoutPlan: WorkoutResource in deletePlanWorkouts:
+		#delete_plan_workout(workoutPlan.planDate)
 
 func save() -> void:
 	SaveAndLoad.save_resource(GlobalData.BASE_PATH, self, "workout_collection")

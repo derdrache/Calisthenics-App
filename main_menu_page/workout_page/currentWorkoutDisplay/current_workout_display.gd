@@ -24,13 +24,13 @@ func _ready() -> void:
 func _set_display() -> void:
 	title.text = str(displayDate.day) + "." + str(displayDate.month) + ". Workout"
 	
-	if not workoutData or not _is_in_future(displayDate): delete_workout_container.hide()
+	if not workoutData or not HelperFunctions.is_in_future(displayDate): delete_workout_container.hide()
 	else: delete_workout_container.show()
 
 	if not workoutData: 
 		setup_workout_button.show()
 		
-		if not _is_in_future(displayDate): 
+		if not HelperFunctions.is_in_future(displayDate): 
 			setup_workout_button.text = "Not trained"
 		else: 
 			setup_workout_button.text = "No workout - set up yet"
@@ -50,7 +50,7 @@ func _setup_workout() -> void:
 	if not WorkoutManager.currentWorkout:
 		get_tree().change_scene_to_file("res://main_menu_page/workout_page/setting/setting_workout_page.tscn")
 	else: 
-		if not _is_in_future(displayDate): return
+		if not HelperFunctions.is_in_future(displayDate): return
 		
 		workoutData = WorkoutManager.currentWorkout.duplicate()
 		workoutData.planDate = displayDate
@@ -59,12 +59,6 @@ func _setup_workout() -> void:
 		workoutCollection.add_workout(workoutData, "Plan")
 		
 		_refresh_display()
-		
-func _is_in_future(date: Dictionary) -> bool:
-	var currentDateUnix := Time.get_unix_time_from_system()
-	var selectedDateUnix := Time.get_unix_time_from_datetime_dict(date)
-
-	return selectedDateUnix >= currentDateUnix
 
 func _change_workout_data(date: Dictionary) -> void:
 	displayDate = date

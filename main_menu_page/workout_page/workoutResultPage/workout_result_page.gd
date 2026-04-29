@@ -26,7 +26,7 @@ func _setup_workout_time() -> void:
 	var currentTime := Time.get_unix_time_from_datetime_dict(Time.get_time_dict_from_system())  
 	var workoutStart := Time.get_unix_time_from_datetime_dict(WorkoutManager.startTime)
 
-	workout_time_label.text = "TIME: " +  GlobalData.seconds_in_minutes_string(currentTime - workoutStart)
+	workout_time_label.text = "TIME: " +  HelperFunctions.seconds_in_minutes_string(currentTime - workoutStart)
 
 func _setup_exercise_resulst() -> void:
 	for exercise: Exercise in workoutExercisesData:
