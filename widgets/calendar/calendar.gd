@@ -9,7 +9,6 @@ extends Control
 @onready var previous_month: TextureRect = %previousMonth
 @onready var next_month: TextureRect = %nextMonth
 @onready var month_year_label: Label = %MonthYearLabel
-@onready var setup_workout_button: Button = %SetupWorkoutButton
 
 const DATE_LABEL = preload("res://widgets/calendar/DateLabel.tscn")
 const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
@@ -76,8 +75,8 @@ func _create_label(date: Dictionary, index: int) -> void:
 		
 		dateLabel.date = date
 		
-		var workoutCcollection := SaveAndLoad.load_workout_collection()
-		dateLabel.workoutData = workoutCcollection.get_workout(date)
+		var workoutCollection := SaveAndLoad.load_workout_collection()
+		dateLabel.workoutData = workoutCollection.get_workout(date)
 
 		columns_box.get_children()[index].add_child(dateLabel)	
 	

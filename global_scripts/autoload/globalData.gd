@@ -18,20 +18,13 @@ enum workout_modus {NORMAL, SUPERSET}
 
 var exerciseCompleted: Array[int]
 var exerciseUnlocked: Array[int]
-var workouts: Array[WorkoutResource] = []
 
 func _ready() -> void:
 	_create_dir()
 	
 	SaveAndLoad.load_exercise_data()
 	
-	_load_workout_templates()
-	
 func _create_dir() -> void:
 	var dir := DirAccess.open(BASE_PATH)
 	dir.make_dir("workout_templates")
 	dir.make_dir("exercises_history")
-
-
-func _load_workout_templates() -> void:
-	workouts = SaveAndLoad.load_workout_resources()

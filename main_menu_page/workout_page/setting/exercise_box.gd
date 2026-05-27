@@ -8,8 +8,7 @@ signal changed()
 @onready var set_selection: Button = %SetSelection
 @onready var rep_selection: Button = %RepSelection
 @onready var break_time_selection: Button = %BreakTimeSelection
-@onready var delete_button: Button = %DeleteButton
-
+@onready var close_button: TextureButton = %closeButton
 
 @export var selectedTalent : TalentResource
 @export var sets := 3
@@ -23,7 +22,7 @@ func _ready() -> void:
 	rep_selection.pressed.connect(_set_reps_window)
 	break_time_selection.pressed.connect(_set_break_window)
 	talent_selection.talent_updated.connect(_set_talent)
-	delete_button.pressed.connect(queue_free)
+	close_button.pressed.connect(queue_free)
 	
 	if selectedTalent: _set_talent(selectedTalent)
 	

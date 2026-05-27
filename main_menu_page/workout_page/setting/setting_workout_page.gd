@@ -1,13 +1,14 @@
 extends Control
 
+@export var selectedWorkout: WorkoutResource
+
 @onready var modus_button: Button = %ModusButton
 @onready var global_break_button: Button = %GlobalBreakButton
 @onready var scroll_container: ScrollContainer = %ScrollContainer
 @onready var exercise_container: VBoxContainer = %ExerciseContainer
-@onready var add_exercise_button: Button = %addExerciseButton
 @onready var save_workout_button: Button = %SaveWorkoutButton
+@onready var name_input_box: LineEdit = %NameInputBox
 
-const MAIN_MENU = preload("res://main_menu_page/main_menu.tscn")
 const EXERCISE_BOX = preload("res://main_menu_page/workout_page/setting/exercise_box.tscn")
 const LABEL_SELECTION_CARUSEL = preload("res://widgets/selection_carusel/label_selection_carusel.tscn")
 
@@ -17,7 +18,6 @@ var workoutModus: GlobalData.workout_modus = GlobalData.workout_modus.NORMAL
 func _ready() -> void:
 	modus_button.pressed.connect(_set_modus_window)
 	global_break_button.pressed.connect(_set_break_window)
-	add_exercise_button.pressed.connect(_add_exercise)
 	save_workout_button.pressed.connect(_save_workout)
 	
 	_refresh_modus_button_label()
@@ -26,22 +26,13 @@ func _ready() -> void:
 	_add_exercise()
 	
 	_load_workout()
-
+	
 func _refresh_modus_button_label() -> void:
 	modus_button.text = "Modus:\n" + GlobalData.workout_modus.keys()[workoutModus]
 	
 func _refresh_global_break_button_label() -> void:
 	global_break_button.text = "Break:\n" + str(globalBreakTime) + " sec"
-
-func _on_top_navigation_bar_previous_page() -> void:
-	var mainMenu: MainMenu = MAIN_MENU.instantiate()
 	
-	mainMenu.initalPage = 0
-
-	get_tree().current_scene.queue_free()
-	get_tree().root.add_child(mainMenu)
-	get_tree().current_scene = mainMenu
-
 func _get_all_exersice_data() -> Array[Exercise]:
 	var exerciseList: Array[Exercise] = []
 	
@@ -76,8 +67,6 @@ func _add_exercise() -> void:
 		exercise_container.add_child(secondExerciseNode)
 		
 		secondExerciseNode.changed.connect(_on_exercise_container_changed.bind(secondExerciseNode))
-	
-	_scroll_v_bottom()
 
 func _on_exercise_container_changed(exercise_box: Control) -> void:
 	if not workoutModus == GlobalData.workout_modus.SUPERSET:
@@ -95,12 +84,6 @@ func _on_exercise_container_changed(exercise_box: Control) -> void:
 	var connectionContainer: Control = exercise_container.get_child(connectionContainerIndex)
 	connectionContainer.change_break_time(exercise_box.breakTime)
 	connectionContainer.change_sets(exercise_box.sets)
-
-func _scroll_v_bottom() -> void:
-	await get_tree().process_frame
-	await get_tree().process_frame
-	var vScrollbar := scroll_container.get_v_scroll_bar()
-	scroll_container.scroll_vertical = int(vScrollbar.max_value)
 
 func _set_break_window() -> void:
 	var selectionCaruselNode: LabelSelectionCarusel = LABEL_SELECTION_CARUSEL.instantiate()
@@ -153,36 +136,38 @@ func _check_superset_setup() -> void:
 func _save_workout() -> void:
 	if _get_all_exersice_data().is_empty(): return
 	
-	var workoutData := WorkoutResource.new()
-	workoutData.workoutName = "Workout_A"
+	var workoutData: WorkoutResource = WorkoutResource.new()
+	
+	if selectedWorkout:
+		workoutData = selectedWorkout
+	else:
+		workoutData.id = WorkoutResource.generate_scene_unique_id()	
+		
+	workoutData.workoutName = name_input_box.text
 	workoutData.modus = workoutModus
 	workoutData.globalBreak = globalBreakTime
 	workoutData.exercises = _get_all_exersice_data()
 
-	if GlobalData.workouts.is_empty():
-		GlobalData.workouts.append(workoutData)
-	else:
-		GlobalData.workouts[0] = workoutData
 		
-	SaveAndLoad.save_resource(GlobalData.SAVE_WORKOUT_PATH, workoutData, workoutData.workoutName)
+	SaveAndLoad.save_resource(GlobalData.SAVE_WORKOUT_PATH, workoutData, workoutData.id)
 	
 	_on_top_navigation_bar_previous_page()
 
 func _load_workout() -> void:
-	if GlobalData.workouts.is_empty():
+	if not selectedWorkout:
 		return
 		
-	var workoutData := GlobalData.workouts[0]
-	
 	exercise_container.get_children()[0].queue_free()
 	
-	workoutModus = workoutData.modus
-	globalBreakTime = workoutData.globalBreak
+	workoutModus = selectedWorkout.modus
+	globalBreakTime = selectedWorkout.globalBreak
 	
 	_refresh_modus_button_label()
 	_refresh_global_break_button_label()
+	
+	name_input_box.text = selectedWorkout.workoutName
 
-	for exercise: Exercise in workoutData.exercises:
+	for exercise: Exercise in selectedWorkout.exercises:
 		var exerciseNode: ExerciseBox = EXERCISE_BOX.instantiate()
 		exerciseNode.breakTime = exercise.breakTime
 		exerciseNode.reps = exercise.reps
@@ -193,4 +178,9 @@ func _load_workout() -> void:
 		exercise_container.move_child(exerciseNode, exercise_container.get_child_count() -2)
 		
 		exercise.talent.get_talent_level()
-	
+
+func _on_top_navigation_bar_previous_page() -> void:
+	get_tree().change_scene_to_file("res://main_menu_page/workout_page/select_workout_page/select_workout_page.tscn")
+
+func _on_add_button_pressed() -> void:
+	_add_exercise()

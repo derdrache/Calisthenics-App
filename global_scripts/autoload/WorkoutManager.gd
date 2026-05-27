@@ -5,9 +5,6 @@ var currentWorkout : WorkoutResource
 var currentExerciseIndex := 0
 var startTime: Dictionary
 	
-	
-func _ready() -> void:
-	currentWorkout = GlobalData.workouts[0]
 
 func get_current_exercise() -> Exercise:
 	if currentExerciseIndex > len(currentWorkout.exercises) -1:
@@ -24,11 +21,11 @@ func get_current_max_set() -> int:
 func get_break_time() -> int:
 	return currentWorkout.exercises[currentExerciseIndex - 1].breakTime
 
-func start_workout() -> void:
+func start_workout(workout: WorkoutResource) -> void:
 	reset_workout_data()
 	
 	startTime = Time.get_time_dict_from_system()
-	currentWorkout = GlobalData.workouts[0]
+	currentWorkout = workout
 	currentWorkout.reset()
 
 func set_next_exersice(repsDone: int) -> void:

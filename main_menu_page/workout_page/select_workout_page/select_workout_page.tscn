@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://c27ggq11b6dsk"]
+
+[ext_resource type="Script" uid="uid://c71bmyts6myqa" path="res://main_menu_page/workout_page/select_workout_page/select_workout_page.gd" id="1_apchc"]
+[ext_resource type="PackedScene" uid="uid://c1u5yg2o45dr" path="res://widgets/safe_area_container/safe_area_container.tscn" id="2_50bcw"]
+[ext_resource type="PackedScene" uid="uid://brpavu0ocrgcq" path="res://widgets/top_navigation_bar/top_navigation_bar.tscn" id="3_bif4i"]
+[ext_resource type="PackedScene" uid="uid://d2cm653td1j2r" path="res://widgets/add_button/add_button.tscn" id="4_2hgrs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_amqbk"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.09985284, 0.09985284, 0.09985284, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="SelectWorkoutPage" type="Control" unique_id=1559870613]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_apchc")
+
+[node name="SaftyArea" parent="." unique_id=276050435 instance=ExtResource("2_50bcw")]
+layout_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="SaftyArea" unique_id=1941676262]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SaftyArea/MarginContainer" unique_id=1032209968]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="TopNavigationBar" parent="SaftyArea/MarginContainer/VBoxContainer" unique_id=91757467 instance=ExtResource("3_bif4i")]
+unique_name_in_owner = true
+layout_mode = 2
+title = "Select Workout"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SaftyArea/MarginContainer/VBoxContainer" unique_id=1178411583]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="SaftyArea/MarginContainer/VBoxContainer/ScrollContainer" unique_id=1993796306]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_constants/h_separation = 50
+theme_override_constants/v_separation = 50
+columns = 2
+
+[node name="AddButtonContainer" type="PanelContainer" parent="SaftyArea/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" unique_id=486996093]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_amqbk")
+
+[node name="AddButton" parent="SaftyArea/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/AddButtonContainer" unique_id=779116856 instance=ExtResource("4_2hgrs")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[connection signal="previousPage" from="SaftyArea/MarginContainer/VBoxContainer/TopNavigationBar" to="." method="_on_top_navigation_bar_previous_page"]
+[connection signal="pressed" from="SaftyArea/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/AddButtonContainer/AddButton" to="." method="_on_add_button_pressed"]

@@ -65,3 +65,7 @@ static func load_exercise_data() -> void:
 	GlobalData.exerciseUnlocked = unlocked
 	GlobalData.exerciseCompleted = completed
 	
+static func delete_file(path: String, fileName: String) -> void:
+	var dir := DirAccess.open(path)
+	dir.remove(fileName)
+	

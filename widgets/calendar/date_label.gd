@@ -18,10 +18,13 @@ func _ready() -> void:
 	var currentDate := Time.get_datetime_dict_from_system()
 	var isCurrentDate: bool = date.day == currentDate.day and date.month == currentDate.month and date.year == currentDate.year
 	
-	if not isCurrentDate: panel.add_theme_stylebox_override("panel", StyleBoxEmpty.new())
+	if not isCurrentDate: 
+		panel.add_theme_stylebox_override("panel", StyleBoxEmpty.new())
 	
-	if not workoutData: workout_indicator.add_theme_stylebox_override("panel", StyleBoxEmpty.new())
-	else: _set_workout_indicator()
+	if not workoutData: 
+		workout_indicator.add_theme_stylebox_override("panel", StyleBoxEmpty.new())
+	else: 
+		_set_workout_indicator()
 
 func _on_button_pressed() -> void:
 	SignalHub.calendar_date_selected.emit(date)

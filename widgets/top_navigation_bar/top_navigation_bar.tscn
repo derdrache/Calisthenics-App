@@ -1,12 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://brpavu0ocrgcq"]
+[gd_scene format=3 uid="uid://brpavu0ocrgcq"]
 
-[ext_resource type="Script" path="res://widgets/top_navigation_bar/top_navigation_bar.gd" id="1_gpvf2"]
+[ext_resource type="Script" uid="uid://ddh4bh25ol2cn" path="res://widgets/top_navigation_bar/top_navigation_bar.gd" id="1_gpvf2"]
 [ext_resource type="Texture2D" uid="uid://u2ei6hl1xxaq" path="res://assets/icons/Icon_Small_Blank_Arrow.png" id="1_ygun5"]
 [ext_resource type="Texture2D" uid="uid://c7bpp43qq54rv" path="res://assets/icons/Icon_X.png" id="3_7iktk"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yautv"]
 
-[node name="TopNavigationBar" type="Control"]
+[node name="TopNavigationBar" type="Control" unique_id=1608733309]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 3
 anchors_preset = 10
@@ -14,7 +14,7 @@ anchor_right = 1.0
 grow_horizontal = 2
 script = ExtResource("1_gpvf2")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=225884955]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -24,7 +24,7 @@ grow_vertical = 2
 theme_override_constants/margin_left = 140
 theme_override_constants/margin_right = 140
 
-[node name="title" type="Label" parent="MarginContainer"]
+[node name="title" type="Label" parent="MarginContainer" unique_id=325234900]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
@@ -36,9 +36,9 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="BackButtonContainer" type="MarginContainer" parent="."]
+[node name="BackButtonContainer" type="MarginContainer" parent="." unique_id=838799799]
 unique_name_in_owner = true
-layout_mode = 2
+layout_mode = 0
 offset_right = 110.0
 offset_bottom = 90.0
 theme_override_constants/margin_left = 30
@@ -46,7 +46,7 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 20
 
-[node name="TextureRect" type="TextureRect" parent="BackButtonContainer"]
+[node name="TextureRect" type="TextureRect" parent="BackButtonContainer" unique_id=1920142789]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -54,7 +54,7 @@ texture = ExtResource("1_ygun5")
 expand_mode = 1
 flip_h = true
 
-[node name="BackButton" type="Button" parent="BackButtonContainer/TextureRect"]
+[node name="BackButton" type="Button" parent="BackButtonContainer/TextureRect" unique_id=2001290789]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -62,13 +62,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/focus = SubResource("StyleBoxEmpty_yautv")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_yautv")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_yautv")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_yautv")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_yautv")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yautv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_yautv")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_yautv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yautv")
 
-[node name="CloseButtonContainer" type="MarginContainer" parent="."]
+[node name="CloseButtonContainer" type="MarginContainer" parent="." unique_id=805706965]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
@@ -86,7 +86,7 @@ theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 30
 
-[node name="TextureRect" type="TextureRect" parent="CloseButtonContainer"]
+[node name="TextureRect" type="TextureRect" parent="CloseButtonContainer" unique_id=1843529756]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -94,7 +94,7 @@ texture = ExtResource("3_7iktk")
 expand_mode = 1
 flip_h = true
 
-[node name="CloseButton" type="Button" parent="CloseButtonContainer/TextureRect"]
+[node name="CloseButton" type="Button" parent="CloseButtonContainer/TextureRect" unique_id=767169374]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -102,8 +102,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/focus = SubResource("StyleBoxEmpty_yautv")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_yautv")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_yautv")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_yautv")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_yautv")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yautv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_yautv")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_yautv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yautv")

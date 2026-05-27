@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://cj845qi18njjj"]
+
+[ext_resource type="Script" uid="uid://cvbsusa7rtqxx" path="res://main_menu_page/workout_page/select_workout_page/workout_container.gd" id="1_1klf5"]
+[ext_resource type="PackedScene" uid="uid://b073nmixjkwjk" path="res://widgets/close_button/close_button.tscn" id="2_4cofw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t75g3"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(1, 1, 1, 0.6)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+corner_detail = 5
+
+[node name="WorkoutContainer" type="Control" unique_id=554705255]
+custom_minimum_size = Vector2(300, 150)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 150.0
+offset_bottom = 150.0
+script = ExtResource("1_1klf5")
+
+[node name="WorkoutContainer" type="PanelContainer" parent="." unique_id=627254188]
+custom_minimum_size = Vector2(275, 125)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -137.5
+offset_top = -62.5
+offset_right = 137.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_t75g3")
+
+[node name="MarginContainer" type="MarginContainer" parent="WorkoutContainer" unique_id=2009229148]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="WorkoutContainer/MarginContainer" unique_id=146369996]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="workoutNameLabel" type="Label" parent="WorkoutContainer/MarginContainer/VBoxContainer" unique_id=845984799]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="WorkoutContainer" unique_id=264745379]
+layout_mode = 2
+flat = true
+
+[node name="closeButton" parent="." unique_id=765210577 instance=ExtResource("2_4cofw")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -50.0
+offset_right = 0.0
+grow_horizontal = 0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[connection signal="pressed" from="WorkoutContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="closeButton" to="." method="_on_close_button_pressed"]

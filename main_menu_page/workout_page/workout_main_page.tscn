@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cb3gyjpywky8i" path="res://main_menu_page/workout_page/currentWorkoutDisplay/current_workout_display.tscn" id="2_pao4v"]
 [ext_resource type="PackedScene" uid="uid://cqey1rgvj0e2j" path="res://widgets/calendar/Calendar.tscn" id="4_dd0rm"]
 [ext_resource type="PackedScene" uid="uid://ctosym02jipr0" path="res://main_menu_page/workout_page/CurrentState/current_state.tscn" id="4_p2p3c"]
+[ext_resource type="PackedScene" uid="uid://g6p4r814dmu7" path="res://widgets/popup_window/popup_window.tscn" id="6_bybpp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v2n0d"]
 bg_color = Color(0.380392, 0.686275, 0.301961, 1)
@@ -124,3 +125,10 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_6gep0")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_6gep0")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_6gep0")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_6gep0")
+
+[node name="PopupWindow" parent="." unique_id=206082604 instance=ExtResource("6_bybpp")]
+layout_mode = 1
+title = "no workout selected"
+description = "add workout in the calander for today
+
+"

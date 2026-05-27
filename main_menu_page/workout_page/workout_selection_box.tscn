@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://b5v787yy3qjkq"]
+
+[ext_resource type="Script" uid="uid://b47rbh7gsdqh3" path="res://main_menu_page/workout_page/workout_selection_box.gd" id="1_tvt6v"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aqtel"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 5
+
+[node name="WorkoutSelectionBox" type="PanelContainer" unique_id=221098643]
+custom_minimum_size = Vector2(125, 125)
+theme_override_styles/panel = SubResource("StyleBoxFlat_aqtel")
+script = ExtResource("1_tvt6v")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=551978356]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="Label" parent="MarginContainer" unique_id=956736455]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Testasdasd
+ad
+ad"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="." unique_id=497222123]
+layout_mode = 2
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

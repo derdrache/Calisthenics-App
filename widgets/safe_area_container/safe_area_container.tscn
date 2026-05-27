@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://c1u5yg2o45dr"]
+[gd_scene format=3 uid="uid://c1u5yg2o45dr"]
 
-[ext_resource type="Script" path="res://widgets/safe_area_container/safe_area_container.gd" id="1_7tk5c"]
+[ext_resource type="Script" uid="uid://cstilbab20ect" path="res://widgets/safe_area_container/safe_area_container.gd" id="1_7tk5c"]
 
-[node name="SaftyArea" type="MarginContainer"]
+[node name="SaftyArea" type="MarginContainer" unique_id=1942756315]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

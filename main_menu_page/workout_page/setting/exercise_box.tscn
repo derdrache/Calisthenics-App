@@ -2,7 +2,19 @@
 
 [ext_resource type="Script" uid="uid://brsqxc56aqbuy" path="res://main_menu_page/workout_page/setting/exercise_box.gd" id="1_1a0tk"]
 [ext_resource type="PackedScene" uid="uid://dlm00wymo6axj" path="res://widgets/talent_selection_button.tscn" id="2_r8gl2"]
-[ext_resource type="Texture2D" uid="uid://c7bpp43qq54rv" path="res://assets/icons/Icon_X.png" id="3_uloxn"]
+[ext_resource type="PackedScene" uid="uid://b073nmixjkwjk" path="res://widgets/close_button/close_button.tscn" id="3_0psw1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0psw1"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.09985284, 0.09985284, 0.09985284, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6l4ya"]
 bg_color = Color(0.85098, 0.85098, 0.85098, 1)
@@ -26,21 +38,18 @@ expand_margin_top = 5.0
 expand_margin_right = 5.0
 expand_margin_bottom = 5.0
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xdavv"]
-
-[node name="exercise_box" type="Control" unique_id=356392812]
-custom_minimum_size = Vector2(720, 240)
-layout_mode = 3
+[node name="exercise_box" type="PanelContainer" unique_id=419961635]
+custom_minimum_size = Vector2(0, 250)
 anchors_preset = 10
 anchor_right = 1.0
+offset_bottom = 260.0
 grow_horizontal = 2
 mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_0psw1")
 script = ExtResource("1_1a0tk")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=347137561]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 20
@@ -137,26 +146,8 @@ theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_4tnm1")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1830308721]
-custom_minimum_size = Vector2(70, 70)
-layout_mode = 0
-offset_left = 646.0
-offset_right = 716.0
-offset_bottom = 70.0
-texture = ExtResource("3_uloxn")
-expand_mode = 1
-
-[node name="DeleteButton" type="Button" parent="TextureRect" unique_id=490046605]
+[node name="closeButton" parent="." unique_id=765210577 instance=ExtResource("3_0psw1")]
 unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 1
-theme_override_styles/normal = SubResource("StyleBoxEmpty_xdavv")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_xdavv")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_xdavv")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_xdavv")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_xdavv")
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
