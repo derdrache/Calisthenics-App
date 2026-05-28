@@ -4,8 +4,9 @@ extends PanelContainer
 
 @onready var title: Label = %Title
 @onready var display_box: HBoxContainer = %DisplayBox
-#@onready var setup_workout_button : Button = %SetupWorkoutButton
 @onready var delete_workout_container: MarginContainer = %deleteWorkoutContainer
+@onready var scroll_container: ScrollContainer = %ScrollContainer
+@onready var not_trained_label: Label = %notTrainedLabel
 
 const TALENT_SELECTION_BUTTON = preload("res://widgets/talent_selection_button.tscn")
 const WORKOUT_SELECTION_BOX = preload("uid://b5v787yy3qjkq")
@@ -14,7 +15,7 @@ var displayDate : Dictionary = Time.get_datetime_dict_from_system()
 
 func _ready() -> void:
 	SignalHub.calendar_date_selected.connect(_change_workout_data)
-
+	
 	_change_workout_data(Time.get_datetime_dict_from_system())
 	
 func _set_display() -> void:	
@@ -66,14 +67,22 @@ func _change_workout_data(date: Dictionary) -> void:
 	var workoutCollection := SaveAndLoad.load_workout_collection()
 	workoutData = workoutCollection.get_workout(date)
 	
-	if workoutData: displayDate = workoutData.get_date()
+	if workoutData: 
+		displayDate = workoutData.get_date()
 	
 	_refresh_display()
 
 func _refresh_display() -> void:
 	for node in display_box.get_children():
 		node.queue_free()
-		
+
+	if not HelperFunctions.is_in_future(displayDate) and not workoutData:
+		scroll_container.hide()
+		not_trained_label.show()
+	else:
+		not_trained_label.hide()
+		scroll_container.show()
+	
 	_set_display()
 
 func _on_close_button_pressed() -> void:

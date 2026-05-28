@@ -31,11 +31,12 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1160949162]
+[node name="CurrentWorkoutBox" type="VBoxContainer" parent="MarginContainer" unique_id=1160949162]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Title" type="Label" parent="MarginContainer/VBoxContainer" unique_id=605645680]
+[node name="Title" type="Label" parent="MarginContainer/CurrentWorkoutBox" unique_id=605645680]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -45,18 +46,26 @@ text = "Current Workout"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer" unique_id=868248399]
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/CurrentWorkoutBox" unique_id=868248399]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 vertical_scroll_mode = 0
 
-[node name="DisplayBox" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer" unique_id=1409760092]
+[node name="DisplayBox" type="HBoxContainer" parent="MarginContainer/CurrentWorkoutBox/ScrollContainer" unique_id=1409760092]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 10
+
+[node name="notTrainedLabel" type="Label" parent="MarginContainer/CurrentWorkoutBox" unique_id=473125033]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "not Trained"
+horizontal_alignment = 1
 
 [node name="deleteWorkoutContainer" type="MarginContainer" parent="." unique_id=782768444]
 unique_name_in_owner = true

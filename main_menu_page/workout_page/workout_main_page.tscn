@@ -127,6 +127,7 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_6gep0")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_6gep0")
 
 [node name="PopupWindow" parent="." unique_id=206082604 instance=ExtResource("6_bybpp")]
+visible = false
 layout_mode = 1
 title = "no workout selected"
 description = "add workout in the calander for today
