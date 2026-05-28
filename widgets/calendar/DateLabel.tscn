@@ -54,6 +54,7 @@ theme_override_constants/margin_bottom = 10
 
 [node name="WorkoutIndicator" type="PanelContainer" parent="Panel/MarginContainer" unique_id=759153155]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_04bnq")
@@ -61,7 +62,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_04bnq")
 [node name="DateLabel" type="Label" parent="Panel/MarginContainer/WorkoutIndicator" unique_id=574797037]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_vertical = 1
+size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "66"
 horizontal_alignment = 1
