@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dfaarq0jjffgx"]
+
+[ext_resource type="Script" uid="uid://i6mc3kxfq6jm" path="res://talent_trees/level_panel/level_panel.gd" id="1_ghj67"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_56bt7"]
+resource_local_to_scene = true
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.09985284, 1, 0.09985284, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="Panel" type="Panel" unique_id=183608095]
+z_index = -1
+offset_right = 400.0
+offset_bottom = 5000.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_56bt7")
+script = ExtResource("1_ghj67")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=213454263]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -31.0
+offset_right = 120.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 20
+
+[node name="titleLabel" type="Label" parent="MarginContainer" unique_id=865672951]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 30
+text = "LEVEL 1"

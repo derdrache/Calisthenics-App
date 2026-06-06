@@ -1,3 +1,4 @@
+@tool
 extends Panel
 class_name TalentIcon
 
@@ -6,13 +7,17 @@ signal selected(talentResource: TalentResource)
 @export var talentResource : TalentResource:
 	set(newValue):
 		talentResource = newValue
-		
+
 		if not label: return
 		
-		if newValue == null: label.text = ""
+		if newValue == null: 
+			label.text = ""
+			name = "TextureRect"
 		else:
 			var talentName: String = talentResource.resource_path.get_file().trim_suffix('.tres')
 			label.text = talentName.replace("_", " ")
+			name = talentName.replace("_", " ")
+			
 @export var isGoal := false
 
 @export var lockColorPanel : Color
@@ -32,18 +37,26 @@ signal selected(talentResource: TalentResource)
 const TALENT_ICON_STYLEBOX = preload("res://talent_trees/talent_icon/talent_icon_stylebox.tres")
 
 func _ready() -> void:
+	if Engine.is_editor_hint():
+		if talentResource:
+			name = talentResource.get_talent_name().replace("_", " ")
+		
+		return
+	
 	add_to_group("talentIcon")
 	goal_icon.hide()
 
-	if not talentResource: 
+
+	if talentResource:
+		add_to_group("talents")
+		add_theme_stylebox_override("panel", TALENT_ICON_STYLEBOX)
+	else:
 		texture_rect.hide()
 		add_theme_stylebox_override("panel", StyleBoxEmpty.new())
 		return
-	else:
-		add_to_group("talents")
-		add_theme_stylebox_override("panel", TALENT_ICON_STYLEBOX)
-
-	if not talentResource.icon: texture_rect.hide()
+	
+	if not talentResource.icon: 
+		texture_rect.hide()
 
 	var talentName: String = talentResource.resource_path.get_file().trim_suffix('.tres')
 	label.text = talentName.replace("_", " ")
@@ -69,7 +82,7 @@ func _set_style() -> void:
 		styleBox.border_color = unlockColorBorder
 		styleBox.bg_color = unlockColorPanel
 	else:
-		modulate.a = 0.7
+		#modulate.a = 0.7
 		styleBox.border_color = lockColorBorder
 		styleBox.bg_color = lockColorPanel		
 	

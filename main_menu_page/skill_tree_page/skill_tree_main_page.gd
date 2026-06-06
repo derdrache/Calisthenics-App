@@ -16,9 +16,9 @@ func _open_tree(treeTyp: GlobalData.exercice_type) -> void:
 	var selectedTree: String
 	
 	match treeTyp:
-		GlobalData.exercice_type.PUSH: selectedTree = "res://talent_trees/push_talent_tree.tscn"
-		GlobalData.exercice_type.LEG: selectedTree = "res://talent_trees/leg_talent_tree.tscn"
-		GlobalData.exercice_type.CORE: selectedTree = "res://talent_trees/core_talent_tree.tscn"
-		GlobalData.exercice_type.PULL: selectedTree = "res://talent_trees/pull_talent_tree.tscn"
+		GlobalData.exercice_type.PUSH: selectedTree = GlobalData.PUSH_TALENT_TREE
+		GlobalData.exercice_type.LEG: selectedTree = GlobalData.LEG_TALENT_TREE
+		GlobalData.exercice_type.CORE: selectedTree = GlobalData.CORE_TALENT_TREE
+		GlobalData.exercice_type.PULL: selectedTree = GlobalData.PULL_TALENT_TREE
 		
 	get_tree().change_scene_to_file(selectedTree)

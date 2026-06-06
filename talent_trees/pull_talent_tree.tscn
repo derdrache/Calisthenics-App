@@ -868,7 +868,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_nw35u")
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_whsiv")
 
-[node name="TextureRect4" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level1" unique_id=1881047523 instance=ExtResource("4_poil6")]
+[node name="Dead Hang" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level1" unique_id=1881047523 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_rxvlc")
 talentResource = ExtResource("5_v5glv")
@@ -886,7 +886,7 @@ lockColorBorder = Color(0.541176, 0.541176, 0.541176, 1)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_huqa6")
 
-[node name="TextureRect8" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level1" unique_id=1488173951 instance=ExtResource("4_poil6")]
+[node name="Beginner Australien Pull-Up" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level1" unique_id=1488173951 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ypnbv")
 talentResource = ExtResource("6_thhh3")
@@ -931,7 +931,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_246lj")
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_rym5n")
 
-[node name="TextureRect4" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level2" unique_id=197579477 instance=ExtResource("4_poil6")]
+[node name="German Hang" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level2" unique_id=197579477 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_3locq")
 talentResource = ExtResource("7_x2pjh")
@@ -948,7 +948,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_qc0t3")
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_f58yt")
 
-[node name="TextureRect8" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level2" unique_id=1604427414 instance=ExtResource("4_poil6")]
+[node name="Bent Knee Australien Pull-Up" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level2" unique_id=1604427414 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_hc2bg")
 talentResource = ExtResource("8_8k41s")
@@ -993,7 +993,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_jxie5")
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_bhg53")
 
-[node name="TextureRect4" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level3" unique_id=709189112 instance=ExtResource("4_poil6")]
+[node name="Skin the Cat" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level3" unique_id=709189112 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_l2pfl")
 talentResource = ExtResource("9_lyrnp")
@@ -1010,7 +1010,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_005x8")
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_p8yu1")
 
-[node name="TextureRect8" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level3" unique_id=452111146 instance=ExtResource("4_poil6")]
+[node name="Australien Pull-Up" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level3" unique_id=452111146 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_jqw0m")
 talentResource = ExtResource("10_r2e3m")
@@ -1055,7 +1055,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_2jlng")
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_thn8o")
 
-[node name="TextureRect4" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level4" unique_id=2070328775 instance=ExtResource("4_poil6")]
+[node name="Adv_ Skin the Cat" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level4" unique_id=2070328775 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ec1hf")
 talentResource = ExtResource("11_xjbds")
@@ -1073,7 +1073,7 @@ isGoal = true
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_236km")
 
-[node name="TextureRect8" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level4" unique_id=1765743960 instance=ExtResource("4_poil6")]
+[node name="Decline Australien Pull-Up" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level4" unique_id=1765743960 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_oq2yn")
 talentResource = ExtResource("12_i4utj")
@@ -1118,7 +1118,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_wybga")
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_vlnpu")
 
-[node name="TextureRect4" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level5" unique_id=885736439 instance=ExtResource("4_poil6")]
+[node name="Pike Skin the Cat" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level5" unique_id=885736439 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_kpon4")
 talentResource = ExtResource("13_2aoji")
@@ -1135,7 +1135,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_yrlwb")
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_wvuuq")
 
-[node name="TextureRect8" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level5" unique_id=1841750992 instance=ExtResource("4_poil6")]
+[node name="Assisted Pull-Up" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level5" unique_id=1841750992 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_m0wd4")
 talentResource = ExtResource("14_xsrnj")
@@ -1148,7 +1148,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_lkubi")
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_ba0wu")
 
-[node name="TextureRect11" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level5" unique_id=791209841 instance=ExtResource("4_poil6")]
+[node name="Assisted Chin-Up" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level5" unique_id=791209841 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_3tpl1")
 talentResource = ExtResource("15_yn4fv")
@@ -1185,7 +1185,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_n2vj0")
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_ir7yk")
 
-[node name="TextureRect5" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level6" unique_id=484057752 instance=ExtResource("4_poil6")]
+[node name="Tuck Back Lever" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level6" unique_id=484057752 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_jkt5x")
 talentResource = ExtResource("16_q1vla")
@@ -1198,7 +1198,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_uo1hi")
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_2ur8s")
 
-[node name="TextureRect8" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level6" unique_id=1018409525 instance=ExtResource("4_poil6")]
+[node name="Negative Pull-Up" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level6" unique_id=1018409525 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_3f1ub")
 talentResource = ExtResource("16_selbh")
@@ -1211,7 +1211,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_q3ycg")
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_vxv5q")
 
-[node name="TextureRect11" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level6" unique_id=1166291334 instance=ExtResource("4_poil6")]
+[node name="Negative Chin-Up" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level6" unique_id=1166291334 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_rbl3u")
 talentResource = ExtResource("17_5117f")
@@ -1240,7 +1240,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_15a8n")
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_qx2n8")
 
-[node name="TextureRect3" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level7" unique_id=1664610695 instance=ExtResource("4_poil6")]
+[node name="Tuck Front Lever" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level7" unique_id=1664610695 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_qu0h0")
 talentResource = ExtResource("19_5dges")
@@ -1249,7 +1249,7 @@ talentResource = ExtResource("19_5dges")
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_mcxyx")
 
-[node name="TextureRect5" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level7" unique_id=122173475 instance=ExtResource("4_poil6")]
+[node name="Adv_ Tuck Back Lever" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level7" unique_id=122173475 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_mer8y")
 talentResource = ExtResource("20_kxo5h")
@@ -1262,7 +1262,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_2ww35")
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_fd3qd")
 
-[node name="TextureRect8" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level7" unique_id=1966658072 instance=ExtResource("4_poil6")]
+[node name="Pull-Up" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level7" unique_id=1966658072 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_n4sjx")
 talentResource = ExtResource("21_a6v4w")
@@ -1275,7 +1275,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_uyxfe")
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_n26x8")
 
-[node name="TextureRect11" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level7" unique_id=1613650655 instance=ExtResource("4_poil6")]
+[node name="Chin-Up" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level7" unique_id=1613650655 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_opcn1")
 talentResource = ExtResource("22_tvwch")
@@ -1304,7 +1304,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_hstcq")
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_oq1js")
 
-[node name="TextureRect3" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level8" unique_id=1829744866 instance=ExtResource("4_poil6")]
+[node name="Adv_ Tuck Front Lever" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level8" unique_id=1829744866 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lj3ep")
 talentResource = ExtResource("23_nixmc")
@@ -1313,27 +1313,27 @@ talentResource = ExtResource("23_nixmc")
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_bdf6n")
 
-[node name="TextureRect5" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level8" unique_id=1523024786 instance=ExtResource("4_poil6")]
+[node name="Straddle Back Lever" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level8" unique_id=1523024786 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_hehad")
 talentResource = ExtResource("24_qk8qy")
 
-[node name="TextureRect6" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level8" unique_id=374983646 instance=ExtResource("4_poil6")]
+[node name="Close Pull-Up" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level8" unique_id=374983646 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_arf1u")
 talentResource = ExtResource("25_i8kiw")
 
-[node name="TextureRect7" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level8" unique_id=1564707950 instance=ExtResource("4_poil6")]
+[node name="Wide Pull-Up" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level8" unique_id=1564707950 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_uqxwd")
 talentResource = ExtResource("26_mbd1k")
 
-[node name="TextureRect8" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level8" unique_id=1328564676 instance=ExtResource("4_poil6")]
+[node name="Weighted Pull-Up" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level8" unique_id=1328564676 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_5ivun")
 talentResource = ExtResource("25_1tt1f")
 
-[node name="TextureRect9" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level8" unique_id=2007036276 instance=ExtResource("4_poil6")]
+[node name="Muscle Up" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level8" unique_id=2007036276 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_h888p")
 talentResource = ExtResource("28_vckdc")
@@ -1342,7 +1342,7 @@ talentResource = ExtResource("28_vckdc")
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_g6vqv")
 
-[node name="TextureRect11" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level8" unique_id=925193416 instance=ExtResource("4_poil6")]
+[node name="Weighted Chin-Up" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level8" unique_id=925193416 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_hora2")
 talentResource = ExtResource("26_q4w8f")
@@ -1371,17 +1371,17 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_oinuh")
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_ha45t")
 
-[node name="TextureRect3" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level9" unique_id=1349515297 instance=ExtResource("4_poil6")]
+[node name="Straddle Front Lever" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level9" unique_id=1349515297 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_86g5d")
 talentResource = ExtResource("30_8nc62")
 
-[node name="TextureRect4" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level9" unique_id=1823345978 instance=ExtResource("4_poil6")]
+[node name="Straddle Back Lever" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level9" unique_id=1823345978 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_fv3b1")
 talentResource = ExtResource("31_a05cd")
 
-[node name="TextureRect5" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level9" unique_id=643018300 instance=ExtResource("4_poil6")]
+[node name="One-Leg Back lever" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level9" unique_id=643018300 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_5jguw")
 talentResource = ExtResource("31_f75hg")
@@ -1430,12 +1430,12 @@ theme_override_constants/separation = 10
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_p2cy3")
 
-[node name="TextureRect2" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level10" unique_id=1569027338 instance=ExtResource("4_poil6")]
+[node name="Half Front Lever" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level10" unique_id=1569027338 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_bc4me")
 talentResource = ExtResource("33_664yy")
 
-[node name="TextureRect3" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level10" unique_id=1039388175 instance=ExtResource("4_poil6")]
+[node name="One-Leg Front Lever" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level10" unique_id=1039388175 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_3st8p")
 talentResource = ExtResource("34_1ij1a")
@@ -1444,7 +1444,7 @@ talentResource = ExtResource("34_1ij1a")
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_jtvfy")
 
-[node name="TextureRect5" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level10" unique_id=715326155 instance=ExtResource("4_poil6")]
+[node name="Back Lever" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level10" unique_id=715326155 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_7kmcj")
 talentResource = ExtResource("35_13wqh")
@@ -1457,7 +1457,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_lto3a")
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_a44pk")
 
-[node name="TextureRect8" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level10" unique_id=1874450227 instance=ExtResource("4_poil6")]
+[node name="Archer Pull-Up" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level10" unique_id=1874450227 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lpptq")
 talentResource = ExtResource("36_5xrn1")
@@ -1498,7 +1498,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_rg1po")
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_ayadu")
 
-[node name="TextureRect3" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level11" unique_id=1425641591 instance=ExtResource("4_poil6")]
+[node name="Front Lever" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level11" unique_id=1425641591 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ohv2a")
 talentResource = ExtResource("37_afig3")
@@ -1519,7 +1519,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_jscjw")
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_y4mes")
 
-[node name="TextureRect8" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level11" unique_id=892144084 instance=ExtResource("4_poil6")]
+[node name="Finger Assisted Pull-Up" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level11" unique_id=892144084 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_bow3v")
 talentResource = ExtResource("38_o1won")
@@ -1580,7 +1580,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_gg1or")
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_vsmxr")
 
-[node name="TextureRect8" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level12" unique_id=905754934 instance=ExtResource("4_poil6")]
+[node name="One-Arm Pull-Up" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level12" unique_id=905754934 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_73wmo")
 talentResource = ExtResource("39_edki7")
@@ -1593,7 +1593,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_dgsm1")
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_6mjua")
 
-[node name="TextureRect11" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level12" unique_id=434334505 instance=ExtResource("4_poil6")]
+[node name="One-Arm Chin-Up" parent="SaftyArea2/VBoxContainer/ScrollContainer/ContentContainer/SkillContainer/Level12" unique_id=434334505 instance=ExtResource("4_poil6")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_mptgs")
 talentResource = ExtResource("40_701sc")

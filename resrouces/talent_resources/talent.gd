@@ -1,8 +1,14 @@
+@tool
 extends Resource
 class_name TalentResource
 
 @export var icon : CompressedTexture2D
 @export var unlocks: Array[TalentResource]
+
+@export_category("Information")
+@export var videoLink: String
+@export_multiline var description: String
+
 
 var talentName:  String = resource_path.get_file().trim_suffix('.tres')
 

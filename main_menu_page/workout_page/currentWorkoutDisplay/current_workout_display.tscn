@@ -62,9 +62,11 @@ theme_override_constants/separation = 10
 
 [node name="notTrainedLabel" type="Label" parent="MarginContainer/CurrentWorkoutBox" unique_id=473125033]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "not Trained"
+text = "
+not Trained"
 horizontal_alignment = 1
 
 [node name="deleteWorkoutContainer" type="MarginContainer" parent="." unique_id=782768444]

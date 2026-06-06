@@ -1,8 +1,7 @@
-[gd_resource type="Resource" script_class="TalentResource" load_steps=2 format=3 uid="uid://cifs2rff427q8"]
+[gd_resource type="Resource" script_class="TalentResource" format=3 uid="uid://cifs2rff427q8"]
 
-[ext_resource type="Script" path="res://resrouces/talent_resources/talent.gd" id="1_wry0b"]
+[ext_resource type="Script" uid="uid://cvnpukj6lw1k8" path="res://resrouces/talent_resources/talent.gd" id="1_wry0b"]
 
 [resource]
 script = ExtResource("1_wry0b")
-unlocks = Array[ExtResource("1_wry0b")]([])
-is_unlocked = false
+videoLink = "https://www.youtube.com/watch?v=odcPqBOlJhI"

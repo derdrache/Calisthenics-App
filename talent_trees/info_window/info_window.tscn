@@ -1,13 +1,15 @@
 [gd_scene format=3 uid="uid://4abutnd18e4i"]
 
 [ext_resource type="Script" uid="uid://d2qdsql43s7sv" path="res://talent_trees/info_window/info_window.gd" id="1_wxa8t"]
+[ext_resource type="PackedScene" uid="uid://bhvxfx2qrcx12" path="res://talent_trees/info_window/tabContainer/tab_container.tscn" id="2_g3bin"]
+[ext_resource type="PackedScene" uid="uid://b073nmixjkwjk" path="res://widgets/close_button/close_button.tscn" id="2_v7uaq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wxa8t"]
 content_margin_left = 0.0
 content_margin_top = 0.0
 content_margin_right = 0.0
 content_margin_bottom = 0.0
-bg_color = Color(0.1, 0.1, 0.1, 0.6)
+bg_color = Color(0.14044744, 0.14044744, 0.14044744, 1)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
@@ -19,34 +21,81 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 corner_detail = 5
 
-[node name="InfoWindow" type="PanelContainer" unique_id=1908891191]
-custom_minimum_size = Vector2(500, 350)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g3bin"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.16565639, 0.16565642, 0.16565639, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 5
+
+[node name="InfoWindow" type="Control" unique_id=1792621031]
+custom_minimum_size = Vector2(525, 550)
+layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = -150.0
-offset_right = 150.0
-offset_bottom = 150.0
+offset_left = -262.5
+offset_top = -250.0
+offset_right = 262.5
+offset_bottom = 250.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_wxa8t")
+mouse_filter = 1
 script = ExtResource("1_wxa8t")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=594231914]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=530920138]
+layout_mode = 0
+offset_right = 500.0
+offset_bottom = 400.0
+theme_override_constants/separation = 0
+
+[node name="TabContainer" type="MarginContainer" parent="VBoxContainer" unique_id=1337086062]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 50
+
+[node name="tabs" type="HBoxContainer" parent="VBoxContainer/TabContainer" unique_id=321958199]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="TabContainer" parent="VBoxContainer/TabContainer/tabs" unique_id=303249544 instance=ExtResource("2_g3bin")]
+layout_mode = 2
+title = "Stats"
+
+[node name="TabContainer2" parent="VBoxContainer/TabContainer/tabs" unique_id=1228920361 instance=ExtResource("2_g3bin")]
+layout_mode = 2
+title = "Info"
+
+[node name="Window" type="PanelContainer" parent="VBoxContainer" unique_id=1908891191]
+custom_minimum_size = Vector2(500, 400)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wxa8t")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Window" unique_id=594231914]
 layout_mode = 2
 theme_override_constants/margin_left = 25
 theme_override_constants/margin_top = 25
 theme_override_constants/margin_right = 25
 theme_override_constants/margin_bottom = 25
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=772710311]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Window/MarginContainer" unique_id=1321022631]
 layout_mode = 2
-theme_override_constants/separation = 25
+theme_override_constants/separation = 20
 
-[node name="titleLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=776926830]
+[node name="titleLabel" type="Label" parent="VBoxContainer/Window/MarginContainer/VBoxContainer" unique_id=776926830]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/outline_size = 15
@@ -54,65 +103,120 @@ theme_override_font_sizes/font_size = 30
 text = "XXXX"
 horizontal_alignment = 1
 
-[node name="statsOverview" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=63163729]
+[node name="StatsWindow" type="VBoxContainer" parent="VBoxContainer/Window/MarginContainer/VBoxContainer" unique_id=772710311]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Window/MarginContainer/VBoxContainer/StatsWindow" unique_id=1464582944]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/statsOverview" unique_id=1464582944]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/statsOverview/HBoxContainer" unique_id=1745548856]
+[node name="Label" type="Label" parent="VBoxContainer/Window/MarginContainer/VBoxContainer/StatsWindow/HBoxContainer" unique_id=1745548856]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "total reps:"
 
-[node name="totalRepsLabel" type="Label" parent="MarginContainer/VBoxContainer/statsOverview/HBoxContainer" unique_id=952995658]
+[node name="totalRepsLabel" type="Label" parent="VBoxContainer/Window/MarginContainer/VBoxContainer/StatsWindow/HBoxContainer" unique_id=952995658]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "xxx"
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer/statsOverview" unique_id=611566073]
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/Window/MarginContainer/VBoxContainer/StatsWindow" unique_id=611566073]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/statsOverview/HBoxContainer3" unique_id=97798050]
+[node name="Label" type="Label" parent="VBoxContainer/Window/MarginContainer/VBoxContainer/StatsWindow/HBoxContainer3" unique_id=97798050]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "total sets:"
 
-[node name="totalSetsLabel" type="Label" parent="MarginContainer/VBoxContainer/statsOverview/HBoxContainer3" unique_id=119439783]
+[node name="totalSetsLabel" type="Label" parent="VBoxContainer/Window/MarginContainer/VBoxContainer/StatsWindow/HBoxContainer3" unique_id=119439783]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "xxx"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/statsOverview" unique_id=1189298197]
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/Window/MarginContainer/VBoxContainer/StatsWindow" unique_id=1189298197]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/statsOverview/HBoxContainer2" unique_id=63671445]
+[node name="Label" type="Label" parent="VBoxContainer/Window/MarginContainer/VBoxContainer/StatsWindow/HBoxContainer2" unique_id=63671445]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "max rep:"
 
-[node name="maxRepLabel" type="Label" parent="MarginContainer/VBoxContainer/statsOverview/HBoxContainer2" unique_id=1215381261]
+[node name="maxRepLabel" type="Label" parent="VBoxContainer/Window/MarginContainer/VBoxContainer/StatsWindow/HBoxContainer2" unique_id=1215381261]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "xxx"
 
-[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/VBoxContainer/statsOverview" unique_id=1861892849]
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer/Window/MarginContainer/VBoxContainer/StatsWindow" unique_id=1861892849]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/statsOverview/HBoxContainer4" unique_id=907502392]
+[node name="Label" type="Label" parent="VBoxContainer/Window/MarginContainer/VBoxContainer/StatsWindow/HBoxContainer4" unique_id=907502392]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "best result: "
 
-[node name="bestReusltLabel" type="Label" parent="MarginContainer/VBoxContainer/statsOverview/HBoxContainer4" unique_id=1294939086]
+[node name="bestReusltLabel" type="Label" parent="VBoxContainer/Window/MarginContainer/VBoxContainer/StatsWindow/HBoxContainer4" unique_id=1294939086]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "xxx"
+
+[node name="InfoWindow" type="VBoxContainer" parent="VBoxContainer/Window/MarginContainer/VBoxContainer" unique_id=1942722738]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="exerciseVideoLink" type="LinkButton" parent="VBoxContainer/Window/MarginContainer/VBoxContainer/InfoWindow" unique_id=530150051]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "exercise video"
+uri = "https://youtu.be/pvIjsG5Svck?si=gkxULO37OIZjeE7x"
+
+[node name="InfoDescriptionLabel" type="Label" parent="VBoxContainer/Window/MarginContainer/VBoxContainer/InfoWindow" unique_id=868566295]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+autowrap_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=1145020665]
+layout_mode = 2
+theme_override_constants/margin_top = 25
+
+[node name="SelectButton" type="Button" parent="VBoxContainer/MarginContainer" unique_id=17210664]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_g3bin")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g3bin")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g3bin")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_g3bin")
+theme_override_styles/focus = SubResource("StyleBoxFlat_g3bin")
+text = "Select"
+
+[node name="closeButton" parent="." unique_id=765210577 instance=ExtResource("2_v7uaq")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -60.0
+offset_top = 39.0
+offset_right = -10.0
+offset_bottom = 89.0
+grow_horizontal = 0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[connection signal="pressed" from="VBoxContainer/MarginContainer/SelectButton" to="." method="_on_select_button_pressed"]
+[connection signal="pressed" from="closeButton" to="." method="_on_close_button_pressed"]

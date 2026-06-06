@@ -19,6 +19,11 @@ enum workout_modus {NORMAL, SUPERSET}
 var exerciseCompleted: Array[int]
 var exerciseUnlocked: Array[int]
 
+const PULL_TALENT_TREE = "res://talent_trees/pull_talent_tree.tscn"
+const PUSH_TALENT_TREE = "res://talent_trees/push_talent_tree.tscn"
+const CORE_TALENT_TREE = "res://talent_trees/core_talent_tree.tscn"
+const LEG_TALENT_TREE = "res://talent_trees/leg_talent_tree.tscn"
+
 func _ready() -> void:
 	_create_dir()
 	

@@ -80,20 +80,23 @@ func _hide_menu() -> void:
 func _show_talent_tree(talentGroup: String) -> void:
 	_hide_menu()
 	
-	var talentNode: TalentTree
+	var talentNode: Node
 	
 	if talentGroup == "PUSH":
-		talentNode = load("res://talent_trees/push_talent_tree.tscn").instantiate()
+		talentNode = load(GlobalData.PUSH_TALENT_TREE).instantiate()
 	elif talentGroup == "PULL":
-		talentNode = load("res://talent_trees/pull_talent_tree.tscn").instantiate()
+		talentNode = load(GlobalData.PULL_TALENT_TREE).instantiate()
 	elif talentGroup == "CORE":
-		talentNode = load("res://talent_trees/core_talent_tree.tscn").instantiate()
+		talentNode = load(GlobalData.CORE_TALENT_TREE).instantiate()
 	elif talentGroup == "LEG":
-		talentNode = load("res://talent_trees/leg_talent_tree.tscn").instantiate()
+		talentNode = load(GlobalData.LEG_TALENT_TREE).instantiate()
 
+	var canvasLayer := CanvasLayer.new()
 	talentNode.talentSelection = true
 	talentNode.selected_talent.connect(set_talent)
-	add_child(talentNode)
+	get_tree().current_scene.add_child(talentNode)
+	
+	#add_child(canvasLayer)
 
 func set_talent(talent : TalentResource, withSignal := true) -> void:
 	label.text = talent.get_talent_name()

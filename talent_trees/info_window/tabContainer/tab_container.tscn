@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://bhvxfx2qrcx12"]
+
+[ext_resource type="Script" uid="uid://c55qx8ankj7yd" path="res://talent_trees/info_window/tabContainer/tab_container.gd" id="1_rtpw3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v7uaq"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rtpw3"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.09985284, 0.09985284, 0.09985284, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ls7vy"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.09985284, 0.09985284, 0.09985284, 0.5)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_detail = 5
+
+[node name="TabContainer" type="PanelContainer" unique_id=303249544]
+custom_minimum_size = Vector2(100, 0)
+theme_override_styles/panel = SubResource("StyleBoxFlat_v7uaq")
+script = ExtResource("1_rtpw3")
+title = ""
+selectedStyleBox = SubResource("StyleBoxFlat_rtpw3")
+unselectedStyleBox = SubResource("StyleBoxFlat_ls7vy")
+
+[node name="Label" type="Label" parent="." unique_id=1306120032]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=1005490310]
+layout_mode = 2
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

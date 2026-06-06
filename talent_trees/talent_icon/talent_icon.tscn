@@ -9,15 +9,14 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_opdbu"]
 
 [node name="TextureRect" type="Panel" unique_id=2020655335]
-custom_minimum_size = Vector2(80, 70)
+custom_minimum_size = Vector2(100, 100)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxEmpty_sk3tt")
 script = ExtResource("1_wadke")
-lockColorPanel = Color(0.54901963, 0.54901963, 0.54901963, 1)
-lockColorBorder = Color(0.54901963, 0.54901963, 0.54901963, 1)
-unlockColorPanel = Color(0.54902, 0.54902, 0.54902, 1)
+lockColorPanel = Color(0.28627452, 0.28627452, 0.28627452, 1)
+unlockColorPanel = Color(0.54901963, 0.54901963, 0.54901963, 1)
 completeColorPanel = Color(1, 0.843137, 0, 1)
 
 [node name="Button" type="Button" parent="." unique_id=2043522636]
@@ -37,7 +36,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_opdbu")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1625864636]
 visible = false
-custom_minimum_size = Vector2(70, 60)
+custom_minimum_size = Vector2(70, 70)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -62,7 +61,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
-theme_override_font_sizes/font_size = 11
+theme_override_font_sizes/font_size = 16
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2

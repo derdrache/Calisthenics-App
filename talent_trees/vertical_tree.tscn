@@ -1,247 +1,247 @@
-[gd_scene format=3 uid="uid://b2nfbwltslvsd"]
+[gd_scene format=3 uid="uid://wqugo55ocjr3"]
 
-[ext_resource type="Script" uid="uid://dol1nwog83jmk" path="res://talent_trees/talent_tree_new_version.gd" id="1_5h8hh"]
-[ext_resource type="Script" uid="uid://dayk84xvmmtm5" path="res://talent_trees/camera_2d.gd" id="2_qygrj"]
-[ext_resource type="PackedScene" uid="uid://dtsq21l50odev" path="res://talent_trees/talent_icon/talent_icon.tscn" id="3_h4tl1"]
-[ext_resource type="Resource" uid="uid://bsubt8p8iq1l8" path="res://resrouces/talent_resources/Push/level1/Plank.tres" id="4_pwglr"]
-[ext_resource type="Resource" uid="uid://c2t6hepyn8ae2" path="res://resrouces/talent_resources/Push/level1/Wall_Push_Up.tres" id="5_cbejt"]
-[ext_resource type="Resource" uid="uid://bimdlk8hohe8p" path="res://resrouces/talent_resources/Push/level1/Knee_Bench_Dip.tres" id="6_vi4ac"]
-[ext_resource type="Resource" uid="uid://6upjylh6x2re" path="res://resrouces/talent_resources/Push/level2/Knee_Planche_Lean.tres" id="7_4jkyh"]
-[ext_resource type="PackedScene" uid="uid://dfaarq0jjffgx" path="res://talent_trees/level_panel/level_panel.tscn" id="7_f5tui"]
-[ext_resource type="Resource" uid="uid://cce7jkf4bdor2" path="res://resrouces/talent_resources/Push/level2/Wall_Plank.tres" id="8_otpl1"]
-[ext_resource type="Resource" uid="uid://srow3at463wr" path="res://resrouces/talent_resources/Push/level2/Incline_Push_Up.tres" id="9_sevft"]
-[ext_resource type="Resource" uid="uid://b8sm6ac436doo" path="res://resrouces/talent_resources/Push/level2/Bench_Dip.tres" id="10_y5khn"]
-[ext_resource type="Resource" uid="uid://dbxu1y6xbywnj" path="res://resrouces/talent_resources/Push/level3/Planche_Lean.tres" id="11_yex7j"]
-[ext_resource type="Resource" uid="uid://bpiyp7rv47bh4" path="res://resrouces/talent_resources/Push/level3/Assisted_Pike_Hold.tres" id="12_osisg"]
-[ext_resource type="Resource" uid="uid://d0p40tl538usd" path="res://resrouces/talent_resources/Push/level3/Knee_Push_up.tres" id="13_jppvt"]
-[ext_resource type="Resource" uid="uid://pxgwye3uqvsf" path="res://resrouces/talent_resources/Push/level3/Decline_Bench_Dip.tres" id="14_rovrv"]
-[ext_resource type="Resource" uid="uid://cou27og48n30m" path="res://resrouces/talent_resources/Push/level4/Decline_Planche_Lean.tres" id="15_1y6pl"]
-[ext_resource type="Resource" uid="uid://bceqkasnh4k61" path="res://resrouces/talent_resources/Push/level4/Half_Wall_Handstand.tres" id="16_0ty8p"]
-[ext_resource type="Resource" uid="uid://bmyfbqyfqj8gg" path="res://resrouces/talent_resources/Push/level4/Push_up.tres" id="17_tuhdv"]
-[ext_resource type="Resource" uid="uid://df254cwyoid74" path="res://resrouces/talent_resources/Push/level4/Negative_Dip.tres" id="18_03wsf"]
-[ext_resource type="Resource" uid="uid://b2nk7js8ttgmh" path="res://resrouces/talent_resources/Push/level5/Frog_Stand.tres" id="19_8qljg"]
-[ext_resource type="Resource" uid="uid://4ud16d4qrk3s" path="res://resrouces/talent_resources/Push/level5/Wall_Walk_Handstand.tres" id="20_isaos"]
-[ext_resource type="Resource" uid="uid://l80doxxp864" path="res://resrouces/talent_resources/Push/level5/Pike_Push_up.tres" id="21_fq2tk"]
-[ext_resource type="Resource" uid="uid://cfq51rl3a2chv" path="res://resrouces/talent_resources/Push/level5/Explosive_Push_Up.tres" id="22_yfryy"]
-[ext_resource type="Resource" uid="uid://dlff5msqky0i5" path="res://resrouces/talent_resources/Push/level5/Decline_Push_Up.tres" id="23_xjx5r"]
-[ext_resource type="Resource" uid="uid://18it13teipb3" path="res://resrouces/talent_resources/Push/level5/Knee_Pseudo_Push_Up.tres" id="24_cbodw"]
-[ext_resource type="Resource" uid="uid://c24hgmifsd8g7" path="res://resrouces/talent_resources/Push/level5/Diamond_Push_Up.tres" id="25_hi8g2"]
-[ext_resource type="Resource" uid="uid://rggfdibt66sb" path="res://resrouces/talent_resources/Push/level5/Dip.tres" id="26_3cxpg"]
-[ext_resource type="Resource" uid="uid://oue44eih47u7" path="res://resrouces/talent_resources/Push/level6/Low_Tuck_Planche.tres" id="27_ear8o"]
-[ext_resource type="Resource" uid="uid://imasd7sqeowt" path="res://resrouces/talent_resources/Push/level6/Full_Wall_Handstand.tres" id="28_5hgie"]
-[ext_resource type="Resource" uid="uid://b5jn2wlsq18ou" path="res://resrouces/talent_resources/Push/level6/Decline_Pike_Push_Up.tres" id="29_krdhy"]
-[ext_resource type="Resource" uid="uid://7h18sm5lbxo7" path="res://resrouces/talent_resources/Push/level6/Clapping_Push_Up.tres" id="30_mx12v"]
-[ext_resource type="Resource" uid="uid://bw2a71pbjovrh" path="res://resrouces/talent_resources/Push/level6/Archer_Push_Up.tres" id="31_cgb17"]
-[ext_resource type="Resource" uid="uid://b4hgi7ddlf1nd" path="res://resrouces/talent_resources/Push/level6/Wall_One_Arm_Push_Up.tres" id="32_yjb8n"]
-[ext_resource type="Resource" uid="uid://cifs2rff427q8" path="res://resrouces/talent_resources/Push/level6/Pseudo_Planche_Push_Up.tres" id="33_qanwh"]
-[ext_resource type="Resource" uid="uid://f7qyfwuoqhox" path="res://resrouces/talent_resources/Push/level6/Decline_Diamond_Push_Up.tres" id="34_g74gx"]
-[ext_resource type="Resource" uid="uid://hw0o2l0qsmeq" path="res://resrouces/talent_resources/Push/level6/Sphinx_Push_Up.tres" id="35_d3hbj"]
-[ext_resource type="Resource" uid="uid://bqnoxe823ibh" path="res://resrouces/talent_resources/Push/level6/Pike_Diamond_Push_Up.tres" id="36_wglab"]
-[ext_resource type="Resource" uid="uid://b6s6465jgxl1d" path="res://resrouces/talent_resources/Push/level6/Tuck_L-Sit_Dip.tres" id="37_tagad"]
-[ext_resource type="Resource" uid="uid://blltmmcbqt237" path="res://resrouces/talent_resources/Push/level7/Tuck_Planche.tres" id="38_plfhw"]
-[ext_resource type="Resource" uid="uid://brggrdoynm55y" path="res://resrouces/talent_resources/Push/level7/Handstand.tres" id="39_pralu"]
-[ext_resource type="Resource" uid="uid://cey7tr1713yj6" path="res://resrouces/talent_resources/Push/level7/Wall_Handstand_Push_Up.tres" id="40_p4x7d"]
-[ext_resource type="Resource" uid="uid://duq6dl2rvregi" path="res://resrouces/talent_resources/Push/level7/Triple_Clap_Push_Up.tres" id="41_nnbr1"]
-[ext_resource type="Resource" uid="uid://bgs5kb3lougwn" path="res://resrouces/talent_resources/Push/level7/Incline_One_Arm_Push_Up.tres" id="42_7c32t"]
-[ext_resource type="Resource" uid="uid://ctluy1xcwvcne" path="res://resrouces/talent_resources/Push/level7/L-Sit_Dip.tres" id="43_px0cx"]
-[ext_resource type="Resource" uid="uid://dabkiaiybqxte" path="res://resrouces/talent_resources/Push/level8/One_Leg_Adv._Tuck_Planche.tres" id="44_nva1u"]
-[ext_resource type="Resource" uid="uid://6eybdfs2lynh" path="res://resrouces/talent_resources/Push/level8/Tuck_Handstand.tres" id="45_gaaee"]
-[ext_resource type="Resource" uid="uid://k5smuqqqhfam" path="res://resrouces/talent_resources/Push/level8/Negative_Handstand_Push_Up.tres" id="46_scltn"]
-[ext_resource type="Resource" uid="uid://cwuwxobewcjau" path="res://resrouces/talent_resources/Push/level8/Straddle_one_arm_Push_Up.tres" id="47_btiqw"]
-[ext_resource type="Resource" uid="uid://bq5s2keyn06vh" path="res://resrouces/talent_resources/Push/level8/Tuck_Planche_Push_Up.tres" id="48_c1yal"]
-[ext_resource type="Resource" uid="uid://f38ov1ep4y1a" path="res://resrouces/talent_resources/Push/level9/Adv._Tuck_Planche.tres" id="49_j2rua"]
-[ext_resource type="Resource" uid="uid://bb67y5p56gskj" path="res://resrouces/talent_resources/Push/level9/Wall_One_Arm_Handstand.tres" id="50_xfpqy"]
-[ext_resource type="Resource" uid="uid://stkt5jndoxc" path="res://resrouces/talent_resources/Push/level9/Handstand_Push_Up.tres" id="51_vxo73"]
-[ext_resource type="Resource" uid="uid://be74is8w5qcrs" path="res://resrouces/talent_resources/Push/level9/One_Arm_Push_Up.tres" id="52_cctiy"]
-[ext_resource type="Resource" uid="uid://b5mx5ckenrsmf" path="res://resrouces/talent_resources/Push/level10/Straddle_Planche.tres" id="53_c87xr"]
-[ext_resource type="Resource" uid="uid://dcjpg045uursb" path="res://resrouces/talent_resources/Push/level10/One-Leg_Planche.tres" id="54_tijwd"]
-[ext_resource type="Resource" uid="uid://ddjf8o845susc" path="res://resrouces/talent_resources/Push/level10/Finger-Assisted-One_Hand_Handstand.tres" id="55_822qd"]
-[ext_resource type="Resource" uid="uid://wviyasausd1f" path="res://resrouces/talent_resources/Push/level10/Decline_One_Arm_Push_Up.tres" id="56_bmbsc"]
-[ext_resource type="Resource" uid="uid://gfqla315n3dr" path="res://resrouces/talent_resources/Push/level11/One_Arm_Handstand.tres" id="57_6884j"]
-[ext_resource type="Resource" uid="uid://n2mtf535lem" path="res://resrouces/talent_resources/Push/level11/Weighted_decline_One_Arm_Push_Up.tres" id="58_es5yy"]
-[ext_resource type="Resource" uid="uid://bgkiu80j6d30i" path="res://resrouces/talent_resources/Push/level12/Planche.tres" id="59_2m2s2"]
-[ext_resource type="Resource" uid="uid://b5c8c1ustnusr" path="res://resrouces/talent_resources/Push/level12/Full_One_Arm_Handstand.tres" id="60_diirg"]
-[ext_resource type="Resource" uid="uid://b5sd5pgqkwcjk" path="res://resrouces/talent_resources/Push/level14/Planche_Push_Up.tres" id="61_wkdks"]
-[ext_resource type="Resource" uid="uid://b5dag2avuyvgl" path="res://resrouces/talent_resources/Push/level14/Two_Finger_Push_Up.tres" id="62_7sif4"]
-[ext_resource type="PackedScene" uid="uid://brpavu0ocrgcq" path="res://widgets/top_navigation_bar/top_navigation_bar.tscn" id="63_5gmrd"]
-[ext_resource type="Texture2D" uid="uid://dvobueh3j5k0v" path="res://assets/images/full-shot-ninja-wearing-equipment.jpg" id="64_23qmh"]
+[ext_resource type="Script" uid="uid://dol1nwog83jmk" path="res://talent_trees/talent_tree_new_version.gd" id="1_vf5eu"]
+[ext_resource type="Script" uid="uid://dayk84xvmmtm5" path="res://talent_trees/camera_2d.gd" id="2_aqtqn"]
+[ext_resource type="PackedScene" uid="uid://dfaarq0jjffgx" path="res://talent_trees/level_panel/level_panel.tscn" id="3_1tmei"]
+[ext_resource type="PackedScene" uid="uid://dtsq21l50odev" path="res://talent_trees/talent_icon/talent_icon.tscn" id="4_jq2fi"]
+[ext_resource type="Resource" uid="uid://bsubt8p8iq1l8" path="res://resrouces/talent_resources/Push/level1/Plank.tres" id="5_iinke"]
+[ext_resource type="Resource" uid="uid://c2t6hepyn8ae2" path="res://resrouces/talent_resources/Push/level1/Wall_Push_Up.tres" id="6_mmupr"]
+[ext_resource type="Resource" uid="uid://bimdlk8hohe8p" path="res://resrouces/talent_resources/Push/level1/Knee_Bench_Dip.tres" id="7_ikl1u"]
+[ext_resource type="Resource" uid="uid://6upjylh6x2re" path="res://resrouces/talent_resources/Push/level2/Knee_Planche_Lean.tres" id="8_ijrti"]
+[ext_resource type="Resource" uid="uid://cce7jkf4bdor2" path="res://resrouces/talent_resources/Push/level2/Wall_Plank.tres" id="9_lu33n"]
+[ext_resource type="Resource" uid="uid://srow3at463wr" path="res://resrouces/talent_resources/Push/level2/Incline_Push_Up.tres" id="10_83dn5"]
+[ext_resource type="Resource" uid="uid://b8sm6ac436doo" path="res://resrouces/talent_resources/Push/level2/Bench_Dip.tres" id="11_4vs70"]
+[ext_resource type="Resource" uid="uid://dbxu1y6xbywnj" path="res://resrouces/talent_resources/Push/level3/Planche_Lean.tres" id="12_pvor5"]
+[ext_resource type="Resource" uid="uid://bpiyp7rv47bh4" path="res://resrouces/talent_resources/Push/level3/Assisted_Pike_Hold.tres" id="13_01v3m"]
+[ext_resource type="Resource" uid="uid://d0p40tl538usd" path="res://resrouces/talent_resources/Push/level3/Knee_Push_up.tres" id="14_xw50t"]
+[ext_resource type="Resource" uid="uid://pxgwye3uqvsf" path="res://resrouces/talent_resources/Push/level3/Decline_Bench_Dip.tres" id="15_61j4y"]
+[ext_resource type="Resource" uid="uid://cou27og48n30m" path="res://resrouces/talent_resources/Push/level4/Decline_Planche_Lean.tres" id="16_748wq"]
+[ext_resource type="Resource" uid="uid://bceqkasnh4k61" path="res://resrouces/talent_resources/Push/level4/Half_Wall_Handstand.tres" id="17_fkkm6"]
+[ext_resource type="Resource" uid="uid://bmyfbqyfqj8gg" path="res://resrouces/talent_resources/Push/level4/Push_up.tres" id="18_ldvrc"]
+[ext_resource type="Resource" uid="uid://df254cwyoid74" path="res://resrouces/talent_resources/Push/level4/Negative_Dip.tres" id="19_66tb1"]
+[ext_resource type="Resource" uid="uid://b2nk7js8ttgmh" path="res://resrouces/talent_resources/Push/level5/Frog_Stand.tres" id="20_xnkkj"]
+[ext_resource type="Resource" uid="uid://4ud16d4qrk3s" path="res://resrouces/talent_resources/Push/level5/Wall_Walk_Handstand.tres" id="21_0es3b"]
+[ext_resource type="Resource" uid="uid://l80doxxp864" path="res://resrouces/talent_resources/Push/level5/Pike_Push_up.tres" id="22_0htne"]
+[ext_resource type="Resource" uid="uid://cfq51rl3a2chv" path="res://resrouces/talent_resources/Push/level5/Explosive_Push_Up.tres" id="23_r04sw"]
+[ext_resource type="Resource" uid="uid://dlff5msqky0i5" path="res://resrouces/talent_resources/Push/level5/Decline_Push_Up.tres" id="24_7s0x6"]
+[ext_resource type="Resource" uid="uid://18it13teipb3" path="res://resrouces/talent_resources/Push/level5/Knee_Pseudo_Push_Up.tres" id="25_dcaqu"]
+[ext_resource type="Resource" uid="uid://c24hgmifsd8g7" path="res://resrouces/talent_resources/Push/level5/Diamond_Push_Up.tres" id="26_1so47"]
+[ext_resource type="Resource" uid="uid://rggfdibt66sb" path="res://resrouces/talent_resources/Push/level5/Dip.tres" id="27_c2bv4"]
+[ext_resource type="Resource" uid="uid://oue44eih47u7" path="res://resrouces/talent_resources/Push/level6/Low_Tuck_Planche.tres" id="28_vj5jk"]
+[ext_resource type="Resource" uid="uid://imasd7sqeowt" path="res://resrouces/talent_resources/Push/level6/Full_Wall_Handstand.tres" id="29_8oymf"]
+[ext_resource type="Resource" uid="uid://b5jn2wlsq18ou" path="res://resrouces/talent_resources/Push/level6/Decline_Pike_Push_Up.tres" id="30_3fifj"]
+[ext_resource type="Resource" uid="uid://7h18sm5lbxo7" path="res://resrouces/talent_resources/Push/level6/Clapping_Push_Up.tres" id="31_fsxqo"]
+[ext_resource type="Resource" uid="uid://bw2a71pbjovrh" path="res://resrouces/talent_resources/Push/level6/Archer_Push_Up.tres" id="32_bmuno"]
+[ext_resource type="Resource" uid="uid://b4hgi7ddlf1nd" path="res://resrouces/talent_resources/Push/level6/Wall_One_Arm_Push_Up.tres" id="33_h8g8k"]
+[ext_resource type="Resource" uid="uid://cifs2rff427q8" path="res://resrouces/talent_resources/Push/level6/Pseudo_Planche_Push_Up.tres" id="34_30i2s"]
+[ext_resource type="Resource" uid="uid://f7qyfwuoqhox" path="res://resrouces/talent_resources/Push/level6/Decline_Diamond_Push_Up.tres" id="35_sepel"]
+[ext_resource type="Resource" uid="uid://hw0o2l0qsmeq" path="res://resrouces/talent_resources/Push/level6/Sphinx_Push_Up.tres" id="36_ey1ih"]
+[ext_resource type="Resource" uid="uid://bqnoxe823ibh" path="res://resrouces/talent_resources/Push/level6/Pike_Diamond_Push_Up.tres" id="37_3jhkh"]
+[ext_resource type="Resource" uid="uid://b6s6465jgxl1d" path="res://resrouces/talent_resources/Push/level6/Tuck_L-Sit_Dip.tres" id="38_tysla"]
+[ext_resource type="Resource" uid="uid://blltmmcbqt237" path="res://resrouces/talent_resources/Push/level7/Tuck_Planche.tres" id="39_cp8lj"]
+[ext_resource type="Resource" uid="uid://brggrdoynm55y" path="res://resrouces/talent_resources/Push/level7/Handstand.tres" id="40_656d2"]
+[ext_resource type="Resource" uid="uid://cey7tr1713yj6" path="res://resrouces/talent_resources/Push/level7/Wall_Handstand_Push_Up.tres" id="41_4liab"]
+[ext_resource type="Resource" uid="uid://duq6dl2rvregi" path="res://resrouces/talent_resources/Push/level7/Triple_Clap_Push_Up.tres" id="42_whgvc"]
+[ext_resource type="Resource" uid="uid://bgs5kb3lougwn" path="res://resrouces/talent_resources/Push/level7/Incline_One_Arm_Push_Up.tres" id="43_xe1mu"]
+[ext_resource type="Resource" uid="uid://ctluy1xcwvcne" path="res://resrouces/talent_resources/Push/level7/L-Sit_Dip.tres" id="44_53gmu"]
+[ext_resource type="Resource" uid="uid://dabkiaiybqxte" path="res://resrouces/talent_resources/Push/level8/One_Leg_Adv._Tuck_Planche.tres" id="45_scvaj"]
+[ext_resource type="Resource" uid="uid://6eybdfs2lynh" path="res://resrouces/talent_resources/Push/level8/Tuck_Handstand.tres" id="46_yvrh4"]
+[ext_resource type="Resource" uid="uid://k5smuqqqhfam" path="res://resrouces/talent_resources/Push/level8/Negative_Handstand_Push_Up.tres" id="47_6y2co"]
+[ext_resource type="Resource" uid="uid://cwuwxobewcjau" path="res://resrouces/talent_resources/Push/level8/Straddle_one_arm_Push_Up.tres" id="48_d74gm"]
+[ext_resource type="Resource" uid="uid://bq5s2keyn06vh" path="res://resrouces/talent_resources/Push/level8/Tuck_Planche_Push_Up.tres" id="49_7j1ij"]
+[ext_resource type="Resource" uid="uid://f38ov1ep4y1a" path="res://resrouces/talent_resources/Push/level9/Adv._Tuck_Planche.tres" id="50_f8jxb"]
+[ext_resource type="Resource" uid="uid://bb67y5p56gskj" path="res://resrouces/talent_resources/Push/level9/Wall_One_Arm_Handstand.tres" id="51_j8lrx"]
+[ext_resource type="Resource" uid="uid://stkt5jndoxc" path="res://resrouces/talent_resources/Push/level9/Handstand_Push_Up.tres" id="52_l52nc"]
+[ext_resource type="Resource" uid="uid://be74is8w5qcrs" path="res://resrouces/talent_resources/Push/level9/One_Arm_Push_Up.tres" id="53_65rth"]
+[ext_resource type="Resource" uid="uid://b5mx5ckenrsmf" path="res://resrouces/talent_resources/Push/level10/Straddle_Planche.tres" id="54_ldhns"]
+[ext_resource type="Resource" uid="uid://dcjpg045uursb" path="res://resrouces/talent_resources/Push/level10/One-Leg_Planche.tres" id="55_d6ate"]
+[ext_resource type="Resource" uid="uid://ddjf8o845susc" path="res://resrouces/talent_resources/Push/level10/Finger-Assisted-One_Hand_Handstand.tres" id="56_d7rs0"]
+[ext_resource type="Resource" uid="uid://wviyasausd1f" path="res://resrouces/talent_resources/Push/level10/Decline_One_Arm_Push_Up.tres" id="57_w3c6j"]
+[ext_resource type="Resource" uid="uid://gfqla315n3dr" path="res://resrouces/talent_resources/Push/level11/One_Arm_Handstand.tres" id="58_5vnu8"]
+[ext_resource type="Resource" uid="uid://n2mtf535lem" path="res://resrouces/talent_resources/Push/level11/Weighted_decline_One_Arm_Push_Up.tres" id="59_37iw5"]
+[ext_resource type="Resource" uid="uid://bgkiu80j6d30i" path="res://resrouces/talent_resources/Push/level12/Planche.tres" id="60_tvtbp"]
+[ext_resource type="Resource" uid="uid://b5c8c1ustnusr" path="res://resrouces/talent_resources/Push/level12/Full_One_Arm_Handstand.tres" id="61_juaui"]
+[ext_resource type="Resource" uid="uid://b5sd5pgqkwcjk" path="res://resrouces/talent_resources/Push/level14/Planche_Push_Up.tres" id="62_85mbu"]
+[ext_resource type="Resource" uid="uid://b5dag2avuyvgl" path="res://resrouces/talent_resources/Push/level14/Two_Finger_Push_Up.tres" id="63_cgfm2"]
+[ext_resource type="PackedScene" uid="uid://brpavu0ocrgcq" path="res://widgets/top_navigation_bar/top_navigation_bar.tscn" id="64_dikhr"]
+[ext_resource type="Texture2D" uid="uid://dvobueh3j5k0v" path="res://assets/images/full-shot-ninja-wearing-equipment.jpg" id="65_ayqnk"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f5tui"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kao8b"]
 resource_local_to_scene = true
 content_margin_left = 0.0
 content_margin_top = 0.0
 content_margin_right = 0.0
 content_margin_bottom = 0.0
-bg_color = Color(0.36396736, 1, 0.33890283, 1)
+bg_color = Color(0.36450788, 0.9999996, 0.33833238, 0.6)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wl61l"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1wyum"]
 resource_local_to_scene = true
 content_margin_left = 0.0
 content_margin_top = 0.0
 content_margin_right = 0.0
 content_margin_bottom = 0.0
-bg_color = Color(0, 0.8129441, 0.012920001, 1)
+bg_color = Color(0, 0.8130081, 0.01740023, 0.6)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_27tyy"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_radis"]
 resource_local_to_scene = true
 content_margin_left = 0.0
 content_margin_top = 0.0
 content_margin_right = 0.0
 content_margin_bottom = 0.0
-bg_color = Color(0, 0.6437342, 0.012920001, 1)
+bg_color = Color(0, 0.6436178, 0.009535279, 0.6)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_02kou"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nfsvj"]
 resource_local_to_scene = true
 content_margin_left = 0.0
 content_margin_top = 0.0
 content_margin_right = 0.0
 content_margin_bottom = 0.0
-bg_color = Color(0, 0.40863404, 0, 1)
+bg_color = Color(0, 0.40900776, 5.7756904e-07, 0.6)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fkqyg"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rulg8"]
 resource_local_to_scene = true
 content_margin_left = 0.0
 content_margin_top = 0.0
 content_margin_right = 0.0
 content_margin_bottom = 0.0
-bg_color = Color(1, 1, 0, 1)
+bg_color = Color(1, 1, 0, 0.6)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2sx4l"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_melqs"]
 resource_local_to_scene = true
 content_margin_left = 0.0
 content_margin_top = 0.0
 content_margin_right = 0.0
 content_margin_bottom = 0.0
-bg_color = Color(1, 0.89471775, 0, 1)
+bg_color = Color(1, 0.89471775, 0, 0.6)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yj6u6"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x0vbt"]
 resource_local_to_scene = true
 content_margin_left = 0.0
 content_margin_top = 0.0
 content_margin_right = 0.0
 content_margin_bottom = 0.0
-bg_color = Color(1, 0.7887894, 0, 1)
+bg_color = Color(1, 0.7887894, 0, 0.6)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u0oi5"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ri21o"]
 resource_local_to_scene = true
 content_margin_left = 0.0
 content_margin_top = 0.0
 content_margin_right = 0.0
 content_margin_bottom = 0.0
-bg_color = Color(1, 0.6636825, 0, 1)
+bg_color = Color(1, 0.6636825, 0, 0.6)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hpqdf"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s116x"]
 resource_local_to_scene = true
 content_margin_left = 0.0
 content_margin_top = 0.0
 content_margin_right = 0.0
 content_margin_bottom = 0.0
-bg_color = Color(1, 0.50956357, 0, 1)
+bg_color = Color(1, 0.50956357, 0, 0.6)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_an8xt"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6s3ib"]
 resource_local_to_scene = true
 content_margin_left = 0.0
 content_margin_top = 0.0
 content_margin_right = 0.0
 content_margin_bottom = 0.0
-bg_color = Color(1, 0.36396736, 0, 1)
+bg_color = Color(1, 0.36396736, 0, 0.6)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6w60l"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dodd5"]
 resource_local_to_scene = true
 content_margin_left = 0.0
 content_margin_top = 0.0
 content_margin_right = 0.0
 content_margin_bottom = 0.0
-bg_color = Color(1, 0.11207495, 0, 1)
+bg_color = Color(1, 0.11207495, 0, 0.6)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_umkkt"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0vwhs"]
 resource_local_to_scene = true
 content_margin_left = 0.0
 content_margin_top = 0.0
 content_margin_right = 0.0
 content_margin_bottom = 0.0
-bg_color = Color(0.6755825, 0.06100855, 0, 1)
+bg_color = Color(0.6756096, 0.06184666, 1.92523e-07, 0.6)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wsunp"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_umaun"]
 resource_local_to_scene = true
 content_margin_left = 0.0
 content_margin_top = 0.0
 content_margin_right = 0.0
 content_margin_bottom = 0.0
-bg_color = Color(0.45411357, 0.025840001, 0, 1)
+bg_color = Color(0.45464492, 0.028306676, 0, 0.6)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2tkb7"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0w8oe"]
 resource_local_to_scene = true
 content_margin_left = 0.0
 content_margin_top = 0.0
 content_margin_right = 0.0
 content_margin_bottom = 0.0
-bg_color = Color(0.27619392, 0.012920001, 0, 1)
+bg_color = Color(0.2771099, 0.009809802, 3.6098065e-08, 0.6)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
@@ -956,18 +956,17 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[node name="TalentTreeNewVersion" type="Node2D" unique_id=169612495]
-z_index = 10
-position = Vector2(-50, 0)
-script = ExtResource("1_5h8hh")
+[node name="TalentTreeNewVersion" type="Node2D" unique_id=1911271462]
+script = ExtResource("1_vf5eu")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1919471361]
-position = Vector2(320, 800)
-limit_left = -7
-limit_top = -234
-limit_right = 5609
-limit_bottom = 1758
-script = ExtResource("2_qygrj")
+position = Vector2(360, 760)
+zoom = Vector2(0.8, 0.8)
+limit_left = -800
+limit_top = 0
+limit_right = 1600
+limit_bottom = 5600
+script = ExtResource("2_aqtqn")
 
 [node name="Panel" type="Control" parent="." unique_id=1639221956]
 z_index = -1
@@ -977,828 +976,790 @@ offset_top = -1840.0
 offset_right = 40.0
 offset_bottom = -1800.0
 
-[node name="LevelPanel1" parent="Panel" unique_id=183608095 instance=ExtResource("7_f5tui")]
+[node name="LevelPanel1" parent="Panel" unique_id=183608095 instance=ExtResource("3_1tmei")]
 layout_mode = 0
-theme_override_styles/panel = SubResource("StyleBoxFlat_f5tui")
+offset_left = -2080.0
+offset_top = 1840.0
+offset_right = 2920.0
+offset_bottom = 2240.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kao8b")
 title = "Level 1"
-panelColor = Color(0.36396736, 1, 0.33890283, 1)
+panelColor = Color(0.36450788, 0.9999996, 0.33833238, 0.6)
 
-[node name="LevelPanel2" parent="Panel" unique_id=903708383 instance=ExtResource("7_f5tui")]
+[node name="LevelPanel2" parent="Panel" unique_id=903708383 instance=ExtResource("3_1tmei")]
 layout_mode = 0
-offset_left = 400.0
-offset_right = 800.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_wl61l")
+offset_left = -2080.0
+offset_top = 2240.0
+offset_right = 2920.0
+offset_bottom = 2640.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1wyum")
 title = "Level 2"
-panelColor = Color(0, 0.8129441, 0.012920001, 1)
+panelColor = Color(0, 0.8130081, 0.01740023, 0.6)
 
-[node name="LevelPanel3" parent="Panel" unique_id=559742578 instance=ExtResource("7_f5tui")]
+[node name="LevelPanel3" parent="Panel" unique_id=559742578 instance=ExtResource("3_1tmei")]
 layout_mode = 0
-offset_left = 800.0
-offset_right = 1200.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_27tyy")
+offset_left = -2080.0
+offset_top = 2640.0
+offset_right = 2920.0
+offset_bottom = 3040.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_radis")
 title = "Level 2"
-panelColor = Color(0, 0.6437342, 0.012920001, 1)
+panelColor = Color(0, 0.6436178, 0.009535279, 0.6)
 
-[node name="LevelPanel4" parent="Panel" unique_id=1657249620 instance=ExtResource("7_f5tui")]
+[node name="LevelPanel4" parent="Panel" unique_id=1657249620 instance=ExtResource("3_1tmei")]
 layout_mode = 0
-offset_left = 1200.0
-offset_right = 1600.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_02kou")
+offset_left = -2080.0
+offset_top = 3040.0
+offset_right = 2920.0
+offset_bottom = 3440.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nfsvj")
 title = "Level 4"
-panelColor = Color(0, 0.40863404, 0, 1)
+panelColor = Color(0, 0.40900776, 5.7756904e-07, 0.6)
 
-[node name="LevelPanel5" parent="Panel" unique_id=534242182 instance=ExtResource("7_f5tui")]
+[node name="LevelPanel5" parent="Panel" unique_id=534242182 instance=ExtResource("3_1tmei")]
 layout_mode = 0
-offset_left = 1600.0
-offset_right = 2000.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_fkqyg")
+offset_left = -2080.0
+offset_top = 3440.0
+offset_right = 2920.0
+offset_bottom = 3840.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rulg8")
 title = "Level 5"
-panelColor = Color(1, 1, 0, 1)
+panelColor = Color(1, 1, 0, 0.6)
 
-[node name="LevelPanel6" parent="Panel" unique_id=764822567 instance=ExtResource("7_f5tui")]
+[node name="LevelPanel6" parent="Panel" unique_id=764822567 instance=ExtResource("3_1tmei")]
 layout_mode = 0
-offset_left = 2000.0
-offset_right = 2400.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_2sx4l")
+offset_left = -2080.0
+offset_top = 3840.0
+offset_right = 2920.0
+offset_bottom = 4240.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_melqs")
 title = "Level 6"
-panelColor = Color(1, 0.89471775, 0, 1)
+panelColor = Color(1, 0.89471775, 0, 0.6)
 
-[node name="LevelPanel7" parent="Panel" unique_id=376006062 instance=ExtResource("7_f5tui")]
+[node name="LevelPanel7" parent="Panel" unique_id=376006062 instance=ExtResource("3_1tmei")]
 layout_mode = 0
-offset_left = 2400.0
-offset_right = 2800.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_yj6u6")
+offset_left = -2080.0
+offset_top = 4240.0
+offset_right = 2920.0
+offset_bottom = 4640.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_x0vbt")
 title = "Level 7"
-panelColor = Color(1, 0.7887894, 0, 1)
+panelColor = Color(1, 0.7887894, 0, 0.6)
 
-[node name="LevelPanel8" parent="Panel" unique_id=1494934276 instance=ExtResource("7_f5tui")]
+[node name="LevelPanel8" parent="Panel" unique_id=1494934276 instance=ExtResource("3_1tmei")]
 layout_mode = 0
-offset_left = 2800.0
-offset_right = 3200.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_u0oi5")
+offset_left = -2080.0
+offset_top = 4640.0
+offset_right = 2920.0
+offset_bottom = 5040.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ri21o")
 title = "Level 8"
-panelColor = Color(1, 0.6636825, 0, 1)
+panelColor = Color(1, 0.6636825, 0, 0.6)
 
-[node name="LevelPanel9" parent="Panel" unique_id=740884095 instance=ExtResource("7_f5tui")]
+[node name="LevelPanel9" parent="Panel" unique_id=740884095 instance=ExtResource("3_1tmei")]
 layout_mode = 0
-offset_left = 3200.0
-offset_right = 3600.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_hpqdf")
+offset_left = -2080.0
+offset_top = 5040.0
+offset_right = 2920.0
+offset_bottom = 5440.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_s116x")
 title = "Level 9"
-panelColor = Color(1, 0.50956357, 0, 1)
+panelColor = Color(1, 0.50956357, 0, 0.6)
 
-[node name="LevelPanel10" parent="Panel" unique_id=1024860440 instance=ExtResource("7_f5tui")]
+[node name="LevelPanel10" parent="Panel" unique_id=1024860440 instance=ExtResource("3_1tmei")]
 layout_mode = 0
-offset_left = 3600.0
-offset_right = 4000.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_an8xt")
+offset_left = -2080.0
+offset_top = 5440.0
+offset_right = 2920.0
+offset_bottom = 5840.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6s3ib")
 title = "Level 10"
-panelColor = Color(1, 0.36396736, 0, 1)
+panelColor = Color(1, 0.36396736, 0, 0.6)
 
-[node name="LevelPanel11" parent="Panel" unique_id=1252642364 instance=ExtResource("7_f5tui")]
+[node name="LevelPanel11" parent="Panel" unique_id=1252642364 instance=ExtResource("3_1tmei")]
 layout_mode = 0
-offset_left = 4000.0
-offset_right = 4400.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_6w60l")
+offset_left = -2080.0
+offset_top = 5840.0
+offset_right = 2920.0
+offset_bottom = 6240.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dodd5")
 title = "Level 11"
-panelColor = Color(1, 0.11207495, 0, 1)
+panelColor = Color(1, 0.11207495, 0, 0.6)
 
-[node name="LevelPanel12" parent="Panel" unique_id=865688095 instance=ExtResource("7_f5tui")]
+[node name="LevelPanel12" parent="Panel" unique_id=865688095 instance=ExtResource("3_1tmei")]
 layout_mode = 0
-offset_left = 4400.0
-offset_right = 4800.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_umkkt")
+offset_left = -2080.0
+offset_top = 6240.0
+offset_right = 2920.0
+offset_bottom = 6640.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0vwhs")
 title = "Level 12"
-panelColor = Color(0.6755825, 0.06100855, 0, 1)
+panelColor = Color(0.6756096, 0.06184666, 1.92523e-07, 0.6)
 
-[node name="LevelPanel13" parent="Panel" unique_id=974178431 instance=ExtResource("7_f5tui")]
+[node name="LevelPanel13" parent="Panel" unique_id=974178431 instance=ExtResource("3_1tmei")]
 layout_mode = 0
-offset_left = 4800.0
-offset_right = 5200.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_wsunp")
+offset_left = -2080.0
+offset_top = 6640.0
+offset_right = 2920.0
+offset_bottom = 7040.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_umaun")
 title = "Level 13"
-panelColor = Color(0.45411357, 0.025840001, 0, 1)
+panelColor = Color(0.45464492, 0.028306676, 0, 0.6)
 
-[node name="LevelPanel14" parent="Panel" unique_id=1379524621 instance=ExtResource("7_f5tui")]
+[node name="LevelPanel14" parent="Panel" unique_id=1379524621 instance=ExtResource("3_1tmei")]
 layout_mode = 0
-offset_left = 5200.0
-offset_right = 5600.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_2tkb7")
+offset_left = -2080.0
+offset_top = 7040.0
+offset_right = 2920.0
+offset_bottom = 7440.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0w8oe")
 title = "Level 14"
-panelColor = Color(0.27619392, 0.012920001, 0, 1)
+panelColor = Color(0.2771099, 0.009809802, 3.6098065e-08, 0.6)
 
 [node name="Levels" type="Control" parent="." unique_id=1904421727]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-metadata/_edit_use_anchors_ = true
 
 [node name="Level1" type="Control" parent="Levels" unique_id=615710727]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-metadata/_edit_use_anchors_ = true
 
-[node name="Plank" parent="Levels/Level1" unique_id=2020655335 instance=ExtResource("3_h4tl1")]
+[node name="Plank" parent="Levels/Level1" unique_id=2020655335 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
-offset_left = 100.0
-offset_top = 300.0
-offset_right = 200.0
-offset_bottom = 400.0
+offset_left = 80.0
+offset_top = 160.0
+offset_right = 160.0
+offset_bottom = 240.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_xq83t")
-talentResource = ExtResource("4_pwglr")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("5_iinke")
 
-[node name="Wall Push Up" parent="Levels/Level1" unique_id=11585248 instance=ExtResource("3_h4tl1")]
+[node name="Wall Push Up" parent="Levels/Level1" unique_id=11585248 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
-offset_left = 200.0
-offset_top = 700.0
-offset_right = 300.0
-offset_bottom = 800.0
+offset_left = 400.0
+offset_top = 160.0
+offset_right = 480.0
+offset_bottom = 240.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_56tva")
-talentResource = ExtResource("5_cbejt")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("6_mmupr")
 
-[node name="Knee Bench Dip" parent="Levels/Level1" unique_id=1917956320 instance=ExtResource("3_h4tl1")]
+[node name="Knee Bench Dip" parent="Levels/Level1" unique_id=1917956320 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
-offset_left = 200.0
-offset_top = 1100.0
-offset_right = 300.0
-offset_bottom = 1200.0
+offset_left = 720.0
+offset_top = 160.0
+offset_right = 800.0
+offset_bottom = 240.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_3we4v")
-talentResource = ExtResource("6_vi4ac")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("7_ikl1u")
 
 [node name="Level2" type="Control" parent="Levels" unique_id=1978057843]
 anchors_preset = 0
-offset_left = 400.0
-offset_right = 440.0
-offset_bottom = 40.0
-metadata/_edit_use_anchors_ = true
+offset_top = 400.0
+offset_right = 40.0
+offset_bottom = 440.0
 
-[node name="Knee Planche Lean" parent="Levels/Level2" unique_id=651268211 instance=ExtResource("3_h4tl1")]
+[node name="Knee Planche Lean" parent="Levels/Level2" unique_id=651268211 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
-offset_left = 150.0
-offset_top = 150.0
-offset_right = 250.0
-offset_bottom = 250.0
+offset_left = -80.0
+offset_top = 160.0
+offset_bottom = 240.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_yxeb3")
-talentResource = ExtResource("7_4jkyh")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("8_ijrti")
 
-[node name="Wall Plank" parent="Levels/Level2" unique_id=344801460 instance=ExtResource("3_h4tl1")]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 1.25
-anchor_right = 1.25
-offset_left = 100.0
-offset_top = 300.0
-offset_right = 200.0
-offset_bottom = 400.0
+[node name="Wall Plank" parent="Levels/Level2" unique_id=344801460 instance=ExtResource("4_jq2fi")]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 160.0
+offset_right = 160.0
+offset_bottom = 240.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_fy4ec")
-talentResource = ExtResource("8_otpl1")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("9_lu33n")
 
-[node name="Incline Push Up" parent="Levels/Level2" unique_id=1509900767 instance=ExtResource("3_h4tl1")]
+[node name="Incline Push Up" parent="Levels/Level2" unique_id=1509900767 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
-offset_left = 150.0
-offset_top = 700.0
-offset_right = 250.0
-offset_bottom = 800.0
+offset_left = 400.0
+offset_top = 160.0
+offset_right = 480.0
+offset_bottom = 240.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_4nu5x")
-talentResource = ExtResource("9_sevft")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("10_83dn5")
 
-[node name="Bench Dip" parent="Levels/Level2" unique_id=801829627 instance=ExtResource("3_h4tl1")]
+[node name="Bench Dip" parent="Levels/Level2" unique_id=801829627 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
-offset_left = 150.0
-offset_top = 1400.0
-offset_right = 250.0
-offset_bottom = 1500.0
+offset_left = 720.0
+offset_top = 160.0
+offset_right = 800.0
+offset_bottom = 240.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_jtop3")
-talentResource = ExtResource("10_y5khn")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("11_4vs70")
 
 [node name="Level3" type="Control" parent="Levels" unique_id=1973911007]
 anchors_preset = 0
-offset_left = 800.0
-offset_right = 840.0
-offset_bottom = 40.0
-metadata/_edit_use_anchors_ = true
+offset_left = -80.0
+offset_top = 800.0
+offset_right = -40.0
+offset_bottom = 840.0
 
-[node name="Planche Lean" parent="Levels/Level3" unique_id=1437607908 instance=ExtResource("3_h4tl1")]
+[node name="Planche Lean" parent="Levels/Level3" unique_id=1437607908 instance=ExtResource("4_jq2fi")]
+layout_mode = 0
+offset_top = 160.0
+offset_right = 80.0
+offset_bottom = 240.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j8h5v")
+talentResource = ExtResource("12_pvor5")
+
+[node name="Assisted Pike Hold" parent="Levels/Level3" unique_id=1506276160 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 160.0
 offset_right = 240.0
 offset_bottom = 240.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_j8h5v")
-talentResource = ExtResource("11_yex7j")
-metadata/_edit_use_anchors_ = true
-
-[node name="Assisted Pike Hold" parent="Levels/Level3" unique_id=1506276160 instance=ExtResource("3_h4tl1")]
-layout_mode = 0
-offset_left = 160.0
-offset_top = 320.0
-offset_right = 240.0
-offset_bottom = 400.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_m2k2g")
-talentResource = ExtResource("12_osisg")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("13_01v3m")
 
-[node name="Knee Push up" parent="Levels/Level3" unique_id=1887006907 instance=ExtResource("3_h4tl1")]
+[node name="Knee Push up" parent="Levels/Level3" unique_id=1887006907 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
-offset_left = 160.0
-offset_top = 720.0
-offset_right = 240.0
-offset_bottom = 800.0
+offset_left = 480.0
+offset_top = 160.0
+offset_right = 560.0
+offset_bottom = 240.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_o62eq")
-talentResource = ExtResource("13_jppvt")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("14_xw50t")
 
-[node name="Decline Bench Dip" parent="Levels/Level3" unique_id=1644273765 instance=ExtResource("3_h4tl1")]
+[node name="Decline Bench Dip" parent="Levels/Level3" unique_id=1644273765 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
-offset_left = 160.0
-offset_top = 1440.0
-offset_right = 240.0
-offset_bottom = 1520.0
+offset_left = 800.0
+offset_top = 160.0
+offset_right = 880.0
+offset_bottom = 240.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_j7gpr")
-talentResource = ExtResource("14_rovrv")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("15_61j4y")
 
 [node name="Level4" type="Control" parent="Levels" unique_id=1455603017]
 anchors_preset = 0
-offset_left = 1200.0
-offset_right = 1240.0
-offset_bottom = 40.0
-metadata/_edit_use_anchors_ = true
+offset_left = 4720.0
+offset_top = 320.0
+offset_right = 4760.0
+offset_bottom = 360.0
 
-[node name="Decline Planche Lean" parent="Levels/Level4" unique_id=226177860 instance=ExtResource("3_h4tl1")]
+[node name="Decline Planche Lean" parent="Levels/Level4" unique_id=226177860 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 160.0
 offset_right = 240.0
 offset_bottom = 240.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_8lrwr")
-talentResource = ExtResource("15_1y6pl")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("16_748wq")
 
-[node name="Half Wall Handstand" parent="Levels/Level4" unique_id=1334162920 instance=ExtResource("3_h4tl1")]
+[node name="Half Wall Handstand" parent="Levels/Level4" unique_id=1334162920 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 320.0
 offset_right = 240.0
 offset_bottom = 400.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_fu6ud")
-talentResource = ExtResource("16_0ty8p")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("17_fkkm6")
 
-[node name="Push up" parent="Levels/Level4" unique_id=777534693 instance=ExtResource("3_h4tl1")]
+[node name="Push up" parent="Levels/Level4" unique_id=777534693 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 720.0
 offset_right = 240.0
 offset_bottom = 800.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_rwrsg")
-talentResource = ExtResource("17_tuhdv")
+talentResource = ExtResource("18_ldvrc")
 isGoal = true
-metadata/_edit_use_anchors_ = true
 
-[node name="Negative Dip" parent="Levels/Level4" unique_id=77566552 instance=ExtResource("3_h4tl1")]
+[node name="Negative Dip" parent="Levels/Level4" unique_id=77566552 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 1440.0
 offset_right = 240.0
 offset_bottom = 1520.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_8l4lh")
-talentResource = ExtResource("18_03wsf")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("19_66tb1")
 
 [node name="Level5" type="Control" parent="Levels" unique_id=2116571796]
 anchors_preset = 0
-offset_left = 1600.0
-offset_right = 1640.0
-offset_bottom = 40.0
-metadata/_edit_use_anchors_ = true
+offset_left = 5120.0
+offset_top = 320.0
+offset_right = 5160.0
+offset_bottom = 360.0
 
-[node name="Frog Stand" parent="Levels/Level5" unique_id=62787777 instance=ExtResource("3_h4tl1")]
+[node name="Frog Stand" parent="Levels/Level5" unique_id=62787777 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 160.0
 offset_right = 240.0
 offset_bottom = 240.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_t4pb8")
-talentResource = ExtResource("19_8qljg")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("20_xnkkj")
 
-[node name="Wall Walk Handstand" parent="Levels/Level5" unique_id=1356816250 instance=ExtResource("3_h4tl1")]
+[node name="Wall Walk Handstand" parent="Levels/Level5" unique_id=1356816250 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 320.0
 offset_right = 240.0
 offset_bottom = 400.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_anq03")
-talentResource = ExtResource("20_isaos")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("21_0es3b")
 
-[node name="Pike Push up" parent="Levels/Level5" unique_id=1646871227 instance=ExtResource("3_h4tl1")]
+[node name="Pike Push up" parent="Levels/Level5" unique_id=1646871227 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 560.0
 offset_right = 240.0
 offset_bottom = 640.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_6bt02")
-talentResource = ExtResource("21_fq2tk")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("22_0htne")
 
-[node name="Explosive Push Up" parent="Levels/Level5" unique_id=145609567 instance=ExtResource("3_h4tl1")]
+[node name="Explosive Push Up" parent="Levels/Level5" unique_id=145609567 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 720.0
 offset_right = 240.0
 offset_bottom = 800.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_5ismx")
-talentResource = ExtResource("22_yfryy")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("23_r04sw")
 
-[node name="Decline Push Up" parent="Levels/Level5" unique_id=1212431640 instance=ExtResource("3_h4tl1")]
+[node name="Decline Push Up" parent="Levels/Level5" unique_id=1212431640 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 880.0
 offset_right = 240.0
 offset_bottom = 960.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_mmtku")
-talentResource = ExtResource("23_xjx5r")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("24_7s0x6")
 
-[node name="Knee Pseudo Push Up" parent="Levels/Level5" unique_id=1815974362 instance=ExtResource("3_h4tl1")]
+[node name="Knee Pseudo Push Up" parent="Levels/Level5" unique_id=1815974362 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 1040.0
 offset_right = 240.0
 offset_bottom = 1120.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_l8d0i")
-talentResource = ExtResource("24_cbodw")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("25_dcaqu")
 
-[node name="Diamond Push Up" parent="Levels/Level5" unique_id=1364453948 instance=ExtResource("3_h4tl1")]
+[node name="Diamond Push Up" parent="Levels/Level5" unique_id=1364453948 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 1200.0
 offset_right = 240.0
 offset_bottom = 1280.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_7rhtp")
-talentResource = ExtResource("25_hi8g2")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("26_1so47")
 
-[node name="Dip" parent="Levels/Level5" unique_id=413438054 instance=ExtResource("3_h4tl1")]
+[node name="Dip" parent="Levels/Level5" unique_id=413438054 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 1440.0
 offset_right = 240.0
 offset_bottom = 1520.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_1746g")
-talentResource = ExtResource("26_3cxpg")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("27_c2bv4")
 
 [node name="Level6" type="Control" parent="Levels" unique_id=1617244342]
 anchors_preset = 0
-offset_left = 2000.0
-offset_right = 2040.0
-offset_bottom = 40.0
-metadata/_edit_use_anchors_ = true
+offset_left = 5520.0
+offset_top = 320.0
+offset_right = 5560.0
+offset_bottom = 360.0
 
-[node name="Low Tuck Planche" parent="Levels/Level6" unique_id=1674287850 instance=ExtResource("3_h4tl1")]
+[node name="Low Tuck Planche" parent="Levels/Level6" unique_id=1674287850 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 160.0
 offset_right = 240.0
 offset_bottom = 240.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_aafkk")
-talentResource = ExtResource("27_ear8o")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("28_vj5jk")
 
-[node name="Full Wall Handstand" parent="Levels/Level6" unique_id=788965702 instance=ExtResource("3_h4tl1")]
+[node name="Full Wall Handstand" parent="Levels/Level6" unique_id=788965702 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 320.0
 offset_right = 240.0
 offset_bottom = 400.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_vsp6e")
-talentResource = ExtResource("28_5hgie")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("29_8oymf")
 
-[node name="Decline Pike Push Up" parent="Levels/Level6" unique_id=918144748 instance=ExtResource("3_h4tl1")]
+[node name="Decline Pike Push Up" parent="Levels/Level6" unique_id=918144748 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
-offset_left = 160.0
+offset_left = 80.0
 offset_top = 560.0
-offset_right = 240.0
+offset_right = 160.0
 offset_bottom = 640.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_6lwvu")
-talentResource = ExtResource("29_krdhy")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("30_3fifj")
 
-[node name="Clapping Push Up" parent="Levels/Level6" unique_id=1872190166 instance=ExtResource("3_h4tl1")]
+[node name="Clapping Push Up" parent="Levels/Level6" unique_id=1872190166 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
-offset_left = 160.0
+offset_left = 80.0
 offset_top = 720.0
-offset_right = 240.0
+offset_right = 160.0
 offset_bottom = 800.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_4efmp")
-talentResource = ExtResource("30_mx12v")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("31_fsxqo")
 
-[node name="Archer Push Up" parent="Levels/Level6" unique_id=1786126886 instance=ExtResource("3_h4tl1")]
+[node name="Archer Push Up" parent="Levels/Level6" unique_id=1786126886 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 880.0
 offset_right = 160.0
 offset_bottom = 960.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_xgdog")
-talentResource = ExtResource("31_cgb17")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("32_bmuno")
 
-[node name="Wall One Arm Push Up" parent="Levels/Level6" unique_id=1290189865 instance=ExtResource("3_h4tl1")]
+[node name="Wall One Arm Push Up" parent="Levels/Level6" unique_id=1290189865 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 880.0
 offset_right = 240.0
 offset_bottom = 960.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_qyjem")
-talentResource = ExtResource("32_yjb8n")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("33_h8g8k")
 
-[node name="Pseudo Planche Push Up" parent="Levels/Level6" unique_id=419063575 instance=ExtResource("3_h4tl1")]
+[node name="Pseudo Planche Push Up" parent="Levels/Level6" unique_id=419063575 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
-offset_left = 160.0
+offset_left = 80.0
 offset_top = 1040.0
-offset_right = 240.0
+offset_right = 160.0
 offset_bottom = 1120.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_bowxf")
-talentResource = ExtResource("33_qanwh")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("34_30i2s")
 
-[node name="Decline Diamond Push Up" parent="Levels/Level6" unique_id=1863167781 instance=ExtResource("3_h4tl1")]
+[node name="Decline Diamond Push Up" parent="Levels/Level6" unique_id=1863167781 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 240.0
 offset_top = 1200.0
 offset_right = 320.0
 offset_bottom = 1280.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_b4c6f")
-talentResource = ExtResource("34_g74gx")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("35_sepel")
 
-[node name="Sphinx Push Up" parent="Levels/Level6" unique_id=1549909742 instance=ExtResource("3_h4tl1")]
+[node name="Sphinx Push Up" parent="Levels/Level6" unique_id=1549909742 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 1200.0
 offset_right = 160.0
 offset_bottom = 1280.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_eomii")
-talentResource = ExtResource("35_d3hbj")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("36_ey1ih")
 
-[node name="Pike Diamond Push Up" parent="Levels/Level6" unique_id=297053500 instance=ExtResource("3_h4tl1")]
+[node name="Pike Diamond Push Up" parent="Levels/Level6" unique_id=297053500 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 1200.0
 offset_right = 240.0
 offset_bottom = 1280.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_hf3n3")
-talentResource = ExtResource("36_wglab")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("37_3jhkh")
 
-[node name="Tuck L-Sit Dip" parent="Levels/Level6" unique_id=959770750 instance=ExtResource("3_h4tl1")]
+[node name="Tuck L-Sit Dip" parent="Levels/Level6" unique_id=959770750 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 1440.0
 offset_right = 240.0
 offset_bottom = 1520.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_cko6u")
-talentResource = ExtResource("37_tagad")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("38_tysla")
 
 [node name="Level7" type="Control" parent="Levels" unique_id=478728729]
 anchors_preset = 0
-offset_left = 2400.0
-offset_right = 2440.0
-offset_bottom = 40.0
-metadata/_edit_use_anchors_ = true
+offset_left = 5920.0
+offset_top = 320.0
+offset_right = 5960.0
+offset_bottom = 360.0
 
-[node name="Tuck Planche" parent="Levels/Level7" unique_id=757413343 instance=ExtResource("3_h4tl1")]
+[node name="Tuck Planche" parent="Levels/Level7" unique_id=757413343 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 160.0
 offset_right = 240.0
 offset_bottom = 240.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_0w8lb")
-talentResource = ExtResource("38_plfhw")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("39_cp8lj")
 
-[node name="Handstand" parent="Levels/Level7" unique_id=1912060687 instance=ExtResource("3_h4tl1")]
+[node name="Handstand" parent="Levels/Level7" unique_id=1912060687 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 320.0
 offset_right = 240.0
 offset_bottom = 400.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ydrr4")
-talentResource = ExtResource("39_pralu")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("40_656d2")
 
-[node name="Wall Handstand Push Up" parent="Levels/Level7" unique_id=901383733 instance=ExtResource("3_h4tl1")]
+[node name="Wall Handstand Push Up" parent="Levels/Level7" unique_id=901383733 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 560.0
 offset_right = 240.0
 offset_bottom = 640.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_x1d6p")
-talentResource = ExtResource("40_p4x7d")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("41_4liab")
 
-[node name="Triple Clap Push Up" parent="Levels/Level7" unique_id=707395992 instance=ExtResource("3_h4tl1")]
+[node name="Triple Clap Push Up" parent="Levels/Level7" unique_id=707395992 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 720.0
 offset_right = 240.0
 offset_bottom = 800.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ctjib")
-talentResource = ExtResource("41_nnbr1")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("42_whgvc")
 
-[node name="Incline One Arm Push Up" parent="Levels/Level7" unique_id=929704444 instance=ExtResource("3_h4tl1")]
+[node name="Incline One Arm Push Up" parent="Levels/Level7" unique_id=929704444 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 880.0
 offset_right = 240.0
 offset_bottom = 960.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_it7sy")
-talentResource = ExtResource("42_7c32t")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("43_xe1mu")
 
-[node name="L-Sit Dip" parent="Levels/Level7" unique_id=2067413277 instance=ExtResource("3_h4tl1")]
+[node name="L-Sit Dip" parent="Levels/Level7" unique_id=2067413277 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 1440.0
 offset_right = 240.0
 offset_bottom = 1520.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_3utb6")
-talentResource = ExtResource("43_px0cx")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("44_53gmu")
 
 [node name="Level8" type="Control" parent="Levels" unique_id=67289193]
 anchors_preset = 0
-offset_left = 2800.0
-offset_right = 2840.0
-offset_bottom = 40.0
-metadata/_edit_use_anchors_ = true
+offset_left = 6320.0
+offset_top = 320.0
+offset_right = 6360.0
+offset_bottom = 360.0
 
-[node name="One Leg Adv_ Tuck Planche" parent="Levels/Level8" unique_id=204201893 instance=ExtResource("3_h4tl1")]
+[node name="One Leg Adv_ Tuck Planche" parent="Levels/Level8" unique_id=204201893 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 160.0
 offset_right = 240.0
 offset_bottom = 240.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_yjhvh")
-talentResource = ExtResource("44_nva1u")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("45_scvaj")
 
-[node name="Tuck Handstand" parent="Levels/Level8" unique_id=1111477762 instance=ExtResource("3_h4tl1")]
+[node name="Tuck Handstand" parent="Levels/Level8" unique_id=1111477762 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 320.0
 offset_right = 240.0
 offset_bottom = 400.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_2y7hn")
-talentResource = ExtResource("45_gaaee")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("46_yvrh4")
 
-[node name="Negative Handstand Push Up" parent="Levels/Level8" unique_id=227521730 instance=ExtResource("3_h4tl1")]
+[node name="Negative Handstand Push Up" parent="Levels/Level8" unique_id=227521730 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 480.0
 offset_right = 240.0
 offset_bottom = 560.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_8dqsv")
-talentResource = ExtResource("46_scltn")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("47_6y2co")
 
-[node name="Straddle one arm Push Up" parent="Levels/Level8" unique_id=463057359 instance=ExtResource("3_h4tl1")]
+[node name="Straddle one arm Push Up" parent="Levels/Level8" unique_id=463057359 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 880.0
 offset_right = 240.0
 offset_bottom = 960.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_squx7")
-talentResource = ExtResource("47_btiqw")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("48_d74gm")
 
-[node name="Tuck Planche Push Up" parent="Levels/Level8" unique_id=1419595218 instance=ExtResource("3_h4tl1")]
+[node name="Tuck Planche Push Up" parent="Levels/Level8" unique_id=1419595218 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 1040.0
 offset_right = 240.0
 offset_bottom = 1120.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_d87g4")
-talentResource = ExtResource("48_c1yal")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("49_7j1ij")
 
 [node name="Level9" type="Control" parent="Levels" unique_id=1492983817]
 anchors_preset = 0
-offset_left = 3200.0
-offset_right = 3240.0
-offset_bottom = 40.0
-metadata/_edit_use_anchors_ = true
+offset_left = 6720.0
+offset_top = 320.0
+offset_right = 6760.0
+offset_bottom = 360.0
 
-[node name="Adv_ Tuck Planche" parent="Levels/Level9" unique_id=387118405 instance=ExtResource("3_h4tl1")]
+[node name="Adv_ Tuck Planche" parent="Levels/Level9" unique_id=387118405 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 160.0
 offset_right = 240.0
 offset_bottom = 240.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_whov6")
-talentResource = ExtResource("49_j2rua")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("50_f8jxb")
 
-[node name="Wall One Arm Handstand" parent="Levels/Level9" unique_id=1397396608 instance=ExtResource("3_h4tl1")]
+[node name="Wall One Arm Handstand" parent="Levels/Level9" unique_id=1397396608 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 320.0
 offset_right = 240.0
 offset_bottom = 400.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_biaws")
-talentResource = ExtResource("50_xfpqy")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("51_j8lrx")
 
-[node name="Handstand Push Up" parent="Levels/Level9" unique_id=624346934 instance=ExtResource("3_h4tl1")]
+[node name="Handstand Push Up" parent="Levels/Level9" unique_id=624346934 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 480.0
 offset_right = 240.0
 offset_bottom = 560.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_6d6nx")
-talentResource = ExtResource("51_vxo73")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("52_l52nc")
 
-[node name="One Arm Push Up" parent="Levels/Level9" unique_id=1948966552 instance=ExtResource("3_h4tl1")]
+[node name="One Arm Push Up" parent="Levels/Level9" unique_id=1948966552 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 880.0
 offset_right = 240.0
 offset_bottom = 960.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_sv5sx")
-talentResource = ExtResource("52_cctiy")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("53_65rth")
 
 [node name="Level10" type="Control" parent="Levels" unique_id=788415961]
 anchors_preset = 0
-offset_left = 3600.0
-offset_right = 3640.0
-offset_bottom = 40.0
-metadata/_edit_use_anchors_ = true
+offset_left = 7120.0
+offset_top = 320.0
+offset_right = 7160.0
+offset_bottom = 360.0
 
-[node name="Straddle Planche" parent="Levels/Level10" unique_id=1897191765 instance=ExtResource("3_h4tl1")]
+[node name="Straddle Planche" parent="Levels/Level10" unique_id=1897191765 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_right = 240.0
 offset_bottom = 80.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_vicrv")
-talentResource = ExtResource("53_c87xr")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("54_ldhns")
 
-[node name="One-Leg Planche" parent="Levels/Level10" unique_id=1948165013 instance=ExtResource("3_h4tl1")]
+[node name="One-Leg Planche" parent="Levels/Level10" unique_id=1948165013 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 160.0
 offset_right = 240.0
 offset_bottom = 240.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_e7ntx")
-talentResource = ExtResource("54_tijwd")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("55_d6ate")
 
-[node name="Finger-Assisted-One Hand Handstand" parent="Levels/Level10" unique_id=1326407355 instance=ExtResource("3_h4tl1")]
+[node name="Finger-Assisted-One Hand Handstand" parent="Levels/Level10" unique_id=1326407355 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 320.0
 offset_right = 240.0
 offset_bottom = 400.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_k15vi")
-talentResource = ExtResource("55_822qd")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("56_d7rs0")
 
-[node name="Decline One Arm Push Up" parent="Levels/Level10" unique_id=312582233 instance=ExtResource("3_h4tl1")]
+[node name="Decline One Arm Push Up" parent="Levels/Level10" unique_id=312582233 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 880.0
 offset_right = 240.0
 offset_bottom = 960.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_fgeea")
-talentResource = ExtResource("56_bmbsc")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("57_w3c6j")
 
 [node name="Level11" type="Control" parent="Levels" unique_id=721782697]
 anchors_preset = 0
-offset_left = 4000.0
-offset_right = 4040.0
-offset_bottom = 40.0
-metadata/_edit_use_anchors_ = true
+offset_left = 7520.0
+offset_top = 320.0
+offset_right = 7560.0
+offset_bottom = 360.0
 
-[node name="One Arm Handstand" parent="Levels/Level11" unique_id=510827004 instance=ExtResource("3_h4tl1")]
+[node name="One Arm Handstand" parent="Levels/Level11" unique_id=510827004 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 320.0
 offset_right = 240.0
 offset_bottom = 400.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_7ixdg")
-talentResource = ExtResource("57_6884j")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("58_5vnu8")
 
-[node name="Weighted decline One Arm Push Up" parent="Levels/Level11" unique_id=205998840 instance=ExtResource("3_h4tl1")]
+[node name="Weighted decline One Arm Push Up" parent="Levels/Level11" unique_id=205998840 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 880.0
 offset_right = 240.0
 offset_bottom = 960.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_7vwq3")
-talentResource = ExtResource("58_es5yy")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("59_37iw5")
 
 [node name="Level12" type="Control" parent="Levels" unique_id=1539813487]
 anchors_preset = 0
-offset_left = 4400.0
-offset_right = 4440.0
-offset_bottom = 40.0
-metadata/_edit_use_anchors_ = true
+offset_left = 7920.0
+offset_top = 320.0
+offset_right = 7960.0
+offset_bottom = 360.0
 
-[node name="Planche" parent="Levels/Level12" unique_id=193581619 instance=ExtResource("3_h4tl1")]
+[node name="Planche" parent="Levels/Level12" unique_id=193581619 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 80.0
 offset_right = 240.0
 offset_bottom = 160.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_puvt6")
-talentResource = ExtResource("59_2m2s2")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("60_tvtbp")
 
-[node name="Full One Arm Handstand" parent="Levels/Level12" unique_id=2038841406 instance=ExtResource("3_h4tl1")]
+[node name="Full One Arm Handstand" parent="Levels/Level12" unique_id=2038841406 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 320.0
 offset_right = 240.0
 offset_bottom = 400.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_qucqe")
-talentResource = ExtResource("60_diirg")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("61_juaui")
 
 [node name="Level13" type="Control" parent="Levels" unique_id=908923569]
 anchors_preset = 0
-offset_left = 4800.0
-offset_right = 4840.0
-offset_bottom = 40.0
-metadata/_edit_use_anchors_ = true
+offset_left = 8320.0
+offset_top = 320.0
+offset_right = 8360.0
+offset_bottom = 360.0
 
 [node name="Level14" type="Control" parent="Levels" unique_id=788389517]
 anchors_preset = 0
-offset_left = 5200.0
-offset_right = 5240.0
-offset_bottom = 40.0
-metadata/_edit_use_anchors_ = true
+offset_left = 8720.0
+offset_top = 320.0
+offset_right = 8760.0
+offset_bottom = 360.0
 
-[node name="Planche Push Up" parent="Levels/Level14" unique_id=715928158 instance=ExtResource("3_h4tl1")]
+[node name="Planche Push Up" parent="Levels/Level14" unique_id=715928158 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 480.0
 offset_right = 240.0
 offset_bottom = 560.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_n43an")
-talentResource = ExtResource("61_wkdks")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("62_85mbu")
 
-[node name="Two Finger Push Up" parent="Levels/Level14" unique_id=1836015859 instance=ExtResource("3_h4tl1")]
+[node name="Two Finger Push Up" parent="Levels/Level14" unique_id=1836015859 instance=ExtResource("4_jq2fi")]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 880.0
 offset_right = 240.0
 offset_bottom = 960.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_qvjfs")
-talentResource = ExtResource("62_7sif4")
-metadata/_edit_use_anchors_ = true
+talentResource = ExtResource("63_cgfm2")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=414674488]
+layer = -1
 
-[node name="TopNavigationBar" parent="CanvasLayer" unique_id=1608733309 instance=ExtResource("63_5gmrd")]
+[node name="TopNavigationBar" parent="CanvasLayer" unique_id=1608733309 instance=ExtResource("64_dikhr")]
 unique_name_in_owner = true
-offset_left = -50.0
-offset_right = -50.0
 offset_bottom = 100.0
 title = "PUSH"
-metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=630799801]
 visible = false
 z_index = -1
-texture = ExtResource("64_23qmh")
+texture = ExtResource("65_ayqnk")
 centered = false
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1948956679]
 unique_name_in_owner = true
+visible = false

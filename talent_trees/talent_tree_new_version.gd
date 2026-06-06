@@ -1,5 +1,4 @@
-extends Control
-class_name TalentTree
+extends Node2D
 
 signal selected_talent
 
@@ -10,9 +9,7 @@ signal selected_talent
 		_reset_talents()
 		
 @onready var top_navigation_bar: TopNavigationBar = %TopNavigationBar
-@onready var scroll_container: ScrollContainer = %ScrollContainer
-@onready var content_container: MarginContainer = %ContentContainer
-@onready var skill_container: HBoxContainer = %SkillContainer
+@onready var canvas_layer: CanvasLayer = %CanvasLayer2
 
 const INFO_WINDOW = preload("uid://4abutnd18e4i")
 
@@ -28,9 +25,7 @@ func _set_signals() -> void:
 	for talentIcon in get_tree().get_nodes_in_group("talentIcon"):
 		talentIcon.selected.connect(_on_talent_icon_selected)
 
-func _on_talent_icon_selected(talentResource: TalentResource) -> void:
-	if talentSelection or not talentResource: return
-	
+func _on_talent_icon_selected(talentResource: TalentResource) -> void:	
 	var title: String = talentResource.get_talent_name()
 	var exerciseHistory: Exercise_History = SaveAndLoad.load_exercise_history(talentResource.get_uid())
 	
@@ -40,9 +35,12 @@ func _on_talent_icon_selected(talentResource: TalentResource) -> void:
 	
 	var infoWindowNode := INFO_WINDOW.instantiate()
 	infoWindowNode.title = title
+	infoWindowNode.talentResource = talentResource
 	infoWindowNode.exerciseHistory = exerciseHistory
+	infoWindowNode.withTalentSelection = talentSelection
+	infoWindowNode.selected.connect(_on_info_window_talent_selection)
 	
-	add_child(infoWindowNode)
+	canvas_layer.add_child(infoWindowNode)
 	
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("quit"): 
@@ -54,30 +52,30 @@ func _process(_delta: float) -> void:
 func _draw() -> void:
 	for talentNode: TalentIcon in get_tree().get_nodes_in_group("talents"):
 		if talentNode.talentResource == null: continue
-
+		
 		for resource: TalentResource in talentNode.talentResource.unlocks:
 			var targetNode := _get_node_with_resource(resource)
-			var sourcePosition: Vector2 = ((talentNode.global_position) 
-				+ (talentNode.get_center() * scroll_container.scale.x))
+			var sourcePosition: Vector2 = talentNode.global_position + talentNode.get_center()
 			
 			if targetNode == null: 
 				push_error(talentNode, " talent not available")
 				continue
 			
-			var targetPosition: Vector2 = (targetNode.global_position) + (targetNode.get_center()* scroll_container.scale.x)
-			var color := Color.GRAY
+			var targetPosition: Vector2 = targetNode.global_position + targetNode.get_center()
+			var color := Color.FLORAL_WHITE
 			
 			var isUnlocked: bool = targetNode.talentResource.get_uid() in GlobalData.exerciseUnlocked
 			
 			if isUnlocked:
 				color = Color.BLACK
-		
-			if targetPosition.y < 200: continue
 			
 			draw_line(sourcePosition, targetPosition, color, 7.0)
 
 func _get_node_with_resource(resource: TalentResource) -> TalentIcon:
 	for talentNode: TalentIcon in get_tree().get_nodes_in_group("talents"):
+		if not resource:
+			continue
+		
 		if talentNode.talentResource.get_talent_name() == resource.get_talent_name() :
 			return talentNode
 			
@@ -113,10 +111,11 @@ func _set_talent_selection() -> void:
 	top_navigation_bar.hide_back_button()
 	top_navigation_bar.show_close_button()
 	
-	for talent: TalentIcon in get_tree().get_nodes_in_group("talents"):
-		talent.button.pressed.connect(_get_selected_talent.bind(talent.talentResource))
-
-func _get_selected_talent(talent: TalentResource) -> void:
+	#for talentIcon: TalentIcon in get_tree().get_nodes_in_group("talents"):
+		#talentIcon.button.pressed.connect(_get_selected_talent.bind(talentIcon.talentResource))
+#
+func _on_info_window_talent_selection(talent: TalentResource) -> void:
+	print("test")
 	selected_talent.emit(talent)
 	queue_free()
 

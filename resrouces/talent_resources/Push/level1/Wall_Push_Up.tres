@@ -6,3 +6,4 @@
 [resource]
 script = ExtResource("1_50y3l")
 unlocks = Array[ExtResource("1_50y3l")]([ExtResource("2_e1xf1")])
+videoLink = "https://www.youtube.com/shorts/dXYwYbE75Po"
