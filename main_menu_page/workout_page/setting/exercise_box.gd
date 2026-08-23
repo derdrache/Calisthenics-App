@@ -53,6 +53,7 @@ func _set_sets_window() -> void:
 	
 func _change_sets_value(newValue: String) -> void:
 	sets = int(newValue)
+	
 	_refresh_sets_label()
 
 	changed.emit()
