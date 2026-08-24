@@ -8,30 +8,39 @@ extends Control
 @onready var exercise_container: VBoxContainer = %ExerciseContainer
 @onready var save_workout_button: Button = %SaveWorkoutButton
 @onready var name_input_box: LineEdit = %NameInputBox
+@onready var circle_button: Button = %CircleButton
 
 const EXERCISE_BOX = preload("res://main_menu_page/workout_page/setting/exercise_box.tscn")
 const LABEL_SELECTION_CARUSEL = preload("res://widgets/selection_carusel/label_selection_carusel.tscn")
 
 var globalBreakTime : int = GlobalData.initialBreakTime
 var workoutModus: GlobalData.workout_modus = GlobalData.workout_modus.NORMAL
+var circles: int = 1
 
 func _ready() -> void:
-	modus_button.pressed.connect(_set_modus_window)
-	global_break_button.pressed.connect(_set_break_window)
-	save_workout_button.pressed.connect(_save_workout)
-	
-	_refresh_modus_button_label()
-	_refresh_global_break_button_label()
-	
-	_add_exercise()
+	circle_button.hide()
 	
 	_load_workout()
 	
-func _refresh_modus_button_label() -> void:
-	modus_button.text = "Modus:\n" + GlobalData.workout_modus.keys()[workoutModus]
+	modus_button.title = "Modus:"
+	modus_button.selectionList = GlobalData.workout_modus.keys()
+	modus_button.initialValue = workoutModus
+	modus_button.changed.connect(_change_modus)
 	
-func _refresh_global_break_button_label() -> void:
-	global_break_button.text = "Break:\n" + str(globalBreakTime) + " sec"
+	global_break_button.title = "Global Break Time"
+	global_break_button.initialValue = globalBreakTime
+	global_break_button.maxValue = 600
+	global_break_button.steps = 30
+	global_break_button.changed.connect(_change_break_time)
+	
+	circle_button.title = "Circles"
+	circle_button.maxValue = 20
+	circle_button.initialValue = circles
+	circle_button.changed.connect(_change_circle_value)
+
+	save_workout_button.pressed.connect(_save_workout)
+	
+	_add_exercise()
 	
 func _get_all_exersice_data() -> Array[Exercise]:
 	var exerciseList: Array[Exercise] = []
@@ -85,45 +94,30 @@ func _on_exercise_container_changed(exercise_box: Control) -> void:
 	connectionContainer.change_break_time(exercise_box.breakTime)
 	connectionContainer.change_sets(exercise_box.sets)
 
-func _set_break_window() -> void:
-	var selectionCaruselNode: LabelSelectionCarusel = LABEL_SELECTION_CARUSEL.instantiate()
-	selectionCaruselNode.title = "Global Break Time"
-	selectionCaruselNode.maxValue = 600
-	selectionCaruselNode.initialValue = int(globalBreakTime)
-	selectionCaruselNode.steps = 30
-	
-	add_child(selectionCaruselNode)
-	selectionCaruselNode.global_position = global_break_button.global_position
-	
-	selectionCaruselNode.valueChanged.connect(_change_break_time)
-
 func _change_break_time(newValue: String) -> void:
 	globalBreakTime = int(newValue)
-	_refresh_global_break_button_label()
 	
 	for container: Control in exercise_container.get_children():		
 		container.change_break_time(globalBreakTime)
 
-func _set_modus_window() -> void:
-	var selectionCaruselNode: LabelSelectionCarusel = LABEL_SELECTION_CARUSEL.instantiate()
-	
-	selectionCaruselNode.title = "Workout Modus"
-	selectionCaruselNode.stringList = GlobalData.workout_modus.keys()
-	selectionCaruselNode.initialValue = workoutModus
-
-	add_child(selectionCaruselNode)
-	selectionCaruselNode.global_position = modus_button.global_position
-	selectionCaruselNode.valueChanged.connect(_change_modus)	
-
 func _change_modus(newValue: String) -> void:
 	var newModus: GlobalData.workout_modus = GlobalData.workout_modus[newValue]
 	workoutModus = newModus
-	_refresh_modus_button_label()
 	
-	if newModus == GlobalData.workout_modus.SUPERSET:
-		_check_superset_setup()
-		
-func _check_superset_setup() -> void:
+	_reset_modus_setup()
+	
+	_setup_modus(newModus)
+	
+func _setup_modus(modus: GlobalData.workout_modus) -> void:
+	if modus == GlobalData.workout_modus.SUPERSET:
+		_setup_superset_setup()
+	if modus == GlobalData.workout_modus.CIRCLE:
+		_setup_circle_modus()
+
+func _reset_modus_setup() -> void:
+	circle_button.hide()
+
+func _setup_superset_setup() -> void:
 	var childCount: int = exercise_container.get_child_count()
 	var isOdd: bool = childCount / 2 == 0
 
@@ -131,7 +125,12 @@ func _check_superset_setup() -> void:
 		return
 	
 	_add_exercise()
-	
+
+func _setup_circle_modus() -> void:
+	circle_button.show()
+
+func _change_circle_value(newValue: String) -> void:
+	circles = int(newValue)
 
 func _save_workout() -> void:
 	if _get_all_exersice_data().is_empty(): return
@@ -147,6 +146,7 @@ func _save_workout() -> void:
 	workoutData.modus = workoutModus
 	workoutData.globalBreak = globalBreakTime
 	workoutData.exercises = _get_all_exersice_data()
+	workoutData.circles = circles
 
 		
 	SaveAndLoad.save_resource(GlobalData.SAVE_WORKOUT_PATH, workoutData, workoutData.id)
@@ -156,14 +156,11 @@ func _save_workout() -> void:
 func _load_workout() -> void:
 	if not selectedWorkout:
 		return
-		
-	exercise_container.get_children()[0].queue_free()
 	
 	workoutModus = selectedWorkout.modus
+	_setup_modus(workoutModus)
 	globalBreakTime = selectedWorkout.globalBreak
-	
-	_refresh_modus_button_label()
-	_refresh_global_break_button_label()
+	circles = selectedWorkout.circles
 	
 	name_input_box.text = selectedWorkout.workoutName
 
@@ -184,3 +181,7 @@ func _on_top_navigation_bar_previous_page() -> void:
 
 func _on_add_button_pressed() -> void:
 	_add_exercise()
+	
+	await get_tree().create_timer(0.01).timeout
+	
+	scroll_container.set_deferred("scroll_vertical", scroll_container.get_v_scroll_bar().max_value)

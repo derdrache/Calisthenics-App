@@ -57,9 +57,7 @@ func _show_menu() -> void:
 			Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 		tween.parallel()
 		tween.tween_property(button, "scale", Vector2.ONE, animationSpeed).set_trans(Tween.TRANS_LINEAR)
-	
-	await get_tree().create_timer(animationSpeed).timeout
-	
+		
 	disabled = false
 	active = true
 		

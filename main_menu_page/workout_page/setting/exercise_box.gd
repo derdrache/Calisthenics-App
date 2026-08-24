@@ -18,74 +18,43 @@ signal changed()
 const SELECTION_CARUSEL = preload("res://widgets/selection_carusel/label_selection_carusel.tscn")
 
 func _ready() -> void:
-	set_selection.pressed.connect(_set_sets_window)
-	rep_selection.pressed.connect(_set_reps_window)
-	break_time_selection.pressed.connect(_set_break_window)
+	set_selection.title = "Sets"
+	set_selection.maxValue = 10
+	set_selection.initialValue = int(sets)
+	set_selection.changed.connect(_change_sets_value)
+	
+	rep_selection.title = "Reps"
+	rep_selection.maxValue = 99
+	rep_selection.initialValue = int(reps)
+	rep_selection.changed.connect(_change_reps_value)
+	
+	break_time_selection.title = "Break Time"
+	break_time_selection.maxValue = 600
+	break_time_selection.initialValue = int(breakTime)
+	break_time_selection.steps = 30
+	break_time_selection.changed.connect(_change_break_time)
+	
 	talent_selection.talent_updated.connect(_set_talent)
 	close_button.pressed.connect(queue_free)
 	
 	if selectedTalent: _set_talent(selectedTalent)
-	
-	_refresh_sets_label()
-	_refresh_reps_label()
-	_refresh_break_time_label()
 
 func _process(_delta: float) -> void:
 	letter_number.text = GlobalData.ABC_LIST[get_index()]
 
-func _refresh_sets_label() -> void:
-	set_selection.text = str(sets) + " Sets"
-
-func _refresh_reps_label() -> void:
-	rep_selection.text = str(reps) + " Reps"
-
-func _refresh_break_time_label() -> void:
-		break_time_selection.text = str(breakTime)+ " sec"
-
-func _set_sets_window() -> void:
-	var selectionCaruselNode: LabelSelectionCarusel = SELECTION_CARUSEL.instantiate()
-	selectionCaruselNode.title = "Sets"
-	selectionCaruselNode.maxValue = 10
-	selectionCaruselNode.initialValue = int(sets)
-	
-	add_child(selectionCaruselNode)
-	selectionCaruselNode.valueChanged.connect(_change_sets_value)
-	
 func _change_sets_value(newValue: String) -> void:
 	sets = int(newValue)
-	
-	_refresh_sets_label()
 
-	changed.emit()
-
-func _set_reps_window() -> void:
-	var selectionCaruselNode: LabelSelectionCarusel = SELECTION_CARUSEL.instantiate()
-	selectionCaruselNode.title = "Reps"
-	selectionCaruselNode.maxValue = 99
-	selectionCaruselNode.initialValue = int(reps)
-	
-	add_child(selectionCaruselNode)
-	selectionCaruselNode.valueChanged.connect(_change_reps_value)	
-	
 	changed.emit()
 
 func _change_reps_value(newValue: String) -> void:
 	reps = int(newValue)
-	_refresh_reps_label()
-
-func _set_break_window() -> void:
-	var selectionCaruselNode: LabelSelectionCarusel = SELECTION_CARUSEL.instantiate()
-	selectionCaruselNode.title = "Break Time"
-	selectionCaruselNode.maxValue = 600
-	selectionCaruselNode.initialValue = int(breakTime)
-	selectionCaruselNode.steps = 30
 	
-	add_child(selectionCaruselNode)
-	selectionCaruselNode.valueChanged.connect(_change_break_time)
+	changed.emit()
 
 func _change_break_time(newValue: int) -> void:
 	breakTime = newValue
-	_refresh_break_time_label()
+	
 	changed.emit()
 
 func _set_talent(talent: TalentResource) -> void:
@@ -94,8 +63,4 @@ func _set_talent(talent: TalentResource) -> void:
 
 func change_break_time(newValue: int) -> void:
 	breakTime = newValue
-	_refresh_break_time_label()
-
-func change_sets(newValue: int) -> void:
-	sets = newValue
-	_refresh_sets_label()
+	break_time_selection.initialValue = newValue

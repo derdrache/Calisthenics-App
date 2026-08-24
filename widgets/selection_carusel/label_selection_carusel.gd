@@ -20,7 +20,8 @@ signal valueChanged(value: String)
 			_set_carusel_start()
 		
 @export var withBackground := true
-@export var withCloseOnBackgroundClick := true
+
+var swipeStart: Vector2
 
 func _ready() -> void:
 	titleLabel.text = title
@@ -71,26 +72,24 @@ func _create_normal_labels() -> void:
 	spacer2.custom_minimum_size.x = 60
 	object_container.add_child(spacer2)
 
-func  _remove_background() -> void:
+func _remove_background() -> void:
 	background_panel.add_theme_stylebox_override("panel", StyleBoxEmpty.new())
 	
 func _input(event: InputEvent) -> void:
-	if not withCloseOnBackgroundClick: return
-	var onContainer: bool = background_panel.get_global_rect().has_point(get_global_mouse_position())
-
-	if event is InputEventMouseButton and event.button_index == 1 and event.is_pressed() and not onContainer:
-		var value := get_selected_value()
-		valueChanged.emit(value)
-
-		queue_free()
+	if Input.is_action_just_pressed("leftMouseClick"):
+		swipeStart = event.position
+	elif Input.is_action_just_released("leftMouseClick"):
+		var swipeDistance: float = (event.position - swipeStart).length()
+		
+		if swipeDistance < 10:
+			var value := get_selected_value()
+			valueChanged.emit(value)
+			queue_free()
 
 func _set_carusel_start() -> void:
-
-	
 	var initalValueIndex := get_node_index(initialValue)
-	
+	print(initalValueIndex)
 	var startScroll := _get_space_between_scroll_objects() * (initalValueIndex-1)
-
 	scroll_container.set_deferred("scroll_horizontal", startScroll)
 
 	_select_deselect_objects(object_container.get_children()[initalValueIndex])
@@ -98,7 +97,12 @@ func _set_carusel_start() -> void:
 func get_node_index(value: int) -> int:
 	for i in object_container.get_child_count():
 		var object : Label = object_container.get_children()[i]
-		if object.text == str(value):
+		var objectText:String = object.text
+
+		if stringList:
+			objectText = str(stringList.find(objectText))
+		
+		if objectText == str(value):
 			return i
 			
 	return -1

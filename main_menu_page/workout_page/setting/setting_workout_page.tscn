@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://da4ga444yrgso" path="res://main_menu_page/workout_page/setting/setting_workout_page.gd" id="1_ys275"]
 [ext_resource type="PackedScene" uid="uid://c1u5yg2o45dr" path="res://widgets/safe_area_container/safe_area_container.tscn" id="2_gjhjg"]
 [ext_resource type="PackedScene" uid="uid://brpavu0ocrgcq" path="res://widgets/top_navigation_bar/top_navigation_bar.tscn" id="2_huq1w"]
+[ext_resource type="PackedScene" uid="uid://cbn6wwqwhf8ms" path="res://widgets/selection_button/selection_button.tscn" id="4_rqlwp"]
 [ext_resource type="PackedScene" uid="uid://d2cm653td1j2r" path="res://widgets/add_button/add_button.tscn" id="4_ws422"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ws422"]
@@ -18,18 +19,6 @@ corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kxu6w"]
-bg_color = Color(0.498039, 0.498039, 0.498039, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hf3jq"]
 bg_color = Color(0.498039, 0.498039, 0.498039, 1)
@@ -63,7 +52,7 @@ layout_mode = 1
 layout_mode = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
+theme_override_constants/margin_bottom = 50
 
 [node name="VBoxContainer" type="VBoxContainer" parent="SaftyArea/MarginContainer" unique_id=343536872]
 layout_mode = 2
@@ -91,39 +80,17 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 70
 
-[node name="ModusButton" type="Button" parent="SaftyArea/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1530959472]
+[node name="ModusButton" parent="SaftyArea/MarginContainer/VBoxContainer/HBoxContainer" unique_id=894488370 instance=ExtResource("4_rqlwp")]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(150, 80)
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = SubResource("StyleBoxFlat_kxu6w")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_kxu6w")
-theme_override_styles/hover = SubResource("StyleBoxFlat_kxu6w")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_kxu6w")
-theme_override_styles/focus = SubResource("StyleBoxFlat_kxu6w")
-text = "Modus:
-"
 
-[node name="GlobalBreakButton" type="Button" parent="SaftyArea/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1937653229]
+[node name="GlobalBreakButton" parent="SaftyArea/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1420954383 instance=ExtResource("4_rqlwp")]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(150, 80)
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = SubResource("StyleBoxFlat_kxu6w")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_kxu6w")
-theme_override_styles/hover = SubResource("StyleBoxFlat_kxu6w")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_kxu6w")
-theme_override_styles/focus = SubResource("StyleBoxFlat_kxu6w")
-text = "Break:
-180 sec"
+
+[node name="CircleButton" parent="SaftyArea/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1582131231 instance=ExtResource("4_rqlwp")]
+unique_name_in_owner = true
+layout_mode = 2
 
 [node name="ScrollContainer" type="ScrollContainer" parent="SaftyArea/MarginContainer/VBoxContainer" unique_id=1991528914]
 unique_name_in_owner = true
@@ -142,7 +109,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_constants/separation = 25
+theme_override_constants/separation = 0
 
 [node name="AddButton" type="MarginContainer" parent="SaftyArea/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=283604472]
 layout_mode = 2
